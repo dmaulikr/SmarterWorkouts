@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0288D98C1A180C1A0092C2D3 /* PlateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0288D98B1A180C1A0092C2D3 /* PlateViewController.xib */; };
+		545902DECE48C72B4EA42451 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545909DEAE65283756E25E7A /* LaunchScreen.xib */; };
+		545903DDFDE7F7965ADDE139 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 545904E1841B2C9A4524B6E1 /* main.m */; };
+		545905E56CE3F26AADB60219 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545902E72D54617EBBB68CC0 /* Images.xcassets */; };
+		545907E6880B196D473BB864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545906E82697330EFD85E5DF /* Main.storyboard */; };
+		54590AAB2E44163CF8136D46 /* WorkoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590834E09D76DC26CC206D /* WorkoutController.m */; };
+		54590D079BDADB2B71F67E4F /* PlateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905FE8FE91A0D796F4099 /* PlateViewController.m */; };
+		54590E16F642336636D23885 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905ED0E0E46EE8AA17304 /* AppDelegate.m */; };
+		54590E367006AD1770F8B724 /* SmarterWorkoutsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 545909FF081DA7CFD645CFF1 /* SmarterWorkoutsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		54590815875FF5E3BAEC3A19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54590B7E717641F0455C5327 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 545902536CDF9710E59E4BB2;
+			remoteInfo = SmarterWorkouts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0288D98B1A180C1A0092C2D3 /* PlateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlateViewController.xib; sourceTree = "<group>"; };
+		545902056D72E2D7A78706FB /* PlateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateViewController.h; sourceTree = "<group>"; };
+		5459026EC551FA5E344D9121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		545902792F0900BE86135C4D /* SmarterWorkouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmarterWorkouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		545902E72D54617EBBB68CC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5459047548B43CB2B2ABA86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		545904E1841B2C9A4524B6E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		545905ED0E0E46EE8AA17304 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		545905FE8FE91A0D796F4099 /* PlateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateViewController.m; sourceTree = "<group>"; };
+		5459061FF264AFC33EDE1495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		54590834E09D76DC26CC206D /* WorkoutController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkoutController.m; sourceTree = "<group>"; };
+		545908C17FF06866026FFF47 /* WorkoutController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutController.h; sourceTree = "<group>"; };
+		545909FF081DA7CFD645CFF1 /* SmarterWorkoutsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmarterWorkoutsTests.m; sourceTree = "<group>"; };
+		54590CFA15918636F9EA4B15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		54590DFEC887B12C9D546107 /* SmarterWorkoutsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmarterWorkoutsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54590F6B39C5170F22DD30BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		545901121645FF57FE293DFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		545906F2583B4650AD5C5850 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0288D9891A180BF50092C2D3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0288D98A1A180BFB0092C2D3 /* Contexts */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0288D98A1A180BFB0092C2D3 /* Contexts */ = {
+			isa = PBXGroup;
+			children = (
+				0288D98B1A180C1A0092C2D3 /* PlateViewController.xib */,
+				545905FE8FE91A0D796F4099 /* PlateViewController.m */,
+				545902056D72E2D7A78706FB /* PlateViewController.h */,
+			);
+			name = Contexts;
+			sourceTree = "<group>";
+		};
+		5459028458247F86AFC666EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				54590F6B39C5170F22DD30BD /* Info.plist */,
+				545904E1841B2C9A4524B6E1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		545904972D5B59C73C7E185D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				545902792F0900BE86135C4D /* SmarterWorkouts.app */,
+				54590DFEC887B12C9D546107 /* SmarterWorkoutsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		545906C0F1AE80F757530F01 /* SmarterWorkoutsTests */ = {
+			isa = PBXGroup;
+			children = (
+				54590E60F1278BCB13340384 /* Supporting Files */,
+				545909FF081DA7CFD645CFF1 /* SmarterWorkoutsTests.m */,
+			);
+			path = SmarterWorkoutsTests;
+			sourceTree = "<group>";
+		};
+		54590986B357EA60358384A3 = {
+			isa = PBXGroup;
+			children = (
+				545904972D5B59C73C7E185D /* Products */,
+				54590E7C84FB812C1C10E222 /* SmarterWorkouts */,
+				545906C0F1AE80F757530F01 /* SmarterWorkoutsTests */,
+			);
+			sourceTree = "<group>";
+		};
+		54590E60F1278BCB13340384 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5459026EC551FA5E344D9121 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		54590E7C84FB812C1C10E222 /* SmarterWorkouts */ = {
+			isa = PBXGroup;
+			children = (
+				0288D9891A180BF50092C2D3 /* Views */,
+				5459028458247F86AFC666EA /* Supporting Files */,
+				545902E72D54617EBBB68CC0 /* Images.xcassets */,
+				545909DEAE65283756E25E7A /* LaunchScreen.xib */,
+				54590CFA15918636F9EA4B15 /* AppDelegate.h */,
+				545905ED0E0E46EE8AA17304 /* AppDelegate.m */,
+				545906E82697330EFD85E5DF /* Main.storyboard */,
+				545908C17FF06866026FFF47 /* WorkoutController.h */,
+				54590834E09D76DC26CC206D /* WorkoutController.m */,
+			);
+			path = SmarterWorkouts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		545902536CDF9710E59E4BB2 /* SmarterWorkouts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54590F3259FCCC41F9AA418D /* Build configuration list for PBXNativeTarget "SmarterWorkouts" */;
+			buildPhases = (
+				54590212CC773E5A6481C484 /* Sources */,
+				545906F2583B4650AD5C5850 /* Frameworks */,
+				5459021BD2AD0F93D69FCD06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmarterWorkouts;
+			productName = SmarterWorkouts;
+			productReference = 545902792F0900BE86135C4D /* SmarterWorkouts.app */;
+			productType = "com.apple.product-type.application";
+		};
+		54590696CAD506FDD77D6248 /* SmarterWorkoutsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54590E14121E96ADDADB146C /* Build configuration list for PBXNativeTarget "SmarterWorkoutsTests" */;
+			buildPhases = (
+				54590C6A2EB3C23B5748A690 /* Sources */,
+				545901121645FF57FE293DFC /* Frameworks */,
+				54590102F41F6604530F1E99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				545902BBDF721AC34F6EF908 /* PBXTargetDependency */,
+			);
+			name = SmarterWorkoutsTests;
+			productName = SmarterWorkoutsTests;
+			productReference = 54590DFEC887B12C9D546107 /* SmarterWorkoutsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		54590B7E717641F0455C5327 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Stefan Kendall";
+			};
+			buildConfigurationList = 54590FFBAF335D6C15E7BEA2 /* Build configuration list for PBXProject "SmarterWorkouts" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 54590986B357EA60358384A3;
+			productRefGroup = 545904972D5B59C73C7E185D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				545902536CDF9710E59E4BB2 /* SmarterWorkouts */,
+				54590696CAD506FDD77D6248 /* SmarterWorkoutsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		54590102F41F6604530F1E99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5459021BD2AD0F93D69FCD06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				545905E56CE3F26AADB60219 /* Images.xcassets in Resources */,
+				0288D98C1A180C1A0092C2D3 /* PlateViewController.xib in Resources */,
+				545902DECE48C72B4EA42451 /* LaunchScreen.xib in Resources */,
+				545907E6880B196D473BB864 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		54590212CC773E5A6481C484 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				545903DDFDE7F7965ADDE139 /* main.m in Sources */,
+				54590E16F642336636D23885 /* AppDelegate.m in Sources */,
+				54590AAB2E44163CF8136D46 /* WorkoutController.m in Sources */,
+				54590D079BDADB2B71F67E4F /* PlateViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54590C6A2EB3C23B5748A690 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54590E367006AD1770F8B724 /* SmarterWorkoutsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		545902BBDF721AC34F6EF908 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 545902536CDF9710E59E4BB2 /* SmarterWorkouts */;
+			targetProxy = 54590815875FF5E3BAEC3A19 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		545906E82697330EFD85E5DF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5459047548B43CB2B2ABA86D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		545909DEAE65283756E25E7A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5459061FF264AFC33EDE1495 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		545900EC130ABC7133E6F91D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SmarterWorkouts.app/SmarterWorkouts";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SmarterWorkoutsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		5459029655D9499BBE086737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SmarterWorkouts/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		54590B128CEE8DA132EE5A22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SmarterWorkouts/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		54590C3DDE05C0586A27165C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SmarterWorkouts.app/SmarterWorkouts";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SmarterWorkoutsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+		54590CB5A9E60EFA4164910A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		54590E95E0D4DED4C427928B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		54590E14121E96ADDADB146C /* Build configuration list for PBXNativeTarget "SmarterWorkoutsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				545900EC130ABC7133E6F91D /* Debug */,
+				54590C3DDE05C0586A27165C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54590F3259FCCC41F9AA418D /* Build configuration list for PBXNativeTarget "SmarterWorkouts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54590B128CEE8DA132EE5A22 /* Debug */,
+				5459029655D9499BBE086737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54590FFBAF335D6C15E7BEA2 /* Build configuration list for PBXProject "SmarterWorkouts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54590E95E0D4DED4C427928B /* Debug */,
+				54590CB5A9E60EFA4164910A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 54590B7E717641F0455C5327 /* Project object */;
+}

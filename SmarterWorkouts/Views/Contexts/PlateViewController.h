@@ -1,0 +1,2 @@
+@interface PlateViewController : UITableViewController
+@end
