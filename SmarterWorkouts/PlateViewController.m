@@ -14,10 +14,11 @@
 }
 
 - (CGFloat)expandedHeight {
-    return 160;
+    return 200;
 }
 
 - (void)attachToBottomOfView:(UIView *)parentView {
+    [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     [parentView addConstraints:@[
             [NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeLeft
                                          relatedBy:NSLayoutRelationEqual
@@ -32,12 +33,15 @@
                                                              relatedBy:NSLayoutRelationEqual
                                                                 toItem:parentView attribute:NSLayoutAttributeBottom multiplier:1 constant:0
     ];
+    self.heightConstraint = [NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeHeight
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:400];
     [parentView addConstraint:self.contextTopConstraint];
+    [parentView addConstraint:self.heightConstraint];
     [self.view layoutIfNeeded];
 }
 
 - (void)reveal:(id)reveal {
-    NSLog(@"EXPAND");
     self.contextTopConstraint.constant = -[self expandedHeight];
     [self animateChanges:^(BOOL b) {
     }];
