@@ -1,11 +1,17 @@
 #import "WorkoutController.h"
 #import "PlateViewController.h"
 
-@interface WorkoutController ()
-@end
+@implementation WorkoutController
 
-@implementation WorkoutController {
+- (void)viewDidLoad {
+    [self.activityInput setDelegate:self];
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
 
 - (IBAction)revealPlates:(id)sender {
     [self removeContextController];
