@@ -50,6 +50,9 @@
                         <state key="normal" title="Setup bar and plates">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="setupBarLoading:" destination="g56-NT-dyt" eventType="touchUpInside" id="Oew-6m-onh"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="more" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TA2-se-Q6b">
                         <rect key="frame" x="326" y="14" width="33" height="17"/>
