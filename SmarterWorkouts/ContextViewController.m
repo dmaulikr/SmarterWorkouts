@@ -5,8 +5,11 @@
 - (void)viewDidLoad {
     [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
 
-    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleShowMoreLess:)];
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
     [self.view addGestureRecognizer:recognizer];
+}
+
+- (void)viewTapped:(id)gesture {
 }
 
 - (CGFloat)initialHeight {
@@ -41,33 +44,11 @@
     [self.view layoutIfNeeded];
 }
 
-- (void)toggleShowMoreLess:(id)gesture {
-    if (self.expanded) {
-        [self showLess];
-    }
-    else {
-        [self showMore];
-    }
-    self.expanded = !self.expanded;
-}
-
-- (void)showMore {
-    [self.moreLabel setText:@"less"];
-    [self.moreLabel layoutIfNeeded];
-    [self animateToHeight:[self expandedHeight]];
-}
-
 - (void)animateToHeight:(CGFloat)height {
     self.contextTopConstraint.constant = -height;
     self.heightConstraint.constant = height;
     [self animateChanges:^(BOOL b) {
     }];
-}
-
-- (void)showLess {
-    [self.moreLabel setText:@"more"];
-    [self.moreLabel layoutIfNeeded];
-    [self animateToHeight:[self initialHeight]];
 }
 
 - (void)animateIn {

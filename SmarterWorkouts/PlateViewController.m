@@ -8,7 +8,29 @@
 }
 
 - (CGFloat)expandedHeight {
-    return 220;
+    return 210;
+}
+
+- (void)viewTapped:(id)gesture {
+    if (self.expanded) {
+        [self showLess];
+    }
+    else {
+        [self showMore];
+    }
+    self.expanded = !self.expanded;
+}
+
+- (void)showLess {
+    [self.moreLabel setText:@"more"];
+    [self.moreLabel layoutIfNeeded];
+    [self animateToHeight:[self initialHeight]];
+}
+
+- (void)showMore {
+    [self.moreLabel setText:@"less"];
+    [self.moreLabel layoutIfNeeded];
+    [self animateToHeight:[self expandedHeight]];
 }
 
 - (IBAction)setupBarLoading:(id)sender {

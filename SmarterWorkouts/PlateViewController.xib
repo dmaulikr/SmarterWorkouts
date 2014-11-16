@@ -13,7 +13,7 @@
                 <viewControllerLayoutGuide type="bottom" id="wTY-uN-V9a"/>
             </layoutGuides>
             <view key="view" contentMode="scaleToFill" id="80n-gJ-7ZE">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plates to put on bar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1i-71-6ZC">
@@ -83,7 +83,7 @@
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <size key="freeformSize" width="375" height="600"/>
+            <size key="freeformSize" width="375" height="210"/>
             <connections>
                 <outlet property="moreLabel" destination="TA2-se-Q6b" id="3RE-jt-pD0"/>
             </connections>
