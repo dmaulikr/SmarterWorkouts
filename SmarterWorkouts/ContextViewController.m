@@ -36,8 +36,8 @@
     self.heightConstraint = [NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeHeight
                                                          relatedBy:NSLayoutRelationEqual
                                                             toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:[self initialHeight]];
-    [parentView addConstraint:self.contextTopConstraint];
     [parentView addConstraint:self.heightConstraint];
+    [parentView addConstraint:self.contextTopConstraint];
     [self.view layoutIfNeeded];
 }
 
@@ -67,8 +67,8 @@
 }
 
 - (void)animateIn {
-    self.contextTopConstraint.constant = -[self initialHeight];
     self.heightConstraint.constant = [self initialHeight];
+    self.contextTopConstraint.constant = -[self initialHeight];
     [self animateChanges:^(BOOL b) {
     }];
 }

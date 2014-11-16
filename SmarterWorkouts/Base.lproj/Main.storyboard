@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2cQ-1v-WTb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Workout Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="Ryu-XF-XqR">
+            <objects>
+                <navigationController id="2cQ-1v-WTb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hGK-99-3FU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dap-4F-Ofd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qxm-PP-atA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-49" y="424"/>
+        </scene>
+        <!--Workout-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WorkoutController" sceneMemberID="viewController">
@@ -18,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oaf-oF-QNm">
-                                <rect key="frame" x="16" y="40" width="343" height="60"/>
+                                <rect key="frame" x="16" y="84" width="343" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="vx7-qt-U8k"/>
                                 </constraints>
@@ -30,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBo-1s-zGB">
-                                <rect key="frame" x="16" y="108" width="343" height="60"/>
+                                <rect key="frame" x="16" y="152" width="343" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="wo1-yv-oPj"/>
                                 </constraints>
@@ -52,6 +68,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Oaf-oF-QNm" secondAttribute="trailing" id="zmA-GC-1Y9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Workout" id="lL6-zL-ihZ"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                 </viewController>
