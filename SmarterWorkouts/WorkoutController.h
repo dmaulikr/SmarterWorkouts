@@ -1,8 +1,9 @@
 #import <UIKit/UIKit.h>
 
+@class PlateViewController;
+
 @interface WorkoutController : UIViewController
 
 
-@property(nonatomic, strong) UIView *context;
-@property(nonatomic, strong) NSLayoutConstraint *contextTopConstraint;
+@property(nonatomic, strong) PlateViewController *contextController;
 @end

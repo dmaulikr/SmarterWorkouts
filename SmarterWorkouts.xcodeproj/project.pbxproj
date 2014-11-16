@@ -13,6 +13,7 @@
 		545905E56CE3F26AADB60219 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545902E72D54617EBBB68CC0 /* Images.xcassets */; };
 		545907E6880B196D473BB864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545906E82697330EFD85E5DF /* Main.storyboard */; };
 		54590AAB2E44163CF8136D46 /* WorkoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590834E09D76DC26CC206D /* WorkoutController.m */; };
+		54590B466C4E9D168112F834 /* WorkoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459069B2C3E1667665C956A /* WorkoutView.m */; };
 		54590D079BDADB2B71F67E4F /* PlateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905FE8FE91A0D796F4099 /* PlateViewController.m */; };
 		54590E16F642336636D23885 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905ED0E0E46EE8AA17304 /* AppDelegate.m */; };
 		54590E367006AD1770F8B724 /* SmarterWorkoutsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 545909FF081DA7CFD645CFF1 /* SmarterWorkoutsTests.m */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		0288D98B1A180C1A0092C2D3 /* PlateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlateViewController.xib; sourceTree = "<group>"; };
+		54590098229E00A3F488F2F4 /* WorkoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutView.h; sourceTree = "<group>"; };
 		545902056D72E2D7A78706FB /* PlateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateViewController.h; sourceTree = "<group>"; };
 		5459026EC551FA5E344D9121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		545902792F0900BE86135C4D /* SmarterWorkouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmarterWorkouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +41,7 @@
 		545905ED0E0E46EE8AA17304 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		545905FE8FE91A0D796F4099 /* PlateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateViewController.m; sourceTree = "<group>"; };
 		5459061FF264AFC33EDE1495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5459069B2C3E1667665C956A /* WorkoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutView.m; sourceTree = "<group>"; };
 		54590834E09D76DC26CC206D /* WorkoutController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkoutController.m; sourceTree = "<group>"; };
 		545908C17FF06866026FFF47 /* WorkoutController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutController.h; sourceTree = "<group>"; };
 		545909FF081DA7CFD645CFF1 /* SmarterWorkoutsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmarterWorkoutsTests.m; sourceTree = "<group>"; };
@@ -69,6 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				0288D98A1A180BFB0092C2D3 /* Contexts */,
+				5459069B2C3E1667665C956A /* WorkoutView.m */,
+				54590098229E00A3F488F2F4 /* WorkoutView.h */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 				54590E16F642336636D23885 /* AppDelegate.m in Sources */,
 				54590AAB2E44163CF8136D46 /* WorkoutController.m in Sources */,
 				54590D079BDADB2B71F67E4F /* PlateViewController.m in Sources */,
+				54590B466C4E9D168112F834 /* WorkoutView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
