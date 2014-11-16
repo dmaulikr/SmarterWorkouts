@@ -8,8 +8,12 @@
 }
 
 - (IBAction)revealPlates:(id)sender {
+    [self showHideContext:@"PlateViewController"];
+}
+
+- (void)showHideContext:(NSString *)nibName {
     if (!self.contextController) {
-        self.contextController = [self addPlateContext];
+        self.contextController = [self addContextWithName:nibName];
         [self.contextController animateIn];
     }
     else {
@@ -22,8 +26,8 @@
     }
 }
 
-- (PlateViewController *)addPlateContext {
-    PlateViewController *controller = [[NSBundle mainBundle] loadNibNamed:@"PlateViewController" owner:self options:nil][0];
+- (ContextViewController *)addContextWithName:(NSString *)nibName {
+    ContextViewController *controller = [[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil][0];
     [self addChildViewController:controller];
     [self.view addSubview:controller.view];
     [controller attachToBottomOfView:self.view];

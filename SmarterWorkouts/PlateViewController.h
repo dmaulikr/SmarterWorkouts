@@ -1,18 +1,5 @@
 #import <UIKit/UIKit.h>
+#import "ContextViewController.h"
 
-@interface PlateViewController : UIViewController <UIGestureRecognizerDelegate>
-@property(nonatomic, strong) NSLayoutConstraint *contextTopConstraint;
-@property (weak, nonatomic) IBOutlet UILabel *moreLabel;
-
-@property(nonatomic, strong) NSLayoutConstraint *heightConstraint;
-
-@property(nonatomic) BOOL expanded;
-
-- (CGFloat)initialHeight;
-
-- (void)attachToBottomOfView:(UIView *)parentView;
-
-- (void)animateIn;
-
-- (void)animateOut:(void (^)(BOOL))pFunction;
+@interface PlateViewController : ContextViewController
 @end

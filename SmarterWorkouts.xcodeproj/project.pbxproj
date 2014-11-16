@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0288D98C1A180C1A0092C2D3 /* PlateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0288D98B1A180C1A0092C2D3 /* PlateViewController.xib */; };
+		545901E8BA347E6F6D5B27BF /* ContextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590ABDAAB338BA42EB1F42 /* ContextViewController.m */; };
 		545902DECE48C72B4EA42451 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545909DEAE65283756E25E7A /* LaunchScreen.xib */; };
 		545903DDFDE7F7965ADDE139 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 545904E1841B2C9A4524B6E1 /* main.m */; };
 		545905E56CE3F26AADB60219 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545902E72D54617EBBB68CC0 /* Images.xcassets */; };
@@ -39,9 +40,11 @@
 		545905ED0E0E46EE8AA17304 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		545905FE8FE91A0D796F4099 /* PlateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateViewController.m; sourceTree = "<group>"; };
 		5459061FF264AFC33EDE1495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5459065DD82A3AD6C97D68EA /* ContextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextViewController.h; sourceTree = "<group>"; };
 		54590834E09D76DC26CC206D /* WorkoutController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkoutController.m; sourceTree = "<group>"; };
 		545908C17FF06866026FFF47 /* WorkoutController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutController.h; sourceTree = "<group>"; };
 		545909FF081DA7CFD645CFF1 /* SmarterWorkoutsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmarterWorkoutsTests.m; sourceTree = "<group>"; };
+		54590ABDAAB338BA42EB1F42 /* ContextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextViewController.m; sourceTree = "<group>"; };
 		54590CFA15918636F9EA4B15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54590DFEC887B12C9D546107 /* SmarterWorkoutsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmarterWorkoutsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54590F6B39C5170F22DD30BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +82,8 @@
 				0288D98B1A180C1A0092C2D3 /* PlateViewController.xib */,
 				545905FE8FE91A0D796F4099 /* PlateViewController.m */,
 				545902056D72E2D7A78706FB /* PlateViewController.h */,
+				54590ABDAAB338BA42EB1F42 /* ContextViewController.m */,
+				5459065DD82A3AD6C97D68EA /* ContextViewController.h */,
 			);
 			name = Contexts;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 				54590E16F642336636D23885 /* AppDelegate.m in Sources */,
 				54590AAB2E44163CF8136D46 /* WorkoutController.m in Sources */,
 				54590D079BDADB2B71F67E4F /* PlateViewController.m in Sources */,
+				545901E8BA347E6F6D5B27BF /* ContextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
