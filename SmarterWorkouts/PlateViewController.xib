@@ -42,7 +42,11 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1V4-ib-izd">
-                        <rect key="frame" x="215" y="167" width="144" height="30"/>
+                        <rect key="frame" x="195" y="152" width="180" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="180" id="aZE-EY-E7v"/>
+                            <constraint firstAttribute="height" constant="60" id="osJ-3K-Y4y"/>
+                        </constraints>
                         <state key="normal" title="Setup bar and plates">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -64,11 +68,11 @@
                     <constraint firstItem="Gej-vU-Gbq" firstAttribute="top" secondItem="LMD-Th-938" secondAttribute="top" id="BqW-Bb-YPl"/>
                     <constraint firstItem="TA2-se-Q6b" firstAttribute="centerY" secondItem="k1i-71-6ZC" secondAttribute="centerY" id="HfL-kJ-BQy"/>
                     <constraint firstItem="R1n-Fv-bxu" firstAttribute="leading" secondItem="80n-gJ-7ZE" secondAttribute="leadingMargin" id="I5I-xJ-Irm"/>
-                    <constraint firstItem="1V4-ib-izd" firstAttribute="top" secondItem="QmQ-GE-NLc" secondAttribute="bottom" constant="-5" id="K7J-Zu-TKh"/>
+                    <constraint firstItem="1V4-ib-izd" firstAttribute="top" secondItem="QmQ-GE-NLc" secondAttribute="bottom" constant="-20" id="K7J-Zu-TKh"/>
                     <constraint firstItem="k1i-71-6ZC" firstAttribute="top" secondItem="Gej-vU-Gbq" secondAttribute="top" constant="8" id="Uja-x2-KTB"/>
                     <constraint firstAttribute="trailingMargin" secondItem="R1n-Fv-bxu" secondAttribute="trailing" id="W33-tp-Owc"/>
                     <constraint firstItem="k1i-71-6ZC" firstAttribute="leading" secondItem="80n-gJ-7ZE" secondAttribute="leadingMargin" id="hbW-g0-8ZP"/>
-                    <constraint firstItem="1V4-ib-izd" firstAttribute="trailing" secondItem="80n-gJ-7ZE" secondAttribute="trailingMargin" id="mPV-Ea-Ab4"/>
+                    <constraint firstItem="1V4-ib-izd" firstAttribute="trailing" secondItem="80n-gJ-7ZE" secondAttribute="trailing" id="mPV-Ea-Ab4"/>
                     <constraint firstItem="QmQ-GE-NLc" firstAttribute="trailing" secondItem="80n-gJ-7ZE" secondAttribute="trailingMargin" id="peA-hh-6lw"/>
                     <constraint firstItem="QmQ-GE-NLc" firstAttribute="top" secondItem="R1n-Fv-bxu" secondAttribute="bottom" constant="15" id="vpy-2f-TdC"/>
                 </constraints>

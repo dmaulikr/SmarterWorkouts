@@ -14,7 +14,7 @@
 }
 
 - (CGFloat)expandedHeight {
-    return 200;
+    return 220;
 }
 
 - (void)attachToBottomOfView:(UIView *)parentView {
