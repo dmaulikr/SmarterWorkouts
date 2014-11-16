@@ -5,7 +5,7 @@
 - (void)viewDidLoad {
     [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
 
-    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(reveal:)];
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleShowMoreLess:)];
     [self.view addGestureRecognizer:recognizer];
 }
 
@@ -41,10 +41,28 @@
     [self.view layoutIfNeeded];
 }
 
-- (void)reveal:(id)reveal {
+- (void)toggleShowMoreLess:(id)gesture {
+    if (self.expanded) {
+        [self showLess];
+    }
+    else {
+        [self showMore];
+    }
+    self.expanded = !self.expanded;
+}
+
+- (void)showMore {
+    [self.moreLabel setText:@"less"];
+    [self.moreLabel layoutIfNeeded];
     self.contextTopConstraint.constant = -[self expandedHeight];
     [self animateChanges:^(BOOL b) {
     }];
+}
+
+- (void)showLess {
+    [self.moreLabel setText:@"more"];
+    [self.moreLabel layoutIfNeeded];
+    [self animateIn];
 }
 
 - (void)animateIn {

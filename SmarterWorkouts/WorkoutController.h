@@ -2,7 +2,7 @@
 
 @class PlateViewController;
 
-@interface WorkoutController : UIViewController
+@interface WorkoutController : UIViewController {}
 
 
 @property(nonatomic, strong) PlateViewController *contextController;
