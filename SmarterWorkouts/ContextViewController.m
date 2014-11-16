@@ -54,8 +54,12 @@
 - (void)showMore {
     [self.moreLabel setText:@"less"];
     [self.moreLabel layoutIfNeeded];
-    self.contextTopConstraint.constant = -[self expandedHeight];
-    self.heightConstraint.constant = [self expandedHeight];
+    [self animateToHeight:[self expandedHeight]];
+}
+
+- (void)animateToHeight:(CGFloat)height {
+    self.contextTopConstraint.constant = -height;
+    self.heightConstraint.constant = height;
     [self animateChanges:^(BOOL b) {
     }];
 }
@@ -63,14 +67,11 @@
 - (void)showLess {
     [self.moreLabel setText:@"more"];
     [self.moreLabel layoutIfNeeded];
-    [self animateIn];
+    [self animateToHeight:[self initialHeight]];
 }
 
 - (void)animateIn {
-    self.heightConstraint.constant = [self initialHeight];
-    self.contextTopConstraint.constant = -[self initialHeight];
-    [self animateChanges:^(BOOL b) {
-    }];
+    [self animateToHeight:[self initialHeight]];
 }
 
 - (void)animateOut:(void (^)(BOOL))completion {

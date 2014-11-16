@@ -19,4 +19,6 @@
 
 - (void)animateOut:(void (^)(BOOL))pFunction;
 
+- (void)animateToHeight:(CGFloat)height;
+
 @end
