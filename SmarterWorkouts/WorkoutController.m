@@ -8,7 +8,13 @@
 }
 
 - (IBAction)revealPlates:(id)sender {
+    [self removeContextController];
     [self showHideContext:@"PlateViewController"];
+}
+
+- (IBAction)revealTimer:(id)sender {
+    [self removeContextController];
+    [self showHideContext:@"RestViewController"];
 }
 
 - (void)showHideContext:(NSString *)nibName {
@@ -18,12 +24,16 @@
     }
     else {
         [self.contextController animateOut:^(BOOL finished) {
-            UIViewController *vc = [self.childViewControllers lastObject];
-            [vc.view removeFromSuperview];
-            [vc removeFromParentViewController];
-            self.contextController = nil;
+            [self removeContextController];
         }];
     }
+}
+
+- (void)removeContextController {
+    UIViewController *vc = [self.childViewControllers lastObject];
+    [vc.view removeFromSuperview];
+    [vc removeFromParentViewController];
+    self.contextController = nil;
 }
 
 - (ContextViewController *)addContextWithName:(NSString *)nibName {
