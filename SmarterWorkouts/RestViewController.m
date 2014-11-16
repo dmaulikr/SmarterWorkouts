@@ -6,6 +6,4 @@
     return 60;
 }
 
-
-
 @end
