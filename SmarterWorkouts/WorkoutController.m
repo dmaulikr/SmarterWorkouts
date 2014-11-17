@@ -2,6 +2,7 @@
 #import "PlateViewController.h"
 #import "HTAutocompleteTextField.h"
 #import "ActivityAutoCompleteManager.h"
+#import "ActivityWeightFormViewController.h"
 
 @implementation WorkoutController
 
@@ -12,7 +13,16 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
+    [self showFormBeneath:self.activityInput];
     return YES;
+}
+
+- (void)showFormBeneath:(HTAutocompleteTextField *)field {
+    ActivityWeightFormViewController *form = [[NSBundle mainBundle] loadNibNamed:@"ActivityWeightFormViewController" owner:self options:nil][0];
+    [self addChildViewController:form];
+    [self.view addSubview:form.view];
+    [form attachBelow:field inView: self.view];
+    [form didMoveToParentViewController:self];
 }
 
 - (IBAction)revealPlates:(id)sender {
@@ -38,9 +48,8 @@
 }
 
 - (void)removeContextController {
-    UIViewController *vc = [self.childViewControllers lastObject];
-    [vc.view removeFromSuperview];
-    [vc removeFromParentViewController];
+    [self.contextController.view removeFromSuperview];
+    [self.contextController removeFromParentViewController];
     self.contextController = nil;
 }
 
@@ -50,7 +59,6 @@
     [self.view addSubview:controller.view];
     [controller attachToBottomOfView:self.view];
     [controller didMoveToParentViewController:self];
-    [self.view bringSubviewToFront:controller.view];
     return controller;
 }
 
