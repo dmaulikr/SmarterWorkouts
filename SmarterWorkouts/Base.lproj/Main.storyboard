@@ -57,7 +57,7 @@
                                     <action selector="revealTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vyr-5P-CLr"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add an activity (e.g. Squat)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Afe-VQ-S57">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add an activity (e.g. Squat)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Afe-VQ-S57" customClass="HTAutocompleteTextField">
                                 <rect key="frame" x="16" y="220" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="WBu-qI-JUa"/>

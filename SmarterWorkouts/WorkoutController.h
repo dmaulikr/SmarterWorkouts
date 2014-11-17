@@ -2,10 +2,12 @@
 
 @class PlateViewController;
 @class ContextViewController;
+@class HTAutocompleteTextField;
 
-@interface WorkoutController : UIViewController <UITextFieldDelegate> {}
+@interface WorkoutController : UIViewController <UITextFieldDelegate> {
+}
 
-@property (weak, nonatomic) IBOutlet UITextField *activityInput;
+@property(weak, nonatomic) IBOutlet HTAutocompleteTextField *activityInput;
 
 @property(nonatomic, strong) ContextViewController *contextController;
 @end

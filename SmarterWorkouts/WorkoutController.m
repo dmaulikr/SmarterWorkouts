@@ -1,17 +1,19 @@
 #import "WorkoutController.h"
 #import "PlateViewController.h"
+#import "HTAutocompleteTextField.h"
+#import "ActivityAutoCompleteManager.h"
 
 @implementation WorkoutController
 
 - (void)viewDidLoad {
     [self.activityInput setDelegate:self];
+    self.activityInput.autocompleteDataSource = [ActivityAutoCompleteManager instance];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return YES;
 }
-
 
 - (IBAction)revealPlates:(id)sender {
     [self removeContextController];
