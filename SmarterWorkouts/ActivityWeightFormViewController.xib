@@ -13,7 +13,7 @@
                 <viewControllerLayoutGuide type="bottom" id="fuU-YO-fmd"/>
             </layoutGuides>
             <view key="view" contentMode="scaleToFill" id="MhJ-9w-GBh">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="124"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="176"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xYR-dB-BtY" customClass="HTAutocompleteTextField">
@@ -24,42 +24,55 @@
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="decimalPad" returnKeyType="next"/>
                     </textField>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reps" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bo6-p3-bEI" customClass="HTAutocompleteTextField">
-                        <rect key="frame" x="192" y="66" width="167" height="50"/>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sets: 1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bo6-p3-bEI" customClass="HTAutocompleteTextField">
+                        <rect key="frame" x="191.5" y="66" width="167.5" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="8gD-1s-XNT"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="decimalPad" returnKeyType="next"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" returnKeyType="next"/>
                     </textField>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sets" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ndn-Qx-Xj1" customClass="HTAutocompleteTextField">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCf-Sr-PEe">
+                        <rect key="frame" x="16" y="124" width="343" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="wVy-wE-lQ5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <state key="normal" title="Add">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reps" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ndn-Qx-Xj1" customClass="HTAutocompleteTextField">
                         <rect key="frame" x="16" y="66" width="168" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="dTM-HM-hwb"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="decimalPad" returnKeyType="next"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" returnKeyType="next"/>
                     </textField>
                 </subviews>
                 <constraints>
                     <constraint firstItem="xYR-dB-BtY" firstAttribute="trailing" secondItem="MhJ-9w-GBh" secondAttribute="trailingMargin" id="5Y0-7N-q5f"/>
+                    <constraint firstItem="rCf-Sr-PEe" firstAttribute="top" secondItem="bo6-p3-bEI" secondAttribute="bottom" constant="8" id="6ip-Cl-GNe"/>
                     <constraint firstItem="ndn-Qx-Xj1" firstAttribute="top" secondItem="xYR-dB-BtY" secondAttribute="bottom" constant="8" id="BSU-Fa-vrd"/>
+                    <constraint firstItem="rCf-Sr-PEe" firstAttribute="top" secondItem="ndn-Qx-Xj1" secondAttribute="bottom" constant="8" id="Ehk-j1-eci"/>
                     <constraint firstItem="ndn-Qx-Xj1" firstAttribute="leading" secondItem="MhJ-9w-GBh" secondAttribute="leadingMargin" id="Kch-5Q-fOj"/>
                     <constraint firstItem="xYR-dB-BtY" firstAttribute="leading" secondItem="MhJ-9w-GBh" secondAttribute="leadingMargin" id="MQY-Hh-rJq"/>
                     <constraint firstItem="bo6-p3-bEI" firstAttribute="leading" secondItem="ndn-Qx-Xj1" secondAttribute="trailing" constant="8" id="SFe-LW-tWn"/>
                     <constraint firstItem="xYR-dB-BtY" firstAttribute="top" secondItem="W8O-F9-rx9" secondAttribute="bottom" constant="8" id="TZL-TO-r3j"/>
-                    <constraint firstItem="fuU-YO-fmd" firstAttribute="top" secondItem="bo6-p3-bEI" secondAttribute="bottom" constant="8" id="fVO-qC-7yW"/>
-                    <constraint firstItem="fuU-YO-fmd" firstAttribute="top" secondItem="ndn-Qx-Xj1" secondAttribute="bottom" constant="8" id="mLf-dx-Agm"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="rCf-Sr-PEe" secondAttribute="trailing" id="Vtb-8h-2t2"/>
+                    <constraint firstItem="fuU-YO-fmd" firstAttribute="top" secondItem="rCf-Sr-PEe" secondAttribute="bottom" constant="8" id="bms-Uy-CTj"/>
                     <constraint firstItem="ndn-Qx-Xj1" firstAttribute="width" secondItem="bo6-p3-bEI" secondAttribute="width" id="mvU-IN-zk5"/>
                     <constraint firstItem="bo6-p3-bEI" firstAttribute="trailing" secondItem="MhJ-9w-GBh" secondAttribute="trailingMargin" id="tc8-J8-BCE"/>
+                    <constraint firstItem="rCf-Sr-PEe" firstAttribute="leading" secondItem="MhJ-9w-GBh" secondAttribute="leadingMargin" id="ue6-CD-ep1"/>
                     <constraint firstItem="bo6-p3-bEI" firstAttribute="top" secondItem="xYR-dB-BtY" secondAttribute="bottom" constant="8" id="zpw-si-tmO"/>
                 </constraints>
             </view>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <size key="freeformSize" width="375" height="124"/>
-            <point key="canvasLocation" x="215.5" y="314.5"/>
+            <size key="freeformSize" width="375" height="176"/>
+            <point key="canvasLocation" x="215.5" y="314"/>
         </viewController>
     </objects>
 </document>
