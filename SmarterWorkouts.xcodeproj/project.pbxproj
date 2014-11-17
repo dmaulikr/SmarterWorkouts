@@ -17,6 +17,7 @@
 		545905E56CE3F26AADB60219 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545902E72D54617EBBB68CC0 /* Images.xcassets */; };
 		545906244745051DFE7AB1BB /* ActivityAutoCompleteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459006DCE19B92D0AE7F9A5 /* ActivityAutoCompleteManager.m */; };
 		545907E6880B196D473BB864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545906E82697330EFD85E5DF /* Main.storyboard */; };
+		545908449CDCB7857AAF085C /* Form.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590D3E2CA6B03B9BFF4583 /* Form.m */; };
 		5459088D270A0A4C0A9068E7 /* RestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590C356C896DE4D5CEEEF2 /* RestViewController.xib */; };
 		54590A283E14A8B3434A5EF4 /* RestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905866C29C83F2C696586 /* RestViewController.m */; };
 		54590AAB2E44163CF8136D46 /* WorkoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590834E09D76DC26CC206D /* WorkoutController.m */; };
@@ -24,6 +25,7 @@
 		54590E13FCBBA27BB0D90764 /* BarLoadingSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590BCD6074B6467C4D1111 /* BarLoadingSetupViewController.m */; };
 		54590E16F642336636D23885 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905ED0E0E46EE8AA17304 /* AppDelegate.m */; };
 		54590E367006AD1770F8B724 /* SmarterWorkoutsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 545909FF081DA7CFD645CFF1 /* SmarterWorkoutsTests.m */; };
+		54590E38E3BA2792E51A6AA9 /* FormItemBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 545900346C15ECA1C9D05A81 /* FormItemBarButtonItem.m */; };
 		FF4001A8394D49AEB26DF52E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4D313009C4493EB660B607 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,7 @@
 /* Begin PBXFileReference section */
 		027ABDDA1A195D2000DE3321 /* BarLoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarLoadingViewController.xib; sourceTree = "<group>"; };
 		0288D98B1A180C1A0092C2D3 /* PlateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlateViewController.xib; sourceTree = "<group>"; };
+		545900346C15ECA1C9D05A81 /* FormItemBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormItemBarButtonItem.m; sourceTree = "<group>"; };
 		5459006DCE19B92D0AE7F9A5 /* ActivityAutoCompleteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityAutoCompleteManager.m; sourceTree = "<group>"; };
 		54590099F7C030E1042A60BE /* BarLoadingSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarLoadingSetupViewController.h; sourceTree = "<group>"; };
 		545902056D72E2D7A78706FB /* PlateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateViewController.h; sourceTree = "<group>"; };
@@ -64,8 +67,11 @@
 		54590BCD6074B6467C4D1111 /* BarLoadingSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarLoadingSetupViewController.m; sourceTree = "<group>"; };
 		54590C356C896DE4D5CEEEF2 /* RestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestViewController.xib; sourceTree = "<group>"; };
 		54590CFA15918636F9EA4B15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		54590D3E2CA6B03B9BFF4583 /* Form.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Form.m; sourceTree = "<group>"; };
+		54590DEAFE2ED83A044526A3 /* Form.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Form.h; sourceTree = "<group>"; };
 		54590DFEC887B12C9D546107 /* SmarterWorkoutsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmarterWorkoutsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54590EE4A18F42B78AD7B0B6 /* RestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestViewController.h; sourceTree = "<group>"; };
+		54590F592EBDDD376B16FA5D /* FormItemBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormItemBarButtonItem.h; sourceTree = "<group>"; };
 		54590F6B39C5170F22DD30BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		BD4D313009C4493EB660B607 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC837C87765B4CA28F174290 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -96,6 +102,7 @@
 				0288D98A1A180BFB0092C2D3 /* Contexts */,
 				5459001BFB717303CC6CE2F5 /* Setup */,
 				545902E9077C57BF70A67E6E /* Workout */,
+				545908B129FACEDEF36FC3F3 /* Form */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -169,6 +176,17 @@
 				545904572FDA9B23B09F45BA /* ActivityAutoCompleteManager.h */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		545908B129FACEDEF36FC3F3 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				54590D3E2CA6B03B9BFF4583 /* Form.m */,
+				54590DEAFE2ED83A044526A3 /* Form.h */,
+				545900346C15ECA1C9D05A81 /* FormItemBarButtonItem.m */,
+				54590F592EBDDD376B16FA5D /* FormItemBarButtonItem.h */,
+			);
+			name = Form;
 			sourceTree = "<group>";
 		};
 		54590986B357EA60358384A3 = {
@@ -359,6 +377,8 @@
 				54590E13FCBBA27BB0D90764 /* BarLoadingSetupViewController.m in Sources */,
 				545906244745051DFE7AB1BB /* ActivityAutoCompleteManager.m in Sources */,
 				545902C49340E9AB76127CCC /* ActivityWeightFormViewController.m in Sources */,
+				545908449CDCB7857AAF085C /* Form.m in Sources */,
+				54590E38E3BA2792E51A6AA9 /* FormItemBarButtonItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,10 +1,12 @@
 #import <HTAutocompleteTextField/HTAutocompleteTextField.h>
 #import "ActivityWeightFormViewController.h"
+#import "Form.h"
 
 @implementation ActivityWeightFormViewController
 
 - (void)viewDidLoad {
     [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.form = [[Form alloc] initWithFields:@[self.weightInput, self.repsInput, self.setsInput]];
 }
 
 - (void)attachBelow:(UIView *)field inView:(UIView *)view {
