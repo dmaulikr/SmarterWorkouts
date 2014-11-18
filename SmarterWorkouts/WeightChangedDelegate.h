@@ -3,5 +3,5 @@
 @protocol WeightChangedDelegate <NSObject>
 - (void)weightChanged:(NSDecimalNumber *)weight;
 
-- (void)anotherFieldHasFocus;
+- (void)weightDoneEditing;
 @end

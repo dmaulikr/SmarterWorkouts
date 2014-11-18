@@ -6,17 +6,18 @@
 
 @property(nonatomic, strong) NSLayoutConstraint *heightConstraint;
 
+@property(nonatomic) CGFloat keyboardHeight;
+
 - (CGFloat)initialHeight;
 
 - (CGFloat)expandedHeight;
 
 - (void)attachToBottomOfView:(UIView *)parentView;
 
-- (void)animateOut:(void (^)(BOOL))pFunction;
-
 - (void)animateToHeight:(CGFloat)height;
+
+- (void)animateIn;
 
 - (void)adjustBottomConstraintForKeyboard:(CGRect)rect;
 
-- (void)animateInWithKeyboard:(struct CGRect const)aConst;
 @end

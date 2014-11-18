@@ -1,5 +1,6 @@
 #import "Form.h"
 #import "FormItemBarButtonItem.h"
+#import "FormDelegate.h"
 
 @implementation Form
 
@@ -24,7 +25,7 @@
         FormItemBarButtonItem *closeButton = [[FormItemBarButtonItem alloc] initWithTitle:@"Close"
                                                                                     style:UIBarButtonItemStylePlain
                                                                                    target:self
-                                                                                   action:@selector(doneTapped:)
+                                                                                   action:@selector(closeTapped:)
                                                                                parentView:field];
         FormItemBarButtonItem *doneButton = [[FormItemBarButtonItem alloc] initWithTitle:@"Done"
                                                                                    style:UIBarButtonItemStyleDone
@@ -54,21 +55,16 @@
     [fromField.parentView resignFirstResponder];
 }
 
+- (void)closeTapped:(FormItemBarButtonItem *)fromField {
+    [self.delegate closeButtonTapped];
+}
+
 - (void)nextTapped:(FormItemBarButtonItem *)fromField {
     [fromField.parentView resignFirstResponder];
     NSUInteger index = [self.fields indexOfObject:fromField.parentView];
     if (index < [self.fields count] - 1) {
         [self.fields[index + 1] becomeFirstResponder];
     }
-}
-
-- (UIView *)findFirstResponder {
-    for (UIView *view in  self.fields) {
-        if([view isFirstResponder]){
-            return view;
-        }
-    }
-    return nil;
 }
 
 @end

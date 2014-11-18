@@ -61,14 +61,15 @@
     [self showContext:@"PlateViewController"];
 }
 
-- (void)anotherFieldHasFocus {
+- (void)weightDoneEditing {
     [self removeContextController];
 }
 
 - (void)showContext:(NSString *)nibName {
     if (!self.contextController) {
         self.contextController = [self addContextWithName:nibName];
-        [self.contextController animateInWithKeyboard:self.keyboardRect];
+        self.contextController.keyboardHeight = self.keyboardRect.size.height;
+        [self.contextController animateIn];
     }
 }
 

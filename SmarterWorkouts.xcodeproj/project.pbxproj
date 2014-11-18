@@ -70,6 +70,7 @@
 		54590ABDAAB338BA42EB1F42 /* ContextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextViewController.m; sourceTree = "<group>"; };
 		54590B971EFBE43DBA52F764 /* DecimalNumbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalNumbers.m; sourceTree = "<group>"; };
 		54590BCD6074B6467C4D1111 /* BarLoadingSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarLoadingSetupViewController.m; sourceTree = "<group>"; };
+		54590C20F95089E9CFB72BAF /* FormDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormDelegate.h; sourceTree = "<group>"; };
 		54590C356C896DE4D5CEEEF2 /* RestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestViewController.xib; sourceTree = "<group>"; };
 		54590CFA15918636F9EA4B15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54590D3E2CA6B03B9BFF4583 /* Form.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Form.m; sourceTree = "<group>"; };
@@ -202,6 +203,7 @@
 				54590DEAFE2ED83A044526A3 /* Form.h */,
 				545900346C15ECA1C9D05A81 /* FormItemBarButtonItem.m */,
 				54590F592EBDDD376B16FA5D /* FormItemBarButtonItem.h */,
+				54590C20F95089E9CFB72BAF /* FormDelegate.h */,
 			);
 			name = Form;
 			sourceTree = "<group>";

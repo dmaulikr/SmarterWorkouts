@@ -9,6 +9,7 @@
 - (void)viewDidLoad {
     [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.form = [[Form alloc] initWithFields:@[self.weightInput, self.repsInput, self.setsInput]];
+    [self.form setDelegate:self];
     [self.weightInput addTarget:self action:@selector(weightChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.weightInput setDelegate:self];
     [self.repsInput setDelegate:self];
@@ -20,18 +21,31 @@
     [self.weightChangedDelegate weightChanged:weight];
 }
 
+- (void)closeButtonTapped {
+    self.closing = YES;
+    [self.view endEditing:YES];
+    self.closing = NO;
+}
+
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    if (textField != self.weightInput) {
-        [self.weightChangedDelegate anotherFieldHasFocus];
-    }
-    else {
+    if (textField == self.weightInput) {
         NSDecimalNumber *weight = [DecimalNumbers parse:[self.weightInput text]];
-        if([weight compare:[NSDecimalNumber zero]] != NSOrderedSame){
+        if ([weight compare:[NSDecimalNumber zero]] != NSOrderedSame) {
             [self.weightChangedDelegate weightChanged:weight];
         }
     }
+    else {
+        [self.weightChangedDelegate weightDoneEditing];
+    }
     return YES;
 }
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    if (textField == self.weightInput && !self.closing) {
+        [self.weightChangedDelegate weightDoneEditing];
+    }
+}
+
 
 - (void)attachBelow:(UIView *)field inView:(UIView *)view {
     [view addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeTop

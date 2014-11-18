@@ -11,6 +11,19 @@
     return 210;
 }
 
+- (void)animateIn {
+    [self animateToHeight:[self currentHeight] + self.keyboardHeight];
+}
+
+- (CGFloat)currentHeight {
+    return (self.expanded ? [self expandedHeight] : self.initialHeight);
+}
+
+- (void)adjustBottomConstraintForKeyboard:(CGRect)keyboardRect {
+    self.keyboardHeight = keyboardRect.size.height;
+    [self animateToHeight:[self currentHeight] + keyboardRect.size.height];
+}
+
 - (void)viewTapped:(id)gesture {
     if (self.expanded) {
         [self showLess];
@@ -24,13 +37,13 @@
 - (void)showLess {
     [self.moreLabel setText:@"more"];
     [self.moreLabel layoutIfNeeded];
-    [self animateToHeight:[self initialHeight]];
+    [self animateToHeight:[self initialHeight] + self.keyboardHeight];
 }
 
 - (void)showMore {
     [self.moreLabel setText:@"less"];
     [self.moreLabel layoutIfNeeded];
-    [self animateToHeight:[self expandedHeight]];
+    [self animateToHeight:[self expandedHeight] + self.keyboardHeight];
 }
 
 - (IBAction)setupBarLoading:(id)sender {
