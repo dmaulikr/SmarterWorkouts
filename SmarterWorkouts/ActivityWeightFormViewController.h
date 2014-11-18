@@ -4,11 +4,12 @@
 @class WorkoutController;
 @protocol WeightChangedDelegate;
 @class Form;
+@class FlavorTextHTAutocompleteTextField;
 
 @interface ActivityWeightFormViewController : UIViewController <UITextFieldDelegate, FormDelegate>
 @property (weak, nonatomic) IBOutlet HTAutocompleteTextField *weightInput;
-@property (weak, nonatomic) IBOutlet HTAutocompleteTextField *repsInput;
-@property (weak, nonatomic) IBOutlet HTAutocompleteTextField *setsInput;
+@property (weak, nonatomic) IBOutlet FlavorTextHTAutocompleteTextField *repsInput;
+@property (weak, nonatomic) IBOutlet FlavorTextHTAutocompleteTextField *setsInput;
 
 @property(nonatomic, weak) NSObject<WeightChangedDelegate> *weightChangedDelegate;
 

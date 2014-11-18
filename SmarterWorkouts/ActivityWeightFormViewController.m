@@ -3,6 +3,7 @@
 #import "Form.h"
 #import "DecimalNumbers.h"
 #import "WorkoutController.h"
+#import "FlavorTextHTAutocompleteTextField.h"
 
 @implementation ActivityWeightFormViewController
 
@@ -12,13 +13,21 @@
     [self.form setDelegate:self];
     [self.weightInput addTarget:self action:@selector(weightChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.weightInput setDelegate:self];
+
     [self.repsInput setDelegate:self];
+    [self.repsInput setFlavor:@"reps"];
+
     [self.setsInput setDelegate:self];
+    [self.setsInput setFlavor:@"sets"];
+
+    [self.weightInput becomeFirstResponder];
 }
 
 - (void)weightChanged:(id)weightChanged {
     NSDecimalNumber *weight = [DecimalNumbers parse:[self.weightInput text]];
-    [self.weightChangedDelegate weightChanged:weight];
+    if ([weight compare:[NSDecimalNumber decimalNumberWithString:@"45"]] == NSOrderedDescending) {
+        [self.weightChangedDelegate weightChanged:weight];
+    }
 }
 
 - (void)closeButtonTapped {
@@ -37,12 +46,21 @@
     else {
         [self.weightChangedDelegate weightDoneEditing];
     }
+
+    if ([textField isKindOfClass:FlavorTextHTAutocompleteTextField.class]) {
+        [((FlavorTextHTAutocompleteTextField *) textField) removeFlavor];
+    }
+
     return YES;
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     if (textField == self.weightInput && !self.closing) {
         [self.weightChangedDelegate weightDoneEditing];
+    }
+
+    if ([textField isKindOfClass:FlavorTextHTAutocompleteTextField.class]) {
+        [((FlavorTextHTAutocompleteTextField *) textField) addFlavor];
     }
 }
 

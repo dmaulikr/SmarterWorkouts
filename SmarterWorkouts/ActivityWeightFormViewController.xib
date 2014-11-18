@@ -24,7 +24,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="decimalPad" returnKeyType="next"/>
                     </textField>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sets: 1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bo6-p3-bEI" customClass="HTAutocompleteTextField">
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sets: 1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bo6-p3-bEI" customClass="FlavorTextHTAutocompleteTextField">
                         <rect key="frame" x="191.5" y="66" width="167.5" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="8gD-1s-XNT"/>
@@ -42,7 +42,7 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reps" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ndn-Qx-Xj1" customClass="HTAutocompleteTextField">
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reps" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ndn-Qx-Xj1" customClass="FlavorTextHTAutocompleteTextField">
                         <rect key="frame" x="16" y="66" width="168" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="dTM-HM-hwb"/>
