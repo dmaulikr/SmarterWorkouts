@@ -33,50 +33,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oaf-oF-QNm">
-                                <rect key="frame" x="16" y="84" width="343" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="vx7-qt-U8k"/>
-                                </constraints>
-                                <state key="normal" title="Reveal plates for 320">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="revealPlates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="77z-jP-XFH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBo-1s-zGB">
-                                <rect key="frame" x="16" y="152" width="343" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="wo1-yv-oPj"/>
-                                </constraints>
-                                <state key="normal" title="Rest 3 mins">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="revealTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vyr-5P-CLr"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add an activity (e.g. Squat)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Afe-VQ-S57" customClass="HTAutocompleteTextField">
-                                <rect key="frame" x="16" y="220" width="343" height="50"/>
+                                <rect key="frame" x="16" y="80" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="WBu-qI-JUa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Afe-VQ-S57" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1Mo-C8-ZSo"/>
                             <constraint firstItem="Afe-VQ-S57" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4wf-05-w5r"/>
-                            <constraint firstItem="iBo-1s-zGB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Dpv-c4-51J"/>
-                            <constraint firstItem="Oaf-oF-QNm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Krk-Xa-ZlR"/>
-                            <constraint firstItem="Afe-VQ-S57" firstAttribute="top" secondItem="iBo-1s-zGB" secondAttribute="bottom" constant="8" id="WmA-e2-S1c"/>
-                            <constraint firstItem="iBo-1s-zGB" firstAttribute="top" secondItem="Oaf-oF-QNm" secondAttribute="bottom" constant="8" id="dJL-uL-Gr0"/>
-                            <constraint firstItem="Oaf-oF-QNm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="l9H-8T-4Ge"/>
-                            <constraint firstItem="iBo-1s-zGB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tfa-kM-UdW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Oaf-oF-QNm" secondAttribute="trailing" id="zmA-GC-1Y9"/>
+                            <constraint firstItem="Afe-VQ-S57" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="BB4-VH-35g"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Workout" id="lL6-zL-ihZ"/>

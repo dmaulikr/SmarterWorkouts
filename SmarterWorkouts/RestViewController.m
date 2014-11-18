@@ -6,9 +6,8 @@
     return 60;
 }
 
-- (void)animateIn {
+- (void)animateInWithKeyboard:(struct CGRect const)aConst {
     [self showHideFieldsStarting:NO];
-    [super animateIn];
 }
 
 - (void)showHideFieldsStarting:(BOOL)isStarting {

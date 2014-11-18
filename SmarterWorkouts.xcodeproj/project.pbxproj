@@ -16,9 +16,11 @@
 		545903E9C48B9C4623960184 /* ActivityWeightFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590495D916C9155C6F9425 /* ActivityWeightFormViewController.xib */; };
 		545905E56CE3F26AADB60219 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545902E72D54617EBBB68CC0 /* Images.xcassets */; };
 		545906244745051DFE7AB1BB /* ActivityAutoCompleteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459006DCE19B92D0AE7F9A5 /* ActivityAutoCompleteManager.m */; };
+		5459072545855DDFE7DCEB3A /* DecimalNumbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590B971EFBE43DBA52F764 /* DecimalNumbers.m */; };
 		545907E6880B196D473BB864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545906E82697330EFD85E5DF /* Main.storyboard */; };
 		545908449CDCB7857AAF085C /* Form.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590D3E2CA6B03B9BFF4583 /* Form.m */; };
 		5459088D270A0A4C0A9068E7 /* RestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590C356C896DE4D5CEEEF2 /* RestViewController.xib */; };
+		545909286BF2789FEC5F277D /* DecimalNumbersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590ECB811EC9CD1B1F0127 /* DecimalNumbersTests.m */; };
 		54590A283E14A8B3434A5EF4 /* RestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905866C29C83F2C696586 /* RestViewController.m */; };
 		54590AAB2E44163CF8136D46 /* WorkoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590834E09D76DC26CC206D /* WorkoutController.m */; };
 		54590D079BDADB2B71F67E4F /* PlateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905FE8FE91A0D796F4099 /* PlateViewController.m */; };
@@ -50,6 +52,7 @@
 		545902792F0900BE86135C4D /* SmarterWorkouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmarterWorkouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		545902E72D54617EBBB68CC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		545903B0DD13AF9C9EA94E9C /* ActivityWeightFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityWeightFormViewController.h; sourceTree = "<group>"; };
+		5459041C8F7457EE25991D77 /* DecimalNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecimalNumbers.h; sourceTree = "<group>"; };
 		545904572FDA9B23B09F45BA /* ActivityAutoCompleteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityAutoCompleteManager.h; sourceTree = "<group>"; };
 		5459047548B43CB2B2ABA86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54590495D916C9155C6F9425 /* ActivityWeightFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityWeightFormViewController.xib; sourceTree = "<group>"; };
@@ -62,14 +65,17 @@
 		5459065DD82A3AD6C97D68EA /* ContextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextViewController.h; sourceTree = "<group>"; };
 		54590834E09D76DC26CC206D /* WorkoutController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkoutController.m; sourceTree = "<group>"; };
 		545908C17FF06866026FFF47 /* WorkoutController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutController.h; sourceTree = "<group>"; };
+		5459095D3D1623B3210D4AAD /* WeightChangedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightChangedDelegate.h; sourceTree = "<group>"; };
 		545909FF081DA7CFD645CFF1 /* SmarterWorkoutsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmarterWorkoutsTests.m; sourceTree = "<group>"; };
 		54590ABDAAB338BA42EB1F42 /* ContextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextViewController.m; sourceTree = "<group>"; };
+		54590B971EFBE43DBA52F764 /* DecimalNumbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalNumbers.m; sourceTree = "<group>"; };
 		54590BCD6074B6467C4D1111 /* BarLoadingSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarLoadingSetupViewController.m; sourceTree = "<group>"; };
 		54590C356C896DE4D5CEEEF2 /* RestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestViewController.xib; sourceTree = "<group>"; };
 		54590CFA15918636F9EA4B15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54590D3E2CA6B03B9BFF4583 /* Form.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Form.m; sourceTree = "<group>"; };
 		54590DEAFE2ED83A044526A3 /* Form.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Form.h; sourceTree = "<group>"; };
 		54590DFEC887B12C9D546107 /* SmarterWorkoutsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmarterWorkoutsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54590ECB811EC9CD1B1F0127 /* DecimalNumbersTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalNumbersTests.m; sourceTree = "<group>"; };
 		54590EE4A18F42B78AD7B0B6 /* RestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestViewController.h; sourceTree = "<group>"; };
 		54590F592EBDDD376B16FA5D /* FormItemBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormItemBarButtonItem.h; sourceTree = "<group>"; };
 		54590F6B39C5170F22DD30BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -141,12 +147,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		545902D56BB61349A45A6675 /* Numbers */ = {
+			isa = PBXGroup;
+			children = (
+				54590B971EFBE43DBA52F764 /* DecimalNumbers.m */,
+				5459041C8F7457EE25991D77 /* DecimalNumbers.h */,
+			);
+			path = Numbers;
+			sourceTree = "<group>";
+		};
 		545902E9077C57BF70A67E6E /* Workout */ = {
 			isa = PBXGroup;
 			children = (
 				54590598F1B9BA55BE77E556 /* ActivityWeightFormViewController.m */,
 				545903B0DD13AF9C9EA94E9C /* ActivityWeightFormViewController.h */,
 				54590495D916C9155C6F9425 /* ActivityWeightFormViewController.xib */,
+				5459095D3D1623B3210D4AAD /* WeightChangedDelegate.h */,
 			);
 			name = Workout;
 			sourceTree = "<group>";
@@ -165,6 +181,7 @@
 			children = (
 				54590E60F1278BCB13340384 /* Supporting Files */,
 				545909FF081DA7CFD645CFF1 /* SmarterWorkoutsTests.m */,
+				545909C2A1710D57B6CF7566 /* Numbers */,
 			);
 			path = SmarterWorkoutsTests;
 			sourceTree = "<group>";
@@ -200,6 +217,14 @@
 			);
 			sourceTree = "<group>";
 		};
+		545909C2A1710D57B6CF7566 /* Numbers */ = {
+			isa = PBXGroup;
+			children = (
+				54590ECB811EC9CD1B1F0127 /* DecimalNumbersTests.m */,
+			);
+			path = Numbers;
+			sourceTree = "<group>";
+		};
 		54590E60F1278BCB13340384 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +246,7 @@
 				545908C17FF06866026FFF47 /* WorkoutController.h */,
 				54590834E09D76DC26CC206D /* WorkoutController.m */,
 				5459073BFCBB4A194AAB7B3F /* Data */,
+				545902D56BB61349A45A6675 /* Numbers */,
 			);
 			path = SmarterWorkouts;
 			sourceTree = "<group>";
@@ -379,6 +405,7 @@
 				545902C49340E9AB76127CCC /* ActivityWeightFormViewController.m in Sources */,
 				545908449CDCB7857AAF085C /* Form.m in Sources */,
 				54590E38E3BA2792E51A6AA9 /* FormItemBarButtonItem.m in Sources */,
+				5459072545855DDFE7DCEB3A /* DecimalNumbers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54590E367006AD1770F8B724 /* SmarterWorkoutsTests.m in Sources */,
+				545909286BF2789FEC5F277D /* DecimalNumbersTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

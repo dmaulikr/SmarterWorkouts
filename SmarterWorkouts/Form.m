@@ -21,8 +21,13 @@
 
         NSArray *items = nil;
 
+        FormItemBarButtonItem *closeButton = [[FormItemBarButtonItem alloc] initWithTitle:@"Close"
+                                                                                    style:UIBarButtonItemStylePlain
+                                                                                   target:self
+                                                                                   action:@selector(doneTapped:)
+                                                                               parentView:field];
         FormItemBarButtonItem *doneButton = [[FormItemBarButtonItem alloc] initWithTitle:@"Done"
-                                                                                   style:UIBarButtonItemStylePlain
+                                                                                   style:UIBarButtonItemStyleDone
                                                                                   target:self
                                                                                   action:@selector(doneTapped:)
                                                                               parentView:field];
@@ -37,7 +42,7 @@
             items = @[flexBarButton, doneButton];
         }
         else {
-            items = @[doneButton, flexBarButton, nextButton];
+            items = @[closeButton, flexBarButton, nextButton];
         }
 
         toolbar.items = items;
@@ -50,8 +55,20 @@
 }
 
 - (void)nextTapped:(FormItemBarButtonItem *)fromField {
+    [fromField.parentView resignFirstResponder];
+    NSUInteger index = [self.fields indexOfObject:fromField.parentView];
+    if (index < [self.fields count] - 1) {
+        [self.fields[index + 1] becomeFirstResponder];
+    }
+}
 
-
+- (UIView *)findFirstResponder {
+    for (UIView *view in  self.fields) {
+        if([view isFirstResponder]){
+            return view;
+        }
+    }
+    return nil;
 }
 
 @end

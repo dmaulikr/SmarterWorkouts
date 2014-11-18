@@ -12,7 +12,7 @@
                 <viewControllerLayoutGuide type="top" id="Gej-vU-Gbq"/>
                 <viewControllerLayoutGuide type="bottom" id="wTY-uN-V9a"/>
             </layoutGuides>
-            <view key="view" contentMode="scaleToFill" id="80n-gJ-7ZE">
+            <view key="view" alpha="0.89999999999999991" contentMode="scaleToFill" id="80n-gJ-7ZE">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
@@ -61,7 +61,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="QmQ-GE-NLc" firstAttribute="leading" secondItem="80n-gJ-7ZE" secondAttribute="leadingMargin" id="1Ol-rd-wmp"/>
                     <constraint firstItem="TA2-se-Q6b" firstAttribute="trailing" secondItem="80n-gJ-7ZE" secondAttribute="trailingMargin" id="20b-bl-cie"/>

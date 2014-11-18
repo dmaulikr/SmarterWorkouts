@@ -12,10 +12,11 @@
 
 - (void)attachToBottomOfView:(UIView *)parentView;
 
-- (void)animateIn;
-
 - (void)animateOut:(void (^)(BOOL))pFunction;
 
 - (void)animateToHeight:(CGFloat)height;
 
+- (void)adjustBottomConstraintForKeyboard:(CGRect)rect;
+
+- (void)animateInWithKeyboard:(struct CGRect const)aConst;
 @end

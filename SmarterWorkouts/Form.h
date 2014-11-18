@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Form : NSObject
 
@@ -6,4 +7,5 @@
 
 - (instancetype)initWithFields:(NSArray *)fields;
 
+- (UIView *)findFirstResponder;
 @end

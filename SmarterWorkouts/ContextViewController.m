@@ -44,6 +44,10 @@
     [self.view layoutIfNeeded];
 }
 
+- (void)adjustBottomConstraintForKeyboard:(CGRect)keyboardRect {
+    [self animateToHeight:[self initialHeight] + keyboardRect.size.height];
+}
+
 - (void)animateToHeight:(CGFloat)height {
     self.contextTopConstraint.constant = -height;
     self.heightConstraint.constant = height;
@@ -51,8 +55,8 @@
     }];
 }
 
-- (void)animateIn {
-    [self animateToHeight:[self initialHeight]];
+- (void)animateInWithKeyboard:(struct CGRect const)keyboardRect {
+    [self animateToHeight:[self initialHeight] + keyboardRect.size.height];
 }
 
 - (void)animateOut:(void (^)(BOOL))completion {
@@ -62,7 +66,7 @@
 
 - (void)animateChanges:(void (^)(BOOL))completion {
     [self.view setNeedsUpdateConstraints];
-    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         [self.view layoutIfNeeded];
     }                completion:completion];
 }

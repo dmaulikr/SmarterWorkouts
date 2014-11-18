@@ -18,7 +18,7 @@ static ActivityAutoCompleteManager *instance;
     if([activity containsString:prefix]){
         return [activity substringFromIndex:prefix.length];
     }
-    return nil;
+    return @"";
 }
 
 

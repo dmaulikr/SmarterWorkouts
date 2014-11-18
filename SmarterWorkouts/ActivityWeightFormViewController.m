@@ -1,12 +1,36 @@
 #import <HTAutocompleteTextField/HTAutocompleteTextField.h>
 #import "ActivityWeightFormViewController.h"
 #import "Form.h"
+#import "DecimalNumbers.h"
+#import "WorkoutController.h"
 
 @implementation ActivityWeightFormViewController
 
 - (void)viewDidLoad {
     [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.form = [[Form alloc] initWithFields:@[self.weightInput, self.repsInput, self.setsInput]];
+    [self.weightInput addTarget:self action:@selector(weightChanged:) forControlEvents:UIControlEventEditingChanged];
+    [self.weightInput setDelegate:self];
+    [self.repsInput setDelegate:self];
+    [self.setsInput setDelegate:self];
+}
+
+- (void)weightChanged:(id)weightChanged {
+    NSDecimalNumber *weight = [DecimalNumbers parse:[self.weightInput text]];
+    [self.weightChangedDelegate weightChanged:weight];
+}
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    if (textField != self.weightInput) {
+        [self.weightChangedDelegate anotherFieldHasFocus];
+    }
+    else {
+        NSDecimalNumber *weight = [DecimalNumbers parse:[self.weightInput text]];
+        if([weight compare:[NSDecimalNumber zero]] != NSOrderedSame){
+            [self.weightChangedDelegate weightChanged:weight];
+        }
+    }
+    return YES;
 }
 
 - (void)attachBelow:(UIView *)field inView:(UIView *)view {
