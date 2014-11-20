@@ -1,6 +1,21 @@
 #import "ActivitySelectorViewController.h"
+#import "ActivitySelectorDelegate.h"
 
 @implementation ActivitySelectorViewController
+
+- (instancetype)initWithDelegate:(NSObject <ActivitySelectorDelegate> *)delegate {
+    self = [super init];
+    if (self) {
+        self.delegate = delegate;
+    }
+
+    return self;
+}
+
++ (instancetype)controllerWithDelegate:(NSObject <ActivitySelectorDelegate> *)delegate {
+    return [[self alloc] initWithDelegate:delegate];
+}
+
 
 - (void)viewDidLoad {
     self.data = @[@"Bench", @"Deadlift", @"Rest", @"Squat"];
@@ -17,6 +32,7 @@
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self;
     self.searchController.dimsBackgroundDuringPresentation = NO;
+    self.searchController.hidesNavigationBarDuringPresentation = NO;
 
     [self.searchController.searchBar sizeToFit];
     [self.searchController setDelegate:self];
@@ -41,10 +57,11 @@
 }
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
-    NSLog(@"%@", searchController.searchBar.text);
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.delegate activitySelected:self.data[(NSUInteger) indexPath.row]];
+    [self.searchController setActive:NO];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

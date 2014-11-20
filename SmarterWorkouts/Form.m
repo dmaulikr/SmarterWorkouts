@@ -17,38 +17,48 @@
 - (void)bindViewsWithToolbar {
     for (NSUInteger i = 0; i < [self.fields count]; i++) {
         UITextField *field = self.fields[i];
-        UIToolbar *toolbar = [UIToolbar new];
-        [toolbar sizeToFit];
-
-        NSArray *items = nil;
-
-        FormItemBarButtonItem *closeButton = [[FormItemBarButtonItem alloc] initWithTitle:@"Close"
-                                                                                    style:UIBarButtonItemStylePlain
-                                                                                   target:self
-                                                                                   action:@selector(closeTapped:)
-                                                                               parentView:field];
-        FormItemBarButtonItem *doneButton = [[FormItemBarButtonItem alloc] initWithTitle:@"Done"
-                                                                                   style:UIBarButtonItemStyleDone
-                                                                                  target:self
-                                                                                  action:@selector(doneTapped:)
-                                                                              parentView:field];
-        FormItemBarButtonItem *flexBarButton = [[FormItemBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-        FormItemBarButtonItem *nextButton = [[FormItemBarButtonItem alloc] initWithTitle:@"Next"
-                                                                                   style:UIBarButtonItemStyleDone
-                                                                                  target:self
-                                                                                  action:@selector(nextTapped:)
-                                                                              parentView:field];
-
         if (i == [self.fields count] - 1) {
-            items = @[flexBarButton, doneButton];
+            [self addItems:@[[self spacerButton], [self doneButton:field]] forField:field];
         }
         else {
-            items = @[closeButton, flexBarButton, nextButton];
+            [self addItems:@[[self closeButton:field], [self spacerButton], [self nextButton:field]] forField:field];
         }
-
-        toolbar.items = items;
-        field.inputAccessoryView = toolbar;
     }
+}
+
+- (FormItemBarButtonItem *)nextButton:(UITextField *)field {
+    return [[FormItemBarButtonItem alloc] initWithTitle:@"Next"
+                                                  style:UIBarButtonItemStyleDone
+                                                 target:self
+                                                 action:@selector(nextTapped:)
+                                             parentView:field];
+}
+
+- (FormItemBarButtonItem *)spacerButton {
+    return [[FormItemBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+}
+
+- (FormItemBarButtonItem *)doneButton:(UITextField *)field {
+    return [[FormItemBarButtonItem alloc] initWithTitle:@"Done"
+                                                  style:UIBarButtonItemStyleDone
+                                                 target:self
+                                                 action:@selector(doneTapped:)
+                                             parentView:field];
+}
+
+- (FormItemBarButtonItem *)closeButton:(UITextField *)field {
+    return [[FormItemBarButtonItem alloc] initWithTitle:@"Close"
+                                                  style:UIBarButtonItemStylePlain
+                                                 target:self
+                                                 action:@selector(closeTapped:)
+                                             parentView:field];
+}
+
+- (void)addItems:(NSArray *)items forField:(UITextField *)field {
+    UIToolbar *toolbar = [UIToolbar new];
+    [toolbar sizeToFit];
+    toolbar.items = items;
+    field.inputAccessoryView = toolbar;
 }
 
 - (void)doneTapped:(FormItemBarButtonItem *)fromField {

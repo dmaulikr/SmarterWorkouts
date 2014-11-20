@@ -8,16 +8,29 @@
 
 - (void)viewDidLoad {
     [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-    self.form = [[Form alloc] initWithFields:@[self.weightInput, self.repsInput, self.setsInput]];
+    self.form = [[Form alloc] initWithFields:@[self.repsInput, self.setsInput]];
     [self.form setDelegate:self];
+
     [self.weightInput addTarget:self action:@selector(weightChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.weightInput setDelegate:self];
+    [self.weightInput setFlavor: @"lbs"];
+
+    [self.form addItems:@[[self.form spacerButton], [self.form doneButton:self.weightInput]] forField:self.weightInput];
 
     [self.repsInput setDelegate:self];
     [self.repsInput setFlavor:@"reps"];
 
     [self.setsInput setDelegate:self];
     [self.setsInput setFlavor:@"sets"];
+
+    const int CORNER_RADIUS = 10;
+    self.cancelButton.layer.cornerRadius = CORNER_RADIUS;
+    self.cancelButton.layer.borderWidth = 1;
+    self.cancelButton.layer.borderColor = [self.cancelButton currentTitleColor].CGColor;
+
+    self.addButton.layer.cornerRadius = CORNER_RADIUS;
+    self.addButton.layer.borderWidth = 1;
+    self.addButton.layer.borderColor = [self.addButton currentTitleColor].CGColor;
 
     [self.weightInput becomeFirstResponder];
 }
@@ -30,9 +43,7 @@
 }
 
 - (void)closeButtonTapped {
-    self.closing = YES;
     [self.view endEditing:YES];
-    self.closing = NO;
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
@@ -54,7 +65,7 @@
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    if (textField == self.weightInput && !self.closing) {
+    if (textField == self.weightInput) {
         [self.weightChangedDelegate weightDoneEditing];
     }
 
@@ -64,23 +75,19 @@
 }
 
 
-- (void)attachBelow:(UIView *)field inView:(UIView *)view {
-    [view addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeTop
-                                                     relatedBy:NSLayoutRelationEqual
-                                                        toItem:field attribute:NSLayoutAttributeBottom
-                                                    multiplier:1 constant:0]];
-    [view addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeLeft
-                                                     relatedBy:NSLayoutRelationEqual
-                                                        toItem:field attribute:NSLayoutAttributeLeft
-                                                    multiplier:1 constant:0]];
-    [view addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeRight
-                                                     relatedBy:NSLayoutRelationEqual
-                                                        toItem:field attribute:NSLayoutAttributeRight
-                                                    multiplier:1 constant:0]];
-    [self.view setAlpha:0.1];
-    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        [self.view setAlpha:1];
-    }                completion:nil];
+- (void)attachBelow:(UIView *)parentView {
+    [parentView addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeTop
+                                                           relatedBy:NSLayoutRelationEqual
+                                                              toItem:parentView attribute:NSLayoutAttributeTop
+                                                          multiplier:1 constant:0]];
+    [parentView addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeLeft
+                                                           relatedBy:NSLayoutRelationEqual
+                                                              toItem:parentView attribute:NSLayoutAttributeLeft
+                                                          multiplier:1 constant:0]];
+    [parentView addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeRight
+                                                           relatedBy:NSLayoutRelationEqual
+                                                              toItem:parentView attribute:NSLayoutAttributeRight
+                                                          multiplier:1 constant:0]];
 }
 
 @end

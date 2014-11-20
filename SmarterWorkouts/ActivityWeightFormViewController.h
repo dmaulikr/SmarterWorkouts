@@ -7,15 +7,15 @@
 @class FlavorTextUITextField;
 
 @interface ActivityWeightFormViewController : UIViewController <UITextFieldDelegate, FormDelegate>
-@property(weak, nonatomic) IBOutlet UITextField *weightInput;
+@property(weak, nonatomic) IBOutlet FlavorTextUITextField *weightInput;
 @property(weak, nonatomic) IBOutlet FlavorTextUITextField *repsInput;
 @property(weak, nonatomic) IBOutlet FlavorTextUITextField *setsInput;
+@property (weak, nonatomic) IBOutlet UIButton *addButton;
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 
 @property(nonatomic, weak) NSObject <WeightChangedDelegate> *weightChangedDelegate;
 
 @property(nonatomic, strong) Form *form;
 
-@property(nonatomic) BOOL closing;
-
-- (void)attachBelow:(UIView *)field inView:(UIView *)view;
+- (void)attachBelow:(UIView *)parentView;
 @end

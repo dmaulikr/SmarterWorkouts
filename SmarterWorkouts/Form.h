@@ -2,6 +2,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol FormDelegate;
+@class FormItemBarButtonItem;
 
 @interface Form : NSObject
 
@@ -10,4 +11,9 @@
 
 - (instancetype)initWithFields:(NSArray *)fields;
 
+- (FormItemBarButtonItem *)spacerButton;
+
+- (FormItemBarButtonItem *)doneButton:(UITextField *)field;
+
+- (void)addItems:(NSArray *)items forField:(UITextField *)field;
 @end
