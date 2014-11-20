@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
-#import "HTAutocompleteTextField.h"
+#import <UIKit/UIKit.h>
 
-@interface FlavorTextHTAutocompleteTextField : HTAutocompleteTextField
+@interface FlavorTextUITextField : UITextField
 
 @property(nonatomic, strong) NSString *flavor;
 

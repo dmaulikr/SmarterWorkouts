@@ -15,15 +15,15 @@
 		545903DDFDE7F7965ADDE139 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 545904E1841B2C9A4524B6E1 /* main.m */; };
 		545903E9C48B9C4623960184 /* ActivityWeightFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590495D916C9155C6F9425 /* ActivityWeightFormViewController.xib */; };
 		545905E56CE3F26AADB60219 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545902E72D54617EBBB68CC0 /* Images.xcassets */; };
-		545906244745051DFE7AB1BB /* ActivityAutoCompleteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459006DCE19B92D0AE7F9A5 /* ActivityAutoCompleteManager.m */; };
 		5459072545855DDFE7DCEB3A /* DecimalNumbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590B971EFBE43DBA52F764 /* DecimalNumbers.m */; };
 		545907E6880B196D473BB864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545906E82697330EFD85E5DF /* Main.storyboard */; };
 		545908449CDCB7857AAF085C /* Form.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590D3E2CA6B03B9BFF4583 /* Form.m */; };
 		5459088D270A0A4C0A9068E7 /* RestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590C356C896DE4D5CEEEF2 /* RestViewController.xib */; };
 		545909286BF2789FEC5F277D /* DecimalNumbersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590ECB811EC9CD1B1F0127 /* DecimalNumbersTests.m */; };
 		54590A283E14A8B3434A5EF4 /* RestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905866C29C83F2C696586 /* RestViewController.m */; };
+		54590A67664F9262B5B52B47 /* ActivitySelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590D8F6C3DDCC7E9631124 /* ActivitySelectorViewController.m */; };
 		54590AAB2E44163CF8136D46 /* WorkoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590834E09D76DC26CC206D /* WorkoutController.m */; };
-		54590C593F52A746CCAA3A83 /* FlavorTextHTAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905A77383420E1AD6A86B /* FlavorTextHTAutocompleteTextField.m */; };
+		54590C593F52A746CCAA3A83 /* FlavorTextUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905A77383420E1AD6A86B /* FlavorTextUITextField.m */; };
 		54590D079BDADB2B71F67E4F /* PlateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905FE8FE91A0D796F4099 /* PlateViewController.m */; };
 		54590E13FCBBA27BB0D90764 /* BarLoadingSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590BCD6074B6467C4D1111 /* BarLoadingSetupViewController.m */; };
 		54590E16F642336636D23885 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905ED0E0E46EE8AA17304 /* AppDelegate.m */; };
@@ -47,22 +47,20 @@
 		027ABDDA1A195D2000DE3321 /* BarLoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarLoadingViewController.xib; sourceTree = "<group>"; };
 		0288D98B1A180C1A0092C2D3 /* PlateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlateViewController.xib; sourceTree = "<group>"; };
 		545900346C15ECA1C9D05A81 /* FormItemBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormItemBarButtonItem.m; sourceTree = "<group>"; };
-		5459006DCE19B92D0AE7F9A5 /* ActivityAutoCompleteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityAutoCompleteManager.m; sourceTree = "<group>"; };
 		54590099F7C030E1042A60BE /* BarLoadingSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarLoadingSetupViewController.h; sourceTree = "<group>"; };
 		545902056D72E2D7A78706FB /* PlateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateViewController.h; sourceTree = "<group>"; };
 		5459026EC551FA5E344D9121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		545902792F0900BE86135C4D /* SmarterWorkouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmarterWorkouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		545902BAE2F4DAE4614B711B /* FlavorTextHTAutocompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlavorTextHTAutocompleteTextField.h; sourceTree = "<group>"; };
+		545902BAE2F4DAE4614B711B /* FlavorTextUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlavorTextUITextField.h; sourceTree = "<group>"; };
 		545902E72D54617EBBB68CC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		545903B0DD13AF9C9EA94E9C /* ActivityWeightFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityWeightFormViewController.h; sourceTree = "<group>"; };
 		5459041C8F7457EE25991D77 /* DecimalNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecimalNumbers.h; sourceTree = "<group>"; };
-		545904572FDA9B23B09F45BA /* ActivityAutoCompleteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityAutoCompleteManager.h; sourceTree = "<group>"; };
 		5459047548B43CB2B2ABA86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54590495D916C9155C6F9425 /* ActivityWeightFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityWeightFormViewController.xib; sourceTree = "<group>"; };
 		545904E1841B2C9A4524B6E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		545905866C29C83F2C696586 /* RestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestViewController.m; sourceTree = "<group>"; };
 		54590598F1B9BA55BE77E556 /* ActivityWeightFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityWeightFormViewController.m; sourceTree = "<group>"; };
-		545905A77383420E1AD6A86B /* FlavorTextHTAutocompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlavorTextHTAutocompleteTextField.m; sourceTree = "<group>"; };
+		545905A77383420E1AD6A86B /* FlavorTextUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlavorTextUITextField.m; sourceTree = "<group>"; };
 		545905ED0E0E46EE8AA17304 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		545905FE8FE91A0D796F4099 /* PlateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateViewController.m; sourceTree = "<group>"; };
 		5459061FF264AFC33EDE1495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -76,9 +74,11 @@
 		54590BCD6074B6467C4D1111 /* BarLoadingSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarLoadingSetupViewController.m; sourceTree = "<group>"; };
 		54590C20F95089E9CFB72BAF /* FormDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormDelegate.h; sourceTree = "<group>"; };
 		54590C356C896DE4D5CEEEF2 /* RestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestViewController.xib; sourceTree = "<group>"; };
+		54590C3F1AA3C1FD124A69E7 /* ActivitySelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySelectorViewController.h; sourceTree = "<group>"; };
 		54590CFA15918636F9EA4B15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54590CFAA34FDC36A9AAA591 /* ContextHolderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextHolderViewController.m; sourceTree = "<group>"; };
 		54590D3E2CA6B03B9BFF4583 /* Form.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Form.m; sourceTree = "<group>"; };
+		54590D8F6C3DDCC7E9631124 /* ActivitySelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitySelectorViewController.m; sourceTree = "<group>"; };
 		54590DEAFE2ED83A044526A3 /* Form.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Form.h; sourceTree = "<group>"; };
 		54590DFEC887B12C9D546107 /* SmarterWorkoutsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmarterWorkoutsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54590ECB811EC9CD1B1F0127 /* DecimalNumbersTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalNumbersTests.m; sourceTree = "<group>"; };
@@ -172,6 +172,8 @@
 				545903B0DD13AF9C9EA94E9C /* ActivityWeightFormViewController.h */,
 				54590495D916C9155C6F9425 /* ActivityWeightFormViewController.xib */,
 				5459095D3D1623B3210D4AAD /* WeightChangedDelegate.h */,
+				54590D8F6C3DDCC7E9631124 /* ActivitySelectorViewController.m */,
+				54590C3F1AA3C1FD124A69E7 /* ActivitySelectorViewController.h */,
 			);
 			name = Workout;
 			sourceTree = "<group>";
@@ -195,15 +197,6 @@
 			path = SmarterWorkoutsTests;
 			sourceTree = "<group>";
 		};
-		5459073BFCBB4A194AAB7B3F /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				5459006DCE19B92D0AE7F9A5 /* ActivityAutoCompleteManager.m */,
-				545904572FDA9B23B09F45BA /* ActivityAutoCompleteManager.h */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		545908B129FACEDEF36FC3F3 /* Form */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,8 +205,8 @@
 				545900346C15ECA1C9D05A81 /* FormItemBarButtonItem.m */,
 				54590F592EBDDD376B16FA5D /* FormItemBarButtonItem.h */,
 				54590C20F95089E9CFB72BAF /* FormDelegate.h */,
-				545905A77383420E1AD6A86B /* FlavorTextHTAutocompleteTextField.m */,
-				545902BAE2F4DAE4614B711B /* FlavorTextHTAutocompleteTextField.h */,
+				545905A77383420E1AD6A86B /* FlavorTextUITextField.m */,
+				545902BAE2F4DAE4614B711B /* FlavorTextUITextField.h */,
 			);
 			name = Form;
 			sourceTree = "<group>";
@@ -257,7 +250,6 @@
 				545906E82697330EFD85E5DF /* Main.storyboard */,
 				545908C17FF06866026FFF47 /* WorkoutController.h */,
 				54590834E09D76DC26CC206D /* WorkoutController.m */,
-				5459073BFCBB4A194AAB7B3F /* Data */,
 				545902D56BB61349A45A6675 /* Numbers */,
 			);
 			path = SmarterWorkouts;
@@ -334,8 +326,6 @@
 			mainGroup = 54590986B357EA60358384A3;
 			productRefGroup = 545904972D5B59C73C7E185D /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				545902536CDF9710E59E4BB2 /* SmarterWorkouts */,
@@ -413,13 +403,13 @@
 				545901E8BA347E6F6D5B27BF /* ContextViewController.m in Sources */,
 				54590A283E14A8B3434A5EF4 /* RestViewController.m in Sources */,
 				54590E13FCBBA27BB0D90764 /* BarLoadingSetupViewController.m in Sources */,
-				545906244745051DFE7AB1BB /* ActivityAutoCompleteManager.m in Sources */,
 				545902C49340E9AB76127CCC /* ActivityWeightFormViewController.m in Sources */,
 				545908449CDCB7857AAF085C /* Form.m in Sources */,
 				54590E38E3BA2792E51A6AA9 /* FormItemBarButtonItem.m in Sources */,
 				5459072545855DDFE7DCEB3A /* DecimalNumbers.m in Sources */,
 				54590F603CDD369B64C40EBB /* ContextHolderViewController.m in Sources */,
-				54590C593F52A746CCAA3A83 /* FlavorTextHTAutocompleteTextField.m in Sources */,
+				54590C593F52A746CCAA3A83 /* FlavorTextUITextField.m in Sources */,
+				54590A67664F9262B5B52B47 /* ActivitySelectorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

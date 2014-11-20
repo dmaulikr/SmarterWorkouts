@@ -1,9 +1,9 @@
-#import "FlavorTextHTAutocompleteTextField.h"
+#import "FlavorTextUITextField.h"
 
-@implementation FlavorTextHTAutocompleteTextField
+@implementation FlavorTextUITextField
 
 - (void)addFlavor {
-    NSString *text = self.text;
+    NSString *text = [self text];
     if([text isEqualToString:@""]){
         return;
     }

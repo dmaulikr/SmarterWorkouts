@@ -1,9 +1,8 @@
-#import <HTAutocompleteTextField/HTAutocompleteTextField.h>
 #import "ActivityWeightFormViewController.h"
 #import "Form.h"
 #import "DecimalNumbers.h"
 #import "WorkoutController.h"
-#import "FlavorTextHTAutocompleteTextField.h"
+#import "FlavorTextUITextField.h"
 
 @implementation ActivityWeightFormViewController
 
@@ -47,8 +46,8 @@
         [self.weightChangedDelegate weightDoneEditing];
     }
 
-    if ([textField isKindOfClass:FlavorTextHTAutocompleteTextField.class]) {
-        [((FlavorTextHTAutocompleteTextField *) textField) removeFlavor];
+    if ([textField isKindOfClass:FlavorTextUITextField.class]) {
+        [((FlavorTextUITextField *) textField) removeFlavor];
     }
 
     return YES;
@@ -59,8 +58,8 @@
         [self.weightChangedDelegate weightDoneEditing];
     }
 
-    if ([textField isKindOfClass:FlavorTextHTAutocompleteTextField.class]) {
-        [((FlavorTextHTAutocompleteTextField *) textField) addFlavor];
+    if ([textField isKindOfClass:FlavorTextUITextField.class]) {
+        [((FlavorTextUITextField *) textField) addFlavor];
     }
 }
 

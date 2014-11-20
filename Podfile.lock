@@ -1,15 +1,1 @@
-PODS:
-  - HTAutocompleteTextField (1.3.1)
-
-DEPENDENCIES:
-  - HTAutocompleteTextField (from `https://github.com/hoteltonight/HTAutocompleteTextField`, commit `78e9e8c`)
-
-EXTERNAL SOURCES:
-  HTAutocompleteTextField:
-    :commit: 78e9e8c
-    :git: https://github.com/hoteltonight/HTAutocompleteTextField
-
-SPEC CHECKSUMS:
-  HTAutocompleteTextField: 4603b8e40faaad9525a5c899e069d4461b0d660c
-
 COCOAPODS: 0.33.1

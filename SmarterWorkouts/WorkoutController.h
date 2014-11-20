@@ -4,12 +4,11 @@
 
 @class PlateViewController;
 @class ContextViewController;
-@class HTAutocompleteTextField;
 
-@interface WorkoutController : ContextHolderViewController <UITextFieldDelegate, WeightChangedDelegate> {
+@interface WorkoutController : ContextHolderViewController <UITextFieldDelegate> {
 }
 
-@property(weak, nonatomic) IBOutlet HTAutocompleteTextField *activityInput;
+@property(weak, nonatomic) IBOutlet UITextField *activityInput;
 
 @property(nonatomic, strong) ContextViewController *contextController;
 @property(nonatomic) struct CGRect const keyboardRect;
