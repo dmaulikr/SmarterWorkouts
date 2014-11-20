@@ -3,6 +3,7 @@
 #import "DecimalNumbers.h"
 #import "WorkoutController.h"
 #import "FlavorTextUITextField.h"
+#import "WeightInputControls.h"
 
 @implementation ActivityWeightFormViewController
 
@@ -14,8 +15,7 @@
     [self.weightInput addTarget:self action:@selector(weightChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.weightInput setDelegate:self];
     [self.weightInput setFlavor: @"lbs"];
-
-    [self.form addItems:@[[self.form spacerButton], [self.form doneButton:self.weightInput]] forField:self.weightInput];
+    [WeightInputControls setup:self.weightInput];
 
     [self.repsInput setDelegate:self];
     [self.repsInput setFlavor:@"reps"];

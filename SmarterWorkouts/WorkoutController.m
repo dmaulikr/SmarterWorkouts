@@ -8,6 +8,13 @@
     [self.activityInput setDelegate:self];
 
     self.definesPresentationContext = YES;
+
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped)];
+    [self.view addGestureRecognizer:tap];
+}
+
+- (void)viewTapped {
+    [self.view endEditing:NO];
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
@@ -24,10 +31,10 @@
 - (void)activitySelected:(NSString *)activity {
     self.activity = activity;
     [self.activityInput setHidden:YES];
-    [self showFormBeneath:self.view];
+    [self showForm];
 }
 
-- (void)showFormBeneath:(UIView *)view {
+- (void)showForm {
     ActivityWeightFormViewController *form = [[NSBundle mainBundle] loadNibNamed:@"ActivityWeightFormViewController" owner:self options:nil][0];
     [self addChildViewController:form];
     [self.view addSubview:form.view];

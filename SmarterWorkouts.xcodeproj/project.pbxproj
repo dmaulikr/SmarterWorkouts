@@ -30,6 +30,7 @@
 		54590E367006AD1770F8B724 /* SmarterWorkoutsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 545909FF081DA7CFD645CFF1 /* SmarterWorkoutsTests.m */; };
 		54590E38E3BA2792E51A6AA9 /* FormItemBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 545900346C15ECA1C9D05A81 /* FormItemBarButtonItem.m */; };
 		54590F603CDD369B64C40EBB /* ContextHolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590CFAA34FDC36A9AAA591 /* ContextHolderViewController.m */; };
+		54590FF0EC160BC819C507B6 /* WeightInputControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905F4E490B1E7B9BCCE96 /* WeightInputControls.m */; };
 		FF4001A8394D49AEB26DF52E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4D313009C4493EB660B607 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -63,9 +64,11 @@
 		54590598F1B9BA55BE77E556 /* ActivityWeightFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityWeightFormViewController.m; sourceTree = "<group>"; };
 		545905A77383420E1AD6A86B /* FlavorTextUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlavorTextUITextField.m; sourceTree = "<group>"; };
 		545905ED0E0E46EE8AA17304 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		545905F4E490B1E7B9BCCE96 /* WeightInputControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightInputControls.m; sourceTree = "<group>"; };
 		545905FE8FE91A0D796F4099 /* PlateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateViewController.m; sourceTree = "<group>"; };
 		5459061FF264AFC33EDE1495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5459065DD82A3AD6C97D68EA /* ContextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextViewController.h; sourceTree = "<group>"; };
+		545908280499C66CD36DA1EA /* WeightInputControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightInputControls.h; sourceTree = "<group>"; };
 		54590834E09D76DC26CC206D /* WorkoutController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkoutController.m; sourceTree = "<group>"; };
 		545908C17FF06866026FFF47 /* WorkoutController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutController.h; sourceTree = "<group>"; };
 		5459095D3D1623B3210D4AAD /* WeightChangedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightChangedDelegate.h; sourceTree = "<group>"; };
@@ -253,6 +256,8 @@
 				545908C17FF06866026FFF47 /* WorkoutController.h */,
 				54590834E09D76DC26CC206D /* WorkoutController.m */,
 				545902D56BB61349A45A6675 /* Numbers */,
+				545905F4E490B1E7B9BCCE96 /* WeightInputControls.m */,
+				545908280499C66CD36DA1EA /* WeightInputControls.h */,
 			);
 			path = SmarterWorkouts;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 				54590F603CDD369B64C40EBB /* ContextHolderViewController.m in Sources */,
 				54590C593F52A746CCAA3A83 /* FlavorTextUITextField.m in Sources */,
 				54590A67664F9262B5B52B47 /* ActivitySelectorViewController.m in Sources */,
+				54590FF0EC160BC819C507B6 /* WeightInputControls.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
