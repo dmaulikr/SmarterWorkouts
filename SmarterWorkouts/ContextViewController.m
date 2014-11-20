@@ -57,7 +57,7 @@
 
 - (void)animateChanges:(void (^)(BOOL))completion {
     [self.view setNeedsUpdateConstraints];
-    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         [self.view layoutIfNeeded];
     }                completion:completion];
 }
