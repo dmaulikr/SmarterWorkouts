@@ -3,7 +3,6 @@
 @implementation ContextViewController
 
 - (void)viewDidLoad {
-    self.keyboardHeight = 0;
     [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
 
     UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
@@ -45,11 +44,6 @@
     [self.view layoutIfNeeded];
 }
 
-- (void)adjustBottomConstraintForKeyboard:(CGRect)keyboardRect {
-    self.keyboardHeight = keyboardRect.size.height;
-    [self animateToHeight:[self initialHeight] + keyboardRect.size.height];
-}
-
 - (void)animateToHeight:(CGFloat)height {
     self.contextTopConstraint.constant = -height;
     self.heightConstraint.constant = height;
@@ -58,7 +52,7 @@
 }
 
 - (void)animateIn {
-    [self animateToHeight:[self initialHeight] + self.keyboardHeight];
+    [self animateToHeight:[self initialHeight]];
 }
 
 - (void)animateChanges:(void (^)(BOOL))completion {

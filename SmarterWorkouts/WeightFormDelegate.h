@@ -1,7 +1,10 @@
 #import <Foundation/Foundation.h>
 
-@protocol WeightChangedDelegate <NSObject>
+@protocol WeightFormDelegate <NSObject>
 - (void)weightChanged:(NSDecimalNumber *)weight;
 
 - (void)weightDoneEditing;
+
+- (void)formCanceled;
+
 @end

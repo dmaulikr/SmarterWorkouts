@@ -4,6 +4,7 @@
 #import "WorkoutController.h"
 #import "FlavorTextUITextField.h"
 #import "WeightInputControls.h"
+#import "UIImage+ColorFromImage.h"
 
 @implementation ActivityWeightFormViewController
 
@@ -14,7 +15,8 @@
 
     [self.weightInput addTarget:self action:@selector(weightChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.weightInput setDelegate:self];
-    [self.weightInput setFlavor: @"lbs"];
+    [self.weightInput setFlavor:@"lbs"];
+    [self.weightInput setText:@""];
     [WeightInputControls setup:self.weightInput];
 
     [self.repsInput setDelegate:self];
@@ -23,14 +25,12 @@
     [self.setsInput setDelegate:self];
     [self.setsInput setFlavor:@"sets"];
 
-    const int CORNER_RADIUS = 10;
-    self.cancelButton.layer.cornerRadius = CORNER_RADIUS;
-    self.cancelButton.layer.borderWidth = 1;
-    self.cancelButton.layer.borderColor = [self.cancelButton currentTitleColor].CGColor;
-
-    self.addButton.layer.cornerRadius = CORNER_RADIUS;
+    self.addButton.layer.cornerRadius = 10;
     self.addButton.layer.borderWidth = 1;
     self.addButton.layer.borderColor = [self.addButton currentTitleColor].CGColor;
+
+    [self.cancelButton                                        setBackgroundImage:[UIImage imageWithColor:
+            [UIColor colorWithRed:0.851 green:0.325 blue:0.31 alpha:1]] forState:UIControlStateHighlighted];
 
     [self.weightInput becomeFirstResponder];
 }
@@ -38,7 +38,7 @@
 - (void)weightChanged:(id)weightChanged {
     NSDecimalNumber *weight = [DecimalNumbers parse:[self.weightInput text]];
     if ([weight compare:[NSDecimalNumber decimalNumberWithString:@"45"]] == NSOrderedDescending) {
-        [self.weightChangedDelegate weightChanged:weight];
+        [self.weightFormDelegate weightChanged:weight];
     }
 }
 
@@ -46,15 +46,19 @@
     [self.view endEditing:YES];
 }
 
+- (IBAction)cancelButtonTapped:(id)sender {
+    [self.weightFormDelegate formCanceled];
+}
+
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     if (textField == self.weightInput) {
         NSDecimalNumber *weight = [DecimalNumbers parse:[self.weightInput text]];
         if ([weight compare:[NSDecimalNumber zero]] != NSOrderedSame) {
-            [self.weightChangedDelegate weightChanged:weight];
+            [self.weightFormDelegate weightChanged:weight];
         }
     }
     else {
-        [self.weightChangedDelegate weightDoneEditing];
+        [self.weightFormDelegate weightDoneEditing];
     }
 
     if ([textField isKindOfClass:FlavorTextUITextField.class]) {
@@ -66,7 +70,7 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     if (textField == self.weightInput) {
-        [self.weightChangedDelegate weightDoneEditing];
+        [self.weightFormDelegate weightDoneEditing];
     }
 
     if ([textField isKindOfClass:FlavorTextUITextField.class]) {

@@ -13,11 +13,11 @@
                 <viewControllerLayoutGuide type="bottom" id="fuU-YO-fmd"/>
             </layoutGuides>
             <view key="view" contentMode="scaleToFill" id="MhJ-9w-GBh">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="275"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sets: 1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bo6-p3-bEI" customClass="FlavorTextUITextField">
-                        <rect key="frame" x="191" y="110" width="168" height="50"/>
+                        <rect key="frame" x="191" y="103" width="168" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="8gD-1s-XNT"/>
                         </constraints>
@@ -25,7 +25,7 @@
                         <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" returnKeyType="next"/>
                     </textField>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCf-Sr-PEe">
-                        <rect key="frame" x="192" y="168" width="167" height="44"/>
+                        <rect key="frame" x="16" y="161" width="343" height="44"/>
                         <color key="backgroundColor" red="0.36078431370000003" green="0.72156862749999995" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="wVy-wE-lQ5"/>
@@ -37,73 +37,85 @@
                         </state>
                     </button>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reps: 1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ndn-Qx-Xj1" customClass="FlavorTextUITextField">
-                        <rect key="frame" x="16" y="110" width="168" height="50"/>
+                        <rect key="frame" x="16" y="103" width="168" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="dTM-HM-hwb"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" returnKeyType="next"/>
                     </textField>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UkB-oi-mPd">
-                        <rect key="frame" x="16" y="168" width="167" height="44"/>
-                        <color key="backgroundColor" red="0.85098039215686272" green="0.32549019607843138" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="44" id="1Mf-Sv-qOF"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                        <state key="normal" title="Cancel">
-                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                    </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power Clean" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMy-Oq-vBg">
-                        <rect key="frame" x="16" y="8" width="141" height="36"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Power Clean" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMy-Oq-vBg">
+                        <rect key="frame" x="16" y="8" width="141" height="29"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="360" borderStyle="roundedRect" placeholder="Weight" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xYR-dB-BtY" customClass="FlavorTextUITextField">
-                        <rect key="frame" x="16" y="52" width="343" height="50"/>
+                        <rect key="frame" x="16" y="45" width="343" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="dqv-Y7-oxo"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="decimalPad" returnKeyType="done"/>
                     </textField>
+                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RsL-KM-qG3">
+                        <rect key="frame" x="323" y="5" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="ajc-3w-uxh"/>
+                            <constraint firstAttribute="height" constant="36" id="bFe-9q-NCh"/>
+                        </constraints>
+                        <state key="normal" image="433-x.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="cancelButtonTapped:" destination="Vhc-xa-qEs" eventType="touchUpInside" id="hGa-uO-L2d"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Tap to see plates" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcx-Gs-Q9i">
+                        <rect key="frame" x="123" y="227" width="131" height="26"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="centerX" secondItem="vcx-Gs-Q9i" secondAttribute="centerX" id="57n-Xo-nFk"/>
                     <constraint firstItem="xYR-dB-BtY" firstAttribute="trailing" secondItem="MhJ-9w-GBh" secondAttribute="trailingMargin" id="5Y0-7N-q5f"/>
+                    <constraint firstItem="RsL-KM-qG3" firstAttribute="trailing" secondItem="MhJ-9w-GBh" secondAttribute="trailingMargin" id="6Gj-qx-HcT"/>
                     <constraint firstItem="rCf-Sr-PEe" firstAttribute="top" secondItem="bo6-p3-bEI" secondAttribute="bottom" constant="8" id="6ip-Cl-GNe"/>
                     <constraint firstItem="OMy-Oq-vBg" firstAttribute="top" secondItem="W8O-F9-rx9" secondAttribute="bottom" constant="8" id="8Wo-Ql-LQM"/>
-                    <constraint firstItem="rCf-Sr-PEe" firstAttribute="leading" secondItem="UkB-oi-mPd" secondAttribute="trailing" constant="9" id="8vG-s1-fiJ"/>
                     <constraint firstItem="ndn-Qx-Xj1" firstAttribute="top" secondItem="xYR-dB-BtY" secondAttribute="bottom" constant="8" id="BSU-Fa-vrd"/>
                     <constraint firstItem="rCf-Sr-PEe" firstAttribute="top" secondItem="ndn-Qx-Xj1" secondAttribute="bottom" constant="8" id="Ehk-j1-eci"/>
+                    <constraint firstItem="RsL-KM-qG3" firstAttribute="centerY" secondItem="OMy-Oq-vBg" secondAttribute="centerY" id="GHi-Nh-t8f"/>
                     <constraint firstItem="ndn-Qx-Xj1" firstAttribute="leading" secondItem="MhJ-9w-GBh" secondAttribute="leadingMargin" id="Kch-5Q-fOj"/>
-                    <constraint firstItem="UkB-oi-mPd" firstAttribute="leading" secondItem="MhJ-9w-GBh" secondAttribute="leadingMargin" id="M78-SO-5pH"/>
                     <constraint firstItem="xYR-dB-BtY" firstAttribute="leading" secondItem="MhJ-9w-GBh" secondAttribute="leadingMargin" id="MQY-Hh-rJq"/>
+                    <constraint firstItem="rCf-Sr-PEe" firstAttribute="leading" secondItem="MhJ-9w-GBh" secondAttribute="leadingMargin" id="OXq-bY-l2y"/>
                     <constraint firstItem="bo6-p3-bEI" firstAttribute="leading" secondItem="ndn-Qx-Xj1" secondAttribute="trailing" constant="8" id="SFe-LW-tWn"/>
-                    <constraint firstItem="rCf-Sr-PEe" firstAttribute="width" secondItem="UkB-oi-mPd" secondAttribute="width" id="T4V-rq-vjj"/>
-                    <constraint firstItem="fuU-YO-fmd" firstAttribute="top" secondItem="UkB-oi-mPd" secondAttribute="bottom" constant="8" id="Wyq-Vd-6Os"/>
-                    <constraint firstItem="fuU-YO-fmd" firstAttribute="top" secondItem="rCf-Sr-PEe" secondAttribute="bottom" constant="8" id="bms-Uy-CTj"/>
                     <constraint firstItem="xYR-dB-BtY" firstAttribute="top" secondItem="OMy-Oq-vBg" secondAttribute="bottom" constant="8" id="eIq-9t-79Z"/>
+                    <constraint firstItem="fuU-YO-fmd" firstAttribute="top" secondItem="vcx-Gs-Q9i" secondAttribute="bottom" constant="22" id="fQL-o2-3Z8"/>
                     <constraint firstItem="ndn-Qx-Xj1" firstAttribute="width" secondItem="bo6-p3-bEI" secondAttribute="width" id="mvU-IN-zk5"/>
                     <constraint firstItem="bo6-p3-bEI" firstAttribute="trailing" secondItem="MhJ-9w-GBh" secondAttribute="trailingMargin" id="tc8-J8-BCE"/>
                     <constraint firstItem="OMy-Oq-vBg" firstAttribute="leading" secondItem="MhJ-9w-GBh" secondAttribute="leadingMargin" id="uCR-0g-kkg"/>
                     <constraint firstItem="rCf-Sr-PEe" firstAttribute="trailing" secondItem="MhJ-9w-GBh" secondAttribute="trailingMargin" id="uUH-An-udy"/>
+                    <constraint firstItem="vcx-Gs-Q9i" firstAttribute="top" secondItem="rCf-Sr-PEe" secondAttribute="bottom" constant="22" id="vZs-u3-E7n"/>
                     <constraint firstItem="bo6-p3-bEI" firstAttribute="top" secondItem="xYR-dB-BtY" secondAttribute="bottom" constant="8" id="zpw-si-tmO"/>
                 </constraints>
             </view>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <size key="freeformSize" width="375" height="220"/>
+            <size key="freeformSize" width="375" height="275"/>
             <connections>
                 <outlet property="addButton" destination="rCf-Sr-PEe" id="5iz-RB-n4a"/>
-                <outlet property="cancelButton" destination="UkB-oi-mPd" id="1wZ-qn-qr4"/>
+                <outlet property="cancelButton" destination="RsL-KM-qG3" id="kRT-rm-STn"/>
                 <outlet property="repsInput" destination="ndn-Qx-Xj1" id="rAb-kK-b3g"/>
                 <outlet property="setsInput" destination="bo6-p3-bEI" id="wfK-XA-PiT"/>
                 <outlet property="weightInput" destination="xYR-dB-BtY" id="YGn-de-wVO"/>
             </connections>
-            <point key="canvasLocation" x="215.5" y="314"/>
+            <point key="canvasLocation" x="237.5" y="244.5"/>
         </viewController>
     </objects>
+    <resources>
+        <image name="433-x.png" width="18" height="18"/>
+    </resources>
 </document>

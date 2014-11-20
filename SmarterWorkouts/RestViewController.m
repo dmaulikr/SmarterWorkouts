@@ -6,7 +6,7 @@
     return 60;
 }
 
-- (void)animateIn:(struct CGRect const)aConst {
+- (void)animateIn {
     [self showHideFieldsStarting:NO];
 }
 
