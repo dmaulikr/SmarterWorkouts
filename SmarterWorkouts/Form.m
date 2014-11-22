@@ -16,13 +16,16 @@
 - (void)bindViewsWithToolbar {
     for (NSUInteger i = 0; i < [self.fields count]; i++) {
         UITextField *field = self.fields[i];
-        if (i == [self.fields count] - 1) {
-            [self addItems:@[[self previousButton:field], [self spacerButton], [self doneButton:field]] forField:field];
+        if (i == 0 && field.inputAccessoryView != nil) {
+            [self addItems:@[[self spacerButton], [self nextButton:field]] forField:field];
+        }
+        else if (i == [self.fields count] - 1) {
+            [self setItems:@[[self previousButton:field], [self spacerButton], [self doneButton:field]] forField:field];
         }
         else if (i == 0) {
-            [self addItems:@[[self spacerButton], [self nextButton:field]] forField:field];
+            [self setItems:@[[self spacerButton], [self nextButton:field]] forField:field];
         } else {
-            [self addItems:@[[self previousButton:field], [self spacerButton], [self nextButton:field]] forField:field];
+            [self setItems:@[[self previousButton:field], [self spacerButton], [self nextButton:field]] forField:field];
         }
     }
 }
@@ -55,11 +58,16 @@
                                              parentView:field];
 }
 
-- (void)addItems:(NSArray *)items forField:(UITextField *)field {
+- (void)setItems:(NSArray *)items forField:(UITextField *)field {
     UIToolbar *toolbar = [UIToolbar new];
     [toolbar sizeToFit];
     toolbar.items = items;
     field.inputAccessoryView = toolbar;
+}
+
+- (void)addItems:(NSArray *)items forField:(UITextField *)field {
+    UIToolbar *toolbar = (UIToolbar *) field.inputAccessoryView;
+    toolbar.items = [toolbar.items arrayByAddingObjectsFromArray:items];
 }
 
 - (void)doneTapped:(FormItemBarButtonItem *)fromField {

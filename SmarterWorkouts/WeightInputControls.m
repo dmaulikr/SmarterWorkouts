@@ -2,7 +2,7 @@
 
 @implementation WeightInputControls
 
-+ (void)setup:(UITextField *)field {
++ (void)addLbsKgSelector:(UITextField *)field {
     UIToolbar *toolbar = [UIToolbar new];
     [toolbar sizeToFit];
 
@@ -11,12 +11,7 @@
     segmentedControl.selectedSegmentIndex = 0;
 
     toolbar.items = @[
-            [[UIBarButtonItem alloc] initWithCustomView:segmentedControl],
-            [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
-            [[UIBarButtonItem alloc] initWithTitle:@"Done"
-                                             style:UIBarButtonItemStyleDone
-                                            target:field
-                                            action:@selector(resignFirstResponder)]
+            [[UIBarButtonItem alloc] initWithCustomView:segmentedControl]
     ];
     field.inputAccessoryView = toolbar;
 }

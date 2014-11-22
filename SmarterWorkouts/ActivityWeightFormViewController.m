@@ -10,6 +10,7 @@
 
 - (void)viewDidLoad {
     [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [WeightInputControls addLbsKgSelector:self.weightInput];
     self.form = [[Form alloc] initWithFields:@[self.repsInput, self.setsInput]];
     [self.form setDelegate:self];
 
@@ -17,7 +18,7 @@
     [self.weightInput setDelegate:self];
     [self.weightInput setFlavor:@"lbs"];
     [self.weightInput setText:@""];
-    [WeightInputControls setup:self.weightInput];
+
 
     [self.repsInput setDelegate:self];
     [self.repsInput setFlavor:@"reps"];
@@ -40,10 +41,6 @@
     if ([weight compare:[NSDecimalNumber decimalNumberWithString:@"45"]] == NSOrderedDescending) {
         [self.weightFormDelegate weightChanged:weight];
     }
-}
-
-- (void)closeButtonTapped {
-    [self.view endEditing:YES];
 }
 
 - (IBAction)cancelButtonTapped:(id)sender {

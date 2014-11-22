@@ -15,5 +15,5 @@
 
 - (FormItemBarButtonItem *)doneButton:(UITextField *)field;
 
-- (void)addItems:(NSArray *)items forField:(UITextField *)field;
+- (void)setItems:(NSArray *)items forField:(UITextField *)field;
 @end
