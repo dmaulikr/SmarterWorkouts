@@ -106,6 +106,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <size key="freeformSize" width="375" height="275"/>
             <connections>
+                <outlet property="activityNameLabel" destination="OMy-Oq-vBg" id="kTN-kl-yDO"/>
                 <outlet property="addButton" destination="rCf-Sr-PEe" id="5iz-RB-n4a"/>
                 <outlet property="cancelButton" destination="RsL-KM-qG3" id="kRT-rm-STn"/>
                 <outlet property="repsInput" destination="ndn-Qx-Xj1" id="rAb-kK-b3g"/>

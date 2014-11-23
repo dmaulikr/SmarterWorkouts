@@ -28,13 +28,13 @@
 }
 
 - (void)activitySelected:(Activity *)activity {
-    self.activity = activity;
     [self.activityInput setHidden:YES];
-    [self showForm];
+    [self showForm:activity];
 }
 
-- (void)showForm {
+- (void)showForm:(Activity *)activity {
     self.formController = [[NSBundle mainBundle] loadNibNamed:@"ActivityWeightFormViewController" owner:self options:nil][0];
+    self.formController.activity = activity;
     [self addChildViewController:self.formController];
     [self.view addSubview:self.formController.view];
     [self.formController attachBelow:self.view];
@@ -47,7 +47,6 @@
 }
 
 - (void)weightDoneEditing {
-
 }
 
 - (void)formCanceled {

@@ -5,6 +5,7 @@
 #import "FlavorTextUITextField.h"
 #import "WeightInputControls.h"
 #import "UIImage+ColorFromImage.h"
+#import "Activity.h"
 
 @implementation ActivityWeightFormViewController
 
@@ -18,7 +19,6 @@
     [self.weightInput setDelegate:self];
     [self.weightInput setFlavor:@"lbs"];
     [self.weightInput setText:@""];
-
 
     [self.repsInput setDelegate:self];
     [self.repsInput setFlavor:@"reps"];
@@ -35,6 +35,11 @@
 
     self.tapToSeePlatesLabel.alpha = 0;
     [self.weightInput becomeFirstResponder];
+}
+
+- (void)setActivity:(Activity *)activity {
+    _activity = activity;
+    [self.activityNameLabel setText:self.activity.name];
 }
 
 - (void)weightChanged:(id)weightChanged {
