@@ -12,7 +12,7 @@
 - (void)viewDidLoad {
     [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     [WeightInputControls addLbsKgSelector:self.weightInput];
-    self.form = [[Form alloc] initWithFields:@[self.repsInput, self.setsInput]];
+    self.form = [[Form alloc] initWithFields:@[self.weightInput, self.repsInput, self.setsInput]];
     [self.form setDelegate:self];
 
     [self.weightInput addTarget:self action:@selector(weightChanged:) forControlEvents:UIControlEventEditingChanged];
