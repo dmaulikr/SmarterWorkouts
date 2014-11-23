@@ -19,6 +19,10 @@
     return (self.expanded ? [self expandedHeight] : self.initialHeight);
 }
 
+- (void)setWeight:(NSDecimalNumber *)weight {
+
+}
+
 - (void)viewTapped:(id)gesture {
     if (self.expanded) {
         [self showLess];

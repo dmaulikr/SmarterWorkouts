@@ -86,6 +86,7 @@
             <size key="freeformSize" width="375" height="210"/>
             <connections>
                 <outlet property="moreLabel" destination="TA2-se-Q6b" id="3RE-jt-pD0"/>
+                <outlet property="plates" destination="R1n-Fv-bxu" id="JDz-cc-bm0"/>
             </connections>
             <point key="canvasLocation" x="314.5" y="427"/>
         </viewController>

@@ -48,13 +48,13 @@
         [UIView animateWithDuration:0.3 animations:^{
             self.tapToSeePlatesLabel.alpha = 1;
         }];
-        [self.weightFormDelegate weightChanged:weight];
     }
     else {
         [UIView animateWithDuration:0.3 animations:^{
             self.tapToSeePlatesLabel.alpha = 0;
         }];
     }
+    [self.weightFormDelegate weightChanged:weight];
 }
 
 - (IBAction)cancelButtonTapped:(id)sender {
@@ -88,7 +88,6 @@
         [((FlavorTextUITextField *) textField) addFlavor];
     }
 }
-
 
 - (void)attachBelow:(UIView *)parentView {
     [parentView addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeTop

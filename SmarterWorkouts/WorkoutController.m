@@ -2,6 +2,7 @@
 #import "ActivityWeightFormViewController.h"
 #import "ActivitySelectorViewController.h"
 #import "Activity.h"
+#import "PlateViewController.h"
 
 @implementation WorkoutController
 
@@ -43,7 +44,14 @@
 }
 
 - (void)weightChanged:(NSDecimalNumber *)weight {
-    [self showContext:@"PlateViewController"];
+    if ([weight compare:[NSDecimalNumber decimalNumberWithString:@"45"]] == NSOrderedDescending) {
+        [self showContext:@"PlateViewController"];
+        PlateViewController *plateController = (id) self.contextController;
+        [plateController setWeight:weight];
+    }
+    else {
+        [self removeContextController];
+    }
 }
 
 - (void)weightDoneEditing {
