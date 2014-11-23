@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Bench",
+        "type": "weight"
+    },
+    {
+        "name": "Squat",
+        "type": "weight"
+    },
+    {
+        "name": "Deadlift",
+        "type": "weight"
+    },
+    {
+        "name": "Rest",
+        "type": "time"
+    }
+]

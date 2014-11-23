@@ -23,6 +23,7 @@
 		5459051FE88E8E7AC5B12DE2 /* ModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C1704D57A0CB87CD410 /* ModelTests.m */; };
 		545905DB034A77D24890E6CD /* SWTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902FDED688FE872C92CF1 /* SWTestCase.m */; };
 		545905E56CE3F26AADB60219 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545902E72D54617EBBB68CC0 /* Images.xcassets */; };
+		54590711FF0757080443A06B /* activities.json in Resources */ = {isa = PBXBuildFile; fileRef = 545901A01FE5328A627203DC /* activities.json */; };
 		5459072545855DDFE7DCEB3A /* DecimalNumbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590B971EFBE43DBA52F764 /* DecimalNumbers.m */; };
 		545907E6880B196D473BB864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545906E82697330EFD85E5DF /* Main.storyboard */; };
 		545908449CDCB7857AAF085C /* Form.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590D3E2CA6B03B9BFF4583 /* Form.m */; };
@@ -38,6 +39,7 @@
 		54590E13FCBBA27BB0D90764 /* BarLoadingSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590BCD6074B6467C4D1111 /* BarLoadingSetupViewController.m */; };
 		54590E16F642336636D23885 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905ED0E0E46EE8AA17304 /* AppDelegate.m */; };
 		54590E38E3BA2792E51A6AA9 /* FormItemBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 545900346C15ECA1C9D05A81 /* FormItemBarButtonItem.m */; };
+		54590EC373FD7EC97B29942B /* FixtureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590F88FEA9735A87A8F117 /* FixtureLoader.m */; };
 		54590F603CDD369B64C40EBB /* ContextHolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590CFAA34FDC36A9AAA591 /* ContextHolderViewController.m */; };
 		54590FF0EC160BC819C507B6 /* WeightInputControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905F4E490B1E7B9BCCE96 /* WeightInputControls.m */; };
 		85DF1FB35B784B81ACF3A198 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4D313009C4493EB660B607 /* libPods.a */; };
@@ -69,6 +71,8 @@
 		545900346C15ECA1C9D05A81 /* FormItemBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormItemBarButtonItem.m; sourceTree = "<group>"; };
 		54590053F0A3B118E4D23B69 /* ActivitySelectorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySelectorDelegate.h; sourceTree = "<group>"; };
 		54590099F7C030E1042A60BE /* BarLoadingSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarLoadingSetupViewController.h; sourceTree = "<group>"; };
+		545901A01FE5328A627203DC /* activities.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = activities.json; sourceTree = "<group>"; };
+		545901FC6F67BC3E4EB16505 /* FixtureLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixtureLoader.h; sourceTree = "<group>"; };
 		545902056D72E2D7A78706FB /* PlateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateViewController.h; sourceTree = "<group>"; };
 		5459022C1F4BBBE900679F3F /* UIImage+ColorFromImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorFromImage.m"; sourceTree = "<group>"; };
 		5459026EC551FA5E344D9121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -115,8 +119,10 @@
 		54590F18F5B3463F765DF891 /* ContextHolderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextHolderViewController.h; sourceTree = "<group>"; };
 		54590F592EBDDD376B16FA5D /* FormItemBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormItemBarButtonItem.h; sourceTree = "<group>"; };
 		54590F6B39C5170F22DD30BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		54590F88FEA9735A87A8F117 /* FixtureLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixtureLoader.m; sourceTree = "<group>"; };
+		951EA323B2EBA6F3B93DC5EE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BD4D313009C4493EB660B607 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC837C87765B4CA28F174290 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D2ABD30978FA77B752E19FB5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +138,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF4001A8394D49AEB26DF52E /* libPods.a in Frameworks */,
 				54590BBF38CCD39F0B4229FE /* CoreData.framework in Frameworks */,
+				FF4001A8394D49AEB26DF52E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +158,7 @@
 				0267A9B11A21259300DE7DBC /* Workout.m */,
 				0267A9AD1A21259200DE7DBC /* SetGroup.h */,
 				0267A9AE1A21259200DE7DBC /* SetGroup.m */,
+				54590E4A6AF5956EC65E5BDC /* Fixtures */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -183,6 +190,15 @@
 				54590C356C896DE4D5CEEEF2 /* RestViewController.xib */,
 			);
 			name = Contexts;
+			sourceTree = "<group>";
+		};
+		05940C1A0872FC8C43524F11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2ABD30978FA77B752E19FB5 /* Pods.debug.xcconfig */,
+				951EA323B2EBA6F3B93DC5EE /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		5459001BFB717303CC6CE2F5 /* Setup */ = {
@@ -276,8 +292,8 @@
 				545904972D5B59C73C7E185D /* Products */,
 				54590E7C84FB812C1C10E222 /* SmarterWorkouts */,
 				545906C0F1AE80F757530F01 /* SmarterWorkoutsTests */,
-				CC837C87765B4CA28F174290 /* Pods.xcconfig */,
 				B9DD51763DC44FC980A2E276 /* Frameworks */,
+				05940C1A0872FC8C43524F11 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -296,6 +312,16 @@
 				545906B93DC6D229534AC85D /* UIImage+ColorFromImage.h */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		54590E4A6AF5956EC65E5BDC /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				545901A01FE5328A627203DC /* activities.json */,
+				54590F88FEA9735A87A8F117 /* FixtureLoader.m */,
+				545901FC6F67BC3E4EB16505 /* FixtureLoader.h */,
+			);
+			name = Fixtures;
 			sourceTree = "<group>";
 		};
 		54590E60F1278BCB13340384 /* Supporting Files */ = {
@@ -409,6 +435,8 @@
 			mainGroup = 54590986B357EA60358384A3;
 			productRefGroup = 545904972D5B59C73C7E185D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+			);
 			projectRoot = "";
 			targets = (
 				545902536CDF9710E59E4BB2 /* SmarterWorkouts */,
@@ -422,6 +450,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54590711FF0757080443A06B /* activities.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +499,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A6CE2677E60649EF8528AF3E /* Copy Pods Resources */ = {
@@ -485,7 +514,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D11FD39B6F24433D98B00489 /* Check Pods Manifest.lock */ = {
@@ -531,6 +560,7 @@
 				54590FF0EC160BC819C507B6 /* WeightInputControls.m in Sources */,
 				028A72891A216A3A00ADD7CF /* Activity.m in Sources */,
 				54590DDE043FDC900BB95DFF /* UIImage+ColorFromImage.m in Sources */,
+				54590EC373FD7EC97B29942B /* FixtureLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,7 +606,7 @@
 /* Begin XCBuildConfiguration section */
 		545900EC130ABC7133E6F91D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC837C87765B4CA28F174290 /* Pods.xcconfig */;
+			baseConfigurationReference = D2ABD30978FA77B752E19FB5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SmarterWorkouts.app/SmarterWorkouts";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -592,7 +622,7 @@
 		};
 		5459029655D9499BBE086737 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC837C87765B4CA28F174290 /* Pods.xcconfig */;
+			baseConfigurationReference = 951EA323B2EBA6F3B93DC5EE /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -602,13 +632,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Release;
 		};
 		54590B128CEE8DA132EE5A22 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC837C87765B4CA28F174290 /* Pods.xcconfig */;
+			baseConfigurationReference = D2ABD30978FA77B752E19FB5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -618,13 +648,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Debug;
 		};
 		54590C3DDE05C0586A27165C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC837C87765B4CA28F174290 /* Pods.xcconfig */;
+			baseConfigurationReference = 951EA323B2EBA6F3B93DC5EE /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SmarterWorkouts.app/SmarterWorkouts";
 				FRAMEWORK_SEARCH_PATHS = (

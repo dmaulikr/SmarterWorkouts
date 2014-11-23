@@ -1,6 +1,7 @@
 #import "AppDelegate.h"
 #import "MagicalRecord.h"
 #import "MagicalRecord+Setup.h"
+#import "FixtureLoader.h"
 
 @interface AppDelegate ()
 @end
@@ -9,6 +10,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"Workout"];
+    [FixtureLoader load];
     return YES;
 }
 

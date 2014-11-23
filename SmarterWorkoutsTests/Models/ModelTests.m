@@ -1,12 +1,13 @@
 #import "XCTest/XCTest.h"
 #import "Workout.h"
-#import "NSManagedObject+MagicalRecord.h"
 #import "SetGroup.h"
 #import "Set.h"
-#import "MagicalRecord+Actions.h"
-#import "NSManagedObject+MagicalFinders.h"
 #import "SWTestCase.h"
 #import "Activity.h"
+#import "MagicalRecord.h"
+#import "NSManagedObject+MagicalRecord.h"
+#import "NSManagedObject+MagicalFinders.h"
+#import "MagicalRecord+Actions.h"
 
 @interface ModelTests : SWTestCase
 @end
@@ -16,15 +17,15 @@
 - (void)testCreatingAWorkout {
     XCTestExpectation *expectation = [self expectationWithDescription:@""];
     [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
-        Workout *workout = [Workout MR_createInContext:localContext];
+        Workout *workout = [Workout MR_createEntityInContext:localContext];
         XCTAssertNotNil(workout.setGroups);
 
-        SetGroup *setGroup = [SetGroup MR_createInContext:localContext];
+        SetGroup *setGroup = [SetGroup MR_createEntityInContext:localContext];
         [workout addSetGroupsObject:setGroup];
 
         XCTAssertNotNil(setGroup.sets);
 
-        Set *set = [Set MR_createInContext:localContext];
+        Set *set = [Set MR_createEntityInContext:localContext];
         set.activity = @"Bench";
         set.comments = @"Missed a rep";
         set.reps = @2;
