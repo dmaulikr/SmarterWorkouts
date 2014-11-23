@@ -5,6 +5,11 @@
         <attribute name="personalRecord" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Plate" representedClassName="Plate" syncable="YES">
+        <attribute name="count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="units" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+    </entity>
     <entity name="Set" representedClassName="Set" syncable="YES">
         <attribute name="activity" attributeType="String" syncable="YES"/>
         <attribute name="comments" optional="YES" attributeType="String" syncable="YES"/>
@@ -31,5 +36,6 @@
         <element name="Set" positionX="-63" positionY="-18" width="128" height="135"/>
         <element name="SetGroup" positionX="-54" positionY="36" width="128" height="105"/>
         <element name="Workout" positionX="-45" positionY="54" width="128" height="120"/>
+        <element name="Plate" positionX="-54" positionY="63" width="128" height="90"/>
     </elements>
 </model>

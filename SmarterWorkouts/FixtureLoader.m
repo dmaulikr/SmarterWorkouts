@@ -27,11 +27,15 @@
 
 - (void)loadDataInContext:(NSManagedObjectContext *)context {
     if ([Activity MR_countOfEntitiesWithContext:context] == 0) {
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"activities" ofType:@"json"];
-        NSData *data = [NSData dataWithContentsOfFile:filePath];
-        NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-        [Activity MR_importFromArray:json inContext:context];
+        [Activity MR_importFromArray:[self loadArrayFromFile:@"activities"] inContext:context];
     }
+}
+
+- (NSArray *)loadArrayFromFile:(NSString *)fileName {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    return json;
 }
 
 @end

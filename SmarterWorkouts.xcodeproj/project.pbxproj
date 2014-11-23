@@ -14,6 +14,7 @@
 		027ABDDB1A195D2000DE3321 /* BarLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 027ABDDA1A195D2000DE3321 /* BarLoadingViewController.xib */; };
 		0288D98C1A180C1A0092C2D3 /* PlateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0288D98B1A180C1A0092C2D3 /* PlateViewController.xib */; };
 		028A72891A216A3A00ADD7CF /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 028A72881A216A3A00ADD7CF /* Activity.m */; };
+		545900688903A0D38BC654DC /* Plate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459013EDDE483311BCCA7AB /* Plate.m */; };
 		54590083F0899BE15B741589 /* 433-x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545905B774A40A79F9A1FA19 /* 433-x@2x.png */; };
 		5459014698809F8D820FF883 /* ActivitySelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C9608EA266833F2A3D3 /* ActivitySelectorViewController.m */; };
 		545901E8BA347E6F6D5B27BF /* ContextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590ABDAAB338BA42EB1F42 /* ContextViewController.m */; };
@@ -27,6 +28,7 @@
 		545905E56CE3F26AADB60219 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545902E72D54617EBBB68CC0 /* Images.xcassets */; };
 		54590635826A3AABB86AC35D /* activities.json in Resources */ = {isa = PBXBuildFile; fileRef = 545901A01FE5328A627203DC /* activities.json */; };
 		5459072545855DDFE7DCEB3A /* DecimalNumbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590B971EFBE43DBA52F764 /* DecimalNumbers.m */; };
+		5459072AA62AACF824479581 /* PlateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459057E9A8FEBF598DFA13B /* PlateTests.m */; };
 		545907E6880B196D473BB864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545906E82697330EFD85E5DF /* Main.storyboard */; };
 		545908449CDCB7857AAF085C /* Form.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590D3E2CA6B03B9BFF4583 /* Form.m */; };
 		5459088D270A0A4C0A9068E7 /* RestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590C356C896DE4D5CEEEF2 /* RestViewController.xib */; };
@@ -73,6 +75,7 @@
 		545900346C15ECA1C9D05A81 /* FormItemBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormItemBarButtonItem.m; sourceTree = "<group>"; };
 		54590099F7C030E1042A60BE /* BarLoadingSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarLoadingSetupViewController.h; sourceTree = "<group>"; };
 		54590104A11C81871088D3D1 /* ActivityFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityFilter.m; sourceTree = "<group>"; };
+		5459013EDDE483311BCCA7AB /* Plate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plate.m; sourceTree = SOURCE_ROOT; };
 		545901A01FE5328A627203DC /* activities.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = activities.json; sourceTree = "<group>"; };
 		545901FC6F67BC3E4EB16505 /* FixtureLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixtureLoader.h; sourceTree = "<group>"; };
 		545902056D72E2D7A78706FB /* PlateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateViewController.h; sourceTree = "<group>"; };
@@ -85,8 +88,10 @@
 		545903B0DD13AF9C9EA94E9C /* ActivityWeightFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityWeightFormViewController.h; sourceTree = "<group>"; };
 		5459041C8F7457EE25991D77 /* DecimalNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecimalNumbers.h; sourceTree = "<group>"; };
 		5459047548B43CB2B2ABA86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5459047EBAD12095C27345E6 /* Plate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plate.h; sourceTree = SOURCE_ROOT; };
 		54590495D916C9155C6F9425 /* ActivityWeightFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityWeightFormViewController.xib; sourceTree = "<group>"; };
 		545904E1841B2C9A4524B6E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5459057E9A8FEBF598DFA13B /* PlateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateTests.m; sourceTree = "<group>"; };
 		545905866C29C83F2C696586 /* RestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestViewController.m; sourceTree = "<group>"; };
 		54590598F1B9BA55BE77E556 /* ActivityWeightFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityWeightFormViewController.m; sourceTree = "<group>"; };
 		545905A77383420E1AD6A86B /* FlavorTextUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlavorTextUITextField.m; sourceTree = "<group>"; };
@@ -164,6 +169,8 @@
 				0267A9AD1A21259200DE7DBC /* SetGroup.h */,
 				0267A9AE1A21259200DE7DBC /* SetGroup.m */,
 				54590E4A6AF5956EC65E5BDC /* Fixtures */,
+				5459047EBAD12095C27345E6 /* Plate.h */,
+				5459013EDDE483311BCCA7AB /* Plate.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -272,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				54590C1704D57A0CB87CD410 /* ModelTests.m */,
+				5459057E9A8FEBF598DFA13B /* PlateTests.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -475,8 +483,6 @@
 			mainGroup = 54590986B357EA60358384A3;
 			productRefGroup = 545904972D5B59C73C7E185D /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				545902536CDF9710E59E4BB2 /* SmarterWorkouts */,
@@ -602,6 +608,7 @@
 				54590EC373FD7EC97B29942B /* FixtureLoader.m in Sources */,
 				5459014698809F8D820FF883 /* ActivitySelectorViewController.m in Sources */,
 				545902D7B0A4AB9E8044A7A2 /* ActivityFilter.m in Sources */,
+				545900688903A0D38BC654DC /* Plate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +620,7 @@
 				5459051FE88E8E7AC5B12DE2 /* ModelTests.m in Sources */,
 				545905DB034A77D24890E6CD /* SWTestCase.m in Sources */,
 				54590D02DC69A387D23A1539 /* ActivityFilterTests.m in Sources */,
+				5459072AA62AACF824479581 /* PlateTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,7 +682,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Release;
 		};
@@ -690,7 +698,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Debug;
 		};
