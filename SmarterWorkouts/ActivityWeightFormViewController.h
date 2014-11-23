@@ -17,5 +17,7 @@
 
 @property(nonatomic, strong) Form *form;
 
+@property (weak, nonatomic) IBOutlet UILabel *tapToSeePlatesLabel;
+
 - (void)attachBelow:(UIView *)parentView;
 @end

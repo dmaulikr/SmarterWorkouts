@@ -110,6 +110,7 @@
                 <outlet property="cancelButton" destination="RsL-KM-qG3" id="kRT-rm-STn"/>
                 <outlet property="repsInput" destination="ndn-Qx-Xj1" id="rAb-kK-b3g"/>
                 <outlet property="setsInput" destination="bo6-p3-bEI" id="wfK-XA-PiT"/>
+                <outlet property="tapToSeePlatesLabel" destination="vcx-Gs-Q9i" id="aNf-Km-VjR"/>
                 <outlet property="weightInput" destination="xYR-dB-BtY" id="YGn-de-wVO"/>
             </connections>
             <point key="canvasLocation" x="237.5" y="244.5"/>

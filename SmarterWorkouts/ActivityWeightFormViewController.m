@@ -33,13 +33,22 @@
     [self.cancelButton                                        setBackgroundImage:[UIImage imageWithColor:
             [UIColor colorWithRed:0.851 green:0.325 blue:0.31 alpha:1]] forState:UIControlStateHighlighted];
 
+    self.tapToSeePlatesLabel.alpha = 0;
     [self.weightInput becomeFirstResponder];
 }
 
 - (void)weightChanged:(id)weightChanged {
     NSDecimalNumber *weight = [DecimalNumbers parse:[self.weightInput text]];
     if ([weight compare:[NSDecimalNumber decimalNumberWithString:@"45"]] == NSOrderedDescending) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.tapToSeePlatesLabel.alpha = 1;
+        }];
         [self.weightFormDelegate weightChanged:weight];
+    }
+    else {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.tapToSeePlatesLabel.alpha = 0;
+        }];
     }
 }
 
