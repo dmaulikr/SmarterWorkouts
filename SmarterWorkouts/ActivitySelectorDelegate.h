@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
+@class Activity;
+
 @protocol ActivitySelectorDelegate <NSObject>
-- (void)activitySelected:(NSString *)activity;
+- (void)activitySelected:(Activity *)activity;
 @end

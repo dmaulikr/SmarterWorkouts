@@ -1,8 +1,8 @@
 #import <MagicalRecord/MagicalRecord+Actions.h>
 #import "FixtureLoader.h"
 #import "Activity.h"
-#import "NSManagedObject+MagicalAggregation.h"
 #import "NSManagedObject+MagicalDataImport.h"
+#import "NSManagedObject+MagicalAggregation.h"
 
 @implementation FixtureLoader
 
@@ -18,19 +18,19 @@
 }
 
 - (void)loadData {
-    if ([Activity MR_countOfEntities] == 0) {
+    [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
+        [self loadDataInContext:localContext];
+    }                 completion:^(BOOL success, NSError *error) {
+        self.loaded = YES;
+    }];
+}
+
+- (void)loadDataInContext:(NSManagedObjectContext *)context {
+    if ([Activity MR_countOfEntitiesWithContext:context] == 0) {
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"activities" ofType:@"json"];
         NSData *data = [NSData dataWithContentsOfFile:filePath];
         NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-
-        [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
-            [Activity MR_importFromArray:json inContext:localContext];
-        }                 completion:^(BOOL success, NSError *error) {
-            self.loaded = YES;
-        }];
-    }
-    else {
-        self.loaded = YES;
+        [Activity MR_importFromArray:json inContext:context];
     }
 }
 

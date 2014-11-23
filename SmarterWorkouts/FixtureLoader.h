@@ -8,4 +8,5 @@
 
 - (void)loadData;
 
+- (void)loadDataInContext:(NSManagedObjectContext *)context;
 @end

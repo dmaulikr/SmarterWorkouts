@@ -1,5 +1,8 @@
 #import "ActivitySelectorViewController.h"
 #import "ActivitySelectorDelegate.h"
+#import "Activity.h"
+#import "NSManagedObject+MagicalFinders.h"
+#import "ActivityFilter.h"
 
 @implementation ActivitySelectorViewController
 
@@ -12,13 +15,9 @@
     return self;
 }
 
-+ (instancetype)controllerWithDelegate:(NSObject <ActivitySelectorDelegate> *)delegate {
-    return [[self alloc] initWithDelegate:delegate];
-}
-
-
 - (void)viewDidLoad {
-    self.data = @[@"Bench", @"Deadlift", @"Rest", @"Squat"];
+    self.data = [Activity MR_findAllSortedBy:@"name" ascending:YES];
+    self.filteredData = self.data;
     self.navigationItem.title = @"Choose an Activity";
 
     UIBarButtonItem *cancelButton =
@@ -44,7 +43,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.data count];
+    return [self.filteredData count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -52,15 +51,22 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ActivitySearchItem"];
     }
-    [cell.textLabel setText:self.data[(NSUInteger) indexPath.row]];
+    Activity *activity = self.filteredData[(NSUInteger) indexPath.row];
+    [cell.textLabel setText:activity.name];
     return cell;
 }
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    [self filterDataBy:[searchController.searchBar text]];
+}
+
+- (void)filterDataBy:(NSString *)text {
+    self.filteredData = [ActivityFilter filter:self.data forText:text];
+    [self.tableView reloadData];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.delegate activitySelected:self.data[(NSUInteger) indexPath.row]];
+    [self.delegate activitySelected:self.filteredData[(NSUInteger) indexPath.row]];
     [self.searchController setActive:NO];
     [self dismissViewControllerAnimated:YES completion:nil];
 }

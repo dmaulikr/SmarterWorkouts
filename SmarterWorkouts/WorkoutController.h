@@ -14,6 +14,6 @@
 
 @property(nonatomic, strong) ContextViewController *contextController;
 @property(nonatomic) struct CGRect const keyboardRect;
-@property(nonatomic, copy) NSString *activity;
+@property(nonatomic, strong) Activity *activity;
 @property(nonatomic, strong) ActivityWeightFormViewController *formController;
 @end

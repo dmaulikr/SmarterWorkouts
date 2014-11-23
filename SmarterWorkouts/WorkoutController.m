@@ -1,6 +1,7 @@
 #import "WorkoutController.h"
 #import "ActivityWeightFormViewController.h"
 #import "ActivitySelectorViewController.h"
+#import "Activity.h"
 
 @implementation WorkoutController
 
@@ -26,7 +27,7 @@
     [self presentViewController:nav animated:YES completion:nil];
 }
 
-- (void)activitySelected:(NSString *)activity {
+- (void)activitySelected:(Activity *)activity {
     self.activity = activity;
     [self.activityInput setHidden:YES];
     [self showForm];
