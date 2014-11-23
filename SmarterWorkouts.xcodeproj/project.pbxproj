@@ -23,7 +23,7 @@
 		5459051FE88E8E7AC5B12DE2 /* ModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C1704D57A0CB87CD410 /* ModelTests.m */; };
 		545905DB034A77D24890E6CD /* SWTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902FDED688FE872C92CF1 /* SWTestCase.m */; };
 		545905E56CE3F26AADB60219 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545902E72D54617EBBB68CC0 /* Images.xcassets */; };
-		54590711FF0757080443A06B /* activities.json in Resources */ = {isa = PBXBuildFile; fileRef = 545901A01FE5328A627203DC /* activities.json */; };
+		54590635826A3AABB86AC35D /* activities.json in Resources */ = {isa = PBXBuildFile; fileRef = 545901A01FE5328A627203DC /* activities.json */; };
 		5459072545855DDFE7DCEB3A /* DecimalNumbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590B971EFBE43DBA52F764 /* DecimalNumbers.m */; };
 		545907E6880B196D473BB864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545906E82697330EFD85E5DF /* Main.storyboard */; };
 		545908449CDCB7857AAF085C /* Form.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590D3E2CA6B03B9BFF4583 /* Form.m */; };
@@ -450,7 +450,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54590711FF0757080443A06B /* activities.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +465,7 @@
 				027ABDDB1A195D2000DE3321 /* BarLoadingViewController.xib in Resources */,
 				545903E9C48B9C4623960184 /* ActivityWeightFormViewController.xib in Resources */,
 				54590083F0899BE15B741589 /* 433-x@2x.png in Resources */,
+				54590635826A3AABB86AC35D /* activities.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

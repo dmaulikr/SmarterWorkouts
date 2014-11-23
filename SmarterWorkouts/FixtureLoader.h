@@ -4,6 +4,8 @@
 
 @property(nonatomic) BOOL loaded;
 
-- (void)load;
++ (FixtureLoader *)instance;
+
+- (void)loadData;
 
 @end

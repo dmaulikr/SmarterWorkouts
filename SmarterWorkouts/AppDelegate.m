@@ -10,7 +10,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"Workout"];
-    [FixtureLoader load];
+    [[FixtureLoader instance] loadData];
     return YES;
 }
 

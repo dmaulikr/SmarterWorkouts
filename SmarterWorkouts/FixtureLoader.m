@@ -17,7 +17,7 @@
     return loader;
 }
 
-- (void)load {
+- (void)loadData {
     if ([Activity MR_countOfEntities] == 0) {
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"activities" ofType:@"json"];
         NSData *data = [NSData dataWithContentsOfFile:filePath];
@@ -28,6 +28,9 @@
         }                 completion:^(BOOL success, NSError *error) {
             self.loaded = YES;
         }];
+    }
+    else {
+        self.loaded = YES;
     }
 }
 
