@@ -13,6 +13,7 @@
 		0267A9B51A21259300DE7DBC /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 0267A9B41A21259300DE7DBC /* Set.m */; };
 		027ABDDB1A195D2000DE3321 /* BarLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 027ABDDA1A195D2000DE3321 /* BarLoadingViewController.xib */; };
 		0288D98C1A180C1A0092C2D3 /* PlateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0288D98B1A180C1A0092C2D3 /* PlateViewController.xib */; };
+		028A72891A216A3A00ADD7CF /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 028A72881A216A3A00ADD7CF /* Activity.m */; };
 		54590083F0899BE15B741589 /* 433-x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545905B774A40A79F9A1FA19 /* 433-x@2x.png */; };
 		545901E8BA347E6F6D5B27BF /* ContextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590ABDAAB338BA42EB1F42 /* ContextViewController.m */; };
 		545902C49340E9AB76127CCC /* ActivityWeightFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590598F1B9BA55BE77E556 /* ActivityWeightFormViewController.m */; };
@@ -63,6 +64,8 @@
 		0267A9B41A21259300DE7DBC /* Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Set.m; sourceTree = "<group>"; };
 		027ABDDA1A195D2000DE3321 /* BarLoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarLoadingViewController.xib; sourceTree = "<group>"; };
 		0288D98B1A180C1A0092C2D3 /* PlateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlateViewController.xib; sourceTree = "<group>"; };
+		028A72871A216A3A00ADD7CF /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		028A72881A216A3A00ADD7CF /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		545900346C15ECA1C9D05A81 /* FormItemBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormItemBarButtonItem.m; sourceTree = "<group>"; };
 		54590053F0A3B118E4D23B69 /* ActivitySelectorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySelectorDelegate.h; sourceTree = "<group>"; };
 		54590099F7C030E1042A60BE /* BarLoadingSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarLoadingSetupViewController.h; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				0267A9AA1A21180D00DE7DBC /* Workout.xcdatamodeld */,
+				028A72871A216A3A00ADD7CF /* Activity.h */,
+				028A72881A216A3A00ADD7CF /* Activity.m */,
 				0267A9B31A21259300DE7DBC /* Set.h */,
 				0267A9B41A21259300DE7DBC /* Set.m */,
 				0267A9B01A21259300DE7DBC /* Workout.h */,
@@ -404,8 +409,6 @@
 			mainGroup = 54590986B357EA60358384A3;
 			productRefGroup = 545904972D5B59C73C7E185D /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				545902536CDF9710E59E4BB2 /* SmarterWorkouts */,
@@ -526,6 +529,7 @@
 				54590C593F52A746CCAA3A83 /* FlavorTextUITextField.m in Sources */,
 				54590A67664F9262B5B52B47 /* ActivitySelectorViewController.m in Sources */,
 				54590FF0EC160BC819C507B6 /* WeightInputControls.m in Sources */,
+				028A72891A216A3A00ADD7CF /* Activity.m in Sources */,
 				54590DDE043FDC900BB95DFF /* UIImage+ColorFromImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,6 +6,7 @@
 #import "MagicalRecord+Actions.h"
 #import "NSManagedObject+MagicalFinders.h"
 #import "SWTestCase.h"
+#import "Activity.h"
 
 @interface ModelTests : SWTestCase
 @end
@@ -47,6 +48,11 @@
     }];
 
     [self waitForExpectationsWithTimeout:3 handler:nil];
+}
+
+- (void)testSeedsDefaultActivities {
+    NSArray *seededActivities = [Activity MR_findAll];
+    XCTAssertTrue([seededActivities count] > 0);
 }
 
 @end

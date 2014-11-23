@@ -31,3 +31,7 @@ A set group is any grouping of sets
 * Name  
 * Duration
 *(e.g. Cindy)
+
+## Activity
+* Name
+* PersonalRecord

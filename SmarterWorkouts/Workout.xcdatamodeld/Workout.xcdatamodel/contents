@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14A389" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Activity" representedClassName="Activity" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="personalRecord" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+    </entity>
     <entity name="Set" representedClassName="Set" syncable="YES">
         <attribute name="activity" attributeType="String" syncable="YES"/>
         <attribute name="comments" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,5 +29,6 @@
         <element name="Set" positionX="-63" positionY="-18" width="128" height="135"/>
         <element name="SetGroup" positionX="-54" positionY="36" width="128" height="105"/>
         <element name="Workout" positionX="-45" positionY="54" width="128" height="120"/>
+        <element name="Activity" positionX="-54" positionY="63" width="128" height="75"/>
     </elements>
 </model>
