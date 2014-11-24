@@ -4,6 +4,7 @@
 #import "MagicalRecord+Actions.h"
 #import "FixtureLoader.h"
 #import "Activity.h"
+#import "Plate.h"
 
 @implementation SWTestCase
 
@@ -13,6 +14,7 @@
     [MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext *localContext) {
         [Workout MR_truncateAllInContext:localContext];
         [Activity MR_truncateAllInContext:localContext];
+        [Plate MR_truncateAllInContext:localContext];
         [[FixtureLoader instance] loadDataInContext: localContext];
     }];
 }

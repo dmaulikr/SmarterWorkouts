@@ -7,4 +7,7 @@
 @property (nonatomic, retain) NSNumber * count;
 @property (nonatomic, retain) NSString * units;
 
++ (NSArray *)findAllSorted:(NSString *)string;
+
++ (void)createPlateWithWeight:(NSDecimalNumber *)weight count:(int)count units:(NSString *)units;
 @end

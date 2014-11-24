@@ -14,6 +14,7 @@
 		027ABDDB1A195D2000DE3321 /* BarLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 027ABDDA1A195D2000DE3321 /* BarLoadingViewController.xib */; };
 		0288D98C1A180C1A0092C2D3 /* PlateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0288D98B1A180C1A0092C2D3 /* PlateViewController.xib */; };
 		028A72891A216A3A00ADD7CF /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 028A72881A216A3A00ADD7CF /* Activity.m */; };
+		5459004C362F8D82667493BD /* BarCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902FC40A458CC44ECB9A4 /* BarCalculatorTests.m */; };
 		545900688903A0D38BC654DC /* Plate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459013EDDE483311BCCA7AB /* Plate.m */; };
 		54590083F0899BE15B741589 /* 433-x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545905B774A40A79F9A1FA19 /* 433-x@2x.png */; };
 		5459014698809F8D820FF883 /* ActivitySelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C9608EA266833F2A3D3 /* ActivitySelectorViewController.m */; };
@@ -24,6 +25,7 @@
 		545903DDFDE7F7965ADDE139 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 545904E1841B2C9A4524B6E1 /* main.m */; };
 		545903E9C48B9C4623960184 /* ActivityWeightFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590495D916C9155C6F9425 /* ActivityWeightFormViewController.xib */; };
 		5459051FE88E8E7AC5B12DE2 /* ModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C1704D57A0CB87CD410 /* ModelTests.m */; };
+		545905A336F2279F9E0685A0 /* BarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590709AEBEC0E0AE30F736 /* BarCalculator.m */; };
 		545905DB034A77D24890E6CD /* SWTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902FDED688FE872C92CF1 /* SWTestCase.m */; };
 		545905E56CE3F26AADB60219 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545902E72D54617EBBB68CC0 /* Images.xcassets */; };
 		54590635826A3AABB86AC35D /* activities.json in Resources */ = {isa = PBXBuildFile; fileRef = 545901A01FE5328A627203DC /* activities.json */; };
@@ -32,6 +34,7 @@
 		545907E6880B196D473BB864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545906E82697330EFD85E5DF /* Main.storyboard */; };
 		545908449CDCB7857AAF085C /* Form.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590D3E2CA6B03B9BFF4583 /* Form.m */; };
 		5459088D270A0A4C0A9068E7 /* RestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590C356C896DE4D5CEEEF2 /* RestViewController.xib */; };
+		545908EA948161743CA45E19 /* PlateRemaining.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459013B85548A27B8B1B805 /* PlateRemaining.m */; };
 		545909286BF2789FEC5F277D /* DecimalNumbersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590ECB811EC9CD1B1F0127 /* DecimalNumbersTests.m */; };
 		54590A283E14A8B3434A5EF4 /* RestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905866C29C83F2C696586 /* RestViewController.m */; };
 		54590A93C4533D141A1297E5 /* plates.json in Resources */ = {isa = PBXBuildFile; fileRef = 545908CBD1A4AE5DEC6EF376 /* plates.json */; };
@@ -75,7 +78,9 @@
 		028A72881A216A3A00ADD7CF /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		545900346C15ECA1C9D05A81 /* FormItemBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormItemBarButtonItem.m; sourceTree = "<group>"; };
 		54590099F7C030E1042A60BE /* BarLoadingSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarLoadingSetupViewController.h; sourceTree = "<group>"; };
+		545900DE6BC3C8B8CD9B979C /* PlateRemaining.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateRemaining.h; sourceTree = "<group>"; };
 		54590104A11C81871088D3D1 /* ActivityFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityFilter.m; sourceTree = "<group>"; };
+		5459013B85548A27B8B1B805 /* PlateRemaining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateRemaining.m; sourceTree = "<group>"; };
 		5459013EDDE483311BCCA7AB /* Plate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plate.m; sourceTree = SOURCE_ROOT; };
 		545901A01FE5328A627203DC /* activities.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = activities.json; sourceTree = "<group>"; };
 		545901FC6F67BC3E4EB16505 /* FixtureLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixtureLoader.h; sourceTree = "<group>"; };
@@ -85,6 +90,7 @@
 		545902792F0900BE86135C4D /* SmarterWorkouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmarterWorkouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		545902BAE2F4DAE4614B711B /* FlavorTextUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlavorTextUITextField.h; sourceTree = "<group>"; };
 		545902E72D54617EBBB68CC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		545902FC40A458CC44ECB9A4 /* BarCalculatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarCalculatorTests.m; sourceTree = "<group>"; };
 		545902FDED688FE872C92CF1 /* SWTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTestCase.m; sourceTree = "<group>"; };
 		545903B0DD13AF9C9EA94E9C /* ActivityWeightFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityWeightFormViewController.h; sourceTree = "<group>"; };
 		5459041C8F7457EE25991D77 /* DecimalNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecimalNumbers.h; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 		54590645E3F315FB504F4374 /* ActivitySelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySelectorViewController.h; sourceTree = "<group>"; };
 		5459065DD82A3AD6C97D68EA /* ContextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextViewController.h; sourceTree = "<group>"; };
 		545906B93DC6D229534AC85D /* UIImage+ColorFromImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorFromImage.h"; sourceTree = "<group>"; };
+		54590709AEBEC0E0AE30F736 /* BarCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarCalculator.m; sourceTree = "<group>"; };
 		54590710F98D518312B965F0 /* ActivityFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityFilter.h; sourceTree = "<group>"; };
 		545908280499C66CD36DA1EA /* WeightInputControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightInputControls.h; sourceTree = "<group>"; };
 		54590834E09D76DC26CC206D /* WorkoutController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkoutController.m; sourceTree = "<group>"; };
@@ -129,6 +136,7 @@
 		54590ECB811EC9CD1B1F0127 /* DecimalNumbersTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalNumbersTests.m; sourceTree = "<group>"; };
 		54590EE4A18F42B78AD7B0B6 /* RestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestViewController.h; sourceTree = "<group>"; };
 		54590F18F5B3463F765DF891 /* ContextHolderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextHolderViewController.h; sourceTree = "<group>"; };
+		54590F54C0452DE8C7971409 /* BarCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarCalculator.h; sourceTree = "<group>"; };
 		54590F592EBDDD376B16FA5D /* FormItemBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormItemBarButtonItem.h; sourceTree = "<group>"; };
 		54590F6B39C5170F22DD30BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		54590F88FEA9735A87A8F117 /* FixtureLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixtureLoader.m; sourceTree = "<group>"; };
@@ -225,6 +233,14 @@
 			name = Setup;
 			sourceTree = "<group>";
 		};
+		545902443723D2F9011A3074 /* Formulas */ = {
+			isa = PBXGroup;
+			children = (
+				545902B2A6CA42C7EA39C205 /* BarCalculator */,
+			);
+			path = Formulas;
+			sourceTree = "<group>";
+		};
 		5459028458247F86AFC666EA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +248,17 @@
 				545904E1841B2C9A4524B6E1 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		545902B2A6CA42C7EA39C205 /* BarCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				5459013B85548A27B8B1B805 /* PlateRemaining.m */,
+				545900DE6BC3C8B8CD9B979C /* PlateRemaining.h */,
+				54590709AEBEC0E0AE30F736 /* BarCalculator.m */,
+				54590F54C0452DE8C7971409 /* BarCalculator.h */,
+			);
+			path = BarCalculator;
 			sourceTree = "<group>";
 		};
 		545902D56BB61349A45A6675 /* Numbers */ = {
@@ -273,6 +300,7 @@
 				545902FDED688FE872C92CF1 /* SWTestCase.m */,
 				54590E627A49A487C2872338 /* SWTestCase.h */,
 				54590CB1A08FF5874966B887 /* Views */,
+				54590D5888F4BA5FCA5BB38F /* Formulas */,
 			);
 			path = SmarterWorkoutsTests;
 			sourceTree = "<group>";
@@ -298,6 +326,14 @@
 				545902BAE2F4DAE4614B711B /* FlavorTextUITextField.h */,
 			);
 			name = Form;
+			sourceTree = "<group>";
+		};
+		545908B13ADD15B1FC5D0CC9 /* BarCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				545902FC40A458CC44ECB9A4 /* BarCalculatorTests.m */,
+			);
+			path = BarCalculator;
 			sourceTree = "<group>";
 		};
 		545908F56CCD1B7EB6DF275C /* Workout */ = {
@@ -342,6 +378,14 @@
 				545906B93DC6D229534AC85D /* UIImage+ColorFromImage.h */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		54590D5888F4BA5FCA5BB38F /* Formulas */ = {
+			isa = PBXGroup;
+			children = (
+				545908B13ADD15B1FC5D0CC9 /* BarCalculator */,
+			);
+			path = Formulas;
 			sourceTree = "<group>";
 		};
 		54590E3CC51DA5A843C84E47 /* Selection */ = {
@@ -392,6 +436,7 @@
 				545905F4E490B1E7B9BCCE96 /* WeightInputControls.m */,
 				545908280499C66CD36DA1EA /* WeightInputControls.h */,
 				54590E9F250E1DE20DC966FF /* Images */,
+				545902443723D2F9011A3074 /* Formulas */,
 			);
 			path = SmarterWorkouts;
 			sourceTree = "<group>";
@@ -613,6 +658,8 @@
 				5459014698809F8D820FF883 /* ActivitySelectorViewController.m in Sources */,
 				545902D7B0A4AB9E8044A7A2 /* ActivityFilter.m in Sources */,
 				545900688903A0D38BC654DC /* Plate.m in Sources */,
+				545908EA948161743CA45E19 /* PlateRemaining.m in Sources */,
+				545905A336F2279F9E0685A0 /* BarCalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +672,7 @@
 				545905DB034A77D24890E6CD /* SWTestCase.m in Sources */,
 				54590D02DC69A387D23A1539 /* ActivityFilterTests.m in Sources */,
 				5459072AA62AACF824479581 /* PlateTests.m in Sources */,
+				5459004C362F8D82667493BD /* BarCalculatorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,7 +734,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Release;
 		};
@@ -702,7 +750,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Debug;
 		};

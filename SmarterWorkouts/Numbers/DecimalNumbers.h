@@ -4,4 +4,6 @@
 
 + (NSDecimalNumber *)parse:(NSString *)value;
 
++ (NSDecimalNumberHandler *)noRaise;
+
 @end
