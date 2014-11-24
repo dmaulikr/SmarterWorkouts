@@ -1,3 +1,4 @@
+#import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
 #import "ActivityWeightFormViewController.h"
 #import "Form.h"
 #import "DecimalNumbers.h"
@@ -6,6 +7,7 @@
 #import "WeightInputControls.h"
 #import "UIImage+ColorFromImage.h"
 #import "Activity.h"
+#import "Set.h"
 
 @implementation ActivityWeightFormViewController
 
@@ -63,14 +65,26 @@
 
 - (IBAction)addButtonTapped:(id)sender {
     NSMutableArray *sets = [@[] mutableCopy];
-    for (int set = 0; set < [self loggedSets]; set++) {
-
+    for (int setIndex = 0; setIndex < [self loggedSets]; setIndex++) {
+        Set *set = [Set MR_createEntity];
+        set.units = self.activity.units;
+        set.weight = [DecimalNumbers parse:self.weightInput.text];
+        set.reps = @([self loggedReps]);
+        [sets addObject:set];
     }
     [self.weightFormDelegate formFinished:sets];
 }
 
+- (int)valueOf:(UITextField *)field {
+    return [[field text] isEqualToString:@""] ? 1 : [[field text] integerValue];
+}
+
 - (int)loggedSets {
-    return [[self.setsInput text] isEqualToString:@""] ? 1 : [[self.setsInput text] integerValue];
+    return [self valueOf:self.setsInput];
+}
+
+- (int)loggedReps {
+    return [self valueOf:self.repsInput];
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {

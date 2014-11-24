@@ -13,5 +13,6 @@
 
 @dynamic name;
 @dynamic personalRecord;
+@dynamic units;
 
 @end

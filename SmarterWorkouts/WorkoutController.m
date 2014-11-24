@@ -6,6 +6,7 @@
 #import "Activity.h"
 #import "PlateViewController.h"
 #import "Workout.h"
+#import "SetGroup.h"
 
 @implementation WorkoutController
 
@@ -18,6 +19,7 @@
     [MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext *localContext) {
         self.workout = [Workout MR_createEntityInContext:localContext];
         self.workout.date = [NSDate new];
+        [self.workout addSetGroupsObject:[SetGroup MR_createEntity]];
     }];
 }
 
@@ -67,9 +69,12 @@
     [self removeFormController];
 }
 
-- (void)formFinished: (NSArray *) sets {
+- (void)formFinished:(NSArray *)sets {
     [self removeContextController];
     [self removeFormController];
+
+    [self.workout.setGroups[0] addSets:[[NSOrderedSet alloc] initWithArray:sets]];
+    [self.workout.managedObjectContext MR_saveOnlySelfAndWait];
 }
 
 - (void)removeFormController {

@@ -25,5 +25,7 @@
 
 - (int)loggedSets;
 
+- (int)loggedReps;
+
 - (void)attachBelow:(UIView *)parentView;
 @end
