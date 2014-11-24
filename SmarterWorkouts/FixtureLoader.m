@@ -3,6 +3,7 @@
 #import "Activity.h"
 #import "NSManagedObject+MagicalDataImport.h"
 #import "NSManagedObject+MagicalAggregation.h"
+#import "Plate.h"
 
 @implementation FixtureLoader
 
@@ -28,6 +29,10 @@
 - (void)loadDataInContext:(NSManagedObjectContext *)context {
     if ([Activity MR_countOfEntitiesWithContext:context] == 0) {
         [Activity MR_importFromArray:[self loadArrayFromFile:@"activities"] inContext:context];
+    }
+
+    if ([Plate MR_countOfEntitiesWithContext:context] == 0) {
+        [Plate MR_importFromArray:[self loadArrayFromFile:@"plates"] inContext:context];
     }
 }
 

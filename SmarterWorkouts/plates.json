@@ -1,0 +1,57 @@
+[
+    {
+        "weight": 45,
+        "units": "lbs",
+        "count": 6
+    },
+    {
+        "weight": 35,
+        "units": "lbs",
+        "count": 6
+    },
+    {
+        "weight": 25,
+        "units": "lbs",
+        "count": 6
+    },
+    {
+        "weight": 10,
+        "units": "lbs",
+        "count": 6
+    },
+    {
+        "weight": 5,
+        "units": "lbs",
+        "count": 6
+    },
+    {
+        "weight": 2.5,
+        "units": "lbs",
+        "count": 6
+    },
+    {
+        "weight": 20,
+        "units": "kg",
+        "count": 6
+    },
+    {
+        "weight": 10,
+        "units": "kg",
+        "count": 6
+    },
+    {
+        "weight": 5,
+        "units": "kg",
+        "count": 6
+    },
+    {
+        "weight": 2.5,
+        "units": "kg",
+        "count": 6
+    },
+    {
+        "weight": 1.25,
+        "units": "kg",
+        "count": 6
+    }
+]
