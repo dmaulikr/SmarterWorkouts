@@ -1,5 +1,7 @@
 #import "PlateViewController.h"
 #import "BarLoadingSetupViewController.h"
+#import "BarCalculator.h"
+#import "Plate.h"
 
 @implementation PlateViewController
 
@@ -20,7 +22,10 @@
 }
 
 - (void)setWeight:(NSDecimalNumber *)weight {
-
+    BarCalculator *calculator = [[BarCalculator alloc] initWithPlates:[Plate findAllSorted:@"lbs"]
+                                                            barWeight:[NSDecimalNumber decimalNumberWithString:@"45"]];
+    NSArray *platesToMakeWeight = [calculator platesToMakeWeight:weight];
+    [self.plates setText:[platesToMakeWeight componentsJoinedByString:@", "]];
 }
 
 - (void)viewTapped:(id)gesture {
