@@ -23,5 +23,7 @@
 
 @property(nonatomic, strong) Activity *activity;
 
+- (int)loggedSets;
+
 - (void)attachBelow:(UIView *)parentView;
 @end

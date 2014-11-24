@@ -24,6 +24,7 @@
 		545902DECE48C72B4EA42451 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545909DEAE65283756E25E7A /* LaunchScreen.xib */; };
 		545903DDFDE7F7965ADDE139 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 545904E1841B2C9A4524B6E1 /* main.m */; };
 		545903E9C48B9C4623960184 /* ActivityWeightFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590495D916C9155C6F9425 /* ActivityWeightFormViewController.xib */; };
+		545903F7AC9D9FB10A9887C8 /* ActivityWeightFormViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590ACC1AC6B9D074702B48 /* ActivityWeightFormViewControllerTests.m */; };
 		5459051FE88E8E7AC5B12DE2 /* ModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C1704D57A0CB87CD410 /* ModelTests.m */; };
 		545905A336F2279F9E0685A0 /* BarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590709AEBEC0E0AE30F736 /* BarCalculator.m */; };
 		545905DB034A77D24890E6CD /* SWTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902FDED688FE872C92CF1 /* SWTestCase.m */; };
@@ -120,6 +121,7 @@
 		5459095D3D1623B3210D4AAD /* WeightFormDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightFormDelegate.h; sourceTree = "<group>"; };
 		545909CA1997BE71C52F50ED /* ActivitySelectorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySelectorDelegate.h; sourceTree = "<group>"; };
 		54590ABDAAB338BA42EB1F42 /* ContextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextViewController.m; sourceTree = "<group>"; };
+		54590ACC1AC6B9D074702B48 /* ActivityWeightFormViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityWeightFormViewControllerTests.m; sourceTree = "<group>"; };
 		54590B971EFBE43DBA52F764 /* DecimalNumbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalNumbers.m; sourceTree = "<group>"; };
 		54590BCD6074B6467C4D1111 /* BarLoadingSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarLoadingSetupViewController.m; sourceTree = "<group>"; };
 		54590C1704D57A0CB87CD410 /* ModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelTests.m; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				54590FFF13C071E6489F5941 /* Selection */,
+				54590ACC1AC6B9D074702B48 /* ActivityWeightFormViewControllerTests.m */,
 			);
 			path = Workout;
 			sourceTree = "<group>";
@@ -673,6 +676,7 @@
 				54590D02DC69A387D23A1539 /* ActivityFilterTests.m in Sources */,
 				5459072AA62AACF824479581 /* PlateTests.m in Sources */,
 				5459004C362F8D82667493BD /* BarCalculatorTests.m in Sources */,
+				545903F7AC9D9FB10A9887C8 /* ActivityWeightFormViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

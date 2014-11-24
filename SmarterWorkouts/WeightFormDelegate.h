@@ -3,8 +3,8 @@
 @protocol WeightFormDelegate <NSObject>
 - (void)weightChanged:(NSDecimalNumber *)weight;
 
-- (void)weightDoneEditing;
-
 - (void)formCanceled;
+
+- (void)formFinished:(NSArray *)sets;
 
 @end

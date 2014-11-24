@@ -61,15 +61,24 @@
     [self.weightFormDelegate formCanceled];
 }
 
+- (IBAction)addButtonTapped:(id)sender {
+    NSMutableArray *sets = [@[] mutableCopy];
+    for (int set = 0; set < [self loggedSets]; set++) {
+
+    }
+    [self.weightFormDelegate formFinished:sets];
+}
+
+- (int)loggedSets {
+    return [[self.setsInput text] isEqualToString:@""] ? 1 : [[self.setsInput text] integerValue];
+}
+
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     if (textField == self.weightInput) {
         NSDecimalNumber *weight = [DecimalNumbers parse:[self.weightInput text]];
         if ([weight compare:[NSDecimalNumber zero]] != NSOrderedSame) {
             [self.weightFormDelegate weightChanged:weight];
         }
-    }
-    else {
-        [self.weightFormDelegate weightDoneEditing];
     }
 
     if ([textField isKindOfClass:FlavorTextUITextField.class]) {
@@ -80,10 +89,6 @@
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    if (textField == self.weightInput) {
-        [self.weightFormDelegate weightDoneEditing];
-    }
-
     if ([textField isKindOfClass:FlavorTextUITextField.class]) {
         [((FlavorTextUITextField *) textField) addFlavor];
     }

@@ -6,6 +6,7 @@
 @class PlateViewController;
 @class ContextViewController;
 @class ActivityWeightFormViewController;
+@class Workout;
 
 @interface WorkoutController : ContextHolderViewController <UITextFieldDelegate, ActivitySelectorDelegate, WeightFormDelegate> {
 }
@@ -14,4 +15,5 @@
 
 @property(nonatomic, strong) ContextViewController *contextController;
 @property(nonatomic, strong) ActivityWeightFormViewController *formController;
+@property(nonatomic, strong) Workout *workout;
 @end

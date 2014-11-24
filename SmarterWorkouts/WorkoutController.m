@@ -1,8 +1,11 @@
+#import <MagicalRecord/MagicalRecord/MagicalRecord+Actions.h>
+#import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
 #import "WorkoutController.h"
 #import "ActivityWeightFormViewController.h"
 #import "ActivitySelectorViewController.h"
 #import "Activity.h"
 #import "PlateViewController.h"
+#import "Workout.h"
 
 @implementation WorkoutController
 
@@ -11,6 +14,11 @@
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped)];
     [self.view addGestureRecognizer:tap];
+
+    [MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext *localContext) {
+        self.workout = [Workout MR_createEntityInContext:localContext];
+        self.workout.date = [NSDate new];
+    }];
 }
 
 - (void)viewTapped {
@@ -54,10 +62,12 @@
     }
 }
 
-- (void)weightDoneEditing {
+- (void)formCanceled {
+    [self removeContextController];
+    [self removeFormController];
 }
 
-- (void)formCanceled {
+- (void)formFinished: (NSArray *) sets {
     [self removeContextController];
     [self removeFormController];
 }
