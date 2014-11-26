@@ -11,12 +11,11 @@
 - (void)setUp {
     [super setUp];
 
-    [MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext *localContext) {
-        [Workout MR_truncateAllInContext:localContext];
-        [Activity MR_truncateAllInContext:localContext];
-        [Plate MR_truncateAllInContext:localContext];
-        [[FixtureLoader instance] loadDataInContext: localContext];
-    }];
+    [Workout MR_truncateAll];
+    [Activity MR_truncateAll];
+    [Plate MR_truncateAll];
+    [[FixtureLoader instance] loadDataInContext:[NSManagedObjectContext MR_defaultContext]];
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 }
 
 @end

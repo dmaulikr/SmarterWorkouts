@@ -30,6 +30,10 @@
     NSArray *expected180 = @[@45, @10, @10, @2.5];
     XCTAssertEqualObjects([self.calculator platesToMakeWeight:
             [NSDecimalNumber decimalNumberWithString:@"180"]], expected180);
+
+    NSArray *expected900 = @[@45, @45, @45, @45, @45, @45, @45, @45, @45, @10, @10, @2.5];
+    XCTAssertEqualObjects([self.calculator platesToMakeWeight:
+            [NSDecimalNumber decimalNumberWithString:@"900"]], expected900);
 }
 
 - (void)testMakesCorrectWeightWhenSmallerPlatesGetCloser {

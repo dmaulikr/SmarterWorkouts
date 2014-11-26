@@ -1,5 +1,5 @@
 #import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
-#import "ActivityWeightFormViewController.h"
+#import "ActivityWeightFormCell.h"
 #import "Form.h"
 #import "DecimalNumbers.h"
 #import "WorkoutController.h"
@@ -8,11 +8,13 @@
 #import "UIImage+ColorFromImage.h"
 #import "Activity.h"
 #import "Set.h"
+#import "Plate.h"
+#import "BarCalculator.h"
 
-@implementation ActivityWeightFormViewController
+@implementation ActivityWeightFormCell
 
-- (void)viewDidLoad {
-    [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+- (void)layoutSubviews {
+    [super layoutSubviews];
     [WeightInputControls addLbsKgSelector:self.weightInput];
     self.form = [[Form alloc] initWithFields:@[self.weightInput, self.repsInput, self.setsInput]];
     [self.form setDelegate:self];
@@ -35,7 +37,9 @@
     [self.cancelButton                                        setBackgroundImage:[UIImage imageWithColor:
             [UIColor colorWithRed:0.851 green:0.325 blue:0.31 alpha:1]] forState:UIControlStateHighlighted];
 
-    self.tapToSeePlatesLabel.alpha = 0;
+    self.platesLabel.alpha = 0;
+    self.platesLabelSubtitle.alpha = 0;
+
     [self.weightInput becomeFirstResponder];
 }
 
@@ -47,16 +51,32 @@
 - (void)weightChanged:(id)weightChanged {
     NSDecimalNumber *weight = [DecimalNumbers parse:[self.weightInput text]];
     if ([weight compare:[NSDecimalNumber decimalNumberWithString:@"45"]] == NSOrderedDescending) {
+        BarCalculator *calculator = [[BarCalculator alloc] initWithPlates:[Plate findAllSorted:self.activity.units]
+                                                                barWeight:[NSDecimalNumber decimalNumberWithString:@"45"]];
+        NSArray *platesToMakeWeight = [calculator platesToMakeWeight:weight];
+        NSString *platesText = [platesToMakeWeight componentsJoinedByString:@", "];
+        if (self.platesLabel.alpha > 0) {
+            [UIView transitionWithView:self.platesLabel duration:0.3 options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve animations:^{
+                [self.platesLabel setText:platesText];
+            }               completion:nil];
+        }
+        else {
+            [self.platesLabel setText:platesText];
+        }
+
         [UIView animateWithDuration:0.3 animations:^{
-            self.tapToSeePlatesLabel.alpha = 1;
+            [self.platesLabel setText:[platesToMakeWeight componentsJoinedByString:@", "]];
+            self.platesLabel.alpha = 1;
+            self.platesLabelSubtitle.alpha = 1;
         }];
     }
     else {
         [UIView animateWithDuration:0.3 animations:^{
-            self.tapToSeePlatesLabel.alpha = 0;
+            self.platesLabel.alpha = 0;
+            self.platesLabelSubtitle.alpha = 0;
         }];
     }
-    [self.weightFormDelegate weightChanged:weight];
+//    [self.weightFormDelegate weightChanged:weight];
 }
 
 - (IBAction)cancelButtonTapped:(id)sender {
@@ -91,7 +111,7 @@
     if (textField == self.weightInput) {
         NSDecimalNumber *weight = [DecimalNumbers parse:[self.weightInput text]];
         if ([weight compare:[NSDecimalNumber zero]] != NSOrderedSame) {
-            [self.weightFormDelegate weightChanged:weight];
+//            [self.weightFormDelegate weightChanged:weight];
         }
     }
 
@@ -106,21 +126,6 @@
     if ([textField isKindOfClass:FlavorTextUITextField.class]) {
         [((FlavorTextUITextField *) textField) addFlavor];
     }
-}
-
-- (void)attachBelow:(UIView *)parentView {
-    [parentView addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeTop
-                                                           relatedBy:NSLayoutRelationEqual
-                                                              toItem:parentView attribute:NSLayoutAttributeTop
-                                                          multiplier:1 constant:0]];
-    [parentView addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeLeft
-                                                           relatedBy:NSLayoutRelationEqual
-                                                              toItem:parentView attribute:NSLayoutAttributeLeft
-                                                          multiplier:1 constant:0]];
-    [parentView addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeRight
-                                                           relatedBy:NSLayoutRelationEqual
-                                                              toItem:parentView attribute:NSLayoutAttributeRight
-                                                          multiplier:1 constant:0]];
 }
 
 @end

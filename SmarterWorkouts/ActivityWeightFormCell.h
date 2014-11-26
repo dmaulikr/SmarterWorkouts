@@ -7,7 +7,7 @@
 @class FlavorTextUITextField;
 @class Activity;
 
-@interface ActivityWeightFormViewController : UIViewController <UITextFieldDelegate, FormDelegate>
+@interface ActivityWeightFormCell : UITableViewCell <UITextFieldDelegate, FormDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *activityNameLabel;
 @property(weak, nonatomic) IBOutlet FlavorTextUITextField *weightInput;
 @property(weak, nonatomic) IBOutlet FlavorTextUITextField *repsInput;
@@ -19,13 +19,12 @@
 
 @property(nonatomic, strong) Form *form;
 
-@property (weak, nonatomic) IBOutlet UILabel *tapToSeePlatesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *platesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *platesLabelSubtitle;
 
 @property(nonatomic, strong) Activity *activity;
 
 - (int)loggedSets;
 
 - (int)loggedReps;
-
-- (void)attachBelow:(UIView *)parentView;
 @end

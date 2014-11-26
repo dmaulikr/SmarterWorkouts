@@ -1,18 +1,17 @@
 #import <MagicalRecord/MagicalRecord/MagicalRecord+Actions.h>
 #import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
 #import "WorkoutController.h"
-#import "ActivityWeightFormViewController.h"
-#import "ActivitySelectorViewController.h"
+#import "ActivityWeightFormCell.h"
 #import "Activity.h"
 #import "PlateViewController.h"
 #import "Workout.h"
 #import "SetGroup.h"
+#import "ActivitySelectorTableViewCell.h"
 
 @implementation WorkoutController
 
 - (void)viewDidLoad {
-    [self.activityInput setDelegate:self];
-
+    [super viewDidLoad];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped)];
     [self.view addGestureRecognizer:tap];
 
@@ -21,77 +20,65 @@
         self.workout.date = [NSDate new];
         [self.workout addSetGroupsObject:[SetGroup MR_createEntity]];
     }];
+
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 80;
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(ActivitySelectorTableViewCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(ActivitySelectorTableViewCell.class)];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(ActivityWeightFormCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(ActivityWeightFormCell.class)];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        if (!self.seletedActivity) {
+            ActivitySelectorTableViewCell *inputCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ActivitySelectorTableViewCell.class) forIndexPath:indexPath];
+            [inputCell setDelegate:self];
+            return inputCell;
+        }
+        else {
+            ActivityWeightFormCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ActivityWeightFormCell.class) forIndexPath:indexPath];
+            [cell setWeightFormDelegate:self];
+            [cell setActivity:self.seletedActivity];
+            return cell;
+        }
+    }
+    return nil;
 }
 
 - (void)viewTapped {
     [self.view endEditing:NO];
 }
 
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    [self showActivitySelector];
-    return NO;
-}
-
-- (void)showActivitySelector {
-    ActivitySelectorViewController *controller = [[ActivitySelectorViewController alloc] initWithDelegate:self];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
-    [self presentViewController:nav animated:YES completion:nil];
-}
-
 - (void)activitySelected:(Activity *)activity {
-    [self.activityInput setHidden:YES];
-    [self showForm:activity];
-}
+    self.seletedActivity = activity;
 
-- (void)showForm:(Activity *)activity {
-    self.formController = [[NSBundle mainBundle] loadNibNamed:@"ActivityWeightFormViewController" owner:self options:nil][0];
-    self.formController.activity = activity;
-    [self addChildViewController:self.formController];
-    [self.view addSubview:self.formController.view];
-    [self.formController attachBelow:self.view];
-    [self.formController didMoveToParentViewController:self];
-    [self.formController setWeightFormDelegate:self];
-}
-
-- (void)weightChanged:(NSDecimalNumber *)weight {
-    if ([weight compare:[NSDecimalNumber decimalNumberWithString:@"45"]] == NSOrderedDescending) {
-        [self showContext:@"PlateViewController"];
-        PlateViewController *plateController = (id) self.contextController;
-        [plateController setWeight:weight];
+    if (!self.seletedActivity) {
+        [self.tableView beginUpdates];
+        [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+        [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+        [self.tableView endUpdates];
     }
     else {
-        [self removeContextController];
+        [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
     }
 }
 
 - (void)formCanceled {
-    [self removeContextController];
-    [self removeFormController];
+    [self activitySelected:nil];
 }
 
 - (void)formFinished:(NSArray *)sets {
-    [self removeContextController];
-    [self removeFormController];
-
+    [self activitySelected:nil];
     [self.workout.setGroups[0] addSets:[[NSOrderedSet alloc] initWithArray:sets]];
     [self.workout.managedObjectContext MR_saveOnlySelfAndWait];
-}
-
-- (void)removeFormController {
-    [UIView animateWithDuration:0.25 animations:^{
-        self.formController.view.alpha = 0;
-    }                completion:^(BOOL finished) {
-        [self.formController willMoveToParentViewController:nil];
-        [self.self.formController.view removeFromSuperview];
-        [self.self.formController removeFromParentViewController];
-        self.self.formController = nil;
-
-        [self.activityInput setHidden:NO];
-        self.activityInput.alpha = 0;
-        [UIView animateWithDuration:0.25 animations:^{
-            self.activityInput.alpha = 1;
-        }                completion:nil];
-    }];
 }
 
 @end

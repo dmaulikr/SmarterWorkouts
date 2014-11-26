@@ -5,15 +5,14 @@
 
 @class PlateViewController;
 @class ContextViewController;
-@class ActivityWeightFormViewController;
+@class ActivityWeightFormCell;
 @class Workout;
 
-@interface WorkoutController : ContextHolderViewController <UITextFieldDelegate, ActivitySelectorDelegate, WeightFormDelegate> {
+@interface WorkoutController : UITableViewController <UITextFieldDelegate, ActivitySelectorDelegate, WeightFormDelegate> {
 }
 
-@property(weak, nonatomic) IBOutlet UITextField *activityInput;
-
 @property(nonatomic, strong) ContextViewController *contextController;
-@property(nonatomic, strong) ActivityWeightFormViewController *formController;
+@property(nonatomic, strong) ActivityWeightFormCell *formController;
 @property(nonatomic, strong) Workout *workout;
+@property(nonatomic, strong) Activity *seletedActivity;
 @end

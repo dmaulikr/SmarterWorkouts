@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="108" id="moV-FQ-IqW" customClass="ActivitySelectorTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="66"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="moV-FQ-IqW" id="hOi-Xo-WBC">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add an activity (e.g. Squat)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y0K-nl-Kt2">
+                        <rect key="frame" x="8" y="8" width="372" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Pig-aQ-x6b"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="Y0K-nl-Kt2" secondAttribute="bottom" id="5Nj-tQ-ENP"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Y0K-nl-Kt2" secondAttribute="trailing" id="Wqz-4r-Io7"/>
+                    <constraint firstItem="Y0K-nl-Kt2" firstAttribute="leading" secondItem="hOi-Xo-WBC" secondAttribute="leadingMargin" id="ojS-Q4-Qx1"/>
+                    <constraint firstItem="Y0K-nl-Kt2" firstAttribute="top" secondItem="hOi-Xo-WBC" secondAttribute="topMargin" id="zpe-7A-cJI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="activityInput" destination="Y0K-nl-Kt2" id="gbm-ki-JnO"/>
+            </connections>
+            <point key="canvasLocation" x="236" y="325.5"/>
+        </tableViewCell>
+    </objects>
+</document>

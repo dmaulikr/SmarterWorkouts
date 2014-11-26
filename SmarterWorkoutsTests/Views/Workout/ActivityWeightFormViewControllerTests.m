@@ -1,5 +1,5 @@
 #import "SWTestCase.h"
-#import "ActivityWeightFormViewController.h"
+#import "ActivityWeightFormCell.h"
 #import "FlavorTextUITextField.h"
 
 @interface ActivityWeightFormViewControllerTests : SWTestCase
@@ -9,7 +9,7 @@
 @implementation ActivityWeightFormViewControllerTests
 
 - (void)testGetsLoggedSets {
-    ActivityWeightFormViewController *controller = [[NSBundle mainBundle] loadNibNamed:@"ActivityWeightFormViewController" owner:self options:nil][0];
+    ActivityWeightFormCell *controller = [[NSBundle mainBundle] loadNibNamed:@"ActivityWeightFormCell" owner:self options:nil][0];
     XCTAssertNotNil(controller.setsInput);
 
     XCTAssertEqual([controller loggedSets], 1);
@@ -20,7 +20,7 @@
 }
 
 - (void)testGetsLoggedReps {
-    ActivityWeightFormViewController *controller = [[NSBundle mainBundle] loadNibNamed:@"ActivityWeightFormViewController" owner:self options:nil][0];
+    ActivityWeightFormCell *controller = [[NSBundle mainBundle] loadNibNamed:@"ActivityWeightFormCell" owner:self options:nil][0];
     XCTAssertNotNil(controller.repsInput);
 
     XCTAssertEqual([controller loggedReps], 1);
