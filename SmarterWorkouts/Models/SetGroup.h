@@ -17,6 +17,8 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSOrderedSet *setGroups;
 @property (nonatomic, retain) NSOrderedSet *sets;
+
+- (void)addSetsArray:(NSArray *)values;
 @end
 
 @interface SetGroup (CoreDataGeneratedAccessors)

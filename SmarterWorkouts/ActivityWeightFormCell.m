@@ -86,6 +86,7 @@
     NSMutableArray *sets = [@[] mutableCopy];
     for (int setIndex = 0; setIndex < [self loggedSets]; setIndex++) {
         Set *set = [Set MR_createEntity];
+        set.activity = self.activity.name;
         set.units = self.activity.units;
         set.weight = [DecimalNumbers parse:self.weightInput.text];
         set.reps = @([self loggedReps]);

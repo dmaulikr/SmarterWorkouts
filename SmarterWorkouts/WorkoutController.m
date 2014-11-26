@@ -3,10 +3,10 @@
 #import "WorkoutController.h"
 #import "ActivityWeightFormCell.h"
 #import "Activity.h"
-#import "PlateViewController.h"
 #import "Workout.h"
 #import "SetGroup.h"
 #import "ActivitySelectorTableViewCell.h"
+#import "Set.h"
 
 @implementation WorkoutController
 
@@ -15,11 +15,9 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped)];
     [self.view addGestureRecognizer:tap];
 
-    [MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext *localContext) {
-        self.workout = [Workout MR_createEntityInContext:localContext];
-        self.workout.date = [NSDate new];
-        [self.workout addSetGroupsObject:[SetGroup MR_createEntity]];
-    }];
+    self.workout = [Workout MR_createEntity];
+    self.workout.date = [NSDate new];
+    [self.workout addSetGroupsObject:[SetGroup MR_createEntity]];
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
@@ -29,16 +27,24 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return [self.workout.setGroups count] + 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    int sectionCount = [self numberOfSectionsInTableView:tableView];
+    if (section == sectionCount - 1) {
+        return 1;
+    }
+    else {
+        return [[self.workout.setGroups[(NSUInteger) section] sets] count];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        if (!self.seletedActivity) {
+    int sectionCount = [self numberOfSectionsInTableView:tableView];
+
+    if (indexPath.section == sectionCount - 1) {
+        if (!self.selectedActivity) {
             ActivitySelectorTableViewCell *inputCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ActivitySelectorTableViewCell.class) forIndexPath:indexPath];
             [inputCell setDelegate:self];
             return inputCell;
@@ -46,11 +52,17 @@
         else {
             ActivityWeightFormCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ActivityWeightFormCell.class) forIndexPath:indexPath];
             [cell setWeightFormDelegate:self];
-            [cell setActivity:self.seletedActivity];
+            [cell setActivity:self.selectedActivity];
             return cell;
         }
     }
-    return nil;
+    else {
+        Set *set = [self.workout.setGroups[(NSUInteger) indexPath.section] sets][(NSUInteger) indexPath.row];
+        NSLog(@"%@", set.activity);
+        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"temp"];
+        [cell.textLabel setText:set.activity];
+        return cell;
+    }
 }
 
 - (void)viewTapped {
@@ -58,27 +70,21 @@
 }
 
 - (void)activitySelected:(Activity *)activity {
-    self.seletedActivity = activity;
-
-    if (!self.seletedActivity) {
-        [self.tableView beginUpdates];
-        [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
-        [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
-        [self.tableView endUpdates];
-    }
-    else {
-        [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
-    }
+    self.selectedActivity = activity;
+    [self.tableView reloadData];
 }
 
 - (void)formCanceled {
-    [self activitySelected:nil];
+    self.selectedActivity = nil;
+    [self.tableView reloadData];
 }
 
 - (void)formFinished:(NSArray *)sets {
-    [self activitySelected:nil];
-    [self.workout.setGroups[0] addSets:[[NSOrderedSet alloc] initWithArray:sets]];
-    [self.workout.managedObjectContext MR_saveOnlySelfAndWait];
+    self.selectedActivity = nil;
+
+    SetGroup *setGroup = self.workout.setGroups[0];
+    [setGroup addSetsArray: sets];
+    [self.tableView reloadData];
 }
 
 @end

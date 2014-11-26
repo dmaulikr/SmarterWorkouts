@@ -14,5 +14,5 @@
 @property(nonatomic, strong) ContextViewController *contextController;
 @property(nonatomic, strong) ActivityWeightFormCell *formController;
 @property(nonatomic, strong) Workout *workout;
-@property(nonatomic, strong) Activity *seletedActivity;
+@property(nonatomic, strong) Activity *selectedActivity;
 @end

@@ -17,4 +17,11 @@
 @dynamic setGroups;
 @dynamic sets;
 
+- (void)addSetsArray:(NSArray *)values {
+    for(id value in values){
+        [self addSetsObject:value];
+    }
+}
+
+
 @end
