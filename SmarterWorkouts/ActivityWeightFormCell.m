@@ -76,7 +76,6 @@
             self.platesLabelSubtitle.alpha = 0;
         }];
     }
-//    [self.weightFormDelegate weightChanged:weight];
 }
 
 - (IBAction)cancelButtonTapped:(id)sender {
@@ -108,13 +107,6 @@
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    if (textField == self.weightInput) {
-        NSDecimalNumber *weight = [DecimalNumbers parse:[self.weightInput text]];
-        if ([weight compare:[NSDecimalNumber zero]] != NSOrderedSame) {
-//            [self.weightFormDelegate weightChanged:weight];
-        }
-    }
-
     if ([textField isKindOfClass:FlavorTextUITextField.class]) {
         [((FlavorTextUITextField *) textField) removeFlavor];
     }
