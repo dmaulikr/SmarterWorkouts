@@ -36,6 +36,11 @@
             [NSDecimalNumber decimalNumberWithString:@"900"]], expected900);
 }
 
+- (void)testDoesNotCrashWhenPlatesCantMakeWeight {
+    [self.calculator platesToMakeWeight:
+            [NSDecimalNumber decimalNumberWithString:@"9000"]];
+}
+
 - (void)testMakesCorrectWeightWhenSmallerPlatesGetCloser {
     [Plate MR_truncateAll];
     [Plate                                  createPlateWithWeight:

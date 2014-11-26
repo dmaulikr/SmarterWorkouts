@@ -41,10 +41,15 @@
                     NSDecimalNumber *lastPlateWeight = [potentialSolution lastObject];
                     targetWeight = [targetWeight                   decimalNumberByAdding:[lastPlateWeight decimalNumberByMultiplyingBy:
                             [NSDecimalNumber decimalNumberWithString:@"2"]] withBehavior:[DecimalNumbers noRaise]];
-                    PlateRemaining *plateForWeight = [remainingPlates filteredArrayUsingPredicate:
+                    NSArray *foundPlates = [remainingPlates filteredArrayUsingPredicate:
                             [NSPredicate predicateWithBlock:^BOOL(PlateRemaining *p, NSDictionary *bindings) {
                                 return [p.weight isEqual:lastPlateWeight];
-                            }]][0];
+                            }]];
+                    if ([foundPlates count] == 0) {
+                        return @[];
+                    }
+
+                    PlateRemaining *plateForWeight = foundPlates[0];
                     plateForWeight.count = 0;
                     [platesToMakeWeight removeObject:lastPlateWeight];
                 }
