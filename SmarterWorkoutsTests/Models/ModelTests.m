@@ -56,4 +56,9 @@
     XCTAssertTrue([seededActivities count] > 0);
 }
 
+- (void)testFindInvalidActivity {
+    Activity *activity = [Activity MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@", @"name", @"baddata"]];
+    XCTAssertNil(activity);
+}
+
 @end

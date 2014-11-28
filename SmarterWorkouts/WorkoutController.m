@@ -8,6 +8,7 @@
 #import "ActivitySelectorTableViewCell.h"
 #import "Set.h"
 #import "SetCell.h"
+#import "NSManagedObject+MagicalFinders.h"
 
 @implementation WorkoutController
 
@@ -29,7 +30,8 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [self.workout.setGroups count] + 1;
+    int ONE_FOR_FULL_SELECTOR = 1;
+    return [self.workout.setGroups count] + ONE_FOR_FULL_SELECTOR;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -48,6 +50,10 @@
     if (indexPath.section == sectionCount - 1) {
         if (!self.selectedActivity) {
             ActivitySelectorTableViewCell *inputCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ActivitySelectorTableViewCell.class) forIndexPath:indexPath];
+            SetGroup *setGroup = self.workout.setGroups[0];
+            NSUInteger setsCount = [[setGroup sets] count];
+            Set *lastSet = setsCount > 0 ? [setGroup sets][setsCount - 1] : nil;
+            [inputCell setActivity:[Activity MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@", @"name", lastSet.activity]]];
             [inputCell setDelegate:self];
             return inputCell;
         }
