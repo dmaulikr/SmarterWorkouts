@@ -7,6 +7,7 @@
 #import "SetGroup.h"
 #import "ActivitySelectorTableViewCell.h"
 #import "Set.h"
+#import "SetCell.h"
 
 @implementation WorkoutController
 
@@ -24,6 +25,7 @@
     self.tableView.estimatedRowHeight = 80;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(ActivitySelectorTableViewCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(ActivitySelectorTableViewCell.class)];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(ActivityWeightFormCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(ActivityWeightFormCell.class)];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(SetCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(SetCell.class)];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -58,9 +60,8 @@
     }
     else {
         Set *set = [self.workout.setGroups[(NSUInteger) indexPath.section] sets][(NSUInteger) indexPath.row];
-        NSLog(@"%@", set.activity);
-        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"temp"];
-        [cell.textLabel setText:set.activity];
+        SetCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(SetCell.class) forIndexPath:indexPath];
+        [cell setSet:set];
         return cell;
     }
 }
@@ -83,7 +84,7 @@
     self.selectedActivity = nil;
 
     SetGroup *setGroup = self.workout.setGroups[0];
-    [setGroup addSetsArray: sets];
+    [setGroup addSetsArray:sets];
     [self.tableView reloadData];
 }
 

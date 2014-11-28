@@ -17,7 +17,8 @@
     for (NSUInteger i = 0; i < [self.fields count]; i++) {
         UITextField *field = self.fields[i];
         if (i == 0 && field.inputAccessoryView != nil) {
-            [self addItems:@[[self spacerButton], [self nextButton:field]] forField:field];
+            UIToolbar *toolbar = (UIToolbar *) field.inputAccessoryView;
+            [self setItems:@[toolbar.items[0], [self spacerButton], [self nextButton:field]] forField:field];
         }
         else if (i == [self.fields count] - 1) {
             [self setItems:@[[self previousButton:field], [self spacerButton], [self doneButton:field]] forField:field];
