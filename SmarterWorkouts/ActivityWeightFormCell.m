@@ -13,8 +13,8 @@
 
 @implementation ActivityWeightFormCell
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
+- (void)awakeFromNib {
+    [super awakeFromNib];
     [WeightInputControls addLbsKgSelector:self.weightInput];
     self.form = [[Form alloc] initWithFields:@[self.weightInput, self.repsInput, self.setsInput]];
     [self.form setDelegate:self];
@@ -39,7 +39,10 @@
 
     self.platesLabel.alpha = 0;
     self.platesLabelSubtitle.alpha = 0;
+}
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
     [self.weightInput becomeFirstResponder];
 }
 

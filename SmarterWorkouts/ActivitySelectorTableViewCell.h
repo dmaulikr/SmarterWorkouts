@@ -12,5 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *repeatActivityButton;
 @property(nonatomic, weak) UIViewController<ActivitySelectorDelegate> *delegate;
 
+@property(nonatomic, strong) Activity *repeatActivity;
+
 - (void)setActivity:(Activity *)activity;
 @end

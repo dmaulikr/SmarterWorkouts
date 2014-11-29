@@ -2,6 +2,6 @@
 
 @class Activity;
 
-@protocol ActivitySelectorDelegate <NSObject>
+@protocol ActivitySelectorDelegate
 - (void)activitySelected:(Activity *)activity;
 @end

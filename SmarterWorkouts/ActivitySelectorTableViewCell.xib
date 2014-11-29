@@ -23,6 +23,9 @@
                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="repeatActivityTapped:" destination="moV-FQ-IqW" eventType="touchUpInside" id="RCQ-yn-f6h"/>
+                        </connections>
                     </button>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add an activity (e.g. Squat)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y0K-nl-Kt2">
                         <rect key="frame" x="8" y="66" width="372" height="50.5"/>
@@ -35,9 +38,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="BtG-41-iRv" firstAttribute="trailing" secondItem="hOi-Xo-WBC" secondAttribute="trailingMargin" id="8dt-8O-T61"/>
+                    <constraint firstItem="Y0K-nl-Kt2" firstAttribute="leading" secondItem="hOi-Xo-WBC" secondAttribute="leadingMargin" id="8yV-s5-bPp"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Y0K-nl-Kt2" secondAttribute="bottom" id="ANc-7d-PZB"/>
-                    <constraint firstItem="Y0K-nl-Kt2" firstAttribute="leading" secondItem="hOi-Xo-WBC" secondAttribute="leadingMargin" id="Eg2-kZ-pUb"/>
-                    <constraint firstItem="Y0K-nl-Kt2" firstAttribute="trailing" secondItem="hOi-Xo-WBC" secondAttribute="trailingMargin" id="XFB-gE-35v"/>
+                    <constraint firstItem="Y0K-nl-Kt2" firstAttribute="trailing" secondItem="hOi-Xo-WBC" secondAttribute="trailingMargin" id="QHU-s7-QbT"/>
                     <constraint firstItem="Y0K-nl-Kt2" firstAttribute="top" secondItem="BtG-41-iRv" secondAttribute="bottom" constant="8" id="Zsd-Hu-0ce"/>
                     <constraint firstItem="BtG-41-iRv" firstAttribute="leading" secondItem="hOi-Xo-WBC" secondAttribute="leadingMargin" id="eb0-60-ip8"/>
                     <constraint firstItem="BtG-41-iRv" firstAttribute="top" secondItem="hOi-Xo-WBC" secondAttribute="topMargin" id="uJ5-vp-ylE"/>

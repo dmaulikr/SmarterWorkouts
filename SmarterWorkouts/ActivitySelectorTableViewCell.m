@@ -1,6 +1,7 @@
 #import "ActivitySelectorTableViewCell.h"
 #import "ActivitySelectorViewController.h"
 #import "Activity.h"
+#import "ActivitySelectorDelegate.h"
 
 @implementation ActivitySelectorTableViewCell
 
@@ -41,8 +42,14 @@
     [self.delegate presentViewController:nav animated:YES completion:nil];
 }
 
+- (IBAction)repeatActivityTapped:(id)sender {
+    [self.delegate activitySelected: self.repeatActivity];
+}
+
 - (void)setActivity:(Activity *)activity {
+    self.repeatActivity = activity;
     [self setRepeatVisible:activity != nil];
+    [self.repeatActivityButton setTitle:[NSString stringWithFormat:@"+%@", [activity name]] forState:UIControlStateNormal];
 }
 
 @end

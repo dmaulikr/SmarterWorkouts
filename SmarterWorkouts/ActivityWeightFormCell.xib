@@ -124,6 +124,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="activityNameLabel" destination="MVx-IP-ewN" id="IF8-ux-NOO"/>
+                <outlet property="addButton" destination="EPZ-eC-lKe" id="u2Y-nJ-IKL"/>
                 <outlet property="cancelButton" destination="1GM-xh-ZsG" id="OYn-2B-HkD"/>
                 <outlet property="platesLabel" destination="JTB-yb-so9" id="6ni-Ve-Gcc"/>
                 <outlet property="platesLabelSubtitle" destination="X0a-Xo-5vs" id="I4A-hh-vC0"/>
