@@ -13,6 +13,8 @@
     [super awakeFromNib];
     [self.activityInput setDelegate:self];
     [self setRepeatVisible:NO];
+
+    [self.repeatActivityButton setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
 }
 
 - (void)setRepeatVisible:(BOOL)visible {
@@ -43,7 +45,7 @@
 }
 
 - (IBAction)repeatActivityTapped:(id)sender {
-    [self.delegate activitySelected: self.repeatActivity];
+    [self.delegate activitySelected:self.repeatActivity];
 }
 
 - (void)setActivity:(Activity *)activity {
