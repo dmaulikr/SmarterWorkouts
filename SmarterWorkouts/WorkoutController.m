@@ -15,6 +15,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped)];
+    tap.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tap];
 
     self.workout = [Workout MR_createEntity];
@@ -22,33 +23,33 @@
     [self.workout addSetGroupsObject:[SetGroup MR_createEntity]];
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 80;
+
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(ActivitySelectorTableViewCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(ActivitySelectorTableViewCell.class)];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(ActivityWeightFormCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(ActivityWeightFormCell.class)];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(SetCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(SetCell.class)];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    int ONE_FOR_FULL_SELECTOR = 1;
-    return [self.workout.setGroups count] + ONE_FOR_FULL_SELECTOR;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    int sectionCount = [self numberOfSectionsInTableView:tableView];
-    if (section == sectionCount - 1) {
-        return 1;
-    }
-    else {
-        return [[self.workout.setGroups[(NSUInteger) section] sets] count];
-    }
+    const int ONE_FOR_ACTIVITY_SELECTOR = self.selectedSet == nil ? 1 : 0;
+    return [[self.workout.setGroups[(NSUInteger) section] sets] count] + ONE_FOR_ACTIVITY_SELECTOR;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    int sectionCount = [self numberOfSectionsInTableView:tableView];
+    Set *currentSet = nil;
+    if ([indexPath row] < [[self.workout.setGroups[0] sets] count]) {
+        currentSet = [self.workout.setGroups[0] sets][(NSUInteger) indexPath.row];
+    }
 
-    if (indexPath.section == sectionCount - 1) {
-        if (!self.selectedActivity) {
+    if ([indexPath row] == [self tableView:tableView numberOfRowsInSection:indexPath.section] - 1
+            || (currentSet != nil && currentSet == self.selectedSet)) {
+        if (!self.selectedActivity && !self.selectedSet) {
             ActivitySelectorTableViewCell *inputCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ActivitySelectorTableViewCell.class) forIndexPath:indexPath];
             SetGroup *setGroup = self.workout.setGroups[0];
             NSUInteger setsCount = [[setGroup sets] count];
@@ -60,16 +61,30 @@
         else {
             ActivityWeightFormCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ActivityWeightFormCell.class) forIndexPath:indexPath];
             [cell setWeightFormDelegate:self];
-            [cell setActivity:self.selectedActivity];
+            if (self.selectedActivity != nil) {
+                [cell setActivity:self.selectedActivity];
+            }
+            if (self.selectedSet != nil) {
+                [cell setSelectedSet:self.selectedSet];
+            }
             return cell;
         }
     }
-    else {
-        Set *set = [self.workout.setGroups[(NSUInteger) indexPath.section] sets][(NSUInteger) indexPath.row];
-        SetCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(SetCell.class) forIndexPath:indexPath];
-        [cell setSet:set];
-        return cell;
+
+    SetCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(SetCell.class) forIndexPath:indexPath];
+    [cell setSet:currentSet];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([[tableView cellForRowAtIndexPath:indexPath] isKindOfClass:SetCell.class]) {
+        SetGroup *setGroup = self.workout.setGroups[0];
+        self.selectedSet = [setGroup sets][(NSUInteger) indexPath.row];
     }
+    else {
+        self.selectedSet = nil;
+    }
+    [self.tableView reloadData];
 }
 
 - (void)viewTapped {
@@ -83,6 +98,7 @@
 
 - (void)formCanceled {
     self.selectedActivity = nil;
+    self.selectedSet = nil;
     [self.tableView reloadData];
 }
 

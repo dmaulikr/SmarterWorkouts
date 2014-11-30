@@ -37,20 +37,19 @@
                     </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="BtG-41-iRv" firstAttribute="trailing" secondItem="hOi-Xo-WBC" secondAttribute="trailingMargin" id="8dt-8O-T61"/>
-                    <constraint firstItem="Y0K-nl-Kt2" firstAttribute="leading" secondItem="hOi-Xo-WBC" secondAttribute="leadingMargin" id="8yV-s5-bPp"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Y0K-nl-Kt2" secondAttribute="bottom" id="ANc-7d-PZB"/>
-                    <constraint firstItem="Y0K-nl-Kt2" firstAttribute="trailing" secondItem="hOi-Xo-WBC" secondAttribute="trailingMargin" id="QHU-s7-QbT"/>
-                    <constraint firstItem="Y0K-nl-Kt2" firstAttribute="top" secondItem="BtG-41-iRv" secondAttribute="bottom" constant="8" id="Zsd-Hu-0ce"/>
-                    <constraint firstItem="BtG-41-iRv" firstAttribute="leading" secondItem="hOi-Xo-WBC" secondAttribute="leadingMargin" id="eb0-60-ip8"/>
-                    <constraint firstItem="BtG-41-iRv" firstAttribute="top" secondItem="hOi-Xo-WBC" secondAttribute="topMargin" id="uJ5-vp-ylE"/>
+                    <constraint firstItem="Y0K-nl-Kt2" firstAttribute="bottom" secondItem="hOi-Xo-WBC" secondAttribute="bottomMargin" id="AnX-lh-Pg9"/>
+                    <constraint firstItem="Y0K-nl-Kt2" firstAttribute="trailing" secondItem="hOi-Xo-WBC" secondAttribute="trailingMargin" id="C09-mr-umY"/>
+                    <constraint firstItem="BtG-41-iRv" firstAttribute="trailing" secondItem="hOi-Xo-WBC" secondAttribute="trailingMargin" id="D7N-Qi-gib"/>
+                    <constraint firstItem="Y0K-nl-Kt2" firstAttribute="leading" secondItem="hOi-Xo-WBC" secondAttribute="leadingMargin" id="J0S-E2-Xes"/>
+                    <constraint firstItem="Y0K-nl-Kt2" firstAttribute="top" secondItem="BtG-41-iRv" secondAttribute="bottom" constant="8" id="h8O-Sf-0kI"/>
+                    <constraint firstItem="BtG-41-iRv" firstAttribute="leading" secondItem="hOi-Xo-WBC" secondAttribute="leadingMargin" id="mnb-H9-nCU"/>
+                    <constraint firstItem="BtG-41-iRv" firstAttribute="top" secondItem="hOi-Xo-WBC" secondAttribute="topMargin" id="sUx-eT-smD"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="activityInput" destination="Y0K-nl-Kt2" id="gbm-ki-JnO"/>
                 <outlet property="repeatActivityButton" destination="BtG-41-iRv" id="aQL-xH-yt3"/>
                 <outlet property="repeatHeightConstraint" destination="yYA-9v-T5J" id="FDV-KD-WhB"/>
-                <outlet property="repeatSpacer" destination="Zsd-Hu-0ce" id="EPN-vo-CEC"/>
             </connections>
             <point key="canvasLocation" x="236" y="356"/>
         </tableViewCell>

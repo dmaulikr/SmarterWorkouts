@@ -49,6 +49,15 @@
 - (void)setActivity:(Activity *)activity {
     _activity = activity;
     [self.activityNameLabel setText:self.activity.name];
+    [self.setsInput setText:@""];
+}
+
+- (void)setSelectedSet:(Set *)selectedSet {
+    _selectedSet = selectedSet;
+    [self.activityNameLabel setText:selectedSet.activity];
+    [self.setsInput setText:@""];
+    [self.weightInput setText:[NSString stringWithFormat:@"%@", selectedSet.weight]];
+    [self.repsInput setText:[NSString stringWithFormat:@"%@", selectedSet.reps]];
 }
 
 - (void)weightChanged:(id)weightChanged {

@@ -6,6 +6,7 @@
 @class Form;
 @class FlavorTextUITextField;
 @class Activity;
+@class Set;
 
 @interface ActivityWeightFormCell : UITableViewCell <UITextFieldDelegate, FormDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *activityNameLabel;
@@ -23,8 +24,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *platesLabelSubtitle;
 
 @property(nonatomic, strong) Activity *activity;
+@property(nonatomic, strong) Set *selectedSet;
 
 - (int)loggedSets;
 
 - (int)loggedReps;
+
 @end

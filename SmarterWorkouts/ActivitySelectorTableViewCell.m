@@ -5,12 +5,9 @@
 
 @implementation ActivitySelectorTableViewCell
 
-- (CGSize)intrinsicContentSize {
-    return CGSizeMake(320, 66);
-}
-
 - (void)awakeFromNib {
     [super awakeFromNib];
+//    self.translatesAutoresizingMaskIntoConstraints = NO;
     [self.activityInput setDelegate:self];
     [self setRepeatVisible:NO];
 
