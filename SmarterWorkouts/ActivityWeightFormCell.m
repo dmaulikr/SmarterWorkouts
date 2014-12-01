@@ -41,6 +41,15 @@
     self.platesLabelSubtitle.alpha = 0;
 }
 
+- (void)prepareForReuse {
+    self.activity = nil;
+    self.selectedSet = nil;
+    [self.addButton setTitle:@"Add" forState:UIControlStateNormal];
+    [self.weightInput setText:@""];
+    [self.repsInput setText:@""];
+    [self.setsInput setText:@""];
+}
+
 - (void)layoutSubviews {
     [super layoutSubviews];
     [self.weightInput becomeFirstResponder];
@@ -58,6 +67,7 @@
     [self.setsInput setText:@""];
     [self.weightInput setText:[NSString stringWithFormat:@"%@", selectedSet.weight]];
     [self.repsInput setText:[NSString stringWithFormat:@"%@", selectedSet.reps]];
+    [self.addButton setTitle:@"Save" forState:UIControlStateNormal];
 }
 
 - (void)weightChanged:(id)weightChanged {
@@ -96,14 +106,17 @@
 
 - (IBAction)addButtonTapped:(id)sender {
     NSMutableArray *sets = [@[] mutableCopy];
+
     for (int setIndex = 0; setIndex < [self loggedSets]; setIndex++) {
-        Set *set = [Set MR_createEntity];
-        set.activity = self.activity.name;
-        set.units = self.activity.units;
+        Set *set = nil;
+        set = [Set MR_createEntity];
+        set.activity = self.selectedSet ? self.selectedSet.activity : self.activity.name;
+        set.units = self.selectedSet ? self.selectedSet.units : self.activity.units;
         set.weight = [DecimalNumbers parse:self.weightInput.text];
         set.reps = @([self loggedReps]);
         [sets addObject:set];
     }
+
     [self.weightFormDelegate formFinished:sets];
 }
 

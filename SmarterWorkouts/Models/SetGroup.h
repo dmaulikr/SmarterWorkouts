@@ -19,6 +19,8 @@
 @property (nonatomic, retain) NSOrderedSet *sets;
 
 - (void)addSetsArray:(NSArray *)values;
+
+- (void)insertSetsArray:(NSArray *)array atIndex:(NSUInteger)index;
 @end
 
 @interface SetGroup (CoreDataGeneratedAccessors)

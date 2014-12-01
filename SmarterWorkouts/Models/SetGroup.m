@@ -7,7 +7,6 @@
 //
 
 #import "SetGroup.h"
-#import "SetGroup.h"
 
 
 @implementation SetGroup
@@ -18,10 +17,17 @@
 @dynamic sets;
 
 - (void)addSetsArray:(NSArray *)values {
-    for(id value in values){
+    for (id value in values) {
         [self addSetsObject:value];
     }
 }
 
+- (void)insertSetsArray:(NSArray *)array atIndex:(NSUInteger)index {
+    NSMutableOrderedSet *newSet = [self.sets mutableCopy];
+    for(id value in [array reverseObjectEnumerator]){
+        [newSet insertObject:value atIndex:index];
+    }
+    [self setSets:newSet];
+}
 
 @end

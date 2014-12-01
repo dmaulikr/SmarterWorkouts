@@ -47,7 +47,7 @@
         currentSet = [self.workout.setGroups[0] sets][(NSUInteger) indexPath.row];
     }
 
-    if ([indexPath row] == [self tableView:tableView numberOfRowsInSection:indexPath.section] - 1
+    if (([indexPath row] == [self tableView:tableView numberOfRowsInSection:indexPath.section] - 1 && self.selectedSet == nil)
             || (currentSet != nil && currentSet == self.selectedSet)) {
         if (!self.selectedActivity && !self.selectedSet) {
             ActivitySelectorTableViewCell *inputCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ActivitySelectorTableViewCell.class) forIndexPath:indexPath];
@@ -103,10 +103,20 @@
 }
 
 - (void)formFinished:(NSArray *)sets {
-    self.selectedActivity = nil;
+    if (self.selectedSet) {
+        SetGroup *setGroup = self.workout.setGroups[0];
+        NSUInteger index = [setGroup.sets indexOfObject:self.selectedSet];
+        [setGroup insertSetsArray:sets atIndex:index];
+        [setGroup removeSetsObject:self.selectedSet];
 
-    SetGroup *setGroup = self.workout.setGroups[0];
-    [setGroup addSetsArray:sets];
+        self.selectedSet = nil;
+    }
+    else {
+        self.selectedActivity = nil;
+        SetGroup *setGroup = self.workout.setGroups[0];
+        [setGroup addSetsArray:sets];
+    }
+
     [self.tableView reloadData];
 }
 
