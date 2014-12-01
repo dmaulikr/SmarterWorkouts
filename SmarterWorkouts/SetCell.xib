@@ -14,7 +14,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Power Clean" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.70000000000000018" translatesAutoresizingMaskIntoConstraints="NO" id="5fL-sT-cTI">
-                        <rect key="frame" x="8" y="9" width="129" height="26.5"/>
+                        <rect key="frame" x="8" y="8" width="129" height="27.5"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -33,12 +33,13 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="centerY" secondItem="LP2-vI-eZV" secondAttribute="centerY" constant="0.25" id="34A-fR-WLO"/>
-                    <constraint firstAttribute="centerY" secondItem="Dqr-Kq-xoJ" secondAttribute="centerY" constant="0.25" id="5nN-SZ-F6F"/>
+                    <constraint firstAttribute="centerY" secondItem="LP2-vI-eZV" secondAttribute="centerY" id="34A-fR-WLO"/>
+                    <constraint firstAttribute="centerY" secondItem="Dqr-Kq-xoJ" secondAttribute="centerY" id="5nN-SZ-F6F"/>
+                    <constraint firstItem="5fL-sT-cTI" firstAttribute="bottom" secondItem="XVB-Wm-jq0" secondAttribute="bottomMargin" id="MSC-Q4-jcK"/>
                     <constraint firstItem="Dqr-Kq-xoJ" firstAttribute="leading" secondItem="LP2-vI-eZV" secondAttribute="trailing" constant="8" id="NxN-lG-ypB"/>
                     <constraint firstItem="5fL-sT-cTI" firstAttribute="leading" secondItem="XVB-Wm-jq0" secondAttribute="leadingMargin" id="VBZ-CP-hzA"/>
                     <constraint firstItem="LP2-vI-eZV" firstAttribute="leading" secondItem="5fL-sT-cTI" secondAttribute="trailing" constant="8" id="mUe-x5-8EE"/>
-                    <constraint firstAttribute="centerY" secondItem="5fL-sT-cTI" secondAttribute="centerY" constant="0.25" id="p4a-za-nWQ"/>
+                    <constraint firstItem="5fL-sT-cTI" firstAttribute="top" secondItem="XVB-Wm-jq0" secondAttribute="topMargin" id="nzk-GS-1Zw"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Dqr-Kq-xoJ" secondAttribute="trailing" id="uZl-BW-h3R"/>
                 </constraints>
             </tableViewCellContentView>
