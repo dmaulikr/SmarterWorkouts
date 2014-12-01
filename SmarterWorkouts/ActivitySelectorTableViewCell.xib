@@ -50,6 +50,7 @@
                 <outlet property="activityInput" destination="Y0K-nl-Kt2" id="gbm-ki-JnO"/>
                 <outlet property="repeatActivityButton" destination="BtG-41-iRv" id="aQL-xH-yt3"/>
                 <outlet property="repeatHeightConstraint" destination="yYA-9v-T5J" id="FDV-KD-WhB"/>
+                <outlet property="repeatSpacer" destination="h8O-Sf-0kI" id="kjD-UV-USj"/>
             </connections>
             <point key="canvasLocation" x="236" y="356"/>
         </tableViewCell>

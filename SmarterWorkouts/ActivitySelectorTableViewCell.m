@@ -7,7 +7,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-//    self.translatesAutoresizingMaskIntoConstraints = NO;
     [self.activityInput setDelegate:self];
     [self setRepeatVisible:NO];
 
