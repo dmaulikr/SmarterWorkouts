@@ -2,7 +2,7 @@
 #import "FormDelegate.h"
 
 @class WorkoutController;
-@protocol WeightFormDelegate;
+@protocol WeightActivityFormDelegate;
 @class Form;
 @class FlavorTextUITextField;
 @class Activity;
@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 
-@property(nonatomic, weak) NSObject <WeightFormDelegate> *weightFormDelegate;
+@property(nonatomic, weak) NSObject <WeightActivityFormDelegate> *weightActivityFormDelegate;
 
 @property(nonatomic, strong) Form *form;
 

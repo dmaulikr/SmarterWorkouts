@@ -5,7 +5,6 @@
 #import "WorkoutController.h"
 #import "FlavorTextUITextField.h"
 #import "WeightInputControls.h"
-#import "UIImage+ColorFromImage.h"
 #import "Activity.h"
 #import "Set.h"
 #import "Plate.h"
@@ -30,13 +29,6 @@
     [self.setsInput setDelegate:self];
     [self.setsInput setFlavor:@"sets"];
 
-    self.addButton.layer.cornerRadius = 10;
-    self.addButton.layer.borderWidth = 1;
-    self.addButton.layer.borderColor = [self.addButton currentTitleColor].CGColor;
-
-    [self.cancelButton                                        setBackgroundImage:[UIImage imageWithColor:
-            [UIColor colorWithRed:0.851 green:0.325 blue:0.31 alpha:1]] forState:UIControlStateHighlighted];
-
     self.platesLabel.alpha = 0;
     self.platesLabelSubtitle.alpha = 0;
 }
@@ -45,29 +37,39 @@
     self.activity = nil;
     self.selectedSet = nil;
     [self.addButton setTitle:@"Add" forState:UIControlStateNormal];
+    [self.cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
     [self.weightInput setText:@""];
     [self.repsInput setText:@""];
     [self.setsInput setText:@""];
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    [self.weightInput becomeFirstResponder];
 }
 
 - (void)setActivity:(Activity *)activity {
     _activity = activity;
     [self.activityNameLabel setText:self.activity.name];
     [self.setsInput setText:@""];
+
+    [self.weightInput becomeFirstResponder];
 }
 
 - (void)setSelectedSet:(Set *)selectedSet {
     _selectedSet = selectedSet;
     [self.activityNameLabel setText:selectedSet.activity];
     [self.setsInput setText:@""];
-    [self.weightInput setText:[NSString stringWithFormat:@"%@", selectedSet.weight]];
-    [self.repsInput setText:[NSString stringWithFormat:@"%@", selectedSet.reps]];
+    if ([selectedSet.weight compare:[NSDecimalNumber zero]] == NSOrderedDescending) {
+        [self.weightInput setText:[NSString stringWithFormat:@"%@", selectedSet.weight]];
+    }
+    else {
+        [self.weightInput setText:@""];
+    }
+
+    if ([selectedSet.reps intValue] == 1) {
+        [self.repsInput setText:@""];
+    }
+    else {
+        [self.repsInput setText:[NSString stringWithFormat:@"%@", selectedSet.reps]];
+    }
     [self.addButton setTitle:@"Save" forState:UIControlStateNormal];
+    [self.cancelButton setTitle:@"Delete" forState:UIControlStateNormal];
 }
 
 - (void)weightChanged:(id)weightChanged {
@@ -101,7 +103,12 @@
 }
 
 - (IBAction)cancelButtonTapped:(id)sender {
-    [self.weightFormDelegate formCanceled];
+    if (self.selectedSet) {
+        [self.weightActivityFormDelegate formDelete];
+    }
+    else {
+        [self.weightActivityFormDelegate formCanceled];
+    }
 }
 
 - (IBAction)addButtonTapped:(id)sender {
@@ -117,7 +124,7 @@
         [sets addObject:set];
     }
 
-    [self.weightFormDelegate formFinished:sets];
+    [self.weightActivityFormDelegate formFinished:sets];
 }
 
 - (int)valueOf:(UITextField *)field {

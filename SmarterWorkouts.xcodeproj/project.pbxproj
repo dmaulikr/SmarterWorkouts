@@ -118,7 +118,7 @@
 		545908C17FF06866026FFF47 /* WorkoutController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutController.h; sourceTree = "<group>"; };
 		545909370C64722C73459C11 /* Plate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Plate.m; path = Models/Plate.m; sourceTree = "<group>"; };
 		5459093FA06E60D65D8B9C63 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		5459095D3D1623B3210D4AAD /* WeightFormDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightFormDelegate.h; sourceTree = "<group>"; };
+		5459095D3D1623B3210D4AAD /* WeightActivityFormDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightActivityFormDelegate.h; sourceTree = "<group>"; };
 		545909CA1997BE71C52F50ED /* ActivitySelectorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySelectorDelegate.h; sourceTree = "<group>"; };
 		54590A2EACB21533C2AFA241 /* SetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetCell.xib; sourceTree = "<group>"; };
 		54590AAE4C1642A3A0A9BD45 /* Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Set.m; path = Models/Set.m; sourceTree = "<group>"; };
@@ -288,7 +288,7 @@
 				54590598F1B9BA55BE77E556 /* ActivityWeightFormCell.m */,
 				545903B0DD13AF9C9EA94E9C /* ActivityWeightFormCell.h */,
 				54590495D916C9155C6F9425 /* ActivityWeightFormCell.xib */,
-				5459095D3D1623B3210D4AAD /* WeightFormDelegate.h */,
+				5459095D3D1623B3210D4AAD /* WeightActivityFormDelegate.h */,
 				54590E3CC51DA5A843C84E47 /* Selection */,
 				54590BFD70E633D4614C618F /* ActivitySelectorTableViewCell.m */,
 				545907D0EC153A54AC0C5A5D /* ActivitySelectorTableViewCell.h */,

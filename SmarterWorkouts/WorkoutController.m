@@ -58,9 +58,10 @@
             [inputCell setDelegate:self];
             return inputCell;
         }
-        else {
+
+        if (self.selectedSet == nil || (currentSet != nil && currentSet == self.selectedSet)) {
             ActivityWeightFormCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ActivityWeightFormCell.class) forIndexPath:indexPath];
-            [cell setWeightFormDelegate:self];
+            [cell setWeightActivityFormDelegate:self];
             if (self.selectedActivity != nil) {
                 [cell setActivity:self.selectedActivity];
             }
@@ -70,21 +71,23 @@
             return cell;
         }
     }
-
     SetCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(SetCell.class) forIndexPath:indexPath];
     [cell setSet:currentSet];
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)      tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:
+        (NSIndexPath *)indexPath {
     if ([[tableView cellForRowAtIndexPath:indexPath] isKindOfClass:SetCell.class]) {
         SetGroup *setGroup = self.workout.setGroups[0];
         self.selectedSet = [setGroup sets][(NSUInteger) indexPath.row];
+        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationMiddle];
     }
     else {
         self.selectedSet = nil;
+        [self.tableView reloadData];
     }
-    [self.tableView reloadData];
 }
 
 - (void)viewTapped {
@@ -119,5 +122,15 @@
 
     [self.tableView reloadData];
 }
+
+- (void)formDelete {
+    SetGroup *setGroup = self.workout.setGroups[0];
+    NSUInteger index = [setGroup.sets indexOfObject:self.selectedSet];
+    [setGroup removeSetsObject:self.selectedSet];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:index] withRowAnimation:UITableViewRowAnimationFade];
+    self.selectedSet = nil;
+    [self.tableView reloadData];
+}
+
 
 @end
