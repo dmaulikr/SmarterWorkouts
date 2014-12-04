@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02423F8D1A2FE81D0048BB17 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02423F8C1A2FE81D0048BB17 /* WatchKit.framework */; };
+		02423F941A2FE81D0048BB17 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02423F931A2FE81D0048BB17 /* InterfaceController.m */; };
+		02423F971A2FE81D0048BB17 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02423F961A2FE81D0048BB17 /* NotificationController.m */; };
+		02423F9A1A2FE81D0048BB17 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02423F991A2FE81D0048BB17 /* GlanceController.m */; };
+		02423F9C1A2FE81D0048BB17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02423F9B1A2FE81D0048BB17 /* Images.xcassets */; };
+		02423FA01A2FE81D0048BB17 /* SmarterWorkouts Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = 02423F9F1A2FE81D0048BB17 /* SmarterWorkouts Watch App.app */; };
+		02423FA71A2FE81D0048BB17 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02423FA61A2FE81D0048BB17 /* Interface.storyboard */; };
+		02423FA91A2FE81D0048BB17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02423FA81A2FE81D0048BB17 /* Images.xcassets */; };
+		02423FAC1A2FE81D0048BB17 /* SmarterWorkouts WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 02423F8B1A2FE81D0048BB17 /* SmarterWorkouts WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0267A9AC1A21180D00DE7DBC /* Workout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0267A9AA1A21180D00DE7DBC /* Workout.xcdatamodeld */; };
 		027ABDDB1A195D2000DE3321 /* BarLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 027ABDDA1A195D2000DE3321 /* BarLoadingViewController.xib */; };
 		0288D98C1A180C1A0092C2D3 /* PlateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0288D98B1A180C1A0092C2D3 /* PlateViewController.xib */; };
@@ -60,6 +69,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		02423FA11A2FE81D0048BB17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54590B7E717641F0455C5327 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02423F9E1A2FE81D0048BB17;
+			remoteInfo = "SmarterWorkouts Watch App";
+		};
+		02423FAA1A2FE81D0048BB17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54590B7E717641F0455C5327 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02423F8A1A2FE81D0048BB17;
+			remoteInfo = "SmarterWorkouts WatchKit Extension";
+		};
 		54590815875FF5E3BAEC3A19 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 54590B7E717641F0455C5327 /* Project object */;
@@ -69,7 +92,36 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		02423FB31A2FE81D0048BB17 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				02423FAC1A2FE81D0048BB17 /* SmarterWorkouts WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		02423F8B1A2FE81D0048BB17 /* SmarterWorkouts WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SmarterWorkouts WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02423F8C1A2FE81D0048BB17 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		02423F901A2FE81D0048BB17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02423F911A2FE81D0048BB17 /* PushNotificationPayload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PushNotificationPayload.json; sourceTree = "<group>"; };
+		02423F921A2FE81D0048BB17 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		02423F931A2FE81D0048BB17 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		02423F951A2FE81D0048BB17 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		02423F961A2FE81D0048BB17 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		02423F981A2FE81D0048BB17 /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		02423F991A2FE81D0048BB17 /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		02423F9B1A2FE81D0048BB17 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		02423F9F1A2FE81D0048BB17 /* SmarterWorkouts Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmarterWorkouts Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02423FA51A2FE81D0048BB17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02423FA61A2FE81D0048BB17 /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
+		02423FA81A2FE81D0048BB17 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0267A9AB1A21180D00DE7DBC /* Workout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Workout.xcdatamodel; sourceTree = "<group>"; };
 		027ABDDA1A195D2000DE3321 /* BarLoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarLoadingViewController.xib; sourceTree = "<group>"; };
 		0288D98B1A180C1A0092C2D3 /* PlateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlateViewController.xib; sourceTree = "<group>"; };
@@ -158,6 +210,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		02423F881A2FE81D0048BB17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02423F8D1A2FE81D0048BB17 /* WatchKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		545901121645FF57FE293DFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,6 +238,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02423F8E1A2FE81D0048BB17 /* SmarterWorkouts WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				02423F921A2FE81D0048BB17 /* InterfaceController.h */,
+				02423F931A2FE81D0048BB17 /* InterfaceController.m */,
+				02423F951A2FE81D0048BB17 /* NotificationController.h */,
+				02423F961A2FE81D0048BB17 /* NotificationController.m */,
+				02423F981A2FE81D0048BB17 /* GlanceController.h */,
+				02423F991A2FE81D0048BB17 /* GlanceController.m */,
+				02423F9B1A2FE81D0048BB17 /* Images.xcassets */,
+				02423F8F1A2FE81D0048BB17 /* Supporting Files */,
+			);
+			path = "SmarterWorkouts WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		02423F8F1A2FE81D0048BB17 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				02423F901A2FE81D0048BB17 /* Info.plist */,
+				02423F911A2FE81D0048BB17 /* PushNotificationPayload.json */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		02423FA31A2FE81D0048BB17 /* SmarterWorkouts Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				02423FA61A2FE81D0048BB17 /* Interface.storyboard */,
+				02423FA81A2FE81D0048BB17 /* Images.xcassets */,
+				02423FA41A2FE81D0048BB17 /* Supporting Files */,
+			);
+			path = "SmarterWorkouts Watch App";
+			sourceTree = "<group>";
+		};
+		02423FA41A2FE81D0048BB17 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				02423FA51A2FE81D0048BB17 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		0267A9A81A2117D200DE7DBC /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +407,8 @@
 			children = (
 				545902792F0900BE86135C4D /* SmarterWorkouts.app */,
 				54590DFEC887B12C9D546107 /* SmarterWorkoutsTests.xctest */,
+				02423F8B1A2FE81D0048BB17 /* SmarterWorkouts WatchKit Extension.appex */,
+				02423F9F1A2FE81D0048BB17 /* SmarterWorkouts Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -366,6 +470,8 @@
 		54590986B357EA60358384A3 = {
 			isa = PBXGroup;
 			children = (
+				02423F8E1A2FE81D0048BB17 /* SmarterWorkouts WatchKit Extension */,
+				02423FA31A2FE81D0048BB17 /* SmarterWorkouts Watch App */,
 				545904972D5B59C73C7E185D /* Products */,
 				54590E7C84FB812C1C10E222 /* SmarterWorkouts */,
 				545906C0F1AE80F757530F01 /* SmarterWorkoutsTests */,
@@ -481,6 +587,7 @@
 			children = (
 				BD4D313009C4493EB660B607 /* libPods.a */,
 				5459093FA06E60D65D8B9C63 /* CoreData.framework */,
+				02423F8C1A2FE81D0048BB17 /* WatchKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -488,6 +595,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		02423F8A1A2FE81D0048BB17 /* SmarterWorkouts WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02423FB21A2FE81D0048BB17 /* Build configuration list for PBXNativeTarget "SmarterWorkouts WatchKit Extension" */;
+			buildPhases = (
+				02423F871A2FE81D0048BB17 /* Sources */,
+				02423F881A2FE81D0048BB17 /* Frameworks */,
+				02423F891A2FE81D0048BB17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02423FA21A2FE81D0048BB17 /* PBXTargetDependency */,
+			);
+			name = "SmarterWorkouts WatchKit Extension";
+			productName = "SmarterWorkouts WatchKit Extension";
+			productReference = 02423F8B1A2FE81D0048BB17 /* SmarterWorkouts WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		02423F9E1A2FE81D0048BB17 /* SmarterWorkouts Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02423FB11A2FE81D0048BB17 /* Build configuration list for PBXNativeTarget "SmarterWorkouts Watch App" */;
+			buildPhases = (
+				02423F9D1A2FE81D0048BB17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SmarterWorkouts Watch App";
+			productName = "SmarterWorkouts Watch App";
+			productReference = 02423F9F1A2FE81D0048BB17 /* SmarterWorkouts Watch App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		545902536CDF9710E59E4BB2 /* SmarterWorkouts */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54590F3259FCCC41F9AA418D /* Build configuration list for PBXNativeTarget "SmarterWorkouts" */;
@@ -497,10 +637,12 @@
 				545906F2583B4650AD5C5850 /* Frameworks */,
 				5459021BD2AD0F93D69FCD06 /* Resources */,
 				68A04FD592234780B940B58B /* Copy Pods Resources */,
+				02423FB31A2FE81D0048BB17 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				02423FAB1A2FE81D0048BB17 /* PBXTargetDependency */,
 			);
 			name = SmarterWorkouts;
 			productName = SmarterWorkouts;
@@ -535,6 +677,13 @@
 			attributes = {
 				ORGANIZATIONNAME = "Stefan Kendall";
 				TargetAttributes = {
+					02423F8A1A2FE81D0048BB17 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 255V99ZU6N;
+					};
+					02423F9E1A2FE81D0048BB17 = {
+						CreatedOnToolsVersion = 6.2;
+					};
 					545902536CDF9710E59E4BB2 = {
 						DevelopmentTeam = 255V99ZU6N;
 					};
@@ -554,11 +703,31 @@
 			targets = (
 				545902536CDF9710E59E4BB2 /* SmarterWorkouts */,
 				54590696CAD506FDD77D6248 /* SmarterWorkoutsTests */,
+				02423F8A1A2FE81D0048BB17 /* SmarterWorkouts WatchKit Extension */,
+				02423F9E1A2FE81D0048BB17 /* SmarterWorkouts Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		02423F891A2FE81D0048BB17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02423FA01A2FE81D0048BB17 /* SmarterWorkouts Watch App.app in Resources */,
+				02423F9C1A2FE81D0048BB17 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02423F9D1A2FE81D0048BB17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02423FA71A2FE81D0048BB17 /* Interface.storyboard in Resources */,
+				02423FA91A2FE81D0048BB17 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		54590102F41F6604530F1E99 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -651,6 +820,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		02423F871A2FE81D0048BB17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02423F971A2FE81D0048BB17 /* NotificationController.m in Sources */,
+				02423F941A2FE81D0048BB17 /* InterfaceController.m in Sources */,
+				02423F9A1A2FE81D0048BB17 /* GlanceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		54590212CC773E5A6481C484 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -703,6 +882,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		02423FA21A2FE81D0048BB17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02423F9E1A2FE81D0048BB17 /* SmarterWorkouts Watch App */;
+			targetProxy = 02423FA11A2FE81D0048BB17 /* PBXContainerItemProxy */;
+		};
+		02423FAB1A2FE81D0048BB17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02423F8A1A2FE81D0048BB17 /* SmarterWorkouts WatchKit Extension */;
+			targetProxy = 02423FAA1A2FE81D0048BB17 /* PBXContainerItemProxy */;
+		};
 		545902BBDF721AC34F6EF908 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 545902536CDF9710E59E4BB2 /* SmarterWorkouts */;
@@ -730,6 +919,70 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		02423FAD1A2FE81D0048BB17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SmarterWorkouts WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		02423FAE1A2FE81D0048BB17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "SmarterWorkouts WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		02423FAF1A2FE81D0048BB17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = SmarterWorkouts_WatchKit_Extension;
+				INFOPLIST_FILE = "SmarterWorkouts Watch App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		02423FB01A2FE81D0048BB17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				IBSC_MODULE = SmarterWorkouts_WatchKit_Extension;
+				INFOPLIST_FILE = "SmarterWorkouts Watch App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		545900EC130ABC7133E6F91D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D2ABD30978FA77B752E19FB5 /* Pods.debug.xcconfig */;
@@ -875,6 +1128,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		02423FB11A2FE81D0048BB17 /* Build configuration list for PBXNativeTarget "SmarterWorkouts Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02423FAF1A2FE81D0048BB17 /* Debug */,
+				02423FB01A2FE81D0048BB17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		02423FB21A2FE81D0048BB17 /* Build configuration list for PBXNativeTarget "SmarterWorkouts WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02423FAD1A2FE81D0048BB17 /* Debug */,
+				02423FAE1A2FE81D0048BB17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		54590E14121E96ADDADB146C /* Build configuration list for PBXNativeTarget "SmarterWorkoutsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

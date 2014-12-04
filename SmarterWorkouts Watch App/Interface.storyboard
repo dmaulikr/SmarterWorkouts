@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController"/>
+            </objects>
+            <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController">
+                    <items>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <label width="136" height="34.5" alignment="left" text="Plates to load " id="9gk-Kt-qJl"/>
+                            </items>
+                        </group>
+                        <group alignment="left" layout="vertical" id="uCw-4Q-Ouw">
+                            <items>
+                                <group width="1" alignment="left" id="2EY-8Z-EkT">
+                                    <items>
+                                        <label width="0.5" alignment="left" text="2" textAlignment="right" id="5lM-dd-IIa">
+                                            <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                        </label>
+                                        <label width="0.5" alignment="left" text="45s" textAlignment="right" id="mZt-DS-lv6">
+                                            <fontDescription key="font" type="system" pointSize="20"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="wVy-7C-aNV">
+                                    <items>
+                                        <label width="0.5" alignment="left" text="3" textAlignment="right" id="prz-h0-ZUB">
+                                            <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                        </label>
+                                        <label width="0.5" alignment="left" text="35lbs" textAlignment="right" id="ALz-06-ca9">
+                                            <fontDescription key="font" type="system" pointSize="20"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="4CR-E7-CAX">
+                                    <items>
+                                        <label width="0.5" alignment="left" text="3" textAlignment="right" id="CU8-ku-Ifq">
+                                            <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                        </label>
+                                        <label width="0.5" alignment="left" text="2.5lbs" textAlignment="right" id="CTr-RL-Lnv">
+                                            <fontDescription key="font" type="system" pointSize="20"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="bottomPlateCount" destination="CU8-ku-Ifq" id="dp4-q1-E4k"/>
+                        <outlet property="bottomPlateWeight" destination="CTr-RL-Lnv" id="h9D-sM-jN6"/>
+                        <outlet property="middlePlateCount" destination="prz-h0-ZUB" id="tOC-my-ViU"/>
+                        <outlet property="middleWeight" destination="ALz-06-ca9" id="Byq-2R-JKX"/>
+                        <outlet property="topPlateCount" destination="5lM-dd-IIa" id="T0F-OU-fIe"/>
+                        <outlet property="topPlateWeight" destination="mZt-DS-lv6" id="hAn-d9-Oo0"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="1001"/>
+        </scene>
+    </scenes>
+</document>
