@@ -33,6 +33,12 @@
     self.platesLabelSubtitle.alpha = 0;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [self.weightInput becomeFirstResponder];
+    [self weightChanged:nil];
+}
+
 - (void)prepareForReuse {
     self.activity = nil;
     self.selectedSet = nil;
@@ -75,7 +81,8 @@
 - (void)weightChanged:(id)weightChanged {
     NSDecimalNumber *weight = [DecimalNumbers parse:[self.weightInput text]];
     if ([weight compare:[NSDecimalNumber decimalNumberWithString:@"45"]] == NSOrderedDescending) {
-        BarCalculator *calculator = [[BarCalculator alloc] initWithPlates:[Plate findAllSorted:self.activity.units]
+        BarCalculator *calculator = [[BarCalculator alloc] initWithPlates:
+                        [Plate findAllSorted:self.selectedSet ? self.selectedSet.units : self.activity.units]
                                                                 barWeight:[NSDecimalNumber decimalNumberWithString:@"45"]];
         NSArray *platesToMakeWeight = [calculator platesToMakeWeight:weight];
         NSString *platesText = [platesToMakeWeight componentsJoinedByString:@", "];
@@ -85,14 +92,12 @@
             }               completion:nil];
         }
         else {
-            [self.platesLabel setText:platesText];
+            [UIView animateWithDuration:0.3 animations:^{
+                [self.platesLabel setText:[platesToMakeWeight componentsJoinedByString:@", "]];
+                self.platesLabel.alpha = 1;
+                self.platesLabelSubtitle.alpha = 1;
+            }];
         }
-
-        [UIView animateWithDuration:0.3 animations:^{
-            [self.platesLabel setText:[platesToMakeWeight componentsJoinedByString:@", "]];
-            self.platesLabel.alpha = 1;
-            self.platesLabelSubtitle.alpha = 1;
-        }];
     }
     else {
         [UIView animateWithDuration:0.3 animations:^{
