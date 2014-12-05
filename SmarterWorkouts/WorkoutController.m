@@ -73,20 +73,31 @@
 
     if (([self isAddingSet] && [indexPath row] == [[self.workout.setGroups[0] sets] count]) ||
             ([self isEditingSet] && currentSet == self.selectedSet)) {
-        ActivityWeightFormCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ActivityWeightFormCell.class) forIndexPath:indexPath];
-        [cell setWeightActivityFormDelegate:self];
-        if (self.selectedActivity != nil) {
-            [cell setActivity:self.selectedActivity];
+        ActivityWeightFormCell *cell = nil;
+        if ([[self activityType] isEqualToString:@"weight"]) {
+            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ActivityWeightFormCell.class) forIndexPath:indexPath];
+            if (self.selectedActivity != nil) {
+                [cell setActivity:self.selectedActivity];
+            }
+            if (self.selectedSet != nil) {
+                [cell setSelectedSet:self.selectedSet];
+            }
         }
-        if (self.selectedSet != nil) {
-            [cell setSelectedSet:self.selectedSet];
+        else if ([[self activityType] isEqualToString:@"timer"]) {
+            [NSException raise:@"Something" format:@""];
         }
+
+        [cell setActivityFormDelegate:self];
         return cell;
     }
 
     SetCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(SetCell.class) forIndexPath:indexPath];
     [cell setSet:currentSet];
     return cell;
+}
+
+- (NSString *)activityType {
+    return @"weight";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

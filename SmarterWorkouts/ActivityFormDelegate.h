@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@protocol WeightActivityFormDelegate <NSObject>
+@protocol ActivityFormDelegate <NSObject>
 - (void)formCanceled;
 
 - (void)formFinished:(NSArray *)sets;

@@ -1,5 +1,5 @@
 #import <UIKit/UIKit.h>
-#import "WeightActivityFormDelegate.h"
+#import "ActivityFormDelegate.h"
 #import "ContextHolderViewController.h"
 #import "ActivitySelectorDelegate.h"
 
@@ -9,7 +9,7 @@
 @class Workout;
 @class Set;
 
-@interface WorkoutController : UITableViewController <UITextFieldDelegate, ActivitySelectorDelegate, WeightActivityFormDelegate> {
+@interface WorkoutController : UITableViewController <UITextFieldDelegate, ActivitySelectorDelegate, ActivityFormDelegate> {
 }
 @property(nonatomic, strong) Workout *workout;
 @property(nonatomic, strong) Activity *selectedActivity;

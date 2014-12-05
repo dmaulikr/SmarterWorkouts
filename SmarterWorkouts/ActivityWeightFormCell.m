@@ -49,7 +49,7 @@
 }
 
 - (void)setActivity:(Activity *)activity {
-    _activity = activity;
+    super.activity = activity;
     [self.deleteButton setHidden:YES];
     [self.activityNameLabel setText:self.activity.name];
     [self.setsInput setText:@""];
@@ -58,7 +58,7 @@
 }
 
 - (void)setSelectedSet:(Set *)selectedSet {
-    _selectedSet = selectedSet;
+    super.selectedSet = selectedSet;
     [self.deleteButton setHidden:NO];
     [self.activityNameLabel setText:selectedSet.activity];
     [self.setsInput setText:@""];
@@ -108,11 +108,11 @@
 }
 
 - (IBAction)cancelButtonTapped:(id)sender {
-    [self.weightActivityFormDelegate formCanceled];
+    [self.activityFormDelegate formCanceled];
 }
 
 - (IBAction)deleteButtonTapped:(id)sender {
-    [self.weightActivityFormDelegate formDelete];
+    [self.activityFormDelegate formDelete];
 }
 
 - (IBAction)addButtonTapped:(id)sender {
@@ -128,7 +128,7 @@
         [sets addObject:set];
     }
 
-    [self.weightActivityFormDelegate formFinished:sets];
+    [self.activityFormDelegate formFinished:sets];
 }
 
 - (int)valueOf:(UITextField *)field {
