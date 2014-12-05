@@ -15,6 +15,7 @@
 @property(weak, nonatomic) IBOutlet FlavorTextUITextField *setsInput;
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 
 @property(nonatomic, weak) NSObject <WeightActivityFormDelegate> *weightActivityFormDelegate;
 

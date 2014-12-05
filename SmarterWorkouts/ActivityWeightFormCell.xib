@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -89,6 +89,19 @@
                             <action selector="cancelButtonTapped:" destination="iwz-gt-Fgi" eventType="touchUpInside" id="ah1-IG-2HK"/>
                         </connections>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8v-4S-pIH">
+                        <rect key="frame" x="301" y="8" width="70" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="y9M-la-nFW"/>
+                        </constraints>
+                        <state key="normal" title="Delete">
+                            <color key="titleColor" red="1" green="0.44271818930000001" blue="0.46442715670000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="deleteButtonTapped:" destination="iwz-gt-Fgi" eventType="touchUpInside" id="nJ3-fD-2bN"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="0iu-QV-ljs" firstAttribute="leading" secondItem="LCv-4v-3Iu" secondAttribute="trailing" constant="8" id="0aR-kD-FHc"/>
@@ -99,7 +112,9 @@
                     <constraint firstItem="UWw-De-DTe" firstAttribute="trailing" secondItem="KcT-FC-GbJ" secondAttribute="trailingMargin" id="CfH-0n-dZA"/>
                     <constraint firstItem="TDn-Oe-KEq" firstAttribute="leading" secondItem="KcT-FC-GbJ" secondAttribute="leadingMargin" id="Dh4-aQ-uHl"/>
                     <constraint firstAttribute="trailingMargin" secondItem="EPZ-eC-lKe" secondAttribute="trailing" id="HKH-dR-4bZ"/>
+                    <constraint firstItem="K8v-4S-pIH" firstAttribute="top" secondItem="KcT-FC-GbJ" secondAttribute="topMargin" id="KMZ-fq-jUP"/>
                     <constraint firstItem="UWw-De-DTe" firstAttribute="leading" secondItem="KcT-FC-GbJ" secondAttribute="leadingMargin" id="MzS-4j-Uhu"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="K8v-4S-pIH" secondAttribute="trailing" id="NJi-z3-g4K"/>
                     <constraint firstItem="LCv-4v-3Iu" firstAttribute="leading" secondItem="KcT-FC-GbJ" secondAttribute="leadingMargin" id="QpV-KM-BTU"/>
                     <constraint firstAttribute="bottomMargin" secondItem="JTB-yb-so9" secondAttribute="bottom" id="Tg5-81-CAf"/>
                     <constraint firstItem="MVx-IP-ewN" firstAttribute="leading" secondItem="KcT-FC-GbJ" secondAttribute="leadingMargin" id="VVY-J6-WiV"/>
@@ -123,6 +138,7 @@
                 <outlet property="activityNameLabel" destination="MVx-IP-ewN" id="IF8-ux-NOO"/>
                 <outlet property="addButton" destination="EPZ-eC-lKe" id="u2Y-nJ-IKL"/>
                 <outlet property="cancelButton" destination="TDn-Oe-KEq" id="SjP-Jg-cmW"/>
+                <outlet property="deleteButton" destination="K8v-4S-pIH" id="Pzg-Go-UUu"/>
                 <outlet property="platesLabel" destination="JTB-yb-so9" id="6ni-Ve-Gcc"/>
                 <outlet property="platesLabelSubtitle" destination="X0a-Xo-5vs" id="I4A-hh-vC0"/>
                 <outlet property="repsInput" destination="LCv-4v-3Iu" id="RhK-4Y-s3A"/>

@@ -43,7 +43,6 @@
     self.activity = nil;
     self.selectedSet = nil;
     [self.addButton setTitle:@"Add" forState:UIControlStateNormal];
-    [self.cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
     [self.weightInput setText:@""];
     [self.repsInput setText:@""];
     [self.setsInput setText:@""];
@@ -51,6 +50,7 @@
 
 - (void)setActivity:(Activity *)activity {
     _activity = activity;
+    [self.deleteButton setHidden:YES];
     [self.activityNameLabel setText:self.activity.name];
     [self.setsInput setText:@""];
 
@@ -59,6 +59,7 @@
 
 - (void)setSelectedSet:(Set *)selectedSet {
     _selectedSet = selectedSet;
+    [self.deleteButton setHidden:NO];
     [self.activityNameLabel setText:selectedSet.activity];
     [self.setsInput setText:@""];
     if ([selectedSet.weight compare:[NSDecimalNumber zero]] == NSOrderedDescending) {
@@ -75,7 +76,6 @@
         [self.repsInput setText:[NSString stringWithFormat:@"%@", selectedSet.reps]];
     }
     [self.addButton setTitle:@"Save" forState:UIControlStateNormal];
-    [self.cancelButton setTitle:@"Delete" forState:UIControlStateNormal];
 }
 
 - (void)weightChanged:(id)weightChanged {
@@ -108,12 +108,11 @@
 }
 
 - (IBAction)cancelButtonTapped:(id)sender {
-    if (self.selectedSet) {
-        [self.weightActivityFormDelegate formDelete];
-    }
-    else {
-        [self.weightActivityFormDelegate formCanceled];
-    }
+    [self.weightActivityFormDelegate formCanceled];
+}
+
+- (IBAction)deleteButtonTapped:(id)sender {
+    [self.weightActivityFormDelegate formDelete];
 }
 
 - (IBAction)addButtonTapped:(id)sender {

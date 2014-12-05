@@ -17,6 +17,6 @@
     {
         "name": "Rest",
         "type": "time",
-        "units":"lbs"
+        "units":"timer"
     }
 ]

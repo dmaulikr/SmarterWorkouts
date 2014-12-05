@@ -23,7 +23,6 @@
     [self.workout addSetGroupsObject:[SetGroup MR_createEntity]];
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 80;
 
@@ -91,9 +90,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([[tableView cellForRowAtIndexPath:indexPath] isKindOfClass:SetCell.class]) {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if ([cell isKindOfClass:SetCell.class]) {
         SetGroup *setGroup = self.workout.setGroups[0];
         self.selectedSet = [setGroup sets][(NSUInteger) indexPath.row];
+    }
+    else if ([cell isKindOfClass:ActivityWeightFormCell.class]) {
+        return;
     }
     else {
         self.selectedSet = nil;
