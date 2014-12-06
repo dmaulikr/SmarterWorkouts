@@ -1,22 +1,22 @@
 [
-    {
-        "name": "Bench",
-        "type": "weight",
-        "units":"lbs"
-    },
-    {
-        "name": "Squat",
-        "type": "weight",
-        "units":"lbs"
-    },
-    {
-        "name": "Deadlift",
-        "type": "weight",
-        "units":"lbs"
-    },
-    {
-        "name": "Rest",
-        "type": "time",
-        "units":"timer"
-    }
+  {
+    "name": "Bench",
+    "type": "weight",
+    "units": "lbs"
+  },
+  {
+    "name": "Squat",
+    "type": "weight",
+    "units": "lbs"
+  },
+  {
+    "name": "Deadlift",
+    "type": "weight",
+    "units": "lbs"
+  },
+  {
+    "name": "Rest",
+    "type": "timer",
+    "units": null
+  }
 ]

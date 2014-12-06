@@ -16,7 +16,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Power Clean" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVx-IP-ewN">
                         <rect key="frame" x="8" y="8" width="363" height="29"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="360" borderStyle="roundedRect" placeholder="Weight" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UWw-De-DTe" customClass="FlavorTextUITextField">
@@ -48,7 +48,7 @@
                     </textField>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPZ-eC-lKe">
                         <rect key="frame" x="193" y="161" width="177.5" height="44"/>
-                        <color key="backgroundColor" red="0.30196078431372547" green="0.68235294117647061" blue="0.29019607843137257" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.30196078431372547" green="0.68235294117647061" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="foq-6B-uhX"/>
                         </constraints>
@@ -78,17 +78,6 @@
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDn-Oe-KEq">
-                        <rect key="frame" x="8" y="161" width="178" height="44"/>
-                        <color key="backgroundColor" red="0.83529411764705885" green="0.32549019607843138" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                        <state key="normal" title="Cancel">
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                        <connections>
-                            <action selector="cancelButtonTapped:" destination="iwz-gt-Fgi" eventType="touchUpInside" id="ah1-IG-2HK"/>
-                        </connections>
-                    </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8v-4S-pIH">
                         <rect key="frame" x="301" y="8" width="70" height="34"/>
                         <constraints>
@@ -100,6 +89,17 @@
                         </state>
                         <connections>
                             <action selector="deleteButtonTapped:" destination="iwz-gt-Fgi" eventType="touchUpInside" id="nJ3-fD-2bN"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDn-Oe-KEq">
+                        <rect key="frame" x="8" y="161" width="178" height="44"/>
+                        <color key="backgroundColor" red="0.83529411764705885" green="0.32549019607843138" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <state key="normal" title="Cancel">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="cancelButtonTapped:" destination="iwz-gt-Fgi" eventType="touchUpInside" id="ah1-IG-2HK"/>
                         </connections>
                     </button>
                 </subviews>

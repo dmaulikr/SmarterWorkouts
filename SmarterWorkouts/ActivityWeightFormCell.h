@@ -15,8 +15,6 @@
 @property(weak, nonatomic) IBOutlet FlavorTextUITextField *repsInput;
 @property(weak, nonatomic) IBOutlet FlavorTextUITextField *setsInput;
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
-@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
-@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 
 @property(nonatomic, strong) Form *form;
 @property (weak, nonatomic) IBOutlet UILabel *platesLabel;

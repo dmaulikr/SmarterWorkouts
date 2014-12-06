@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="381" id="9rC-8l-Q0f" customClass="ActivityTimerCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="211"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9rC-8l-Q0f" id="3hK-SR-bgF">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rest" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvo-OD-GUe">
+                        <rect key="frame" x="8" y="8" width="50.5" height="27"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t85-Ii-z8s">
+                        <rect key="frame" x="242" y="5" width="70" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="KlZ-3Q-uWU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <state key="normal" title="Delete">
+                            <color key="titleColor" red="1" green="0.44271818930000001" blue="0.46442715670000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="deleteButtonTapped:" destination="9rC-8l-Q0f" eventType="touchUpInside" id="DWs-Jx-53X"/>
+                        </connections>
+                    </button>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many minutes?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yfw-aO-8GY" customClass="FlavorTextUITextField">
+                        <rect key="frame" x="8" y="43" width="304" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Ian-qy-7R2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    </textField>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many seconds?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pzh-yO-DQc" customClass="FlavorTextUITextField">
+                        <rect key="frame" x="8" y="101" width="304" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="ESy-VR-4So"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72U-3e-xsL">
+                        <rect key="frame" x="8" y="159" width="148" height="44"/>
+                        <color key="backgroundColor" red="0.83529411764705885" green="0.32549019607843138" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="mBD-DK-0Tn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <state key="normal" title="Cancel">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="cancelButtonTapped:" destination="9rC-8l-Q0f" eventType="touchUpInside" id="CBj-bw-GmQ"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i17-0R-Q8o">
+                        <rect key="frame" x="164" y="159" width="148" height="44"/>
+                        <color key="backgroundColor" red="0.30196078431372547" green="0.68235294117647061" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="rrH-Yf-tT6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <state key="normal" title="Start Timer">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="startTimer:" destination="9rC-8l-Q0f" eventType="touchUpInside" id="njJ-Go-yZg"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="t85-Ii-z8s" firstAttribute="centerY" secondItem="Tvo-OD-GUe" secondAttribute="centerY" id="1Bs-FT-phI"/>
+                    <constraint firstItem="pzh-yO-DQc" firstAttribute="trailing" secondItem="3hK-SR-bgF" secondAttribute="trailingMargin" id="1y8-r4-wk5"/>
+                    <constraint firstItem="72U-3e-xsL" firstAttribute="leading" secondItem="3hK-SR-bgF" secondAttribute="leadingMargin" id="JBZ-xF-U4i"/>
+                    <constraint firstItem="t85-Ii-z8s" firstAttribute="trailing" secondItem="3hK-SR-bgF" secondAttribute="trailingMargin" id="N3T-lN-d2M"/>
+                    <constraint firstItem="i17-0R-Q8o" firstAttribute="leading" secondItem="72U-3e-xsL" secondAttribute="trailing" constant="8" id="SFe-yP-UYR"/>
+                    <constraint firstItem="72U-3e-xsL" firstAttribute="top" secondItem="pzh-yO-DQc" secondAttribute="bottom" constant="8" id="XCw-hh-RU6"/>
+                    <constraint firstItem="pzh-yO-DQc" firstAttribute="leading" secondItem="3hK-SR-bgF" secondAttribute="leadingMargin" id="Xug-oY-Q6T"/>
+                    <constraint firstItem="pzh-yO-DQc" firstAttribute="top" secondItem="yfw-aO-8GY" secondAttribute="bottom" constant="8" id="cPq-0k-AD4"/>
+                    <constraint firstItem="yfw-aO-8GY" firstAttribute="leading" secondItem="3hK-SR-bgF" secondAttribute="leadingMargin" id="d7x-59-htL"/>
+                    <constraint firstItem="yfw-aO-8GY" firstAttribute="trailing" secondItem="3hK-SR-bgF" secondAttribute="trailingMargin" id="ibl-Mc-ahU"/>
+                    <constraint firstItem="Tvo-OD-GUe" firstAttribute="top" secondItem="3hK-SR-bgF" secondAttribute="topMargin" id="khO-DR-E78"/>
+                    <constraint firstItem="72U-3e-xsL" firstAttribute="width" secondItem="i17-0R-Q8o" secondAttribute="width" id="kl8-qJ-wQr"/>
+                    <constraint firstItem="Tvo-OD-GUe" firstAttribute="leading" secondItem="3hK-SR-bgF" secondAttribute="leadingMargin" id="sTC-FG-iPl"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="72U-3e-xsL" secondAttribute="bottom" id="tks-xe-ONl"/>
+                    <constraint firstItem="i17-0R-Q8o" firstAttribute="trailing" secondItem="3hK-SR-bgF" secondAttribute="trailingMargin" id="u3o-Oi-xgM"/>
+                    <constraint firstItem="yfw-aO-8GY" firstAttribute="top" secondItem="Tvo-OD-GUe" secondAttribute="bottom" constant="8" id="vp4-nU-hUf"/>
+                    <constraint firstItem="i17-0R-Q8o" firstAttribute="top" secondItem="pzh-yO-DQc" secondAttribute="bottom" constant="8" id="vy9-0q-I1y"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cancelButton" destination="72U-3e-xsL" id="ebK-yy-I99"/>
+                <outlet property="deleteButton" destination="t85-Ii-z8s" id="Lvu-Lt-vCP"/>
+                <outlet property="minutes" destination="yfw-aO-8GY" id="3Ph-VW-Zhs"/>
+                <outlet property="seconds" destination="pzh-yO-DQc" id="Iaq-L0-kkC"/>
+            </connections>
+            <point key="canvasLocation" x="151" y="231.5"/>
+        </tableViewCell>
+    </objects>
+</document>

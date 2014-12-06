@@ -1,10 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "ActivityFormDelegate.h"
-#import "ContextHolderViewController.h"
 #import "ActivitySelectorDelegate.h"
 
-@class PlateViewController;
-@class ContextViewController;
 @class ActivityWeightFormCell;
 @class Workout;
 @class Set;

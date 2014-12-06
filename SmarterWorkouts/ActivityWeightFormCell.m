@@ -40,8 +40,7 @@
 }
 
 - (void)prepareForReuse {
-    self.activity = nil;
-    self.selectedSet = nil;
+    [super prepareForReuse];
     [self.addButton setTitle:@"Add" forState:UIControlStateNormal];
     [self.weightInput setText:@""];
     [self.repsInput setText:@""];
@@ -49,7 +48,7 @@
 }
 
 - (void)setActivity:(Activity *)activity {
-    super.activity = activity;
+    [super setActivity:activity];
     [self.deleteButton setHidden:YES];
     [self.activityNameLabel setText:self.activity.name];
     [self.setsInput setText:@""];
@@ -58,7 +57,7 @@
 }
 
 - (void)setSelectedSet:(Set *)selectedSet {
-    super.selectedSet = selectedSet;
+    [super setSelectedSet:selectedSet];
     [self.deleteButton setHidden:NO];
     [self.activityNameLabel setText:selectedSet.activity];
     [self.setsInput setText:@""];
@@ -105,14 +104,6 @@
             self.platesLabelSubtitle.alpha = 0;
         }];
     }
-}
-
-- (IBAction)cancelButtonTapped:(id)sender {
-    [self.activityFormDelegate formCanceled];
-}
-
-- (IBAction)deleteButtonTapped:(id)sender {
-    [self.activityFormDelegate formDelete];
 }
 
 - (IBAction)addButtonTapped:(id)sender {

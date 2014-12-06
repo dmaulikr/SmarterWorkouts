@@ -9,6 +9,7 @@
 #import "Set.h"
 #import "SetCell.h"
 #import "NSManagedObject+MagicalFinders.h"
+#import "ActivityTimerCell.h"
 
 @implementation WorkoutController
 
@@ -28,6 +29,7 @@
 
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(ActivitySelectorTableViewCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(ActivitySelectorTableViewCell.class)];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(ActivityWeightFormCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(ActivityWeightFormCell.class)];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(ActivityTimerCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(ActivityTimerCell.class)];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(SetCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(SetCell.class)];
 }
 
@@ -76,17 +78,16 @@
         ActivityWeightFormCell *cell = nil;
         if ([[self activityType] isEqualToString:@"weight"]) {
             cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ActivityWeightFormCell.class) forIndexPath:indexPath];
-            if (self.selectedActivity != nil) {
-                [cell setActivity:self.selectedActivity];
-            }
-            if (self.selectedSet != nil) {
-                [cell setSelectedSet:self.selectedSet];
-            }
         }
         else if ([[self activityType] isEqualToString:@"timer"]) {
-            [NSException raise:@"Something" format:@""];
+            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ActivityTimerCell.class) forIndexPath:indexPath];
         }
-
+        if (self.selectedActivity != nil) {
+            [cell setActivity:self.selectedActivity];
+        }
+        if (self.selectedSet != nil) {
+            [cell setSelectedSet:self.selectedSet];
+        }
         [cell setActivityFormDelegate:self];
         return cell;
     }
@@ -112,7 +113,7 @@
         SetGroup *setGroup = self.workout.setGroups[0];
         self.selectedSet = [setGroup sets][(NSUInteger) indexPath.row];
     }
-    else if ([cell isKindOfClass:ActivityWeightFormCell.class]) {
+    else if ([cell isKindOfClass:ActivityCell.class]) {
         return;
     }
     else {
