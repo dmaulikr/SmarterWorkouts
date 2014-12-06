@@ -15,5 +15,6 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSDecimalNumber * personalRecord;
 @property (nonatomic, retain) NSString *units;
+@property (nonatomic, retain) NSString *type;
 
 @end

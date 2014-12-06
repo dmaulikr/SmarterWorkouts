@@ -97,7 +97,13 @@
 }
 
 - (NSString *)activityType {
-    return @"weight";
+    if (self.selectedActivity) {
+        return self.selectedActivity.type;
+    }
+    else {
+        Activity *activity = [Activity MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@", @"name", self.selectedSet.activity]];
+        return [activity type];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

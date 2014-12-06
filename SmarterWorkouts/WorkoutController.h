@@ -14,4 +14,6 @@
 @property(nonatomic, strong) Workout *workout;
 @property(nonatomic, strong) Activity *selectedActivity;
 @property(nonatomic, strong) Set *selectedSet;
+
+- (NSString *)activityType;
 @end
