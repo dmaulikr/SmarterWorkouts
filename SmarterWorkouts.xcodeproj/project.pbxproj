@@ -48,7 +48,6 @@
 		545907E6880B196D473BB864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545906E82697330EFD85E5DF /* Main.storyboard */; };
 		54590813BA5B7CD984F40F82 /* ActivityTimerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459090219AF2435A810360C /* ActivityTimerCell.m */; };
 		545908449CDCB7857AAF085C /* Form.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590D3E2CA6B03B9BFF4583 /* Form.m */; };
-		5459084AF915E7957847ADC8 /* TimerStartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545903667CDDAE93C2AB5AEB /* TimerStartViewController.xib */; };
 		545908D0538038661C972C24 /* SetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590A2EACB21533C2AFA241 /* SetCell.xib */; };
 		545908EA948161743CA45E19 /* PlateRemaining.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459013B85548A27B8B1B805 /* PlateRemaining.m */; };
 		54590900CB29487ACAB7746B /* WeightInputControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 545900AEFA1B860CE57D13F7 /* WeightInputControls.m */; };
@@ -59,7 +58,6 @@
 		54590C593F52A746CCAA3A83 /* FlavorTextUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905A77383420E1AD6A86B /* FlavorTextUITextField.m */; };
 		54590C6379DC254E8B6BE8EC /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 545900B085897FD8B72023A8 /* Workout.m */; };
 		54590D02DC69A387D23A1539 /* ActivityFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590E831AB68665C1995884 /* ActivityFilterTests.m */; };
-		54590D0F7AC0D83CF7A95E3B /* TimerStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590A00058E69D5248321DD /* TimerStartViewController.m */; };
 		54590DDE043FDC900BB95DFF /* UIImage+ColorFromImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459022C1F4BBBE900679F3F /* UIImage+ColorFromImage.m */; };
 		54590E13FCBBA27BB0D90764 /* BarLoadingSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590BCD6074B6467C4D1111 /* BarLoadingSetupViewController.m */; };
 		54590E16F642336636D23885 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905ED0E0E46EE8AA17304 /* AppDelegate.m */; };
@@ -140,12 +138,10 @@
 		5459022C1F4BBBE900679F3F /* UIImage+ColorFromImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorFromImage.m"; sourceTree = "<group>"; };
 		5459026EC551FA5E344D9121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		545902792F0900BE86135C4D /* SmarterWorkouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmarterWorkouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		545902A4BA4CD33E0A0F0240 /* TimerStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerStartViewController.h; sourceTree = "<group>"; };
 		545902BAE2F4DAE4614B711B /* FlavorTextUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlavorTextUITextField.h; sourceTree = "<group>"; };
 		545902E72D54617EBBB68CC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		545902FC40A458CC44ECB9A4 /* BarCalculatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarCalculatorTests.m; sourceTree = "<group>"; };
 		545902FDED688FE872C92CF1 /* SWTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTestCase.m; sourceTree = "<group>"; };
-		545903667CDDAE93C2AB5AEB /* TimerStartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerStartViewController.xib; sourceTree = "<group>"; };
 		545903F57D7C270830C13B3B /* FixtureLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FixtureLoader.h; path = Models/Fixtures/FixtureLoader.h; sourceTree = "<group>"; };
 		545903FBE12939C3C1F5D39D /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Activity.h; path = Models/Activity.h; sourceTree = "<group>"; };
 		5459041C8F7457EE25991D77 /* DecimalNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecimalNumbers.h; sourceTree = "<group>"; };
@@ -173,7 +169,6 @@
 		5459095D3D1623B3210D4AAD /* ActivityFormDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityFormDelegate.h; sourceTree = "<group>"; };
 		545909CA1997BE71C52F50ED /* ActivitySelectorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySelectorDelegate.h; sourceTree = "<group>"; };
 		545909D6873990B9CE232AD1 /* TimerActiveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerActiveViewController.xib; sourceTree = "<group>"; };
-		54590A00058E69D5248321DD /* TimerStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerStartViewController.m; sourceTree = "<group>"; };
 		54590A2EACB21533C2AFA241 /* SetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetCell.xib; sourceTree = "<group>"; };
 		54590AAE4C1642A3A0A9BD45 /* Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Set.m; path = Models/Set.m; sourceTree = "<group>"; };
 		54590ACC1AC6B9D074702B48 /* ActivityWeightFormViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityWeightFormViewControllerTests.m; sourceTree = "<group>"; };
@@ -339,9 +334,6 @@
 				54590F3FFC4B3A5BBC5F2B8A /* TimerActiveViewController.m */,
 				54590842C22DF6768733ED66 /* TimerActiveViewController.h */,
 				545909D6873990B9CE232AD1 /* TimerActiveViewController.xib */,
-				545903667CDDAE93C2AB5AEB /* TimerStartViewController.xib */,
-				54590A00058E69D5248321DD /* TimerStartViewController.m */,
-				545902A4BA4CD33E0A0F0240 /* TimerStartViewController.h */,
 			);
 			name = Timer;
 			sourceTree = "<group>";
@@ -765,7 +757,6 @@
 				545908D0538038661C972C24 /* SetCell.xib in Resources */,
 				5459046E831C0A8B5C2B3F39 /* ActivityWeightFormCell.xib in Resources */,
 				5459069A2F63D2C53C8478D1 /* TimerActiveViewController.xib in Resources */,
-				5459084AF915E7957847ADC8 /* TimerStartViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,7 +867,6 @@
 				54590900CB29487ACAB7746B /* WeightInputControls.m in Sources */,
 				54590813BA5B7CD984F40F82 /* ActivityTimerCell.m in Sources */,
 				5459054D6E01E0A7A22F7665 /* TimerActiveViewController.m in Sources */,
-				54590D0F7AC0D83CF7A95E3B /* TimerStartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

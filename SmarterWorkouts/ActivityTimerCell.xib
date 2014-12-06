@@ -103,6 +103,7 @@
                 <outlet property="deleteButton" destination="t85-Ii-z8s" id="Lvu-Lt-vCP"/>
                 <outlet property="minutes" destination="yfw-aO-8GY" id="3Ph-VW-Zhs"/>
                 <outlet property="seconds" destination="pzh-yO-DQc" id="Iaq-L0-kkC"/>
+                <outlet property="startTimerButton" destination="i17-0R-Q8o" id="fs6-hi-L8q"/>
             </connections>
             <point key="canvasLocation" x="151" y="231.5"/>
         </tableViewCell>

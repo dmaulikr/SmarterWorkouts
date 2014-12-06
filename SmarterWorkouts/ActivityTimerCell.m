@@ -10,6 +10,33 @@
 
     [self.minutes setDelegate:self];
     [self.seconds setDelegate:self];
+
+    [self.minutes addTarget:self
+                     action:@selector(enableDisableStartButton:)
+           forControlEvents:UIControlEventEditingChanged];
+    [self.seconds addTarget:self
+                     action:@selector(enableDisableStartButton:)
+           forControlEvents:UIControlEventEditingChanged];
+
+
+    [self.startTimerButton setEnabled:NO];
+    self.startTimerButton.alpha = 0.5;
+}
+
+- (void)prepareForReuse {
+    [super prepareForReuse];
+    [self.minutes setText:@""];
+    [self.seconds setText:@""];
+}
+
+- (void)enableDisableStartButton:(id)textFieldDidChange {
+    BOOL enableButton = ![self.minutes.text isEqualToString:@""] || ![self.seconds.text isEqualToString:@""];
+    if (enableButton != self.startTimerButton.enabled) {
+        [self.startTimerButton setEnabled:enableButton];
+        [UIView animateWithDuration:0.5 animations:^{
+            self.startTimerButton.alpha = (CGFloat) (enableButton ? 1 : 0.5);
+        }];
+    }
 }
 
 - (IBAction)startTimer:(id)sender {
