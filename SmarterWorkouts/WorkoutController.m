@@ -7,10 +7,10 @@
 #import "SetGroup.h"
 #import "ActivitySelectorTableViewCell.h"
 #import "Set.h"
-#import "SetCell.h"
+#import "WeightSetCell.h"
 #import "NSManagedObject+MagicalFinders.h"
-#import "SetupTimerCell.h"
 #import "ActivityCellFactory.h"
+#import "SetCellFactory.h"
 
 @implementation WorkoutController
 
@@ -30,9 +30,8 @@
 
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(ActivitySelectorTableViewCell.class) bundle:nil]
          forCellReuseIdentifier:NSStringFromClass(ActivitySelectorTableViewCell.class)];
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(SetCell.class) bundle:nil]
-         forCellReuseIdentifier:NSStringFromClass(SetCell.class)];
-    [ActivityCellFactory registerNibs: self.tableView];
+    [SetCellFactory registerNibs:self.tableView];
+    [ActivityCellFactory registerNibs:self.tableView];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -87,9 +86,7 @@
         return cell;
     }
 
-    SetCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(SetCell.class) forIndexPath:indexPath];
-    [cell setSet:currentSet];
-    return cell;
+    return [SetCellFactory cellForSet:currentSet tableView:tableView indexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

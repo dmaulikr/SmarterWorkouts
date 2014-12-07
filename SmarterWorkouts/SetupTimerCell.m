@@ -1,6 +1,7 @@
 #import "SetupTimerCell.h"
 #import "FlavorTextUITextField.h"
 #import "ActivityFormDelegate.h"
+#import "Set.h"
 
 const NSString *TIMER_SETUP_ACTIVITY = @"timer";
 
@@ -26,6 +27,25 @@ const NSString *TIMER_SETUP_ACTIVITY = @"timer";
     self.startTimerButton.alpha = 0.5;
 }
 
+- (void)setSelectedSet:(Set *)selectedSet {
+    [super setSelectedSet:selectedSet];
+    int minutes = [selectedSet.duration intValue] / 60;
+    if (minutes > 0) {
+        [self.minutes setText:[NSString stringWithFormat:@"%d", minutes]];
+    }
+    else {
+        [self.minutes setText:@""];
+    }
+
+    int seconds = [selectedSet.duration intValue] % 60;
+    if (seconds > 0) {
+        [self.seconds setText:[NSString stringWithFormat:@"%d", seconds]];
+    }
+    else {
+        [self.seconds setText:@""];
+    }
+}
+
 - (void)prepareForReuse {
     [super prepareForReuse];
     [self.minutes setText:@""];
@@ -36,7 +56,7 @@ const NSString *TIMER_SETUP_ACTIVITY = @"timer";
     BOOL enableButton = ![self.minutes.text isEqualToString:@""] || ![self.seconds.text isEqualToString:@""];
     if (enableButton != self.startTimerButton.enabled) {
         [self.startTimerButton setEnabled:enableButton];
-        [UIView animateWithDuration:0.5 animations:^{
+        [UIView animateWithDuration:0.3 animations:^{
             self.startTimerButton.alpha = (CGFloat) (enableButton ? 1 : 0.5);
         }];
     }

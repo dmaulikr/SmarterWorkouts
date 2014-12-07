@@ -13,10 +13,18 @@ const NSString *TIMER_ACTIVE_ACTIVITY = @"activetimer";
     [self.activityName setText:activity.name];
 }
 
+- (void)setFormChangeOptions:(NSDictionary *)formChangeOptions {
+    [super setFormChangeOptions:formChangeOptions];
+    NSNumber *minutes = formChangeOptions[@"minutes"];
+    NSNumber *seconds = formChangeOptions[@"seconds"];
+    self.totalSeconds = [minutes intValue] * 60 + [seconds intValue];
+    [self.durationLabel setText:[NSString stringWithFormat:@"%d", self.totalSeconds]];
+}
+
 - (IBAction)doneButtonTapped:(id)sender {
     Set *set = [Set MR_createEntity];
     set.activity = self.selectedSet ? self.selectedSet.activity : self.activity.name;
-    set.duration = @(2);
+    set.duration = @(self.totalSeconds);
     [self.activityFormDelegate formFinished:@[set]];
 }
 

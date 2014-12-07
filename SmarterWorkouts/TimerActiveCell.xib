@@ -55,6 +55,7 @@
             <color key="backgroundColor" red="0.0" green="0.4833333333" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="activityName" destination="I7c-b6-Ufo" id="Kdo-KP-1gV"/>
+                <outlet property="durationLabel" destination="nxf-qa-WgJ" id="KNd-Xw-r6Z"/>
             </connections>
             <point key="canvasLocation" x="192" y="279"/>
         </tableViewCell>
