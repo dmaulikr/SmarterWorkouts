@@ -13,5 +13,6 @@
 @property(nonatomic, weak) NSObject <ActivityFormDelegate> *activityFormDelegate;
 @property(nonatomic, strong) Activity *activity;
 @property(nonatomic, strong) Set *selectedSet;
+@property(nonatomic, strong) NSDictionary *formChangeOptions;
 
 @end

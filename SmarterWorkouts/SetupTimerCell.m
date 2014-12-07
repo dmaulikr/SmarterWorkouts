@@ -1,7 +1,10 @@
-#import "ActivityTimerCell.h"
+#import "SetupTimerCell.h"
 #import "FlavorTextUITextField.h"
+#import "ActivityFormDelegate.h"
 
-@implementation ActivityTimerCell
+const NSString *TIMER_SETUP_ACTIVITY = @"timer";
+
+@implementation SetupTimerCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -40,7 +43,11 @@
 }
 
 - (IBAction)startTimer:(id)sender {
-
+    NSDictionary *options = @{
+            @"minutes" : @([self.minutes.text intValue]),
+            @"seconds" : @([self.seconds.text intValue])
+    };
+    [self.activityFormDelegate formChangeToType:@"activetimer" withOptions:options];
 }
 
 - (void)layoutSubviews {

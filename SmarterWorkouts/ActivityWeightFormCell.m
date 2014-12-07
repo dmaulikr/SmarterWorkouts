@@ -10,6 +10,8 @@
 #import "Plate.h"
 #import "BarCalculator.h"
 
+const NSString *WEIGHT_ACTIVITY = @"weight";
+
 @implementation ActivityWeightFormCell
 
 - (void)awakeFromNib {

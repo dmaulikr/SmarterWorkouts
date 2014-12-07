@@ -10,23 +10,6 @@
 
 @implementation WorkoutControllerTests
 
-- (void)testGetsActivityTypeForActivity {
-    WorkoutController *controller = [WorkoutController new];
-    Activity *activity = [Activity MR_findFirst];
-    activity.type = @"new";
-    controller.selectedActivity = activity;
-    XCTAssertNotNil(activity.type);
-    XCTAssertEqualObjects([controller activityType], activity.type);
-}
 
-- (void)testGetsActivityTypeForSet {
-    WorkoutController *controller = [WorkoutController new];
-    Activity *activity = [Activity MR_findFirst];
-    activity.type = @"new";
-    controller.selectedSet = [Set MR_createEntity];
-    controller.selectedSet.activity = activity.name;
-    XCTAssertNotNil(activity.type);
-    XCTAssertEqualObjects([controller activityType], activity.type);
-}
 
 @end

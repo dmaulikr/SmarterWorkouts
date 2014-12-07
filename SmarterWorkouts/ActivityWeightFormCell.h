@@ -9,16 +9,18 @@
 @class Activity;
 @class Set;
 
+extern const NSString *WEIGHT_ACTIVITY;
+
 @interface ActivityWeightFormCell : ActivityCell <UITextFieldDelegate, FormDelegate>
-@property (weak, nonatomic) IBOutlet UILabel *activityNameLabel;
+@property(weak, nonatomic) IBOutlet UILabel *activityNameLabel;
 @property(weak, nonatomic) IBOutlet FlavorTextUITextField *weightInput;
 @property(weak, nonatomic) IBOutlet FlavorTextUITextField *repsInput;
 @property(weak, nonatomic) IBOutlet FlavorTextUITextField *setsInput;
-@property (weak, nonatomic) IBOutlet UIButton *addButton;
+@property(weak, nonatomic) IBOutlet UIButton *addButton;
 
 @property(nonatomic, strong) Form *form;
-@property (weak, nonatomic) IBOutlet UILabel *platesLabel;
-@property (weak, nonatomic) IBOutlet UILabel *platesLabelSubtitle;
+@property(weak, nonatomic) IBOutlet UILabel *platesLabel;
+@property(weak, nonatomic) IBOutlet UILabel *platesLabelSubtitle;
 
 - (int)loggedSets;
 

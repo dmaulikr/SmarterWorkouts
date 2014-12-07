@@ -9,7 +9,8 @@
 #import "Set.h"
 #import "SetCell.h"
 #import "NSManagedObject+MagicalFinders.h"
-#import "ActivityTimerCell.h"
+#import "SetupTimerCell.h"
+#import "ActivityCellFactory.h"
 
 @implementation WorkoutController
 
@@ -27,10 +28,11 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 80;
 
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(ActivitySelectorTableViewCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(ActivitySelectorTableViewCell.class)];
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(ActivityWeightFormCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(ActivityWeightFormCell.class)];
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(ActivityTimerCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(ActivityTimerCell.class)];
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(SetCell.class) bundle:nil] forCellReuseIdentifier:NSStringFromClass(SetCell.class)];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(ActivitySelectorTableViewCell.class) bundle:nil]
+         forCellReuseIdentifier:NSStringFromClass(ActivitySelectorTableViewCell.class)];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(SetCell.class) bundle:nil]
+         forCellReuseIdentifier:NSStringFromClass(SetCell.class)];
+    [ActivityCellFactory registerNibs: self.tableView];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -75,19 +77,12 @@
 
     if (([self isAddingSet] && [indexPath row] == [[self.workout.setGroups[0] sets] count]) ||
             ([self isEditingSet] && currentSet == self.selectedSet)) {
-        ActivityWeightFormCell *cell = nil;
-        if ([[self activityType] isEqualToString:@"weight"]) {
-            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ActivityWeightFormCell.class) forIndexPath:indexPath];
-        }
-        else if ([[self activityType] isEqualToString:@"timer"]) {
-            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ActivityTimerCell.class) forIndexPath:indexPath];
-        }
-        if (self.selectedActivity != nil) {
-            [cell setActivity:self.selectedActivity];
-        }
-        if (self.selectedSet != nil) {
-            [cell setSelectedSet:self.selectedSet];
-        }
+        ActivityWeightFormCell *cell = [ActivityCellFactory cellForSelectedActivity:self.selectedActivity
+                                                                        selectedSet:self.selectedSet
+                                                                     formChangeType:self.formChangeType
+                                                                  formChangeOptions:self.formChangeOptions
+                                                                          tableView:tableView
+                                                                          indexPath:indexPath];
         [cell setActivityFormDelegate:self];
         return cell;
     }
@@ -95,16 +90,6 @@
     SetCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(SetCell.class) forIndexPath:indexPath];
     [cell setSet:currentSet];
     return cell;
-}
-
-- (NSString *)activityType {
-    if (self.selectedActivity) {
-        return self.selectedActivity.type;
-    }
-    else {
-        Activity *activity = [Activity MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@", @"name", self.selectedSet.activity]];
-        return [activity type];
-    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -132,8 +117,7 @@
 }
 
 - (void)formCanceled {
-    self.selectedActivity = nil;
-    self.selectedSet = nil;
+    [self resetFormState];
     [self.tableView reloadData];
 }
 
@@ -143,24 +127,34 @@
         NSUInteger index = [setGroup.sets indexOfObject:self.selectedSet];
         [setGroup insertSetsArray:sets atIndex:index];
         [setGroup removeSetsObject:self.selectedSet];
-
-        self.selectedSet = nil;
     }
     else {
-        self.selectedActivity = nil;
         SetGroup *setGroup = self.workout.setGroups[0];
         [setGroup addSetsArray:sets];
     }
 
+    [self resetFormState];
     [self.tableView reloadData];
 }
 
 - (void)formDelete {
     SetGroup *setGroup = self.workout.setGroups[0];
     [setGroup removeSetsObject:self.selectedSet];
-    self.selectedSet = nil;
+    [self resetFormState];
     [self.tableView reloadData];
 }
 
+- (void)formChangeToType:(NSString *)type withOptions:(NSDictionary *)options {
+    self.formChangeType = type;
+    self.formChangeOptions = options;
+    [self.tableView reloadData];
+}
+
+- (void)resetFormState {
+    self.selectedActivity = nil;
+    self.selectedSet = nil;
+    self.formChangeType = nil;
+    self.formChangeOptions = nil;
+}
 
 @end

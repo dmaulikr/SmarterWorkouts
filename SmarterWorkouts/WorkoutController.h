@@ -12,5 +12,8 @@
 @property(nonatomic, strong) Activity *selectedActivity;
 @property(nonatomic, strong) Set *selectedSet;
 
-- (NSString *)activityType;
+@property(nonatomic, copy) NSString *formChangeType;
+
+@property(nonatomic, strong) NSDictionary *formChangeOptions;
+
 @end

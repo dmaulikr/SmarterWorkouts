@@ -3,7 +3,9 @@
 
 @class FlavorTextUITextField;
 
-@interface ActivityTimerCell : ActivityCell <UITextFieldDelegate> {}
+extern const NSString *TIMER_SETUP_ACTIVITY;
+
+@interface SetupTimerCell : ActivityCell <UITextFieldDelegate> {}
 @property (weak, nonatomic) IBOutlet FlavorTextUITextField *seconds;
 @property (weak, nonatomic) IBOutlet UIButton *startTimerButton;
 
