@@ -1,7 +1,9 @@
+#import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
 #import "SetupTimerCell.h"
 #import "FlavorTextUITextField.h"
 #import "ActivityFormDelegate.h"
 #import "Set.h"
+#import "Activity.h"
 
 const NSString *TIMER_SETUP_ACTIVITY = @"timer";
 
@@ -44,6 +46,13 @@ const NSString *TIMER_SETUP_ACTIVITY = @"timer";
     else {
         [self.seconds setText:@""];
     }
+
+    [self.startTimerButton setTitle:@"Save" forState:UIControlStateNormal];
+}
+
+- (void)setActivity:(Activity *)activity {
+    [super setActivity:activity];
+    [self.startTimerButton setTitle:@"Start Timer" forState:UIControlStateNormal];
 }
 
 - (void)prepareForReuse {
@@ -63,11 +72,19 @@ const NSString *TIMER_SETUP_ACTIVITY = @"timer";
 }
 
 - (IBAction)startTimer:(id)sender {
-    NSDictionary *options = @{
-            @"minutes" : @([self.minutes.text intValue]),
-            @"seconds" : @([self.seconds.text intValue])
-    };
-    [self.activityFormDelegate formChangeToType:@"activetimer" withOptions:options];
+    if (self.selectedSet) {
+        Set *set = [Set MR_createEntity];
+        set.activity = self.selectedSet.activity;
+        set.duration = @([self.minutes.text intValue] * 60 + [self.seconds.text intValue]);
+        [self.activityFormDelegate formFinished:@[set]];
+    }
+    else {
+        NSDictionary *options = @{
+                @"minutes" : @([self.minutes.text intValue]),
+                @"seconds" : @([self.seconds.text intValue])
+        };
+        [self.activityFormDelegate formChangeToType:@"activetimer" withOptions:options];
+    }
 }
 
 - (void)layoutSubviews {

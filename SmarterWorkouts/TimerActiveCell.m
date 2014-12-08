@@ -3,6 +3,7 @@
 #import "Set.h"
 #import "NSManagedObject+MagicalRecord.h"
 #import "ActivityFormDelegate.h"
+#import "DurationDisplay.h"
 
 const NSString *TIMER_ACTIVE_ACTIVITY = @"activetimer";
 
@@ -18,7 +19,7 @@ const NSString *TIMER_ACTIVE_ACTIVITY = @"activetimer";
     NSNumber *minutes = formChangeOptions[@"minutes"];
     NSNumber *seconds = formChangeOptions[@"seconds"];
     self.totalSeconds = [minutes intValue] * 60 + [seconds intValue];
-    [self.durationLabel setText:[NSString stringWithFormat:@"%d", self.totalSeconds]];
+    [self.durationLabel setText:[DurationDisplay displayTimerFromSeconds:@(self.totalSeconds)]];
 }
 
 - (IBAction)doneButtonTapped:(id)sender {

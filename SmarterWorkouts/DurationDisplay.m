@@ -29,4 +29,11 @@
     return displayString;
 }
 
++ (NSString *)displayTimerFromSeconds:(NSNumber *)seconds {
+    int secondsInt = [seconds intValue];
+    int minutes = secondsInt / 60;
+    secondsInt %= 60;
+    return [NSString stringWithFormat:@"%d:%02d", minutes, secondsInt];
+}
+
 @end

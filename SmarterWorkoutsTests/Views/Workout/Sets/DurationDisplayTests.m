@@ -12,4 +12,10 @@
     XCTAssertEqualObjects([DurationDisplay displayHumanDurationFromSeconds:@(3601)], @"1 hrs 1 secs");
 }
 
+- (void)testMakesTimerDisplay {
+    XCTAssertEqualObjects([DurationDisplay displayTimerFromSeconds:@(0)], @"0:00");
+    XCTAssertEqualObjects([DurationDisplay displayTimerFromSeconds:@(60)], @"1:00");
+    XCTAssertEqualObjects([DurationDisplay displayTimerFromSeconds:@(121)], @"2:01");
+}
+
 @end

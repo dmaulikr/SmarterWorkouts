@@ -4,4 +4,6 @@
 
 + (NSString *)displayHumanDurationFromSeconds: (NSNumber *)minutes;
 
++ (NSString *)displayTimerFromSeconds:(NSNumber *)seconds;
+
 @end
