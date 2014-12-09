@@ -2,6 +2,7 @@
 #import "MagicalRecord.h"
 #import "MagicalRecord+Setup.h"
 #import "FixtureLoader.h"
+#import "SWTimer.h"
 
 @interface AppDelegate ()
 @end
@@ -15,15 +16,17 @@
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
+    [[SWTimer instance] suspend];
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [[SWTimer instance] resume];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

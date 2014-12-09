@@ -4,6 +4,7 @@
 #import "NSManagedObject+MagicalRecord.h"
 #import "ActivityFormDelegate.h"
 #import "DurationDisplay.h"
+#import "SWTimer.h"
 
 const NSString *TIMER_ACTIVE_ACTIVITY = @"activetimer";
 
@@ -20,6 +21,10 @@ const NSString *TIMER_ACTIVE_ACTIVITY = @"activetimer";
     NSNumber *seconds = formChangeOptions[@"seconds"];
     self.totalSeconds = [minutes intValue] * 60 + [seconds intValue];
     [self.durationLabel setText:[DurationDisplay displayTimerFromSeconds:@(self.totalSeconds)]];
+    [[SWTimer instance] setObserver:self];
+    if (![[SWTimer instance] isRunning]) {
+        [[SWTimer instance] start:self.totalSeconds];
+    }
 }
 
 - (IBAction)doneButtonTapped:(id)sender {
@@ -27,6 +32,12 @@ const NSString *TIMER_ACTIVE_ACTIVITY = @"activetimer";
     set.activity = self.selectedSet ? self.selectedSet.activity : self.activity.name;
     set.duration = @(self.totalSeconds);
     [self.activityFormDelegate formFinished:@[set]];
+}
+
+- (void)timerTick {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.durationLabel setText:[DurationDisplay displayTimerFromSeconds:@([[SWTimer instance] secondsRemaining])]];
+    });
 }
 
 @end

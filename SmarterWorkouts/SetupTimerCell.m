@@ -79,6 +79,11 @@ const NSString *TIMER_SETUP_ACTIVITY = @"timer";
         [self.activityFormDelegate formFinished:@[set]];
     }
     else {
+        if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
+            [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings
+                    settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeSound categories:nil]];
+        }
+
         NSDictionary *options = @{
                 @"minutes" : @([self.minutes.text intValue]),
                 @"seconds" : @([self.seconds.text intValue])

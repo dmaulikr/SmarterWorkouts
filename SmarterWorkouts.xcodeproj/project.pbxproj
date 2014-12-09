@@ -70,6 +70,7 @@
 		54590E38E3BA2792E51A6AA9 /* FormItemBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 545900346C15ECA1C9D05A81 /* FormItemBarButtonItem.m */; };
 		54590E57AC06674BBE929D2B /* ActivityCellFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459082A26AD4BB9670D2BDC /* ActivityCellFactoryTests.m */; };
 		54590EA8F7F6F5729B808BDD /* Plate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545909370C64722C73459C11 /* Plate.m */; };
+		54590F2DE0A40BC4E74C42A0 /* SWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590EEDEDFB55C9CD0B52CD /* SWTimer.m */; };
 		54590FA6C97345D57ECC5425 /* DurationDisplayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590272E50B204941754D35 /* DurationDisplayTests.m */; };
 		54590FB9490FAEFD72CB3D61 /* ActivityWeightFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590DCC45595B04895F779F /* ActivityWeightFormCell.m */; };
 		85DF1FB35B784B81ACF3A198 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4D313009C4493EB660B607 /* libPods.a */; };
@@ -163,6 +164,7 @@
 		545905A77383420E1AD6A86B /* FlavorTextUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlavorTextUITextField.m; sourceTree = "<group>"; };
 		545905ABBA5E7B5529B9F446 /* DurationSetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DurationSetCell.xib; sourceTree = "<group>"; };
 		545905B774A40A79F9A1FA19 /* 433-x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "433-x@2x.png"; sourceTree = "<group>"; };
+		545905E061C18E2B4E7B5637 /* SWTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTimer.h; sourceTree = "<group>"; };
 		545905ED0E0E46EE8AA17304 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		545905F2270D5965183E8A15 /* SetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCell.h; sourceTree = "<group>"; };
 		5459061FF264AFC33EDE1495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		54590842C22DF6768733ED66 /* TimerActiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerActiveCell.h; sourceTree = "<group>"; };
 		545908C17FF06866026FFF47 /* WorkoutController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutController.h; sourceTree = "<group>"; };
 		5459090219AF2435A810360C /* SetupTimerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupTimerCell.m; sourceTree = "<group>"; };
+		5459091EB57A54F3276C883F /* TimerObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerObserver.h; sourceTree = "<group>"; };
 		545909370C64722C73459C11 /* Plate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Plate.m; path = Models/Plate.m; sourceTree = "<group>"; };
 		5459093FA06E60D65D8B9C63 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5459095D3D1623B3210D4AAD /* ActivityFormDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityFormDelegate.h; sourceTree = "<group>"; };
@@ -217,6 +220,7 @@
 		54590E831AB68665C1995884 /* ActivityFilterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityFilterTests.m; sourceTree = "<group>"; };
 		54590ECB811EC9CD1B1F0127 /* DecimalNumbersTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalNumbersTests.m; sourceTree = "<group>"; };
 		54590ED3193BE2D1D5DBEDE1 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Activity.m; path = Models/Activity.m; sourceTree = "<group>"; };
+		54590EEDEDFB55C9CD0B52CD /* SWTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTimer.m; sourceTree = "<group>"; };
 		54590F3FFC4B3A5BBC5F2B8A /* TimerActiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerActiveCell.m; sourceTree = "<group>"; };
 		54590F54C0452DE8C7971409 /* BarCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarCalculator.h; sourceTree = "<group>"; };
 		54590F592EBDDD376B16FA5D /* FormItemBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormItemBarButtonItem.h; sourceTree = "<group>"; };
@@ -464,6 +468,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5459077F0EB4AF2C7DC590F5 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				545905E061C18E2B4E7B5637 /* SWTimer.h */,
+				54590EEDEDFB55C9CD0B52CD /* SWTimer.m */,
+				5459091EB57A54F3276C883F /* TimerObserver.h */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
 		545908B129FACEDEF36FC3F3 /* Form */ = {
 			isa = PBXGroup;
 			children = (
@@ -618,6 +632,7 @@
 				545902D56BB61349A45A6675 /* Numbers */,
 				54590E9F250E1DE20DC966FF /* Images */,
 				545902443723D2F9011A3074 /* Formulas */,
+				5459077F0EB4AF2C7DC590F5 /* Timer */,
 			);
 			path = SmarterWorkouts;
 			sourceTree = "<group>";
@@ -931,6 +946,7 @@
 				545905E450208D41383B1F64 /* DurationSetCell.m in Sources */,
 				545902FB5831A7DA0C4FE5CD /* SetCell.m in Sources */,
 				5459099A09CF8618E5B6BB25 /* DurationDisplay.m in Sources */,
+				54590F2DE0A40BC4E74C42A0 /* SWTimer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
