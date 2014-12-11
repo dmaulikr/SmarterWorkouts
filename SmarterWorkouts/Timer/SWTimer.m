@@ -21,7 +21,11 @@ const NSString *TIMER_SUSPEND_DATE_KEY = @"timerSuspendDate";
 - (void)start:(int)seconds {
     [self stopTimer];
     self.secondsRemaining = seconds;
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
+    self.timer = [NSTimer timerWithTimeInterval:1
+                                         target:self
+                                       selector:@selector(timerTick:)
+                                       userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     [self scheduleBackgroundNotification];
     [self.observer timerTick];
 }
@@ -85,7 +89,10 @@ const NSString *TIMER_SUSPEND_DATE_KEY = @"timerSuspendDate";
         [self timerDone];
         [self stopTimer];
     }
-    [self.observer timerTick];
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.observer timerTick];
+    });
 }
 
 - (void)timerDone {

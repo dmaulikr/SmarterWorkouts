@@ -28,6 +28,7 @@ const NSString *TIMER_ACTIVE_ACTIVITY = @"activetimer";
 }
 
 - (IBAction)doneButtonTapped:(id)sender {
+    [[SWTimer instance] stopTimer];
     Set *set = [Set MR_createEntity];
     set.activity = self.selectedSet ? self.selectedSet.activity : self.activity.name;
     set.duration = @(self.totalSeconds);
@@ -36,7 +37,13 @@ const NSString *TIMER_ACTIVE_ACTIVITY = @"activetimer";
 
 - (void)timerTick {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.durationLabel setText:[DurationDisplay displayTimerFromSeconds:@([[SWTimer instance] secondsRemaining])]];
+        int secondsRemaining = [[SWTimer instance] secondsRemaining];
+        if (secondsRemaining <= 0) {
+            [self doneButtonTapped:nil];
+        }
+        else {
+            [self.durationLabel setText:[DurationDisplay displayTimerFromSeconds:@(secondsRemaining)]];
+        }
     });
 }
 

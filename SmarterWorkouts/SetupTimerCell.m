@@ -59,6 +59,7 @@ const NSString *TIMER_SETUP_ACTIVITY = @"timer";
     [super prepareForReuse];
     [self.minutes setText:@""];
     [self.seconds setText:@""];
+    [self enableDisableStartButton:nil];
 }
 
 - (void)enableDisableStartButton:(id)textFieldDidChange {
