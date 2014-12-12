@@ -5,7 +5,7 @@
 #import "Activity.h"
 #import "Workout.h"
 #import "SetGroup.h"
-#import "ActivitySelectorTableViewCell.h"
+#import "ActivitySelectorInputViewController.h"
 #import "Set.h"
 #import "WeightSetCell.h"
 #import "NSManagedObject+MagicalFinders.h"
@@ -27,18 +27,22 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 80;
+    [self.tableView setDelegate:self];
+    [self.tableView setDataSource:self];
 
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(ActivitySelectorTableViewCell.class) bundle:nil]
-         forCellReuseIdentifier:NSStringFromClass(ActivitySelectorTableViewCell.class)];
     [SetCellFactory registerNibs:self.tableView];
     [ActivityCellFactory registerNibs:self.tableView];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    if ([self isEditingSet] || [self isAddingSet]) {
-        return 1;
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([[segue identifier] isEqualToString:@"newActivity"]){
+        ActivitySelectorInputViewController *controller = [segue destinationViewController];
+        [controller setDelegate:self];
     }
-    return 2;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
 
 - (BOOL)isEditingSet {
@@ -50,25 +54,10 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 1) {
-        return 1;
-    }
-
-    int rows = [[self.workout.setGroups[0] sets] count] + ([self isAddingSet] ? 1 : 0);
-    return rows;
+    return [[self.workout.setGroups[0] sets] count] + ([self isAddingSet] ? 1 : 0);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (![self isEditingSet] && ![self isAddingSet] && indexPath.section == 1) {
-        ActivitySelectorTableViewCell *inputCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ActivitySelectorTableViewCell.class) forIndexPath:indexPath];
-        SetGroup *setGroup = self.workout.setGroups[0];
-        NSUInteger setsCount = [[setGroup sets] count];
-        Set *lastSet = setsCount > 0 ? [setGroup sets][setsCount - 1] : nil;
-        [inputCell setActivity:[Activity MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@", @"name", lastSet.activity]]];
-        [inputCell setDelegate:self];
-        return inputCell;
-    }
-
     Set *currentSet = nil;
     if ([indexPath row] < [[self.workout.setGroups[0] sets] count]) {
         currentSet = [self.workout.setGroups[0] sets][(NSUInteger) indexPath.row];
@@ -110,6 +99,7 @@
 
 - (void)activitySelected:(Activity *)activity {
     self.selectedActivity = activity;
+    [self.startNewActivityContainer setHidden:YES];
     [self.tableView reloadData];
 }
 

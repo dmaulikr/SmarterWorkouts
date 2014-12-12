@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2cQ-1v-WTb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -13,41 +14,104 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Xhp-zP-Ewc" kind="relationship" relationship="rootViewController" id="aGv-kp-hzx"/>
+                        <segue destination="htu-tR-CGE" kind="relationship" relationship="rootViewController" id="ovF-Zh-pCI"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxm-PP-atA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-270" y="323"/>
+            <point key="canvasLocation" x="219" y="163"/>
         </scene>
         <!--Workout-->
-        <scene sceneID="dbm-0L-eHi">
+        <scene sceneID="Wam-i8-EiM">
             <objects>
-                <tableViewController id="Xhp-zP-Ewc" customClass="WorkoutController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Iaf-IU-aRp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                <viewController id="htu-tR-CGE" customClass="WorkoutController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DFy-uO-dn9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sth-Ar-4ce"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9te-tG-1mq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Yfr-xH-5l7">
+                                <rect key="frame" x="0.0" y="64" width="320" height="336"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7KQ-5X-oca">
+                                <rect key="frame" x="0.0" y="100" width="320" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="6Jb-P2-dFs"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="0gp-Bq-YwD" kind="embed" identifier="newActivity" id="Uok-W9-AEE"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mMb-1n-TPn">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mMb-1n-TPn" id="qAW-eo-VWh">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Xhp-zP-Ewc" id="qec-0z-sV2"/>
-                            <outlet property="delegate" destination="Xhp-zP-Ewc" id="8ZL-mB-a8Z"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Workout" id="tVb-ed-sz4"/>
+                        <constraints>
+                            <constraint firstItem="Yfr-xH-5l7" firstAttribute="leading" secondItem="9te-tG-1mq" secondAttribute="leading" id="1gz-VG-PGG"/>
+                            <constraint firstItem="Sth-Ar-4ce" firstAttribute="top" secondItem="Yfr-xH-5l7" secondAttribute="bottom" id="1oL-CB-CqW"/>
+                            <constraint firstAttribute="trailing" secondItem="7KQ-5X-oca" secondAttribute="trailing" id="2bk-LE-osq"/>
+                            <constraint firstItem="Sth-Ar-4ce" firstAttribute="top" secondItem="7KQ-5X-oca" secondAttribute="bottom" id="5qx-kV-dda"/>
+                            <constraint firstItem="Yfr-xH-5l7" firstAttribute="top" secondItem="DFy-uO-dn9" secondAttribute="top" id="FIb-0H-BNC"/>
+                            <constraint firstAttribute="trailing" secondItem="Yfr-xH-5l7" secondAttribute="trailing" id="PSR-VO-m8f"/>
+                            <constraint firstItem="7KQ-5X-oca" firstAttribute="leading" secondItem="9te-tG-1mq" secondAttribute="leading" id="cjy-Be-bIk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Workout" id="Mms-Kn-hlI"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="480"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VFQ-dV-Ado" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <size key="freeformSize" width="320" height="400"/>
+                    <connections>
+                        <outlet property="startNewActivityContainer" destination="7KQ-5X-oca" id="hKM-Ld-YcZ"/>
+                        <outlet property="tableView" destination="Yfr-xH-5l7" id="hdb-Bg-4ak"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gys-eu-7Pi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="514" y="309"/>
+            <point key="canvasLocation" x="841" y="-37"/>
+        </scene>
+        <!--Activity Selector Input View Controller-->
+        <scene sceneID="BEF-Et-QJl">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="0gp-Bq-YwD" customClass="ActivitySelectorInputViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wOd-tP-tNy"/>
+                        <viewControllerLayoutGuide type="bottom" id="blx-2I-ghh"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Qjf-yV-FSK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDz-2b-f8n">
+                                <rect key="frame" x="8" y="8" width="304" height="108"/>
+                                <color key="backgroundColor" red="0.30196078430000001" green="0.68235294120000001" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Choose an Activity!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showActivitySelector" destination="0gp-Bq-YwD" eventType="touchUpInside" id="Cu6-nE-heo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="VDz-2b-f8n" firstAttribute="leading" secondItem="Qjf-yV-FSK" secondAttribute="leadingMargin" constant="-8" id="130-l4-i7G"/>
+                            <constraint firstItem="blx-2I-ghh" firstAttribute="top" secondItem="VDz-2b-f8n" secondAttribute="bottom" constant="8" id="Cg7-O1-Bxe"/>
+                            <constraint firstItem="VDz-2b-f8n" firstAttribute="top" secondItem="wOd-tP-tNy" secondAttribute="bottom" constant="8" id="fBT-YZ-lIZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VDz-2b-f8n" secondAttribute="trailing" constant="-8" id="skr-R6-jrL"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="124"/>
+                    <connections>
+                        <outlet property="findNewActivityButton" destination="VDz-2b-f8n" id="6e5-SZ-mSb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wiv-xx-qTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="841" y="348"/>
         </scene>
     </scenes>
 </document>
