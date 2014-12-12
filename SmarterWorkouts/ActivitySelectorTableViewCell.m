@@ -1,13 +1,13 @@
 #import "ActivitySelectorTableViewCell.h"
 #import "ActivitySelectorViewController.h"
 #import "Activity.h"
+#import "UIImage+ColorFromImage.h"
 
 @implementation ActivitySelectorTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setRepeatVisible:NO];
-    [self.repeatActivityButton setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
 }
 
 - (void)setRepeatVisible:(BOOL)visible {
@@ -21,10 +21,16 @@
     self.repeatActivityButton.layer.cornerRadius = 10;
     self.repeatActivityButton.layer.borderWidth = 1;
     self.repeatActivityButton.layer.borderColor = [self.repeatActivityButton currentTitleColor].CGColor;
+    [self.repeatActivityButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    [self.repeatActivityButton setBackgroundImage:[UIImage imageWithColor:[self.repeatActivityButton currentTitleColor]]
+                                          forState:UIControlStateHighlighted];
 
     self.findNewActivityButton.layer.cornerRadius = 10;
     self.findNewActivityButton.layer.borderWidth = 1;
     self.findNewActivityButton.layer.borderColor = [self.findNewActivityButton currentTitleColor].CGColor;
+    [self.findNewActivityButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    [self.findNewActivityButton setBackgroundImage:[UIImage imageWithColor:[self.findNewActivityButton currentTitleColor]]
+                                          forState:UIControlStateHighlighted];
 }
 
 - (IBAction)showActivitySelector {

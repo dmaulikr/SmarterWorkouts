@@ -10,7 +10,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *repeatSpacer;
 
 @property (weak, nonatomic) IBOutlet UIButton *findNewActivityButton;
-@property (weak, nonatomic) IBOutlet UITextField *activityInput;
 @property (weak, nonatomic) IBOutlet UIButton *repeatActivityButton;
 @property(nonatomic, weak) UIViewController<ActivitySelectorDelegate> *delegate;
 
