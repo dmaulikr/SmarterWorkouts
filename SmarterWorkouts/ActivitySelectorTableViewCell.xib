@@ -27,30 +27,36 @@
                             <action selector="repeatActivityTapped:" destination="moV-FQ-IqW" eventType="touchUpInside" id="RCQ-yn-f6h"/>
                         </connections>
                     </button>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add an activity (e.g. Squat)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y0K-nl-Kt2">
-                        <rect key="frame" x="8" y="66" width="372" height="50.5"/>
+                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3s-XI-nF2">
+                        <rect key="frame" x="8" y="66" width="372" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="height" priority="999" constant="50" id="Pig-aQ-x6b"/>
+                            <constraint firstAttribute="height" priority="999" constant="50" id="R5z-nf-YDv"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next"/>
-                    </textField>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <state key="normal" title="New Activity">
+                            <color key="titleColor" red="0.30196078430000001" green="0.68235294120000001" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="showActivitySelector" destination="moV-FQ-IqW" eventType="touchUpInside" id="yhi-zh-CtQ"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Y0K-nl-Kt2" firstAttribute="bottom" secondItem="hOi-Xo-WBC" secondAttribute="bottomMargin" id="AnX-lh-Pg9"/>
-                    <constraint firstItem="Y0K-nl-Kt2" firstAttribute="trailing" secondItem="hOi-Xo-WBC" secondAttribute="trailingMargin" id="C09-mr-umY"/>
+                    <constraint firstItem="a3s-XI-nF2" firstAttribute="leading" secondItem="hOi-Xo-WBC" secondAttribute="leadingMargin" id="5ME-mf-Cfm"/>
                     <constraint firstItem="BtG-41-iRv" firstAttribute="trailing" secondItem="hOi-Xo-WBC" secondAttribute="trailingMargin" id="D7N-Qi-gib"/>
-                    <constraint firstItem="Y0K-nl-Kt2" firstAttribute="leading" secondItem="hOi-Xo-WBC" secondAttribute="leadingMargin" id="J0S-E2-Xes"/>
-                    <constraint firstItem="Y0K-nl-Kt2" firstAttribute="top" secondItem="BtG-41-iRv" secondAttribute="bottom" constant="8" id="h8O-Sf-0kI"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="a3s-XI-nF2" secondAttribute="bottom" id="L93-P6-Ike"/>
+                    <constraint firstItem="a3s-XI-nF2" firstAttribute="trailing" secondItem="hOi-Xo-WBC" secondAttribute="trailingMargin" id="PTO-6G-ge2"/>
+                    <constraint firstItem="a3s-XI-nF2" firstAttribute="top" secondItem="BtG-41-iRv" secondAttribute="bottom" constant="8" id="Ruy-5g-asg"/>
                     <constraint firstItem="BtG-41-iRv" firstAttribute="leading" secondItem="hOi-Xo-WBC" secondAttribute="leadingMargin" id="mnb-H9-nCU"/>
                     <constraint firstItem="BtG-41-iRv" firstAttribute="top" secondItem="hOi-Xo-WBC" secondAttribute="topMargin" id="sUx-eT-smD"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="activityInput" destination="Y0K-nl-Kt2" id="gbm-ki-JnO"/>
+                <outlet property="findNewActivityButton" destination="a3s-XI-nF2" id="Vkb-rF-9bz"/>
                 <outlet property="repeatActivityButton" destination="BtG-41-iRv" id="aQL-xH-yt3"/>
                 <outlet property="repeatHeightConstraint" destination="yYA-9v-T5J" id="FDV-KD-WhB"/>
-                <outlet property="repeatSpacer" destination="h8O-Sf-0kI" id="kjD-UV-USj"/>
+                <outlet property="repeatSpacer" destination="Ruy-5g-asg" id="oJk-eq-gOG"/>
             </connections>
             <point key="canvasLocation" x="236" y="356"/>
         </tableViewCell>
