@@ -35,6 +35,7 @@
 		545904B48E9BEB1559CD0C25 /* WorkoutControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590DF5CCADA728F393AF01 /* WorkoutControllerTests.m */; };
 		5459051FE88E8E7AC5B12DE2 /* ModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C1704D57A0CB87CD410 /* ModelTests.m */; };
 		5459052304D189F78C0C9CDE /* SetCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 545900F4F126F777ABE82238 /* SetCellFactory.m */; };
+		545905272B2BD1E72E5F01BC /* QuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459026160D6CA4853567D93 /* QuoteViewController.m */; };
 		5459054D6E01E0A7A22F7665 /* TimerActiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590F3FFC4B3A5BBC5F2B8A /* TimerActiveCell.m */; };
 		545905A336F2279F9E0685A0 /* BarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590709AEBEC0E0AE30F736 /* BarCalculator.m */; };
 		545905DB034A77D24890E6CD /* SWTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902FDED688FE872C92CF1 /* SWTestCase.m */; };
@@ -146,6 +147,7 @@
 		5459013B85548A27B8B1B805 /* PlateRemaining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateRemaining.m; sourceTree = "<group>"; };
 		545901DE0307A2E0890A0281 /* plates.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; name = plates.json; path = Models/Fixtures/plates.json; sourceTree = "<group>"; };
 		5459022C1F4BBBE900679F3F /* UIImage+ColorFromImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorFromImage.m"; sourceTree = "<group>"; };
+		5459026160D6CA4853567D93 /* QuoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteViewController.m; sourceTree = "<group>"; };
 		5459026EC551FA5E344D9121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		54590272E50B204941754D35 /* DurationDisplayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DurationDisplayTests.m; sourceTree = "<group>"; };
 		545902792F0900BE86135C4D /* SmarterWorkouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmarterWorkouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +161,7 @@
 		5459047548B43CB2B2ABA86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		545904E1841B2C9A4524B6E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		545904FB5D170F8D0F3B40D3 /* WeightSetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightSetCell.m; sourceTree = "<group>"; };
+		545905044CA3AB8FAD537913 /* QuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteViewController.h; sourceTree = "<group>"; };
 		5459057E9A8FEBF598DFA13B /* PlateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateTests.m; sourceTree = "<group>"; };
 		545905A77383420E1AD6A86B /* FlavorTextUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlavorTextUITextField.m; sourceTree = "<group>"; };
 		545905ABBA5E7B5529B9F446 /* DurationSetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DurationSetCell.xib; sourceTree = "<group>"; };
@@ -328,6 +331,7 @@
 				545902E9077C57BF70A67E6E /* Workout */,
 				545908B129FACEDEF36FC3F3 /* Form */,
 				54590D1F490E7B967C0D0F37 /* Categories */,
+				54590004C23627957CF23588 /* Quotes */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -339,6 +343,15 @@
 				951EA323B2EBA6F3B93DC5EE /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		54590004C23627957CF23588 /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				5459026160D6CA4853567D93 /* QuoteViewController.m */,
+				545905044CA3AB8FAD537913 /* QuoteViewController.h */,
+			);
+			name = Quotes;
 			sourceTree = "<group>";
 		};
 		5459001BFB717303CC6CE2F5 /* Setup */ = {
@@ -943,6 +956,7 @@
 				545902FB5831A7DA0C4FE5CD /* SetCell.m in Sources */,
 				5459099A09CF8618E5B6BB25 /* DurationDisplay.m in Sources */,
 				54590F2DE0A40BC4E74C42A0 /* SWTimer.m in Sources */,
+				545905272B2BD1E72E5F01BC /* QuoteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

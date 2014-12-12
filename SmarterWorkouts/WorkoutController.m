@@ -100,6 +100,7 @@
 - (void)activitySelected:(Activity *)activity {
     self.selectedActivity = activity;
     [self.startNewActivityContainer setHidden:YES];
+    [self.quoteContainer setHidden:YES];
     [self.tableView reloadData];
 }
 

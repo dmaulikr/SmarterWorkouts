@@ -9,6 +9,8 @@
         <scene sceneID="Ryu-XF-XqR">
             <objects>
                 <navigationController id="2cQ-1v-WTb" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="100"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hGK-99-3FU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -19,9 +21,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxm-PP-atA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="219" y="163"/>
+            <point key="canvasLocation" x="390" y="-37"/>
         </scene>
-        <!--Workout-->
+        <!--New Workout-->
         <scene sceneID="Wam-i8-EiM">
             <objects>
                 <viewController id="htu-tR-CGE" customClass="WorkoutController" sceneMemberID="viewController">
@@ -46,6 +48,15 @@
                                     <segue destination="0gp-Bq-YwD" kind="embed" identifier="newActivity" id="Uok-W9-AEE"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqo-VF-kYp">
+                                <rect key="frame" x="16" y="72" width="288" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="plh-DC-Gj5"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="iog-Pz-BOl" kind="embed" id="neT-2g-a7a"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -56,12 +67,16 @@
                             <constraint firstItem="Yfr-xH-5l7" firstAttribute="top" secondItem="DFy-uO-dn9" secondAttribute="top" id="FIb-0H-BNC"/>
                             <constraint firstAttribute="trailing" secondItem="Yfr-xH-5l7" secondAttribute="trailing" id="PSR-VO-m8f"/>
                             <constraint firstItem="7KQ-5X-oca" firstAttribute="leading" secondItem="9te-tG-1mq" secondAttribute="leading" id="cjy-Be-bIk"/>
+                            <constraint firstItem="xqo-VF-kYp" firstAttribute="leading" secondItem="9te-tG-1mq" secondAttribute="leadingMargin" id="dU8-Hj-sUc"/>
+                            <constraint firstItem="xqo-VF-kYp" firstAttribute="top" secondItem="DFy-uO-dn9" secondAttribute="bottom" constant="8" id="ftR-29-EMN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xqo-VF-kYp" secondAttribute="trailing" id="vLW-oG-UbD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Workout" id="Mms-Kn-hlI"/>
+                    <navigationItem key="navigationItem" title="New Workout" id="Mms-Kn-hlI"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="400"/>
                     <connections>
+                        <outlet property="quoteContainer" destination="xqo-VF-kYp" id="FPh-pM-b5M"/>
                         <outlet property="startNewActivityContainer" destination="7KQ-5X-oca" id="hKM-Ld-YcZ"/>
                         <outlet property="tableView" destination="Yfr-xH-5l7" id="hdb-Bg-4ak"/>
                     </connections>
@@ -112,6 +127,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wiv-xx-qTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="841" y="348"/>
+        </scene>
+        <!--Quote View Controller-->
+        <scene sceneID="ZOi-xn-NyG">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="iog-Pz-BOl" customClass="QuoteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XXp-CY-tKK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cu1-XG-B8F"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1rQ-a6-Zrf">
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success isn't always about ‘Greatness’, it’s about consistency. Consistent, hard work gains success. Greatness will come." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7h-V7-KvV">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="113.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Dwayne Johnson" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzT-h2-QZb">
+                                <rect key="frame" x="129.5" y="117" width="158" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="I7h-V7-KvV" firstAttribute="top" secondItem="XXp-CY-tKK" secondAttribute="bottom" id="T5b-iM-47j"/>
+                            <constraint firstAttribute="trailing" secondItem="I7h-V7-KvV" secondAttribute="trailing" id="T63-lv-lwT"/>
+                            <constraint firstItem="I7h-V7-KvV" firstAttribute="leading" secondItem="1rQ-a6-Zrf" secondAttribute="leading" id="mIq-Ii-cDh"/>
+                            <constraint firstAttribute="trailing" secondItem="YzT-h2-QZb" secondAttribute="trailing" id="pIB-aU-liw"/>
+                            <constraint firstItem="YzT-h2-QZb" firstAttribute="top" secondItem="I7h-V7-KvV" secondAttribute="bottom" constant="4" id="ydl-TZ-JYw"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="author" destination="YzT-h2-QZb" id="YHg-Sr-yo9"/>
+                        <outlet property="quote" destination="I7h-V7-KvV" id="iPl-4S-dGN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZp-bs-8so" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1311" y="-37"/>
         </scene>
     </scenes>
 </document>
