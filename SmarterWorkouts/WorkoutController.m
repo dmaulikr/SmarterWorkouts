@@ -10,6 +10,7 @@
 #import "WeightSetCell.h"
 #import "ActivityCellFactory.h"
 #import "SetCellFactory.h"
+#import "ActivitySelectorInputViewController.h"
 
 @implementation WorkoutController
 
@@ -124,17 +125,16 @@
     [self.selectActivityController setLastActivity:activity];
 
     [self.tableView reloadData];
-    [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 350, 0)];
+    [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 300, 0)];
     [self.tableView layoutIfNeeded];
     NSIndexPath *lastIndexPath = [NSIndexPath                       indexPathForRow:
             ([self tableView:self.tableView numberOfRowsInSection:0] - 1) inSection:0];
     [self scrollToIndexPath:lastIndexPath];
+    [self.tableView setScrollEnabled:NO];
 }
 
 - (void)formCanceled {
-    [self resetFormState];
-    [self.tableView setContentInset:UIEdgeInsetsZero];
-    [self.tableView reloadData];
+    [self restoreViewState];
 }
 
 - (void)formFinished:(NSArray *)sets {
@@ -148,15 +148,17 @@
         SetGroup *setGroup = self.workout.setGroups[0];
         [setGroup addSetsArray:sets];
     }
-
-    [self resetFormState];
-    [self.tableView setContentInset:UIEdgeInsetsZero];
-    [self.tableView reloadData];
+    [self restoreViewState];
 }
 
 - (void)formDelete {
     SetGroup *setGroup = self.workout.setGroups[0];
     [setGroup removeSetsObject:self.selectedSet];
+    [self restoreViewState];
+}
+
+- (void)restoreViewState {
+    [self.tableView setScrollEnabled:YES];
     [self resetFormState];
     [self.tableView setContentInset:UIEdgeInsetsZero];
     [self.tableView reloadData];

@@ -8,4 +8,6 @@
 
 @interface ActivitySelectorInputViewController : NewActivitySelectorInputViewController <UITextFieldDelegate, ActivitySelectorDelegate>
 @property(nonatomic, strong) Activity *repeatActivity;
+
+- (void)setLastActivity:(Activity *)activity;
 @end

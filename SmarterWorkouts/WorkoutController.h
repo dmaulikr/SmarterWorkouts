@@ -6,6 +6,7 @@
 @class Workout;
 @class Set;
 @class NewActivitySelectorInputViewController;
+@class ActivitySelectorInputViewController;
 
 @interface WorkoutController : UIViewController <UITextFieldDelegate, ActivitySelectorDelegate, ActivityFormDelegate, UITableViewDelegate, UITableViewDataSource> {
 }
@@ -22,5 +23,5 @@
 
 @property(nonatomic, strong) NSDictionary *formChangeOptions;
 
-@property(nonatomic, strong) NewActivitySelectorInputViewController *selectActivityController;
+@property(nonatomic, strong) ActivitySelectorInputViewController *selectActivityController;
 @end

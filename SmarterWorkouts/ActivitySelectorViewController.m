@@ -66,9 +66,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.delegate activitySelected:self.filteredData[(NSUInteger) indexPath.row]];
     [self.searchController setActive:NO];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+        [self.delegate activitySelected:self.filteredData[(NSUInteger) indexPath.row]];
+    }];
 }
 
 @end
