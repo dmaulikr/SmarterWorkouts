@@ -5,10 +5,9 @@
 #import "Activity.h"
 #import "Workout.h"
 #import "SetGroup.h"
-#import "ActivitySelectorInputViewController.h"
+#import "NewActivitySelectorInputViewController.h"
 #import "Set.h"
 #import "WeightSetCell.h"
-#import "NSManagedObject+MagicalFinders.h"
 #import "ActivityCellFactory.h"
 #import "SetCellFactory.h"
 
@@ -32,12 +31,18 @@
 
     [SetCellFactory registerNibs:self.tableView];
     [ActivityCellFactory registerNibs:self.tableView];
+
+    [self.selectActivityContainer setHidden:YES];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([[segue identifier] isEqualToString:@"newActivity"]){
-        ActivitySelectorInputViewController *controller = [segue destinationViewController];
+    if ([[segue identifier] isEqualToString:@"newActivity"] || [[segue identifier] isEqualToString:@"selectActivity"]) {
+        NewActivitySelectorInputViewController *controller = [segue destinationViewController];
         [controller setDelegate:self];
+
+        if ([[segue identifier] isEqualToString:@"selectActivity"]) {
+            self.selectActivityController = controller;
+        }
     }
 }
 
@@ -99,8 +104,12 @@
 
 - (void)activitySelected:(Activity *)activity {
     self.selectedActivity = activity;
+
     [self.startNewActivityContainer setHidden:YES];
+    [self.selectActivityContainer setHidden:NO];
     [self.quoteContainer setHidden:YES];
+    [self.selectActivityController setLastActivity:activity];
+
     [self.tableView reloadData];
 }
 

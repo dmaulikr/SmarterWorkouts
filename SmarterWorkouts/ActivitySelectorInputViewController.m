@@ -1,21 +1,29 @@
+#import "NewActivitySelectorInputViewController.h"
 #import "ActivitySelectorInputViewController.h"
-#import "ActivitySelectorViewController.h"
+#import "Activity.h"
 #import "UIImage+ColorFromImage.h"
 
 @implementation ActivitySelectorInputViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIColor *highlightColor = [UIColor colorWithRed:0.361 green:0.514 blue:0.184 alpha:1];
-    [self.findNewActivityButton setBackgroundImage:[UIImage imageWithColor:
-                    highlightColor]
-                                          forState:UIControlStateHighlighted];
+    UIColor *highlightColor = [UIColor colorWithRed:0.192 green:0.69 blue:0.835 alpha:1];
+    [self.repeatActivityButton setBackgroundImage:[UIImage imageWithColor:highlightColor] forState:UIControlStateHighlighted];
 }
 
-- (IBAction)showActivitySelector {
-    ActivitySelectorViewController *controller = [[ActivitySelectorViewController alloc] initWithDelegate:self.delegate];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
-    [self.parentViewController presentViewController:nav animated:YES completion:nil];
+- (void)activitySelected:(Activity *)activity {
+    [self setLastActivity:activity];
+    [self.delegate activitySelected:activity];
+}
+
+- (void)setLastActivity:(Activity *)activity {
+    self.repeatActivity = activity;
+    [self.repeatActivityButton                                setTitle:
+            [NSString stringWithFormat:@"+%@", activity.name] forState:UIControlStateNormal];
+}
+
+- (IBAction)repeatButtonTapped:(id)sender {
+    [self.delegate activitySelected:self.repeatActivity];
 }
 
 @end

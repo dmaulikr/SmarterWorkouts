@@ -57,15 +57,27 @@
                                     <segue destination="iog-Pz-BOl" kind="embed" id="neT-2g-a7a"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcC-kr-xjb">
+                                <rect key="frame" x="0.0" y="272" width="320" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="a2i-uE-kAq"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="5vO-PZ-whY" kind="embed" identifier="selectActivity" id="1xT-Fc-33g"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="vcC-kr-xjb" firstAttribute="leading" secondItem="9te-tG-1mq" secondAttribute="leading" id="0Uh-Tw-KeY"/>
                             <constraint firstItem="Yfr-xH-5l7" firstAttribute="leading" secondItem="9te-tG-1mq" secondAttribute="leading" id="1gz-VG-PGG"/>
                             <constraint firstItem="Sth-Ar-4ce" firstAttribute="top" secondItem="Yfr-xH-5l7" secondAttribute="bottom" id="1oL-CB-CqW"/>
                             <constraint firstAttribute="trailing" secondItem="7KQ-5X-oca" secondAttribute="trailing" id="2bk-LE-osq"/>
+                            <constraint firstAttribute="trailing" secondItem="vcC-kr-xjb" secondAttribute="trailing" id="3DT-6L-U1M"/>
                             <constraint firstItem="Sth-Ar-4ce" firstAttribute="top" secondItem="7KQ-5X-oca" secondAttribute="bottom" id="5qx-kV-dda"/>
                             <constraint firstItem="Yfr-xH-5l7" firstAttribute="top" secondItem="DFy-uO-dn9" secondAttribute="top" id="FIb-0H-BNC"/>
                             <constraint firstAttribute="trailing" secondItem="Yfr-xH-5l7" secondAttribute="trailing" id="PSR-VO-m8f"/>
+                            <constraint firstItem="Sth-Ar-4ce" firstAttribute="top" secondItem="vcC-kr-xjb" secondAttribute="bottom" id="Vdx-bB-njx"/>
                             <constraint firstItem="7KQ-5X-oca" firstAttribute="leading" secondItem="9te-tG-1mq" secondAttribute="leading" id="cjy-Be-bIk"/>
                             <constraint firstItem="xqo-VF-kYp" firstAttribute="leading" secondItem="9te-tG-1mq" secondAttribute="leadingMargin" id="dU8-Hj-sUc"/>
                             <constraint firstItem="xqo-VF-kYp" firstAttribute="top" secondItem="DFy-uO-dn9" secondAttribute="bottom" constant="8" id="ftR-29-EMN"/>
@@ -77,6 +89,7 @@
                     <size key="freeformSize" width="320" height="400"/>
                     <connections>
                         <outlet property="quoteContainer" destination="xqo-VF-kYp" id="FPh-pM-b5M"/>
+                        <outlet property="selectActivityContainer" destination="vcC-kr-xjb" id="vC8-x9-Y4O"/>
                         <outlet property="startNewActivityContainer" destination="7KQ-5X-oca" id="hKM-Ld-YcZ"/>
                         <outlet property="tableView" destination="Yfr-xH-5l7" id="hdb-Bg-4ak"/>
                     </connections>
@@ -85,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="841" y="-37"/>
         </scene>
-        <!--Activity Selector Input View Controller-->
+        <!--New Activity Selector Input View Controller-->
         <scene sceneID="BEF-Et-QJl">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="0gp-Bq-YwD" customClass="ActivitySelectorInputViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="0gp-Bq-YwD" customClass="NewActivitySelectorInputViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wOd-tP-tNy"/>
                         <viewControllerLayoutGuide type="bottom" id="blx-2I-ghh"/>
@@ -170,6 +183,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZp-bs-8so" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1311" y="-37"/>
+        </scene>
+        <!--Activity Selector Input View Controller-->
+        <scene sceneID="ooT-bJ-AzS">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="5vO-PZ-whY" customClass="ActivitySelectorInputViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FOr-zN-y2t"/>
+                        <viewControllerLayoutGuide type="bottom" id="jQw-ra-Vr1"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kcJ-JU-gXX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="136"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2E-Ku-EPe">
+                                <rect key="frame" x="8" y="8" width="304" height="56"/>
+                                <color key="backgroundColor" red="0.30196078430000001" green="0.68235294120000001" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="New Activity!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showActivitySelector" destination="5vO-PZ-whY" eventType="touchUpInside" id="Rc4-6t-ZXb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVC-JT-7Nd">
+                                <rect key="frame" x="8" y="72" width="304" height="56"/>
+                                <color key="backgroundColor" red="0.35686274509803922" green="0.75294117647058822" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="+Power Clean">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="repeatButtonTapped:" destination="5vO-PZ-whY" eventType="touchUpInside" id="uql-49-oej"/>
+                                    <action selector="showActivitySelector" destination="0gp-Bq-YwD" eventType="touchUpInside" id="ysQ-NH-Hz5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mVC-JT-7Nd" secondAttribute="trailing" constant="8" id="5VV-bh-c18"/>
+                            <constraint firstItem="mVC-JT-7Nd" firstAttribute="leading" secondItem="kcJ-JU-gXX" secondAttribute="leading" constant="8" id="I5s-8t-a7A"/>
+                            <constraint firstItem="Q2E-Ku-EPe" firstAttribute="leading" secondItem="kcJ-JU-gXX" secondAttribute="leading" constant="8" id="Qof-XM-XZn"/>
+                            <constraint firstItem="jQw-ra-Vr1" firstAttribute="top" secondItem="mVC-JT-7Nd" secondAttribute="bottom" constant="8" id="biT-AV-o5O"/>
+                            <constraint firstItem="Q2E-Ku-EPe" firstAttribute="top" secondItem="FOr-zN-y2t" secondAttribute="bottom" constant="8" id="gfA-9G-dro"/>
+                            <constraint firstItem="mVC-JT-7Nd" firstAttribute="top" secondItem="Q2E-Ku-EPe" secondAttribute="bottom" constant="8" id="tBY-Nw-r9k"/>
+                            <constraint firstItem="mVC-JT-7Nd" firstAttribute="height" secondItem="Q2E-Ku-EPe" secondAttribute="height" id="vgy-dc-Iwv"/>
+                            <constraint firstAttribute="trailing" secondItem="Q2E-Ku-EPe" secondAttribute="trailing" constant="8" id="zQO-A9-XwL"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="136"/>
+                    <connections>
+                        <outlet property="findNewActivityButton" destination="Q2E-Ku-EPe" id="1sR-aK-90e"/>
+                        <outlet property="repeatActivityButton" destination="mVC-JT-7Nd" id="eg7-6C-p4z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O5z-ln-WxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1186" y="350"/>
         </scene>
     </scenes>
 </document>
