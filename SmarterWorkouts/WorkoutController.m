@@ -33,6 +33,8 @@
     [ActivityCellFactory registerNibs:self.tableView];
 
     [self.selectActivityContainer setHidden:YES];
+
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -95,7 +97,12 @@
     else {
         self.selectedSet = nil;
     }
+    CGPoint contentOffset = [self.tableView contentOffset];
     [self.tableView reloadData];
+    [self.tableView layoutIfNeeded];
+    [self.tableView setContentOffset:contentOffset animated:NO];
+    CGRect cellFrame = [tableView rectForRowAtIndexPath:indexPath];
+    [tableView setContentOffset:CGPointMake(0, cellFrame.origin.y) animated:YES];
 }
 
 - (void)viewTapped {
