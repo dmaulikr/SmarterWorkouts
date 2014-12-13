@@ -124,6 +124,7 @@
     [self.selectActivityController setLastActivity:activity];
 
     [self.tableView reloadData];
+    [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 350, 0)];
     [self.tableView layoutIfNeeded];
     NSIndexPath *lastIndexPath = [NSIndexPath                       indexPathForRow:
             ([self tableView:self.tableView numberOfRowsInSection:0] - 1) inSection:0];
@@ -132,6 +133,7 @@
 
 - (void)formCanceled {
     [self resetFormState];
+    [self.tableView setContentInset:UIEdgeInsetsZero];
     [self.tableView reloadData];
 }
 
@@ -148,6 +150,7 @@
     }
 
     [self resetFormState];
+    [self.tableView setContentInset:UIEdgeInsetsZero];
     [self.tableView reloadData];
 }
 
@@ -155,6 +158,7 @@
     SetGroup *setGroup = self.workout.setGroups[0];
     [setGroup removeSetsObject:self.selectedSet];
     [self resetFormState];
+    [self.tableView setContentInset:UIEdgeInsetsZero];
     [self.tableView reloadData];
 }
 
