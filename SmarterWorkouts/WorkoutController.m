@@ -90,6 +90,7 @@
     if ([cell isKindOfClass:SetCell.class]) {
         SetGroup *setGroup = self.workout.setGroups[0];
         self.selectedSet = [setGroup sets][(NSUInteger) indexPath.row];
+        self.selectedActivity = nil;
     }
     else if ([cell isKindOfClass:ActivityCell.class]) {
         return;
@@ -101,8 +102,12 @@
     [self.tableView reloadData];
     [self.tableView layoutIfNeeded];
     [self.tableView setContentOffset:contentOffset animated:NO];
-    CGRect cellFrame = [tableView rectForRowAtIndexPath:indexPath];
-    [tableView setContentOffset:CGPointMake(0, cellFrame.origin.y) animated:YES];
+    [self scrollToIndexPath:indexPath];
+}
+
+- (void)scrollToIndexPath:(NSIndexPath *)indexPath {
+    CGRect cellFrame = [self.tableView rectForRowAtIndexPath:indexPath];
+    [self.tableView setContentOffset:CGPointMake(0, cellFrame.origin.y) animated:YES];
 }
 
 - (void)viewTapped {
@@ -111,6 +116,7 @@
 
 - (void)activitySelected:(Activity *)activity {
     self.selectedActivity = activity;
+    self.selectedSet = nil;
 
     [self.startNewActivityContainer setHidden:YES];
     [self.selectActivityContainer setHidden:NO];
@@ -118,6 +124,10 @@
     [self.selectActivityController setLastActivity:activity];
 
     [self.tableView reloadData];
+    [self.tableView layoutIfNeeded];
+    NSIndexPath *lastIndexPath = [NSIndexPath                       indexPathForRow:
+            ([self tableView:self.tableView numberOfRowsInSection:0] - 1) inSection:0];
+    [self scrollToIndexPath:lastIndexPath];
 }
 
 - (void)formCanceled {

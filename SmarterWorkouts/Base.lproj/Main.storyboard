@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Yfr-xH-5l7">
-                                <rect key="frame" x="0.0" y="64" width="320" height="336"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="208"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7KQ-5X-oca">
@@ -71,12 +71,12 @@
                         <constraints>
                             <constraint firstItem="vcC-kr-xjb" firstAttribute="leading" secondItem="9te-tG-1mq" secondAttribute="leading" id="0Uh-Tw-KeY"/>
                             <constraint firstItem="Yfr-xH-5l7" firstAttribute="leading" secondItem="9te-tG-1mq" secondAttribute="leading" id="1gz-VG-PGG"/>
-                            <constraint firstItem="Sth-Ar-4ce" firstAttribute="top" secondItem="Yfr-xH-5l7" secondAttribute="bottom" id="1oL-CB-CqW"/>
                             <constraint firstAttribute="trailing" secondItem="7KQ-5X-oca" secondAttribute="trailing" id="2bk-LE-osq"/>
                             <constraint firstAttribute="trailing" secondItem="vcC-kr-xjb" secondAttribute="trailing" id="3DT-6L-U1M"/>
                             <constraint firstItem="Sth-Ar-4ce" firstAttribute="top" secondItem="7KQ-5X-oca" secondAttribute="bottom" id="5qx-kV-dda"/>
                             <constraint firstItem="Yfr-xH-5l7" firstAttribute="top" secondItem="DFy-uO-dn9" secondAttribute="top" id="FIb-0H-BNC"/>
-                            <constraint firstAttribute="trailing" secondItem="Yfr-xH-5l7" secondAttribute="trailing" id="PSR-VO-m8f"/>
+                            <constraint firstItem="vcC-kr-xjb" firstAttribute="top" secondItem="Yfr-xH-5l7" secondAttribute="bottom" id="IMs-bQ-sdW"/>
+                            <constraint firstAttribute="trailing" secondItem="Yfr-xH-5l7" secondAttribute="trailing" id="SK7-n6-CtI"/>
                             <constraint firstItem="Sth-Ar-4ce" firstAttribute="top" secondItem="vcC-kr-xjb" secondAttribute="bottom" id="Vdx-bB-njx"/>
                             <constraint firstItem="7KQ-5X-oca" firstAttribute="leading" secondItem="9te-tG-1mq" secondAttribute="leading" id="cjy-Be-bIk"/>
                             <constraint firstItem="xqo-VF-kYp" firstAttribute="leading" secondItem="9te-tG-1mq" secondAttribute="leadingMargin" id="dU8-Hj-sUc"/>
