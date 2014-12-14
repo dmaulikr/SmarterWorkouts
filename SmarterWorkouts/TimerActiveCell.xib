@@ -15,7 +15,7 @@
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KM-gh-4pU">
                         <rect key="frame" x="232" y="0.0" width="88" height="59.5"/>
-                        <color key="backgroundColor" red="0.0" green="0.44664747017688206" blue="0.93356643356643365" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.44705882352941179" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" priority="999" constant="52" id="Dgw-7T-PZ4"/>
                             <constraint firstAttribute="width" constant="88" id="tOL-bH-u9G"/>
@@ -56,7 +56,7 @@
                     <constraint firstItem="8KM-gh-4pU" firstAttribute="leading" secondItem="nxf-qa-WgJ" secondAttribute="trailing" constant="8" id="idv-2Y-5x4"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.0" green="0.4833333333" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.4823529411764706" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="activityName" destination="I7c-b6-Ufo" id="Kdo-KP-1gV"/>
                 <outlet property="durationLabel" destination="nxf-qa-WgJ" id="KNd-Xw-r6Z"/>

@@ -11,6 +11,7 @@
 #import "ActivityCellFactory.h"
 #import "SetCellFactory.h"
 #import "ActivitySelectorInputViewController.h"
+#import "HistoryViewController.h"
 
 @implementation WorkoutController
 
@@ -29,13 +30,13 @@
     self.tableView.estimatedRowHeight = 80;
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 
     [SetCellFactory registerNibs:self.tableView];
     [ActivityCellFactory registerNibs:self.tableView];
 
     [self.selectActivityContainer setHidden:YES];
-
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    [self.doneButton setEnabled:NO];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -162,6 +163,8 @@
     [self resetFormState];
     [self.tableView setContentInset:UIEdgeInsetsZero];
     [self.tableView reloadData];
+
+    [self.doneButton setEnabled:([[self.workout.setGroups[0] sets] count] > 0)];
 }
 
 - (void)formChangeToType:(NSString *)type withOptions:(NSDictionary *)options {
@@ -175,6 +178,13 @@
     self.selectedSet = nil;
     self.formChangeType = nil;
     self.formChangeOptions = nil;
+}
+
+- (IBAction)doneButtonTapped:(id)sender {
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"HistoryViewController" bundle:nil];
+    HistoryViewController *history = [sb instantiateViewControllerWithIdentifier:@"historyViewController"];
+    [self.navigationController setViewControllers:@[history] animated:YES];
 }
 
 @end

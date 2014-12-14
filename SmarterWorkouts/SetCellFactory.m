@@ -2,14 +2,14 @@
 #import "Set.h"
 #import "WeightSetCell.h"
 #import "DurationSetCell.h"
+#import "CellRegister.h"
 
 @implementation SetCellFactory
 
 + (void)registerNibs:(UITableView *)tableView {
     NSArray *classes = @[WeightSetCell.class, DurationSetCell.class];
     for (Class klass in classes) {
-        [tableView registerNib:[UINib nibWithNibName:NSStringFromClass(klass) bundle:nil]
-        forCellReuseIdentifier:NSStringFromClass(klass)];
+        [CellRegister registerClass:klass for:tableView];
     }
 }
 

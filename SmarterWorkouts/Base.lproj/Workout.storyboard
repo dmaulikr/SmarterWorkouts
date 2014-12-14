@@ -85,7 +85,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Workout" id="Mms-Kn-hlI">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="dAW-7f-OOz"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="dAW-7f-OOz">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="htu-tR-CGE" id="MB7-QY-FrD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="400"/>

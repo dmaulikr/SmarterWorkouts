@@ -47,7 +47,7 @@
                     <constraint firstAttribute="centerY" secondItem="03R-AD-wOl" secondAttribute="centerY" constant="-0.25" id="ufi-d3-Gle"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.78173643350601196" green="0.0" blue="0.99880802631378174" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.4823529411764706" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="activityLabel" destination="5fL-sT-cTI" id="Xxz-gx-o3q"/>
                 <outlet property="durationLabel" destination="03R-AD-wOl" id="h6x-eh-ROr"/>

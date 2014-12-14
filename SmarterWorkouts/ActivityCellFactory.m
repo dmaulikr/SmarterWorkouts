@@ -5,14 +5,14 @@
 #import "Set.h"
 #import "NSManagedObject+MagicalFinders.h"
 #import "TimerActiveCell.h"
+#import "CellRegister.h"
 
 @implementation ActivityCellFactory
 
 + (void)registerNibs:(UITableView *)tableView {
     NSArray *classes = @[TimerActiveCell.class, ActivityWeightFormCell.class, SetupTimerCell.class];
     for (Class klass in classes) {
-        [tableView registerNib:[UINib nibWithNibName:NSStringFromClass(klass) bundle:nil]
-        forCellReuseIdentifier:NSStringFromClass(klass)];
+        [CellRegister registerClass:klass for:tableView];
     }
 }
 
