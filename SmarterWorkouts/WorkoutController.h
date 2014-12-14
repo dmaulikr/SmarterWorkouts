@@ -10,6 +10,7 @@
 
 @interface WorkoutController : UIViewController <UITextFieldDelegate, ActivitySelectorDelegate, ActivityFormDelegate, UITableViewDelegate, UITableViewDataSource> {
 }
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (weak, nonatomic) IBOutlet UIView *quoteContainer;
 @property (weak, nonatomic) IBOutlet UIView *startNewActivityContainer;
 @property (weak, nonatomic) IBOutlet UIView *selectActivityContainer;

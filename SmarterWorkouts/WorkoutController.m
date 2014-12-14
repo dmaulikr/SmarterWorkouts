@@ -44,7 +44,7 @@
         [controller setDelegate:self];
 
         if ([[segue identifier] isEqualToString:@"selectActivity"]) {
-            self.selectActivityController = controller;
+            self.selectActivityController = (ActivitySelectorInputViewController *) controller;
         }
     }
 }

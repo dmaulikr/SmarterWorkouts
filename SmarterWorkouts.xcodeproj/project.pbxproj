@@ -50,7 +50,7 @@
 		5459072AA62AACF824479581 /* PlateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459057E9A8FEBF598DFA13B /* PlateTests.m */; };
 		545907C3DBD21895DE413D74 /* SetGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590D88EEE880F3472985DB /* SetGroup.m */; };
 		545907CCA7D50AB8EFAC07AB /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590ED3193BE2D1D5DBEDE1 /* Activity.m */; };
-		545907E6880B196D473BB864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545906E82697330EFD85E5DF /* Main.storyboard */; };
+		545907E6880B196D473BB864 /* Workout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545906E82697330EFD85E5DF /* Workout.storyboard */; };
 		54590813BA5B7CD984F40F82 /* SetupTimerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459090219AF2435A810360C /* SetupTimerCell.m */; };
 		545908449CDCB7857AAF085C /* Form.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590D3E2CA6B03B9BFF4583 /* Form.m */; };
 		545908EA948161743CA45E19 /* PlateRemaining.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459013B85548A27B8B1B805 /* PlateRemaining.m */; };
@@ -159,7 +159,7 @@
 		545903F57D7C270830C13B3B /* FixtureLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FixtureLoader.h; path = Models/Fixtures/FixtureLoader.h; sourceTree = "<group>"; };
 		545903FBE12939C3C1F5D39D /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Activity.h; path = Models/Activity.h; sourceTree = "<group>"; };
 		5459041C8F7457EE25991D77 /* DecimalNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecimalNumbers.h; sourceTree = "<group>"; };
-		5459047548B43CB2B2ABA86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5459047548B43CB2B2ABA86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Workout.storyboard; sourceTree = "<group>"; };
 		545904E1841B2C9A4524B6E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		545904FB5D170F8D0F3B40D3 /* WeightSetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightSetCell.m; sourceTree = "<group>"; };
 		545905044CA3AB8FAD537913 /* QuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteViewController.h; sourceTree = "<group>"; };
@@ -641,7 +641,7 @@
 				545909DEAE65283756E25E7A /* LaunchScreen.xib */,
 				54590CFA15918636F9EA4B15 /* AppDelegate.h */,
 				545905ED0E0E46EE8AA17304 /* AppDelegate.m */,
-				545906E82697330EFD85E5DF /* Main.storyboard */,
+				545906E82697330EFD85E5DF /* Workout.storyboard */,
 				545908C17FF06866026FFF47 /* WorkoutController.h */,
 				54590834E09D76DC26CC206D /* WorkoutController.m */,
 				545902D56BB61349A45A6675 /* Numbers */,
@@ -835,7 +835,7 @@
 			files = (
 				545905E56CE3F26AADB60219 /* Images.xcassets in Resources */,
 				545902DECE48C72B4EA42451 /* LaunchScreen.xib in Resources */,
-				545907E6880B196D473BB864 /* Main.storyboard in Resources */,
+				545907E6880B196D473BB864 /* Workout.storyboard in Resources */,
 				027ABDDB1A195D2000DE3321 /* BarLoadingViewController.xib in Resources */,
 				02DDF7061A336DED00359F93 /* SetupTimerCell.xib in Resources */,
 				54590083F0899BE15B741589 /* 433-x@2x.png in Resources */,
@@ -1004,12 +1004,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		545906E82697330EFD85E5DF /* Main.storyboard */ = {
+		545906E82697330EFD85E5DF /* Workout.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5459047548B43CB2B2ABA86D /* Base */,
 			);
-			name = Main.storyboard;
+			name = Workout.storyboard;
 			sourceTree = "<group>";
 		};
 		545909DEAE65283756E25E7A /* LaunchScreen.xib */ = {

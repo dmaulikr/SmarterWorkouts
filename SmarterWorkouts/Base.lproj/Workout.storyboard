@@ -84,10 +84,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="xqo-VF-kYp" secondAttribute="trailing" id="vLW-oG-UbD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New Workout" id="Mms-Kn-hlI"/>
+                    <navigationItem key="navigationItem" title="New Workout" id="Mms-Kn-hlI">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="dAW-7f-OOz"/>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="400"/>
                     <connections>
+                        <outlet property="doneButton" destination="dAW-7f-OOz" id="kZy-bC-7Ip"/>
                         <outlet property="quoteContainer" destination="xqo-VF-kYp" id="FPh-pM-b5M"/>
                         <outlet property="selectActivityContainer" destination="vcC-kr-xjb" id="vC8-x9-Y4O"/>
                         <outlet property="startNewActivityContainer" destination="7KQ-5X-oca" id="hKM-Ld-YcZ"/>
