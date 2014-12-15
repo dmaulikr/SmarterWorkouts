@@ -20,18 +20,30 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Squat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6y-ms-rcj">
-                        <rect key="frame" x="8" y="19" width="180.5" height="34.5"/>
+                        <rect key="frame" x="8" y="19" width="183" height="34.5"/>
                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UkX-N8-Ram">
+                        <rect key="frame" x="0.0" y="71.5" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.22352941176470589" green="0.54509803921568623" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="yEH-rY-2GD"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" red="0.0" green="0.65490196078431373" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="t6y-ms-rcj" secondAttribute="bottom" constant="11" id="0FV-hV-rpv"/>
+                    <constraint firstAttribute="trailing" secondItem="UkX-N8-Ram" secondAttribute="trailing" id="1rP-4Z-Upj"/>
                     <constraint firstAttribute="centerY" secondItem="dj5-9i-zKJ" secondAttribute="centerY" id="DE2-t3-pQr"/>
-                    <constraint firstItem="dj5-9i-zKJ" firstAttribute="leading" secondItem="t6y-ms-rcj" secondAttribute="trailing" constant="2.5" id="Enn-hB-hgE"/>
+                    <constraint firstItem="UkX-N8-Ram" firstAttribute="leading" secondItem="giA-qX-ndS" secondAttribute="leading" id="EhF-ga-BNq"/>
+                    <constraint firstItem="dj5-9i-zKJ" firstAttribute="leading" secondItem="t6y-ms-rcj" secondAttribute="trailing" id="Enn-hB-hgE"/>
                     <constraint firstItem="t6y-ms-rcj" firstAttribute="leading" secondItem="giA-qX-ndS" secondAttribute="leadingMargin" id="GFF-hE-wAT"/>
                     <constraint firstAttribute="centerY" secondItem="t6y-ms-rcj" secondAttribute="centerY" id="dDw-LK-Les"/>
+                    <constraint firstItem="t6y-ms-rcj" firstAttribute="top" secondItem="giA-qX-ndS" secondAttribute="topMargin" constant="11" id="nzB-hz-Y6N"/>
+                    <constraint firstAttribute="bottom" secondItem="UkX-N8-Ram" secondAttribute="bottom" id="tfW-7T-GpP"/>
                     <constraint firstItem="dj5-9i-zKJ" firstAttribute="trailing" secondItem="giA-qX-ndS" secondAttribute="trailingMargin" id="xNX-5t-13E"/>
                 </constraints>
             </tableViewCellContentView>

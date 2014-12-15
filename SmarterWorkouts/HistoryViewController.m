@@ -1,6 +1,9 @@
 #import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalAggregation.h>
+#import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalFinders.h>
 #import "HistoryViewController.h"
 #import "Workout.h"
+#import "CellRegister.h"
+#import "HistoryCell.h"
 
 @implementation HistoryViewController
 
@@ -14,6 +17,8 @@
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
     self.edgesForExtendedLayout = UIRectEdgeNone;
+
+    [CellRegister registerClass:HistoryCell.class for:self.tableView];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -21,10 +26,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"historyCell"];
-    if(!cell){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"historyCell"];
-    }
+    HistoryCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(HistoryCell.class)];
+    Workout *workout = [Workout MR_findAllSortedBy:@"date" ascending:NO][(NSUInteger) indexPath.row];
+    [cell setWorkout:workout];
     return cell;
 }
 
