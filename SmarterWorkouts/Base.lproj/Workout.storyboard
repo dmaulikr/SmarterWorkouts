@@ -114,14 +114,14 @@
                         <viewControllerLayoutGuide type="bottom" id="blx-2I-ghh"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Qjf-yV-FSK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="136"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDz-2b-f8n">
-                                <rect key="frame" x="8" y="8" width="304" height="108"/>
+                                <rect key="frame" x="8" y="8" width="304" height="56"/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.68235294120000001" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Choose an Activity!">
+                                <state key="normal" title="New Workout!">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -129,18 +129,32 @@
                                     <action selector="showActivitySelector" destination="0gp-Bq-YwD" eventType="touchUpInside" id="Cu6-nE-heo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSM-nw-zBi">
+                                <rect key="frame" x="8" y="72" width="304" height="56"/>
+                                <color key="backgroundColor" red="0.13333333333333333" green="0.65490196078431373" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Copy a Workout">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="VDz-2b-f8n" firstAttribute="leading" secondItem="Qjf-yV-FSK" secondAttribute="leadingMargin" constant="-8" id="130-l4-i7G"/>
-                            <constraint firstItem="blx-2I-ghh" firstAttribute="top" secondItem="VDz-2b-f8n" secondAttribute="bottom" constant="8" id="Cg7-O1-Bxe"/>
+                            <constraint firstItem="VDz-2b-f8n" firstAttribute="leading" secondItem="Qjf-yV-FSK" secondAttribute="leading" constant="8" id="130-l4-i7G"/>
+                            <constraint firstItem="hSM-nw-zBi" firstAttribute="height" secondItem="VDz-2b-f8n" secondAttribute="height" id="45B-gG-Gho"/>
+                            <constraint firstAttribute="trailing" secondItem="hSM-nw-zBi" secondAttribute="trailing" constant="8" id="OmL-Pw-sz2"/>
+                            <constraint firstItem="blx-2I-ghh" firstAttribute="top" secondItem="hSM-nw-zBi" secondAttribute="bottom" constant="8" id="W2P-G7-RaG"/>
                             <constraint firstItem="VDz-2b-f8n" firstAttribute="top" secondItem="wOd-tP-tNy" secondAttribute="bottom" constant="8" id="fBT-YZ-lIZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VDz-2b-f8n" secondAttribute="trailing" constant="-8" id="skr-R6-jrL"/>
+                            <constraint firstItem="hSM-nw-zBi" firstAttribute="leading" secondItem="Qjf-yV-FSK" secondAttribute="leading" constant="8" id="kWR-aP-0zx"/>
+                            <constraint firstItem="hSM-nw-zBi" firstAttribute="top" secondItem="VDz-2b-f8n" secondAttribute="bottom" constant="8" id="rnt-5z-Y4G"/>
+                            <constraint firstAttribute="trailing" secondItem="VDz-2b-f8n" secondAttribute="trailing" constant="8" id="skr-R6-jrL"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="124"/>
+                    <size key="freeformSize" width="320" height="136"/>
                     <connections>
+                        <outlet property="cpyAWorkoutButton" destination="hSM-nw-zBi" id="CIT-Jz-vkn"/>
                         <outlet property="findNewActivityButton" destination="VDz-2b-f8n" id="6e5-SZ-mSb"/>
                     </connections>
                 </viewController>
@@ -217,7 +231,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVC-JT-7Nd">
                                 <rect key="frame" x="8" y="72" width="304" height="56"/>
-                                <color key="backgroundColor" red="0.35686274509803922" green="0.75294117647058822" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.13333333333333333" green="0.65490196078431373" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="+Power Clean">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

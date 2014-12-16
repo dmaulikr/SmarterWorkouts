@@ -2,14 +2,19 @@
 #import "ActivitySelectorViewController.h"
 #import "UIImage+ColorFromImage.h"
 #import "Activity.h"
+#import "Colors.h"
 
 @implementation NewActivitySelectorInputViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIColor *highlightColor = [UIColor colorWithRed:0.267 green:0.616 blue:0.267 alpha:1];
     [self.findNewActivityButton setBackgroundImage:[UIImage imageWithColor:
-                    highlightColor]
+                    [Colors positiveButtonHighlight]]
+                                          forState:UIControlStateHighlighted];
+
+    [self.cpyAWorkoutButton setBackgroundColor:[Colors secondaryButtonColor]];
+    [self.cpyAWorkoutButton setBackgroundImage:[UIImage imageWithColor:
+                    [Colors secondaryButtonColorHighlight]]
                                           forState:UIControlStateHighlighted];
 }
 

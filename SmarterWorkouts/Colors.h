@@ -5,4 +5,9 @@
 
 + (UIColor *)navBarColor;
 
++ (UIColor *)positiveButtonHighlight;
+
++ (UIColor *)secondaryButtonColor;
+
++ (UIColor *)secondaryButtonColorHighlight;
 @end

@@ -7,7 +7,8 @@
 
 @interface NewActivitySelectorInputViewController : UIViewController <UITextFieldDelegate, ActivitySelectorDelegate>
 @property(weak, nonatomic) IBOutlet UIButton *findNewActivityButton;
-@property (weak, nonatomic) IBOutlet UIButton *repeatActivityButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *cpyAWorkoutButton;
 @property(nonatomic, weak) UIViewController <ActivitySelectorDelegate> *delegate;
 
 @end
