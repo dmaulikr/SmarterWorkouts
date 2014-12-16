@@ -58,6 +58,7 @@
 		545907E6880B196D473BB864 /* Workout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545906E82697330EFD85E5DF /* Workout.storyboard */; };
 		54590813BA5B7CD984F40F82 /* SetupTimerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459090219AF2435A810360C /* SetupTimerCell.m */; };
 		545908449CDCB7857AAF085C /* Form.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590D3E2CA6B03B9BFF4583 /* Form.m */; };
+		5459088D582EFF54312D9232 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C685E059C6D70516D6D /* Colors.m */; };
 		545908E4AE08AE9309C97858 /* CellRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590E06AB55B27E9575B177 /* CellRegister.m */; };
 		545908EA948161743CA45E19 /* PlateRemaining.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459013B85548A27B8B1B805 /* PlateRemaining.m */; };
 		54590900CB29487ACAB7746B /* WeightInputControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 545900AEFA1B860CE57D13F7 /* WeightInputControls.m */; };
@@ -196,6 +197,7 @@
 		545907E5064B74F235D594CD /* ActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCell.m; sourceTree = "<group>"; };
 		5459082A26AD4BB9670D2BDC /* ActivityCellFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCellFactoryTests.m; sourceTree = "<group>"; };
 		54590842C22DF6768733ED66 /* TimerActiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerActiveCell.h; sourceTree = "<group>"; };
+		545908D6450F503B81944539 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
 		5459090219AF2435A810360C /* SetupTimerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupTimerCell.m; sourceTree = "<group>"; };
 		5459091EB57A54F3276C883F /* TimerObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerObserver.h; sourceTree = "<group>"; };
 		545909370C64722C73459C11 /* Plate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Plate.m; path = Models/Plate.m; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		54590C20F95089E9CFB72BAF /* FormDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormDelegate.h; sourceTree = "<group>"; };
 		54590C296C1E9F278FA1D7C4 /* ActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityCell.h; sourceTree = "<group>"; };
 		54590C38B44998CB847FF30C /* FixtureLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FixtureLoader.m; path = Models/Fixtures/FixtureLoader.m; sourceTree = "<group>"; };
+		54590C685E059C6D70516D6D /* Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
 		54590C9608EA266833F2A3D3 /* ActivitySelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitySelectorViewController.m; sourceTree = "<group>"; };
 		54590CBDA13FF3EC3F932B52 /* ActivityCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCellFactory.m; sourceTree = "<group>"; };
 		54590CFA15918636F9EA4B15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -356,6 +359,8 @@
 				54590503FAB1C2573B77EDF1 /* History */,
 				54590E06AB55B27E9575B177 /* CellRegister.m */,
 				545902EF18EEC12333570E82 /* CellRegister.h */,
+				54590C685E059C6D70516D6D /* Colors.m */,
+				545908D6450F503B81944539 /* Colors.h */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1014,6 +1019,7 @@
 				54590932EB0474ECEFD2461B /* HistoryCell.m in Sources */,
 				545908E4AE08AE9309C97858 /* CellRegister.m in Sources */,
 				54590A521B88AA25554E54F9 /* PrimaryActivityFinder.m in Sources */,
+				5459088D582EFF54312D9232 /* Colors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

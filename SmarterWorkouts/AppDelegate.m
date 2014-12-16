@@ -3,6 +3,7 @@
 #import "MagicalRecord+Setup.h"
 #import "FixtureLoader.h"
 #import "SWTimer.h"
+#import "Colors.h"
 
 @interface AppDelegate ()
 @end
@@ -10,6 +11,11 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[UINavigationBar appearance] setBarTintColor:[Colors navBarColor]];
+    [[UISearchBar appearance] setBarTintColor:[Colors navBarColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTranslucent:NO];
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"Workout"];
     [[FixtureLoader instance] loadData];
     return YES;
