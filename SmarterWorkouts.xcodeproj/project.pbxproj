@@ -22,10 +22,10 @@
 		027ABDDB1A195D2000DE3321 /* BarLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 027ABDDA1A195D2000DE3321 /* BarLoadingViewController.xib */; };
 		02DDF7061A336DED00359F93 /* SetupTimerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DDF7051A336DED00359F93 /* SetupTimerCell.xib */; };
 		5459004C362F8D82667493BD /* BarCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902FC40A458CC44ECB9A4 /* BarCalculatorTests.m */; };
-		54590083F0899BE15B741589 /* 433-x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545905B774A40A79F9A1FA19 /* 433-x@2x.png */; };
 		5459014698809F8D820FF883 /* ActivitySelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C9608EA266833F2A3D3 /* ActivitySelectorViewController.m */; };
 		5459019491D5CB54BAD0D851 /* plates.json in Resources */ = {isa = PBXBuildFile; fileRef = 545901DE0307A2E0890A0281 /* plates.json */; };
 		54590239EE7C0CFDD2FFD0E0 /* activities.json in Resources */ = {isa = PBXBuildFile; fileRef = 54590FE99DD4EAE18743CF08 /* activities.json */; };
+		5459026A326FCE30A182C947 /* 709-plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545903888625FF04D581594B /* 709-plus@2x.png */; };
 		545902D7B0A4AB9E8044A7A2 /* ActivityFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590104A11C81871088D3D1 /* ActivityFilter.m */; };
 		545902DECE48C72B4EA42451 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545909DEAE65283756E25E7A /* LaunchScreen.xib */; };
 		545902FB5831A7DA0C4FE5CD /* SetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590722ED75492DCCF67654 /* SetCell.m */; };
@@ -39,6 +39,7 @@
 		5459051FE88E8E7AC5B12DE2 /* ModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C1704D57A0CB87CD410 /* ModelTests.m */; };
 		5459052304D189F78C0C9CDE /* SetCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 545900F4F126F777ABE82238 /* SetCellFactory.m */; };
 		545905272B2BD1E72E5F01BC /* QuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459026160D6CA4853567D93 /* QuoteViewController.m */; };
+		5459054020D3D2EB28EE444F /* 709-plus@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5459076A50C3F5059B5ABDF7 /* 709-plus@3x.png */; };
 		5459054D6E01E0A7A22F7665 /* TimerActiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590F3FFC4B3A5BBC5F2B8A /* TimerActiveCell.m */; };
 		5459059CF1F760883A545BE0 /* ActivitySelectorInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590D666EAF59158375E202 /* ActivitySelectorInputViewController.m */; };
 		545905A336F2279F9E0685A0 /* BarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590709AEBEC0E0AE30F736 /* BarCalculator.m */; };
@@ -48,6 +49,7 @@
 		545905E56CE3F26AADB60219 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545902E72D54617EBBB68CC0 /* Images.xcassets */; };
 		54590615727BF6F6713941C4 /* WorkoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459023FB1ACF26ED54A2EEE /* WorkoutController.m */; };
 		54590660DEAF4D9CFD4F6A81 /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590AAE4C1642A3A0A9BD45 /* Set.m */; };
+		54590694B74FD144286F36CB /* 721-bookmarks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5459075A2F1ADAB16C894A61 /* 721-bookmarks@2x.png */; };
 		5459069A2F63D2C53C8478D1 /* TimerActiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545909D6873990B9CE232AD1 /* TimerActiveCell.xib */; };
 		545906E1AF7D6D5BDFE7E58F /* ActivityCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590CBDA13FF3EC3F932B52 /* ActivityCellFactory.m */; };
 		54590713A522D05CE5E35B97 /* FixtureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C38B44998CB847FF30C /* FixtureLoader.m */; };
@@ -67,12 +69,15 @@
 		54590948B017444BD9DF749B /* DurationSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545905ABBA5E7B5529B9F446 /* DurationSetCell.xib */; };
 		5459099A09CF8618E5B6BB25 /* DurationDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590FE09C7C8766D9F8E7B9 /* DurationDisplay.m */; };
 		545909B97C0D7547A221B9F2 /* WeightSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590C0D4B5814B6A76D333C /* WeightSetCell.xib */; };
+		54590A255A325F01D6D60EBC /* 721-bookmarks.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590E07FF92A54D023DD877 /* 721-bookmarks.png */; };
 		54590A521B88AA25554E54F9 /* PrimaryActivityFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 545909E992DE8D502FDC3322 /* PrimaryActivityFinder.m */; };
 		54590BBF38CCD39F0B4229FE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5459093FA06E60D65D8B9C63 /* CoreData.framework */; };
 		54590BD80E9121ED0C39CAB5 /* ActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 545907E5064B74F235D594CD /* ActivityCell.m */; };
+		54590C02E95961E98D6283A7 /* 721-bookmarks@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590F097E9B63849FEF2808 /* 721-bookmarks@3x.png */; };
 		54590C593F52A746CCAA3A83 /* FlavorTextUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905A77383420E1AD6A86B /* FlavorTextUITextField.m */; };
 		54590C6379DC254E8B6BE8EC /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 545900B085897FD8B72023A8 /* Workout.m */; };
 		54590D02DC69A387D23A1539 /* ActivityFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590E831AB68665C1995884 /* ActivityFilterTests.m */; };
+		54590DB99EE9D336E2A016FA /* 709-plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590553C780EDD38BD34CA6 /* 709-plus.png */; };
 		54590DDE043FDC900BB95DFF /* UIImage+ColorFromImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459022C1F4BBBE900679F3F /* UIImage+ColorFromImage.m */; };
 		54590E13FCBBA27BB0D90764 /* BarLoadingSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590BCD6074B6467C4D1111 /* BarLoadingSetupViewController.m */; };
 		54590E16F642336636D23885 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905ED0E0E46EE8AA17304 /* AppDelegate.m */; };
@@ -169,6 +174,7 @@
 		545902EF18EEC12333570E82 /* CellRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellRegister.h; sourceTree = "<group>"; };
 		545902FC40A458CC44ECB9A4 /* BarCalculatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarCalculatorTests.m; sourceTree = "<group>"; };
 		545902FDED688FE872C92CF1 /* SWTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTestCase.m; sourceTree = "<group>"; };
+		545903888625FF04D581594B /* 709-plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-plus@2x.png"; sourceTree = "<group>"; };
 		545903A3249D172566898D0E /* HistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryCell.h; sourceTree = "<group>"; };
 		545903F57D7C270830C13B3B /* FixtureLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FixtureLoader.h; path = Models/Fixtures/FixtureLoader.h; sourceTree = "<group>"; };
 		545903FBE12939C3C1F5D39D /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Activity.h; path = Models/Activity.h; sourceTree = "<group>"; };
@@ -177,10 +183,10 @@
 		545904E1841B2C9A4524B6E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		545904FB5D170F8D0F3B40D3 /* WeightSetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightSetCell.m; sourceTree = "<group>"; };
 		545905044CA3AB8FAD537913 /* QuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteViewController.h; sourceTree = "<group>"; };
+		54590553C780EDD38BD34CA6 /* 709-plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-plus.png"; sourceTree = "<group>"; };
 		5459057E9A8FEBF598DFA13B /* PlateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateTests.m; sourceTree = "<group>"; };
 		545905A77383420E1AD6A86B /* FlavorTextUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlavorTextUITextField.m; sourceTree = "<group>"; };
 		545905ABBA5E7B5529B9F446 /* DurationSetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DurationSetCell.xib; sourceTree = "<group>"; };
-		545905B774A40A79F9A1FA19 /* 433-x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "433-x@2x.png"; sourceTree = "<group>"; };
 		545905DDCDDBF05FFED34534 /* ActivitySelectorInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySelectorInputViewController.h; sourceTree = "<group>"; };
 		545905E061C18E2B4E7B5637 /* SWTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTimer.h; sourceTree = "<group>"; };
 		545905ED0E0E46EE8AA17304 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -192,6 +198,8 @@
 		5459070CBC39B0E47814377C /* WorkoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutController.h; sourceTree = "<group>"; };
 		54590710F98D518312B965F0 /* ActivityFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityFilter.h; sourceTree = "<group>"; };
 		54590722ED75492DCCF67654 /* SetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCell.m; sourceTree = "<group>"; };
+		5459075A2F1ADAB16C894A61 /* 721-bookmarks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "721-bookmarks@2x.png"; sourceTree = "<group>"; };
+		5459076A50C3F5059B5ABDF7 /* 709-plus@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-plus@3x.png"; sourceTree = "<group>"; };
 		5459078B35AD577F2A45D1D8 /* DurationSetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DurationSetCell.h; sourceTree = "<group>"; };
 		545907D0EC153A54AC0C5A5D /* NewActivitySelectorInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewActivitySelectorInputViewController.h; sourceTree = "<group>"; };
 		545907E5064B74F235D594CD /* ActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCell.m; sourceTree = "<group>"; };
@@ -240,12 +248,14 @@
 		54590DFCC0C53A5A49F76055 /* WeightInputControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightInputControls.h; sourceTree = "<group>"; };
 		54590DFEC887B12C9D546107 /* SmarterWorkoutsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmarterWorkoutsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54590E06AB55B27E9575B177 /* CellRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellRegister.m; sourceTree = "<group>"; };
+		54590E07FF92A54D023DD877 /* 721-bookmarks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "721-bookmarks.png"; sourceTree = "<group>"; };
 		54590E627A49A487C2872338 /* SWTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTestCase.h; sourceTree = "<group>"; };
 		54590E831AB68665C1995884 /* ActivityFilterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityFilterTests.m; sourceTree = "<group>"; };
 		54590ECB811EC9CD1B1F0127 /* DecimalNumbersTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalNumbersTests.m; sourceTree = "<group>"; };
 		54590ED3193BE2D1D5DBEDE1 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Activity.m; path = Models/Activity.m; sourceTree = "<group>"; };
 		54590EEDEDFB55C9CD0B52CD /* SWTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTimer.m; sourceTree = "<group>"; };
 		54590F0008BBC7974A542DBB /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		54590F097E9B63849FEF2808 /* 721-bookmarks@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "721-bookmarks@3x.png"; sourceTree = "<group>"; };
 		54590F3FFC4B3A5BBC5F2B8A /* TimerActiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerActiveCell.m; sourceTree = "<group>"; };
 		54590F54C0452DE8C7971409 /* BarCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarCalculator.h; sourceTree = "<group>"; };
 		54590F592EBDDD376B16FA5D /* FormItemBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormItemBarButtonItem.h; sourceTree = "<group>"; };
@@ -705,7 +715,12 @@
 		54590E9F250E1DE20DC966FF /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				545905B774A40A79F9A1FA19 /* 433-x@2x.png */,
+				5459075A2F1ADAB16C894A61 /* 721-bookmarks@2x.png */,
+				54590F097E9B63849FEF2808 /* 721-bookmarks@3x.png */,
+				54590E07FF92A54D023DD877 /* 721-bookmarks.png */,
+				54590553C780EDD38BD34CA6 /* 709-plus.png */,
+				5459076A50C3F5059B5ABDF7 /* 709-plus@3x.png */,
+				545903888625FF04D581594B /* 709-plus@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -889,7 +904,6 @@
 				0209F6661A3E45A40098AB63 /* HistoryViewController.storyboard in Resources */,
 				027ABDDB1A195D2000DE3321 /* BarLoadingViewController.xib in Resources */,
 				02DDF7061A336DED00359F93 /* SetupTimerCell.xib in Resources */,
-				54590083F0899BE15B741589 /* 433-x@2x.png in Resources */,
 				54590239EE7C0CFDD2FFD0E0 /* activities.json in Resources */,
 				0209F6681A3E4DB70098AB63 /* HistoryCell.xib in Resources */,
 				5459019491D5CB54BAD0D851 /* plates.json in Resources */,
@@ -897,6 +911,12 @@
 				5459069A2F63D2C53C8478D1 /* TimerActiveCell.xib in Resources */,
 				545909B97C0D7547A221B9F2 /* WeightSetCell.xib in Resources */,
 				54590948B017444BD9DF749B /* DurationSetCell.xib in Resources */,
+				54590694B74FD144286F36CB /* 721-bookmarks@2x.png in Resources */,
+				54590C02E95961E98D6283A7 /* 721-bookmarks@3x.png in Resources */,
+				54590A255A325F01D6D60EBC /* 721-bookmarks.png in Resources */,
+				54590DB99EE9D336E2A016FA /* 709-plus.png in Resources */,
+				5459054020D3D2EB28EE444F /* 709-plus@3x.png in Resources */,
+				5459026A326FCE30A182C947 /* 709-plus@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

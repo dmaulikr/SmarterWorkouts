@@ -15,7 +15,11 @@
     [self.cpyAWorkoutButton setBackgroundColor:[Colors secondaryButtonColor]];
     [self.cpyAWorkoutButton setBackgroundImage:[UIImage imageWithColor:
                     [Colors secondaryButtonColorHighlight]]
-                                          forState:UIControlStateHighlighted];
+                                      forState:UIControlStateHighlighted];
+    self.historyImageView.tintColor = [UIColor whiteColor];
+    self.chooseActivityImageView.tintColor = [UIColor whiteColor];
+    self.historyImageView.image = [self.historyImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    self.chooseActivityImageView.image = [self.chooseActivityImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 }
 
 - (IBAction)showActivitySelector {
