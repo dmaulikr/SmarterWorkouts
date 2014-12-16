@@ -1,5 +1,6 @@
 #import "HistoryCell.h"
 #import "Workout.h"
+#import "PrimaryActivityFinder.h"
 
 @implementation HistoryCell
 
@@ -12,11 +13,11 @@
 
 
 - (void)setWorkout:(Workout *)workout {
-    [self.primaryActivityName setText:@"Squat"];
+    [self.primaryActivityName setText:[PrimaryActivityFinder primaryActivityFor:workout]];
 
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setDateStyle:NSDateFormatterShortStyle];
-    [self.date setText:[dateFormatter stringFromDate:[NSDate date]]];
+    [self.date setText:[dateFormatter stringFromDate:workout.date]];
 }
 
 @end

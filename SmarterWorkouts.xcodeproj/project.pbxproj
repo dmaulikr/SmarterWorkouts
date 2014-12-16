@@ -42,6 +42,7 @@
 		5459054D6E01E0A7A22F7665 /* TimerActiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590F3FFC4B3A5BBC5F2B8A /* TimerActiveCell.m */; };
 		5459059CF1F760883A545BE0 /* ActivitySelectorInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590D666EAF59158375E202 /* ActivitySelectorInputViewController.m */; };
 		545905A336F2279F9E0685A0 /* BarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590709AEBEC0E0AE30F736 /* BarCalculator.m */; };
+		545905CA510C602B12251A49 /* PrimaryActivityFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590A8918D8253B759296F4 /* PrimaryActivityFinderTests.m */; };
 		545905DB034A77D24890E6CD /* SWTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902FDED688FE872C92CF1 /* SWTestCase.m */; };
 		545905E450208D41383B1F64 /* DurationSetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459010D561B0BAFE7C99B7E /* DurationSetCell.m */; };
 		545905E56CE3F26AADB60219 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545902E72D54617EBBB68CC0 /* Images.xcassets */; };
@@ -65,6 +66,7 @@
 		54590948B017444BD9DF749B /* DurationSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545905ABBA5E7B5529B9F446 /* DurationSetCell.xib */; };
 		5459099A09CF8618E5B6BB25 /* DurationDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590FE09C7C8766D9F8E7B9 /* DurationDisplay.m */; };
 		545909B97C0D7547A221B9F2 /* WeightSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590C0D4B5814B6A76D333C /* WeightSetCell.xib */; };
+		54590A521B88AA25554E54F9 /* PrimaryActivityFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 545909E992DE8D502FDC3322 /* PrimaryActivityFinder.m */; };
 		54590BBF38CCD39F0B4229FE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5459093FA06E60D65D8B9C63 /* CoreData.framework */; };
 		54590BD80E9121ED0C39CAB5 /* ActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 545907E5064B74F235D594CD /* ActivityCell.m */; };
 		54590C593F52A746CCAA3A83 /* FlavorTextUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905A77383420E1AD6A86B /* FlavorTextUITextField.m */; };
@@ -199,10 +201,13 @@
 		545909370C64722C73459C11 /* Plate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Plate.m; path = Models/Plate.m; sourceTree = "<group>"; };
 		5459093FA06E60D65D8B9C63 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5459095D3D1623B3210D4AAD /* ActivityFormDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityFormDelegate.h; sourceTree = "<group>"; };
+		5459096A0052ABCAEAA63C96 /* PrimaryActivityFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimaryActivityFinder.h; sourceTree = "<group>"; };
 		545909CA1997BE71C52F50ED /* ActivitySelectorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySelectorDelegate.h; sourceTree = "<group>"; };
 		545909D6873990B9CE232AD1 /* TimerActiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerActiveCell.xib; sourceTree = "<group>"; };
 		545909E188A0F9DE5E727714 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		545909E992DE8D502FDC3322 /* PrimaryActivityFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimaryActivityFinder.m; sourceTree = "<group>"; };
 		54590A2E38F8204300D80EF7 /* SetCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCellFactory.h; sourceTree = "<group>"; };
+		54590A8918D8253B759296F4 /* PrimaryActivityFinderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimaryActivityFinderTests.m; sourceTree = "<group>"; };
 		54590AAE4C1642A3A0A9BD45 /* Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Set.m; path = Models/Set.m; sourceTree = "<group>"; };
 		54590ACC1AC6B9D074702B48 /* ActivityWeightFormViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityWeightFormViewControllerTests.m; sourceTree = "<group>"; };
 		54590B172184011883D18ACF /* SetupTimerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupTimerCell.h; sourceTree = "<group>"; };
@@ -467,6 +472,8 @@
 				0209F6671A3E4DB70098AB63 /* HistoryCell.xib */,
 				545902ECBF0EC52B9AD3131F /* HistoryCell.m */,
 				545903A3249D172566898D0E /* HistoryCell.h */,
+				545909E992DE8D502FDC3322 /* PrimaryActivityFinder.m */,
+				5459096A0052ABCAEAA63C96 /* PrimaryActivityFinder.h */,
 			);
 			name = History;
 			sourceTree = "<group>";
@@ -602,6 +609,7 @@
 			isa = PBXGroup;
 			children = (
 				545908F56CCD1B7EB6DF275C /* Workout */,
+				54590DEFBD0ACD54374E5B00 /* History */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -629,6 +637,14 @@
 				54590272E50B204941754D35 /* DurationDisplayTests.m */,
 			);
 			path = Sets;
+			sourceTree = "<group>";
+		};
+		54590DEFBD0ACD54374E5B00 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				54590A8918D8253B759296F4 /* PrimaryActivityFinderTests.m */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		54590E3CC51DA5A843C84E47 /* Selection */ = {
@@ -997,6 +1013,7 @@
 				54590615727BF6F6713941C4 /* WorkoutController.m in Sources */,
 				54590932EB0474ECEFD2461B /* HistoryCell.m in Sources */,
 				545908E4AE08AE9309C97858 /* CellRegister.m in Sources */,
+				54590A521B88AA25554E54F9 /* PrimaryActivityFinder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1014,6 +1031,7 @@
 				545904B48E9BEB1559CD0C25 /* WorkoutControllerTests.m in Sources */,
 				54590E57AC06674BBE929D2B /* ActivityCellFactoryTests.m in Sources */,
 				54590FA6C97345D57ECC5425 /* DurationDisplayTests.m in Sources */,
+				545905CA510C602B12251A49 /* PrimaryActivityFinderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
