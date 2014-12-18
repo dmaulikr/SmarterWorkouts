@@ -3,13 +3,13 @@
 #import "Activity.h"
 #import "UIImage+ColorFromImage.h"
 #import "UIImageViewHelper.h"
+#import "Colors.h"
 
 @implementation ActivitySelectorInputViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIColor *highlightColor = [UIColor colorWithRed:0.192 green:0.69 blue:0.835 alpha:1];
-    [self.repeatActivityButton setBackgroundImage:[UIImage imageWithColor:highlightColor] forState:UIControlStateHighlighted];
+    [self.repeatActivityButton setBackgroundImage:[UIImage imageWithColor:[Colors secondaryButtonColorHighlight]] forState:UIControlStateHighlighted];
     [UIImageViewHelper makeWhite:self.repeatImage];
     [UIImageViewHelper makeWhite:self.addImageView];
 }
