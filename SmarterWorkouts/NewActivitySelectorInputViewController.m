@@ -3,6 +3,7 @@
 #import "UIImage+ColorFromImage.h"
 #import "Activity.h"
 #import "Colors.h"
+#import "UIImageViewHelper.h"
 
 @implementation NewActivitySelectorInputViewController
 
@@ -16,10 +17,8 @@
     [self.cpyAWorkoutButton setBackgroundImage:[UIImage imageWithColor:
                     [Colors secondaryButtonColorHighlight]]
                                       forState:UIControlStateHighlighted];
-    self.historyImageView.tintColor = [UIColor whiteColor];
-    self.chooseActivityImageView.tintColor = [UIColor whiteColor];
-    self.historyImageView.image = [self.historyImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    self.chooseActivityImageView.image = [self.chooseActivityImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    [UIImageViewHelper makeWhite:self.historyImageView];
+    [UIImageViewHelper makeWhite:self.chooseActivityImageView];
 }
 
 - (IBAction)showActivitySelector {

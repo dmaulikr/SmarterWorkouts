@@ -211,7 +211,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Dwayne Johnson" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzT-h2-QZb">
                                 <rect key="frame" x="129.5" y="117" width="158" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -249,7 +249,7 @@
                                 <rect key="frame" x="8" y="8" width="304" height="56"/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.68235294120000001" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="New Activity!">
+                                <state key="normal">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -261,7 +261,7 @@
                                 <rect key="frame" x="8" y="72" width="304" height="56"/>
                                 <color key="backgroundColor" red="0.13333333333333333" green="0.65490196078431373" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="+Power Clean">
+                                <state key="normal">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -270,15 +270,41 @@
                                     <action selector="showActivitySelector" destination="0gp-Bq-YwD" eventType="touchUpInside" id="ysQ-NH-Hz5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power Clean" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfI-xx-oI5">
+                                <rect key="frame" x="76" y="81" width="167.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="901-repeat.png" translatesAutoresizingMaskIntoConstraints="NO" id="QB0-fg-8Du">
+                                <rect key="frame" x="40" y="89" width="28" height="22"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9J-MP-ytx">
+                                <rect key="frame" x="130.5" y="17.5" width="59.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="709-plus.png" translatesAutoresizingMaskIntoConstraints="NO" id="59a-uz-MRA">
+                                <rect key="frame" x="94" y="22" width="28" height="28"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="mVC-JT-7Nd" secondAttribute="trailing" constant="8" id="5VV-bh-c18"/>
+                            <constraint firstItem="Q2E-Ku-EPe" firstAttribute="centerY" secondItem="59a-uz-MRA" secondAttribute="centerY" id="9sh-ZJ-8Ii"/>
                             <constraint firstItem="mVC-JT-7Nd" firstAttribute="leading" secondItem="kcJ-JU-gXX" secondAttribute="leading" constant="8" id="I5s-8t-a7A"/>
+                            <constraint firstItem="mVC-JT-7Nd" firstAttribute="centerX" secondItem="kfI-xx-oI5" secondAttribute="centerX" id="Pss-QY-NNk"/>
                             <constraint firstItem="Q2E-Ku-EPe" firstAttribute="leading" secondItem="kcJ-JU-gXX" secondAttribute="leading" constant="8" id="Qof-XM-XZn"/>
+                            <constraint firstItem="v9J-MP-ytx" firstAttribute="centerY" secondItem="Q2E-Ku-EPe" secondAttribute="centerY" id="WTB-hz-ljY"/>
                             <constraint firstItem="jQw-ra-Vr1" firstAttribute="top" secondItem="mVC-JT-7Nd" secondAttribute="bottom" constant="8" id="biT-AV-o5O"/>
                             <constraint firstItem="Q2E-Ku-EPe" firstAttribute="top" secondItem="FOr-zN-y2t" secondAttribute="bottom" constant="8" id="gfA-9G-dro"/>
+                            <constraint firstItem="mVC-JT-7Nd" firstAttribute="centerY" secondItem="kfI-xx-oI5" secondAttribute="centerY" constant="0.5" id="jiy-vt-WEM"/>
+                            <constraint firstItem="v9J-MP-ytx" firstAttribute="centerX" secondItem="Q2E-Ku-EPe" secondAttribute="centerX" id="pkS-9Y-8Au"/>
+                            <constraint firstItem="QB0-fg-8Du" firstAttribute="centerY" secondItem="mVC-JT-7Nd" secondAttribute="centerY" id="qhv-oV-Rdi"/>
                             <constraint firstItem="mVC-JT-7Nd" firstAttribute="top" secondItem="Q2E-Ku-EPe" secondAttribute="bottom" constant="8" id="tBY-Nw-r9k"/>
+                            <constraint firstItem="kfI-xx-oI5" firstAttribute="leading" secondItem="QB0-fg-8Du" secondAttribute="trailing" constant="8" id="tSR-VU-sJp"/>
+                            <constraint firstItem="v9J-MP-ytx" firstAttribute="leading" secondItem="59a-uz-MRA" secondAttribute="trailing" constant="8.5" id="uNh-gL-O8v"/>
                             <constraint firstItem="mVC-JT-7Nd" firstAttribute="height" secondItem="Q2E-Ku-EPe" secondAttribute="height" id="vgy-dc-Iwv"/>
                             <constraint firstAttribute="trailing" secondItem="Q2E-Ku-EPe" secondAttribute="trailing" constant="8" id="zQO-A9-XwL"/>
                         </constraints>
@@ -287,8 +313,11 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="136"/>
                     <connections>
+                        <outlet property="addImageView" destination="59a-uz-MRA" id="GWC-Nf-IHS"/>
                         <outlet property="findNewActivityButton" destination="Q2E-Ku-EPe" id="1sR-aK-90e"/>
                         <outlet property="repeatActivityButton" destination="mVC-JT-7Nd" id="eg7-6C-p4z"/>
+                        <outlet property="repeatActivityLabel" destination="kfI-xx-oI5" id="UHk-85-N4c"/>
+                        <outlet property="repeatImage" destination="QB0-fg-8Du" id="iep-cM-EQv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5z-ln-WxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -299,5 +328,6 @@
     <resources>
         <image name="709-plus.png" width="28" height="28"/>
         <image name="721-bookmarks.png" width="28" height="24"/>
+        <image name="901-repeat.png" width="28" height="22"/>
     </resources>
 </document>
