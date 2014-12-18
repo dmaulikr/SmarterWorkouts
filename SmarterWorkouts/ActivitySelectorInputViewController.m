@@ -21,7 +21,6 @@
 
 - (void)setLastActivity:(Activity *)activity {
     self.repeatActivity = activity;
-    [self.repeatActivityLabel setText:activity.name];
 }
 
 - (IBAction)repeatButtonTapped:(id)sender {
