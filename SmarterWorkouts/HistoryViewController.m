@@ -4,6 +4,7 @@
 #import "Workout.h"
 #import "CellRegister.h"
 #import "HistoryCell.h"
+#import "SetGroup.h"
 
 @implementation HistoryViewController
 
@@ -19,15 +20,24 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
 
     [CellRegister registerClass:HistoryCell.class for:self.tableView];
+
+    NSLog(@"%d", [Workout MR_countOfEntities]);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [Workout MR_countOfEntities];
+    return [[self findAllWorkouts] count];
+}
+
+- (NSArray *)findAllWorkouts {
+    return [[Workout MR_findAllSortedBy:@"date" ascending:NO] filteredArrayUsingPredicate:
+            [NSPredicate predicateWithBlock:^BOOL(Workout *workout, NSDictionary *bindings) {
+                return [[workout.setGroups[0] sets] count] > 0;
+            }]];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HistoryCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(HistoryCell.class)];
-    Workout *workout = [Workout MR_findAllSortedBy:@"date" ascending:NO][(NSUInteger) indexPath.row];
+    Workout *workout = [self findAllWorkouts][(NSUInteger) indexPath.row];
     [cell setWorkout:workout];
     return cell;
 }

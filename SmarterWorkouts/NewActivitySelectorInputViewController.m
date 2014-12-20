@@ -4,6 +4,9 @@
 #import "Activity.h"
 #import "Colors.h"
 #import "UIImageViewHelper.h"
+#import "HistoryViewController.h"
+#import "NSManagedObjectContext+MagicalRecord.h"
+#import "NSManagedObjectContext+MagicalSaves.h"
 
 @implementation NewActivitySelectorInputViewController
 
@@ -25,6 +28,12 @@
     ActivitySelectorViewController *controller = [[ActivitySelectorViewController alloc] initWithDelegate:self];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
     [self.parentViewController presentViewController:nav animated:YES completion:nil];
+}
+
+- (IBAction)showHistorySelector:(id)sender {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"HistoryViewController" bundle:nil];
+    HistoryViewController *history = [sb instantiateViewControllerWithIdentifier:@"historyViewController"];
+    [self.navigationController pushViewController:history animated:YES];
 }
 
 - (void)activitySelected:(Activity *)activity {
