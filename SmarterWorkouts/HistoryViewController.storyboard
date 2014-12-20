@@ -7,7 +7,6 @@
         <!--History View Controller-->
         <scene sceneID="UFm-0v-diF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QsI-be-cMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="historyViewController" id="5WF-CA-96I" customClass="HistoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Zf-FL-Rvc"/>
@@ -37,6 +36,7 @@
                         <outlet property="tableView" destination="WTS-vs-VLo" id="2Ng-BQ-sBR"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QsI-be-cMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="566" y="28"/>
         </scene>

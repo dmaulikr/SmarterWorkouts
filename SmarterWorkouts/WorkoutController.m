@@ -12,6 +12,7 @@
 #import "SetCellFactory.h"
 #import "ActivitySelectorInputViewController.h"
 #import "HistoryViewController.h"
+#import "WorkoutCopier.h"
 
 @implementation WorkoutController
 
@@ -132,6 +133,11 @@
             ([self tableView:self.tableView numberOfRowsInSection:0] - 1) inSection:0];
     [self scrollToIndexPath:lastIndexPath];
     [self.tableView setScrollEnabled:NO];
+}
+
+- (void)copyWorkout:(Workout *)workout {
+    [WorkoutCopier copy:workout to:self.workout];
+    [self.tableView reloadData];
 }
 
 - (void)formCanceled {

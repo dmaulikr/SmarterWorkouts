@@ -71,6 +71,7 @@
 		545909286BF2789FEC5F277D /* DecimalNumbersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590ECB811EC9CD1B1F0127 /* DecimalNumbersTests.m */; };
 		54590932EB0474ECEFD2461B /* HistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902ECBF0EC52B9AD3131F /* HistoryCell.m */; };
 		54590948B017444BD9DF749B /* DurationSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545905ABBA5E7B5529B9F446 /* DurationSetCell.xib */; };
+		5459099966A8F6A4D6F251AB /* WorkoutCopier.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590974F08C0C86C8BD6ED3 /* WorkoutCopier.m */; };
 		5459099A09CF8618E5B6BB25 /* DurationDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590FE09C7C8766D9F8E7B9 /* DurationDisplay.m */; };
 		545909B97C0D7547A221B9F2 /* WeightSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590C0D4B5814B6A76D333C /* WeightSetCell.xib */; };
 		54590A255A325F01D6D60EBC /* 721-bookmarks.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590E07FF92A54D023DD877 /* 721-bookmarks.png */; };
@@ -154,6 +155,7 @@
 		0267A9AB1A21180D00DE7DBC /* Workout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Workout.xcdatamodel; sourceTree = "<group>"; };
 		027ABDDA1A195D2000DE3321 /* BarLoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarLoadingViewController.xib; sourceTree = "<group>"; };
 		02DDF7051A336DED00359F93 /* SetupTimerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupTimerCell.xib; sourceTree = "<group>"; };
+		5459000A29AE3910D4E81992 /* WorkoutCopier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutCopier.h; sourceTree = "<group>"; };
 		545900346C15ECA1C9D05A81 /* FormItemBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormItemBarButtonItem.m; sourceTree = "<group>"; };
 		5459008E74B4D7736182DDDB /* DurationDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DurationDisplay.h; sourceTree = "<group>"; };
 		54590099F7C030E1042A60BE /* BarLoadingSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarLoadingSetupViewController.h; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		5459010D561B0BAFE7C99B7E /* DurationSetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DurationSetCell.m; sourceTree = "<group>"; };
 		5459013B85548A27B8B1B805 /* PlateRemaining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateRemaining.m; sourceTree = "<group>"; };
 		545901DE0307A2E0890A0281 /* plates.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; name = plates.json; path = Models/Fixtures/plates.json; sourceTree = "<group>"; };
+		54590201C4190E548A25C192 /* WorkoutSelectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutSelectionDelegate.h; sourceTree = "<group>"; };
 		5459022C1F4BBBE900679F3F /* UIImage+ColorFromImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorFromImage.m"; sourceTree = "<group>"; };
 		5459023FB1ACF26ED54A2EEE /* WorkoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutController.m; sourceTree = "<group>"; };
 		5459026160D6CA4853567D93 /* QuoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteViewController.m; sourceTree = "<group>"; };
@@ -216,6 +219,7 @@
 		5459093FA06E60D65D8B9C63 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5459095D3D1623B3210D4AAD /* ActivityFormDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityFormDelegate.h; sourceTree = "<group>"; };
 		5459096A0052ABCAEAA63C96 /* PrimaryActivityFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimaryActivityFinder.h; sourceTree = "<group>"; };
+		54590974F08C0C86C8BD6ED3 /* WorkoutCopier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutCopier.m; sourceTree = "<group>"; };
 		545909BCED15F549B2D6A9B5 /* 901-repeat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "901-repeat.png"; sourceTree = "<group>"; };
 		545909CA1997BE71C52F50ED /* ActivitySelectorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySelectorDelegate.h; sourceTree = "<group>"; };
 		545909D6873990B9CE232AD1 /* TimerActiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerActiveCell.xib; sourceTree = "<group>"; };
@@ -474,6 +478,8 @@
 				545905DDCDDBF05FFED34534 /* ActivitySelectorInputViewController.h */,
 				5459070CBC39B0E47814377C /* WorkoutController.h */,
 				5459023FB1ACF26ED54A2EEE /* WorkoutController.m */,
+				54590974F08C0C86C8BD6ED3 /* WorkoutCopier.m */,
+				5459000A29AE3910D4E81992 /* WorkoutCopier.h */,
 			);
 			name = Workout;
 			sourceTree = "<group>";
@@ -500,6 +506,7 @@
 				545903A3249D172566898D0E /* HistoryCell.h */,
 				545909E992DE8D502FDC3322 /* PrimaryActivityFinder.m */,
 				5459096A0052ABCAEAA63C96 /* PrimaryActivityFinder.h */,
+				54590201C4190E548A25C192 /* WorkoutSelectionDelegate.h */,
 			);
 			name = History;
 			sourceTree = "<group>";
@@ -1058,6 +1065,7 @@
 				54590A521B88AA25554E54F9 /* PrimaryActivityFinder.m in Sources */,
 				5459088D582EFF54312D9232 /* Colors.m in Sources */,
 				5459033E2868864F19843FC3 /* UIImageViewHelper.m in Sources */,
+				5459099966A8F6A4D6F251AB /* WorkoutCopier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

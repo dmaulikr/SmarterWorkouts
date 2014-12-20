@@ -5,6 +5,7 @@
 #import "CellRegister.h"
 #import "HistoryCell.h"
 #import "SetGroup.h"
+#import "WorkoutSelectionDelegate.h"
 
 @implementation HistoryViewController
 
@@ -20,8 +21,21 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
 
     [CellRegister registerClass:HistoryCell.class for:self.tableView];
+}
 
-    NSLog(@"%d", [Workout MR_countOfEntities]);
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if (self.selectionDelegate) {
+        UIBarButtonItem *useButton = [[UIBarButtonItem alloc] initWithTitle:@"Use" style:UIBarButtonItemStylePlain
+                                                                     target:self action:@selector(useButtonTapped:)];
+        [useButton setEnabled:NO];
+        self.navigationItem.rightBarButtonItem = useButton;
+    }
+}
+
+- (void)useButtonTapped:(id)useButton {
+    [self.selectionDelegate workoutSelected:self.selectedWorkout];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -42,5 +56,9 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedWorkout = [self findAllWorkouts][(NSUInteger) indexPath.row];
+    [self.navigationItem.rightBarButtonItem setEnabled:YES];
+}
 
 @end

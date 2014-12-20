@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "ActivityFormDelegate.h"
 #import "ActivitySelectorDelegate.h"
+#import "WorkoutSelectionDelegate.h"
 
 @class ActivityWeightFormCell;
 @class Workout;

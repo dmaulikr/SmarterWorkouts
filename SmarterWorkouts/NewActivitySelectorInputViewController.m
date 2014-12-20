@@ -5,8 +5,7 @@
 #import "Colors.h"
 #import "UIImageViewHelper.h"
 #import "HistoryViewController.h"
-#import "NSManagedObjectContext+MagicalRecord.h"
-#import "NSManagedObjectContext+MagicalSaves.h"
+#import "Workout.h"
 
 @implementation NewActivitySelectorInputViewController
 
@@ -33,7 +32,12 @@
 - (IBAction)showHistorySelector:(id)sender {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"HistoryViewController" bundle:nil];
     HistoryViewController *history = [sb instantiateViewControllerWithIdentifier:@"historyViewController"];
+    history.selectionDelegate = self;
     [self.navigationController pushViewController:history animated:YES];
+}
+
+- (void)workoutSelected:(Workout *)workout {
+    [self.delegate copyWorkout:workout];
 }
 
 - (void)activitySelected:(Activity *)activity {
