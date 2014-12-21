@@ -1,5 +1,6 @@
 #import <MagicalRecord/MagicalRecord/MagicalRecord+Actions.h>
 #import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
+#import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalFinders.h>
 #import "WorkoutController.h"
 #import "ActivityWeightFormCell.h"
 #import "Activity.h"
@@ -121,9 +122,7 @@
     self.selectedActivity = activity;
     self.selectedSet = nil;
 
-    [self.startNewActivityContainer setHidden:YES];
-    [self.selectActivityContainer setHidden:NO];
-    [self.quoteContainer setHidden:YES];
+    [self hideInitialViews];
     [self.selectActivityController setLastActivity:activity];
 
     [self.tableView reloadData];
@@ -135,9 +134,20 @@
     [self.tableView setScrollEnabled:NO];
 }
 
+- (void)hideInitialViews {
+    [self.startNewActivityContainer setHidden:YES];
+    [self.quoteContainer setHidden:YES];
+    [self.selectActivityContainer setHidden:NO];
+}
+
 - (void)copyWorkout:(Workout *)workout {
     [WorkoutCopier copy:workout to:self.workout];
-    [self.tableView reloadData];
+    [self hideInitialViews];
+    [self restoreViewState];
+    NSString *activityName = [[[workout.setGroups[0] sets] lastObject] activity];
+    Activity *lastActivity = [Activity MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@",
+                                                                                                  @"name", activityName]];
+    [self.selectActivityController setRepeatActivity:lastActivity];
 }
 
 - (void)formCanceled {

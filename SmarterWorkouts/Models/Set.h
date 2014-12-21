@@ -19,4 +19,5 @@
 @property (nonatomic, retain) NSString * units;
 @property (nonatomic, retain) NSDecimalNumber * weight;
 
+- (NSDictionary *)dictionary;
 @end

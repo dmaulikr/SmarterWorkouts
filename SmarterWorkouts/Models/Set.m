@@ -1,13 +1,5 @@
-//
-//  Set.m
-//  SmarterWorkouts
-//
-//  Created by Stefan Kendall on 11/22/14.
-//  Copyright (c) 2014 Stefan Kendall. All rights reserved.
-//
-
 #import "Set.h"
-
+#import "NotNil.h"
 
 @implementation Set
 
@@ -17,5 +9,14 @@
 @dynamic reps;
 @dynamic units;
 @dynamic weight;
+
+- (NSDictionary *)dictionary {
+    return @{@"activity" : [NotNil notNil: self.activity],
+            @"comments" : [NotNil notNil: self.comments],
+            @"duration" : [NotNil notNil: self.duration],
+            @"reps" : [NotNil notNil: self.reps],
+            @"units" : [NotNil notNil: self.units],
+            @"weight" : [NotNil notNil: self.weight]};
+}
 
 @end
