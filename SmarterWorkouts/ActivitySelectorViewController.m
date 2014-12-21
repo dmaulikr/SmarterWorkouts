@@ -43,16 +43,16 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [[self.data sections] count];
+    return [[self.filteredData sections] count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    id <NSFetchedResultsSectionInfo> sectionInfo = self.data.sections[(NSUInteger) section];
+    id <NSFetchedResultsSectionInfo> sectionInfo = self.filteredData.sections[(NSUInteger) section];
     return [[[sectionInfo.name substringToIndex:1] uppercaseString] stringByAppendingString:[sectionInfo.name substringFromIndex:1]];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    id <NSFetchedResultsSectionInfo> sectionInfo = self.data.sections[(NSUInteger) section];
+    id <NSFetchedResultsSectionInfo> sectionInfo = self.filteredData.sections[(NSUInteger) section];
     return sectionInfo.numberOfObjects;
 }
 
@@ -71,14 +71,21 @@
 }
 
 - (void)filterDataBy:(NSString *)text {
-    self.filteredData = [Activity MR_fetchAllGroupedBy:@"type" withPredicate:nil sortedBy:@"type,name" ascending:YES];
+    if (text.length == 0) {
+        self.filteredData = self.data;
+    }
+    else {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name CONTAINS[cd] %@", [text lowercaseString]];
+        self.filteredData = [Activity MR_fetchAllGroupedBy:@"type" withPredicate:predicate sortedBy:@"type,name" ascending:YES];
+    }
     [self.tableView reloadData];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Activity *selectedActivity = [self.filteredData objectAtIndexPath:indexPath];
     [self.searchController setActive:NO];
     [self dismissViewControllerAnimated:YES completion:^{
-        [self.delegate activitySelected:[self.filteredData objectAtIndexPath:indexPath]];
+        [self.delegate activitySelected:selectedActivity];
     }];
 }
 
