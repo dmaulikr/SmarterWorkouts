@@ -1,8 +1,8 @@
+#import <CoreData/CoreData.h>
 #import "ActivitySelectorViewController.h"
 #import "ActivitySelectorDelegate.h"
 #import "Activity.h"
 #import "NSManagedObject+MagicalFinders.h"
-#import "ActivityFilter.h"
 
 @implementation ActivitySelectorViewController
 
@@ -16,7 +16,7 @@
 }
 
 - (void)viewDidLoad {
-    self.data = [Activity MR_findAllSortedBy:@"name" ascending:YES];
+    self.data = [Activity MR_fetchAllGroupedBy:@"type" withPredicate:nil sortedBy:@"type,name" ascending:YES];
     self.filteredData = self.data;
     self.navigationItem.title = @"Choose an Activity";
 
@@ -42,8 +42,18 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [[self.data sections] count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    id <NSFetchedResultsSectionInfo> sectionInfo = self.data.sections[(NSUInteger) section];
+    return [[[sectionInfo.name substringToIndex:1] uppercaseString] stringByAppendingString:[sectionInfo.name substringFromIndex:1]];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.filteredData count];
+    id <NSFetchedResultsSectionInfo> sectionInfo = self.data.sections[(NSUInteger) section];
+    return sectionInfo.numberOfObjects;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -51,7 +61,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ActivitySearchItem"];
     }
-    Activity *activity = self.filteredData[(NSUInteger) indexPath.row];
+    Activity *activity = [self.filteredData objectAtIndexPath:indexPath];
     [cell.textLabel setText:activity.name];
     return cell;
 }
@@ -61,14 +71,14 @@
 }
 
 - (void)filterDataBy:(NSString *)text {
-    self.filteredData = [ActivityFilter filter:self.data forText:text];
+    self.filteredData = [Activity MR_fetchAllGroupedBy:@"type" withPredicate:nil sortedBy:@"type,name" ascending:YES];
     [self.tableView reloadData];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.searchController setActive:NO];
     [self dismissViewControllerAnimated:YES completion:^{
-        [self.delegate activitySelected:self.filteredData[(NSUInteger) indexPath.row]];
+        [self.delegate activitySelected:[self.filteredData objectAtIndexPath:indexPath]];
     }];
 }
 

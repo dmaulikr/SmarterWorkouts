@@ -3,6 +3,7 @@
 
 @class WorkoutController;
 @protocol ActivitySelectorDelegate;
+@class NSFetchedResultsController;
 
 @interface ActivitySelectorViewController : UITableViewController <UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate>
 
@@ -10,9 +11,9 @@
 
 @property(nonatomic, weak) NSObject<ActivitySelectorDelegate> *delegate;
 
-@property(nonatomic, strong) NSArray *data;
+@property(nonatomic, strong) NSFetchedResultsController *data;
 
-@property(nonatomic, strong) NSArray *filteredData;
+@property(nonatomic, strong) NSFetchedResultsController *filteredData;
 
 - (instancetype)initWithDelegate:(NSObject <ActivitySelectorDelegate> *)delegate;
 
