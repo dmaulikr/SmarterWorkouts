@@ -1,8 +1,12 @@
 #import "MainViewController.h"
 #import "UIImage+ColorFromImage.h"
-#import "HistoryViewController.h"
+#import "UIImageViewHelper.h"
 
 @implementation MainViewController {
+    __weak IBOutlet UIImageView *historyImage;
+    __weak IBOutlet UIImageView *workoutImage;
+    __weak IBOutlet UIImageView *friendsImage;
+    __weak IBOutlet UILabel *friendsLabel;
 }
 
 - (void)viewDidLoad {
@@ -18,6 +22,18 @@
                                                                                     blue:(CGFloat) (128.0 / 255)
                                                                                    alpha:1.0]]
                                   forState:UIControlStateHighlighted];
+
+    [self.friendsButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithRed:(CGFloat) (66 / 255.0)
+                                                                                   green:(CGFloat) (33 / 255.0)
+                                                                                    blue:(CGFloat) (99 / 255.0)
+                                                                                   alpha:1.0]]
+                                  forState:UIControlStateHighlighted];
+    [UIImageViewHelper makeWhite:historyImage];
+    [UIImageViewHelper makeWhite:workoutImage];
+    [UIImageViewHelper makeWhite:friendsImage];
+
+    [friendsLabel.superview bringSubviewToFront:friendsLabel];
+    [friendsImage.superview bringSubviewToFront:friendsImage];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -27,7 +43,7 @@
 }
 
 - (IBAction)selectHistory:(id)sender {
-    [self loadStoryboard: @"HistoryViewController"];
+    [self loadStoryboard:@"HistoryViewController"];
 }
 
 - (IBAction)selectWorkout:(id)sender {
@@ -37,7 +53,7 @@
 - (IBAction)selectFriends:(id)sender {
 }
 
-- (void)loadStoryboard: (NSString *)nibName {
+- (void)loadStoryboard:(NSString *)nibName {
     UIStoryboard *historyStoryboard = [UIStoryboard storyboardWithName:nibName bundle:[NSBundle mainBundle]];
     UIViewController *controller = [historyStoryboard instantiateInitialViewController];
     [self.navigationController pushViewController:controller animated:YES];
