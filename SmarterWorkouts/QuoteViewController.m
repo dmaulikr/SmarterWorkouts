@@ -4,6 +4,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.quote setText:@""];
+    [self.author setText:@""];
     [self useRandomQuote];
 }
 
@@ -13,8 +15,8 @@
                                                       options:(NSJSONReadingOptions) kNilOptions error:nil];
 
     NSDictionary *quote = quotes[arc4random_uniform([quotes count])];
+    [self.quote setText:[NSString stringWithFormat:@"“%@”", quote[@"quote"]]];
     [self.author setText:quote[@"author"]];
-    [self.quote setText:quote[@"quote"]];
 }
 
 @end
