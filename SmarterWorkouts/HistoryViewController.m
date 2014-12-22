@@ -21,7 +21,11 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
 
     [CellRegister registerClass:HistoryCell.class for:self.tableView];
+}
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
