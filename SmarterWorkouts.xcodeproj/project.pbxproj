@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0209F6661A3E45A40098AB63 /* HistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0209F6651A3E45A40098AB63 /* HistoryViewController.storyboard */; };
 		0209F6681A3E4DB70098AB63 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0209F6671A3E4DB70098AB63 /* HistoryCell.xib */; };
+		023832081A47B01D001D6FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023832051A47B01D001D6FDA /* Main.storyboard */; };
+		023832091A47B01D001D6FDA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 023832071A47B01D001D6FDA /* MainViewController.m */; };
 		02423F8D1A2FE81D0048BB17 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02423F8C1A2FE81D0048BB17 /* WatchKit.framework */; };
 		02423F941A2FE81D0048BB17 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02423F931A2FE81D0048BB17 /* InterfaceController.m */; };
 		02423F971A2FE81D0048BB17 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02423F961A2FE81D0048BB17 /* NotificationController.m */; };
@@ -148,6 +150,9 @@
 /* Begin PBXFileReference section */
 		0209F6651A3E45A40098AB63 /* HistoryViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HistoryViewController.storyboard; sourceTree = "<group>"; };
 		0209F6671A3E4DB70098AB63 /* HistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
+		023832051A47B01D001D6FDA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		023832061A47B01D001D6FDA /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		023832071A47B01D001D6FDA /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		02423F8B1A2FE81D0048BB17 /* SmarterWorkouts WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SmarterWorkouts WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02423F8C1A2FE81D0048BB17 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		02423F901A2FE81D0048BB17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -400,6 +405,9 @@
 		0288D9891A180BF50092C2D3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				023832051A47B01D001D6FDA /* Main.storyboard */,
+				023832061A47B01D001D6FDA /* MainViewController.h */,
+				023832071A47B01D001D6FDA /* MainViewController.m */,
 				5459001BFB717303CC6CE2F5 /* Setup */,
 				545902E9077C57BF70A67E6E /* Workout */,
 				54590D1F490E7B967C0D0F37 /* Categories */,
@@ -984,6 +992,7 @@
 				5459019491D5CB54BAD0D851 /* plates.json in Resources */,
 				5459046E831C0A8B5C2B3F39 /* ActivityWeightFormCell.xib in Resources */,
 				5459069A2F63D2C53C8478D1 /* TimerActiveCell.xib in Resources */,
+				023832081A47B01D001D6FDA /* Main.storyboard in Resources */,
 				545909B97C0D7547A221B9F2 /* WeightSetCell.xib in Resources */,
 				54590948B017444BD9DF749B /* DurationSetCell.xib in Resources */,
 				54590694B74FD144286F36CB /* 721-bookmarks@2x.png in Resources */,
@@ -1100,6 +1109,7 @@
 				54590660DEAF4D9CFD4F6A81 /* Set.m in Sources */,
 				545907C3DBD21895DE413D74 /* SetGroup.m in Sources */,
 				54590C6379DC254E8B6BE8EC /* Workout.m in Sources */,
+				023832091A47B01D001D6FDA /* MainViewController.m in Sources */,
 				54590EA8F7F6F5729B808BDD /* Plate.m in Sources */,
 				5459030C7A29CAEC0F6477AD /* NewActivitySelectorInputViewController.m in Sources */,
 				54590713A522D05CE5E35B97 /* FixtureLoader.m in Sources */,

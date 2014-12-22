@@ -21,6 +21,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
 
     [CellRegister registerClass:HistoryCell.class for:self.tableView];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
