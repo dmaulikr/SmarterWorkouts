@@ -4,6 +4,8 @@
 #import "Activity.h"
 #import "NSManagedObject+MagicalFinders.h"
 #import "SelectionGroupHeader.h"
+#import "ActivitySearchCell.h"
+#import "CellRegister.h"
 
 @implementation ActivitySelectorViewController
 
@@ -28,15 +30,16 @@
                                             action:@selector(cancel)];
 
     self.navigationItem.leftBarButtonItem = cancelButton;
-
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self;
     self.searchController.dimsBackgroundDuringPresentation = NO;
     self.searchController.hidesNavigationBarDuringPresentation = NO;
-
     [self.searchController.searchBar sizeToFit];
     [self.searchController setDelegate:self];
+
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.tableHeaderView = self.searchController.searchBar;
+    [CellRegister registerClass:ActivitySearchCell.class for:self.tableView];
 }
 
 - (void)cancel {
@@ -60,7 +63,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 38;
+    return 44;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -69,12 +72,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ActivitySearchItem"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ActivitySearchItem"];
-    }
+    ActivitySearchCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ActivitySearchCell"];
     Activity *activity = [self.filteredData objectAtIndexPath:indexPath];
-    [cell.textLabel setText:activity.name];
+    [cell.activityLabel setText:activity.name];
     return cell;
 }
 
