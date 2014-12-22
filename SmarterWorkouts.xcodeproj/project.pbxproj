@@ -97,6 +97,7 @@
 		54590E13FCBBA27BB0D90764 /* BarLoadingSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590BCD6074B6467C4D1111 /* BarLoadingSetupViewController.m */; };
 		54590E16F642336636D23885 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905ED0E0E46EE8AA17304 /* AppDelegate.m */; };
 		54590E57AC06674BBE929D2B /* ActivityCellFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459082A26AD4BB9670D2BDC /* ActivityCellFactoryTests.m */; };
+		54590EA2C3FB9CCC2411C9CA /* quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 545903AC024EC344BA992AB7 /* quotes.json */; };
 		54590EA8F7F6F5729B808BDD /* Plate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545909370C64722C73459C11 /* Plate.m */; };
 		54590F2DE0A40BC4E74C42A0 /* SWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590EEDEDFB55C9CD0B52CD /* SWTimer.m */; };
 		54590F71343D7A09435938C2 /* Form.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459094388A431B3BB423E90 /* Form.m */; };
@@ -195,6 +196,7 @@
 		545902FDED688FE872C92CF1 /* SWTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTestCase.m; sourceTree = "<group>"; };
 		545903888625FF04D581594B /* 709-plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-plus@2x.png"; sourceTree = "<group>"; };
 		545903A3249D172566898D0E /* HistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryCell.h; sourceTree = "<group>"; };
+		545903AC024EC344BA992AB7 /* quotes.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = quotes.json; sourceTree = "<group>"; };
 		545903D445CCE5EB68AB601D /* WorkoutCopierTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutCopierTests.m; sourceTree = "<group>"; };
 		545903F57D7C270830C13B3B /* FixtureLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FixtureLoader.h; path = Models/Fixtures/FixtureLoader.h; sourceTree = "<group>"; };
 		545903FBE12939C3C1F5D39D /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Activity.h; path = Models/Activity.h; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 			children = (
 				5459026160D6CA4853567D93 /* QuoteViewController.m */,
 				545905044CA3AB8FAD537913 /* QuoteViewController.h */,
+				545903AC024EC344BA992AB7 /* quotes.json */,
 			);
 			name = Quotes;
 			sourceTree = "<group>";
@@ -1000,6 +1003,7 @@
 				5459043FCE22ED7A812150B4 /* 1097-timer-2@3x.png in Resources */,
 				54590600C2136F850AFCC748 /* 1097-timer-2@2x.png in Resources */,
 				54590BAD0BDD079C13B5806A /* ActivitySearchCell.xib in Resources */,
+				54590EA2C3FB9CCC2411C9CA /* quotes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
