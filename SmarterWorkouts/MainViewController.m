@@ -1,6 +1,7 @@
 #import "MainViewController.h"
 #import "UIImage+ColorFromImage.h"
 #import "UIImageViewHelper.h"
+#import "UIImageHelper.h"
 
 @implementation MainViewController {
     __weak IBOutlet UIImageView *historyImage;
@@ -31,15 +32,35 @@
     [UIImageViewHelper makeWhite:historyImage];
     [UIImageViewHelper makeWhite:workoutImage];
     [UIImageViewHelper makeWhite:friendsImage];
-
-    [friendsLabel.superview bringSubviewToFront:friendsLabel];
-    [friendsImage.superview bringSubviewToFront:friendsImage];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
     self.navigationItem.title = @"Home";
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    double delayInSeconds = 1.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t) (delayInSeconds * NSEC_PER_SEC));
+    __weak id weakself = self;
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void) {
+        [weakself animateWorkoutImage];
+    });
+}
+
+- (void)animateWorkoutImage {
+    UIImage *downImage = [UIImageHelper image:[UIImage imageNamed:@"415-weightlifter-inverse.png"] withColor:[UIColor whiteColor]];
+    workoutImage.animationImages = @[
+            [UIImageHelper image:[UIImage imageNamed:@"415-weightlifter.png"] withColor:[UIColor whiteColor]],
+            downImage,
+            downImage,
+            downImage
+    ];
+    workoutImage.animationDuration = 1;
+    workoutImage.animationRepeatCount = 10;
+    [workoutImage startAnimating];
 }
 
 - (IBAction)selectHistory:(id)sender {
