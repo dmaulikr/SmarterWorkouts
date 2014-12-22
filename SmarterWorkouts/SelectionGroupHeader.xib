@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Xul-1J-R05" customClass="SelectionGroupHeader">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36W-Ga-hs9">
+                    <rect key="frame" x="8" y="0.0" width="72.5" height="38"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1091-weights.png" translatesAutoresizingMaskIntoConstraints="NO" id="HRs-NZ-90K">
+                    <rect key="frame" x="284" y="5" width="28" height="28"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.65490196078431373" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="HRs-NZ-90K" secondAttribute="centerY" id="44E-ZC-Q8i"/>
+                <constraint firstItem="36W-Ga-hs9" firstAttribute="top" secondItem="Xul-1J-R05" secondAttribute="top" id="XRN-rA-vnj"/>
+                <constraint firstItem="36W-Ga-hs9" firstAttribute="leading" secondItem="Xul-1J-R05" secondAttribute="leading" constant="8" id="dnk-nm-gd7"/>
+                <constraint firstAttribute="bottom" secondItem="36W-Ga-hs9" secondAttribute="bottom" id="r4R-kJ-hlA"/>
+                <constraint firstAttribute="trailing" secondItem="HRs-NZ-90K" secondAttribute="trailing" constant="8" id="w79-rx-Yw7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="typeImage" destination="HRs-NZ-90K" id="Uzw-XE-Xc1"/>
+                <outlet property="typeName" destination="36W-Ga-hs9" id="DVk-XV-yUt"/>
+            </connections>
+            <point key="canvasLocation" x="216" y="125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="1091-weights.png" width="28" height="28"/>
+    </resources>
+</document>

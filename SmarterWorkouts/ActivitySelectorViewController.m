@@ -3,6 +3,7 @@
 #import "ActivitySelectorDelegate.h"
 #import "Activity.h"
 #import "NSManagedObject+MagicalFinders.h"
+#import "SelectionGroupHeader.h"
 
 @implementation ActivitySelectorViewController
 
@@ -47,8 +48,19 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return @"a";
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    SelectionGroupHeader *header = [[[NSBundle mainBundle] loadNibNamed:@"SelectionGroupHeader"
+                                                                  owner:self options:nil] lastObject];
     id <NSFetchedResultsSectionInfo> sectionInfo = self.filteredData.sections[(NSUInteger) section];
-    return [[[sectionInfo.name substringToIndex:1] uppercaseString] stringByAppendingString:[sectionInfo.name substringFromIndex:1]];
+    [header setType:sectionInfo.name];
+    return header;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 38;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
