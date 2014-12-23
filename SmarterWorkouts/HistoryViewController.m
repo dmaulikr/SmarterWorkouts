@@ -9,6 +9,7 @@
 #import "HistoryCell.h"
 #import "SetGroup.h"
 #import "WorkoutSelectionDelegate.h"
+#import "HistoryCellExpanded.h"
 
 @implementation HistoryViewController {
     __weak IBOutlet UILabel *emptyLabel;
@@ -28,6 +29,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
 
     [CellRegister registerClass:HistoryCell.class for:self.tableView];
+    [CellRegister registerClass:HistoryCellExpanded.class for:self.tableView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -73,15 +75,30 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HistoryCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(HistoryCell.class)];
     Workout *workout = [self findAllWorkouts][(NSUInteger) indexPath.row];
+
+    HistoryCell *cell = nil;
+    if (self.selectedWorkout == workout) {
+        cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(HistoryCellExpanded.class)];
+    }
+    else {
+        cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(HistoryCell.class)];
+    }
+
     [cell setWorkout:workout];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.selectedWorkout = [self findAllWorkouts][(NSUInteger) indexPath.row];
+    Workout *newSelectedWorkout = [self findAllWorkouts][(NSUInteger) indexPath.row];
+    if (self.selectedWorkout == newSelectedWorkout) {
+        self.selectedWorkout = nil;
+    }
+    else {
+        self.selectedWorkout = newSelectedWorkout;
+    }
     [self.navigationItem.rightBarButtonItem setEnabled:YES];
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
