@@ -11,8 +11,8 @@
     [self setSelectedBackgroundView:bgColorView];
 }
 
-
 - (void)setWorkout:(Workout *)workout {
+    _workout = workout;
     [self.primaryActivityName setText:[PrimaryActivityFinder primaryActivityFor:workout]];
 
     NSDateFormatter *dateFormatter = [NSDateFormatter new];

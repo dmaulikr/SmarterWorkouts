@@ -2,5 +2,10 @@
 #import <UIKit/UIKit.h>
 #import "HistoryCell.h"
 
-@interface HistoryCellExpanded : HistoryCell
+@protocol EditWorkoutDelegate;
+
+@interface HistoryCellExpanded : HistoryCell {}
+@property (weak, nonatomic) IBOutlet UIButton *editButton;
+@property(weak, nonatomic) NSObject<EditWorkoutDelegate> *delegate;
+
 @end

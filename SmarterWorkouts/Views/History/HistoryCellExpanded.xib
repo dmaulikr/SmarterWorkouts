@@ -14,7 +14,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="10/12/14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebJ-cj-2qZ">
-                        <rect key="frame" x="191" y="7" width="120.5" height="60"/>
+                        <rect key="frame" x="191" y="7" width="121" height="60"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -43,6 +43,9 @@
                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="editButtonTapped:" destination="j4w-LR-hGm" eventType="touchUpInside" id="V8h-ea-uyg"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiJ-LS-McB">
                         <rect key="frame" x="139" y="91" width="42" height="28"/>
@@ -73,7 +76,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="date" destination="ebJ-cj-2qZ" id="2gg-jI-VqW"/>
-                <outlet property="editButton" destination="zl8-HJ-pze" id="Yth-od-uXC"/>
+                <outlet property="editButton" destination="zl8-HJ-pze" id="2RM-32-TqS"/>
                 <outlet property="primaryActivityName" destination="Hhu-z2-ZVS" id="9dw-gD-5Mv"/>
             </connections>
             <point key="canvasLocation" x="236" y="245"/>

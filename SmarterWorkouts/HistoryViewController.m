@@ -10,6 +10,7 @@
 #import "SetGroup.h"
 #import "WorkoutSelectionDelegate.h"
 #import "HistoryCellExpanded.h"
+#import "WorkoutController.h"
 
 @implementation HistoryViewController {
     __weak IBOutlet UILabel *emptyLabel;
@@ -36,6 +37,7 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
     [self showHideEmptyLabel];
+    [self.tableView reloadData];
 }
 
 - (void)showHideEmptyLabel {
@@ -80,6 +82,7 @@
     HistoryCell *cell = nil;
     if (self.selectedWorkout == workout) {
         cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(HistoryCellExpanded.class)];
+        [(HistoryCellExpanded *) cell setDelegate:self];
     }
     else {
         cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(HistoryCell.class)];
@@ -101,6 +104,13 @@
     [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
+- (void)editWorkout:(Workout *)workout {
+    UIStoryboard *historyStoryboard = [UIStoryboard storyboardWithName:@"Workout" bundle:[NSBundle mainBundle]];
+    WorkoutController *controller = [historyStoryboard instantiateInitialViewController];
+    [controller setWorkout:workout];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewCellEditingStyleDelete;
 }
@@ -120,6 +130,5 @@
         [self showHideEmptyLabel];
     }
 }
-
 
 @end

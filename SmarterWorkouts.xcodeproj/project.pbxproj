@@ -224,6 +224,7 @@
 		545903FBE12939C3C1F5D39D /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Activity.h; path = Models/Activity.h; sourceTree = "<group>"; };
 		5459040050D27D2FEAEF9090 /* FormItemBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormItemBarButtonItem.m; sourceTree = "<group>"; };
 		5459041C8F7457EE25991D77 /* DecimalNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecimalNumbers.h; sourceTree = "<group>"; };
+		54590438A2E236FB2F530D28 /* EditWorkoutDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditWorkoutDelegate.h; sourceTree = "<group>"; };
 		5459047548B43CB2B2ABA86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Workout.storyboard; sourceTree = "<group>"; };
 		545904CAA5CED6CA3A33D217 /* 415-weightlifter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "415-weightlifter@2x.png"; sourceTree = "<group>"; };
 		545904E1841B2C9A4524B6E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -571,6 +572,7 @@
 				54590172178526A1757A7450 /* HistoryCellExpanded.m */,
 				54590EE3C490AC580F46B152 /* HistoryCellExpanded.h */,
 				0265AB751A49E44800A8556D /* HistoryCellExpanded.xib */,
+				54590438A2E236FB2F530D28 /* EditWorkoutDelegate.h */,
 			);
 			name = History;
 			sourceTree = "<group>";

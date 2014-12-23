@@ -11,11 +11,9 @@
 
 @interface WorkoutController : UIViewController <UITextFieldDelegate, ActivitySelectorDelegate, ActivityFormDelegate, UITableViewDelegate, UITableViewDataSource> {
 }
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (weak, nonatomic) IBOutlet UIView *quoteContainer;
 @property (weak, nonatomic) IBOutlet UIView *startNewActivityContainer;
 @property (weak, nonatomic) IBOutlet UIView *selectActivityContainer;
-@property (weak, nonatomic) IBOutlet NewActivitySelectorInputViewController *activitySelectorInputController;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic, strong) Workout *workout;
 @property(nonatomic, strong) Activity *selectedActivity;
@@ -26,4 +24,5 @@
 @property(nonatomic, strong) NSDictionary *formChangeOptions;
 
 @property(nonatomic, strong) ActivitySelectorInputViewController *selectActivityController;
+@property(nonatomic) BOOL newWorkout;
 @end

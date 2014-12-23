@@ -8,6 +8,6 @@
 @property(weak, nonatomic) IBOutlet UILabel *primaryActivityName;
 @property(weak, nonatomic) IBOutlet UILabel *date;
 
-- (void)setWorkout:(Workout *)workout;
+@property(nonatomic, strong) Workout *workout;
 
 @end

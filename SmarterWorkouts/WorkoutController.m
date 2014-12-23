@@ -20,7 +20,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     if (!self.workout) {
+        self.newWorkout = YES;
+        self.title = @"New Workout";
         self.workout = [self createNewWorkout];
+        [self.selectActivityContainer setHidden:YES];
+        [self.navigationItem.rightBarButtonItem setEnabled:NO];
+    }
+    else {
+        self.newWorkout = NO;
+        self.title = @"Edit Workout";
+        [self hideInitialViews];
+        [self restoreViewState];
+        [self setRepeatActivityToLast:self.workout];
+
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleDone
+                                                                                 target:self
+                                                                                 action:@selector(doneButtonTapped:)];
     }
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped)];
@@ -36,9 +51,6 @@
 
     [SetCellFactory registerNibs:self.tableView];
     [ActivityCellFactory registerNibs:self.tableView];
-
-    [self.selectActivityContainer setHidden:YES];
-    [self.doneButton setEnabled:NO];
 }
 
 - (Workout *)createNewWorkout {
@@ -156,6 +168,10 @@
     [WorkoutCopier copy:workout to:self.workout];
     [self hideInitialViews];
     [self restoreViewState];
+    [self setRepeatActivityToLast:workout];
+}
+
+- (void)setRepeatActivityToLast:(Workout *)workout {
     NSString *activityName = [[[workout.setGroups[0] sets] lastObject] activity];
     Activity *lastActivity = [Activity MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@",
                                                                                                   @"name", activityName]];
@@ -192,7 +208,7 @@
     [self.tableView setContentInset:UIEdgeInsetsZero];
     [self.tableView reloadData];
 
-    [self.doneButton setEnabled:([[self.workout.setGroups[0] sets] count] > 0)];
+    [self.navigationItem.rightBarButtonItem setEnabled:([[self.workout.setGroups[0] sets] count] > 0)];
 }
 
 - (void)formChangeToType:(NSString *)type withOptions:(NSDictionary *)options {
@@ -210,12 +226,18 @@
 
 - (IBAction)doneButtonTapped:(id)sender {
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"HistoryViewController" bundle:nil];
-    HistoryViewController *history = [sb instantiateViewControllerWithIdentifier:@"historyViewController"];
-    NSMutableArray *viewControllers = [NSMutableArray arrayWithArray:[[self navigationController] viewControllers]];
-    [viewControllers removeLastObject];
-    [viewControllers addObject:history];
-    [[self navigationController] setViewControllers:viewControllers animated:YES];
+
+    if (self.newWorkout) {
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"HistoryViewController" bundle:nil];
+        HistoryViewController *history = [sb instantiateViewControllerWithIdentifier:@"historyViewController"];
+        NSMutableArray *viewControllers = [NSMutableArray arrayWithArray:[[self navigationController] viewControllers]];
+        [viewControllers removeLastObject];
+        [viewControllers addObject:history];
+        [[self navigationController] setViewControllers:viewControllers animated:YES];
+    }
+    else {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 @end
