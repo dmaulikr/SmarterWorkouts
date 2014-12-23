@@ -7,7 +7,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     UIView *bgColorView = [UIView new];
-    [bgColorView setBackgroundColor:[UIColor colorWithRed:57 / 255.0f green:139 / 255.0f blue:255 / 255.0f alpha:1.0f]];
+    [bgColorView setBackgroundColor:[UIColor colorWithRed:0 / 255.0f green:116 / 255.0f blue:178 / 255.0f alpha:1.0f]];
     [self setSelectedBackgroundView:bgColorView];
 }
 

@@ -12,21 +12,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.workoutButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithRed:(CGFloat) (68 / 255.0)
-                                                                                   green:(CGFloat) (108 / 255.0)
-                                                                                    blue:(CGFloat) (179.0 / 255)
+    [self.workoutButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithRed:(CGFloat) (6 / 255.0)
+                                                                                   green:(CGFloat) (101 / 255.0)
+                                                                                    blue:(CGFloat) (162 / 255.0)
                                                                                    alpha:1.0]]
                                   forState:UIControlStateHighlighted];
 
-    [self.historyButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithRed:(CGFloat) (63 / 255.0)
-                                                                                   green:(CGFloat) (195 / 255.0)
-                                                                                    blue:(CGFloat) (128.0 / 255)
+    [self.historyButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithRed:(CGFloat) (92 / 255.0)
+                                                                                   green:(CGFloat) (179 / 255.0)
+                                                                                    blue:(CGFloat) (78 / 255.0)
                                                                                    alpha:1.0]]
                                   forState:UIControlStateHighlighted];
 
-    [self.friendsButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithRed:(CGFloat) (66 / 255.0)
-                                                                                   green:(CGFloat) (33 / 255.0)
-                                                                                    blue:(CGFloat) (99 / 255.0)
+    [self.friendsButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithRed:(CGFloat) (98 / 255.0)
+                                                                                   green:(CGFloat) (20 / 255.0)
+                                                                                    blue:(CGFloat) (131 / 255.0)
                                                                                    alpha:1.0]]
                                   forState:UIControlStateHighlighted];
     [UIImageViewHelper makeWhite:historyImage];
