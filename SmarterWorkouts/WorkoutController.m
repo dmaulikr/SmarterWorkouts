@@ -19,14 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (!self.workout) {
+        self.workout = [self createNewWorkout];
+    }
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped)];
     tap.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tap];
-
-    self.workout = [Workout MR_createEntity];
-    self.workout.date = [NSDate new];
-    [self.workout addSetGroupsObject:[SetGroup MR_createEntity]];
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
@@ -40,6 +39,13 @@
 
     [self.selectActivityContainer setHidden:YES];
     [self.doneButton setEnabled:NO];
+}
+
+- (Workout *)createNewWorkout {
+    Workout *workout = [Workout MR_createEntity];
+    workout.date = [NSDate new];
+    [workout addSetGroupsObject:[SetGroup MR_createEntity]];
+    return workout;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -206,7 +212,10 @@
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"HistoryViewController" bundle:nil];
     HistoryViewController *history = [sb instantiateViewControllerWithIdentifier:@"historyViewController"];
-    [self.navigationController setViewControllers:@[history] animated:YES];
+    NSMutableArray *viewControllers = [NSMutableArray arrayWithArray:[[self navigationController] viewControllers]];
+    [viewControllers removeLastObject];
+    [viewControllers addObject:history];
+    [[self navigationController] setViewControllers:viewControllers animated:YES];
 }
 
 @end
