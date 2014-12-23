@@ -10,7 +10,9 @@
 #import "SetGroup.h"
 #import "WorkoutSelectionDelegate.h"
 
-@implementation HistoryViewController
+@implementation HistoryViewController {
+    __weak IBOutlet UILabel *emptyLabel;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,6 +33,17 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
+    [self showHideEmptyLabel];
+}
+
+- (void)showHideEmptyLabel {
+    if (self.selectionDelegate) {
+        [emptyLabel setText:@"No workouts. Yet."];
+    }
+    else {
+        [emptyLabel setText:@"The secret of getting ahead is getting started."];
+    }
+    [emptyLabel setHidden:[self tableView:self.tableView numberOfRowsInSection:0] != 0];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -87,6 +100,7 @@
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         [self.tableView endUpdates];
+        [self showHideEmptyLabel];
     }
 }
 

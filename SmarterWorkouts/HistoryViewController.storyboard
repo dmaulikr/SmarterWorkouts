@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5WF-CA-96I">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--History View Controller-->
@@ -13,26 +14,38 @@
                         <viewControllerLayoutGuide type="bottom" id="pfl-Xt-Kyf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="umQ-lu-MJU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WTS-vs-VLo">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.20392156862745098" green="0.71372549019607845" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The secret of getting ahead is getting started." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbW-LA-f5B">
+                                <rect key="frame" x="16" y="0.0" width="288" height="400"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="WTS-vs-VLo" secondAttribute="trailing" id="4Sf-es-7dD"/>
                             <constraint firstItem="WTS-vs-VLo" firstAttribute="leading" secondItem="umQ-lu-MJU" secondAttribute="leading" id="DDy-lT-wlG"/>
+                            <constraint firstItem="kbW-LA-f5B" firstAttribute="leading" secondItem="umQ-lu-MJU" secondAttribute="leadingMargin" id="Khr-kb-Vhp"/>
                             <constraint firstItem="WTS-vs-VLo" firstAttribute="top" secondItem="0Zf-FL-Rvc" secondAttribute="bottom" id="Mgv-EB-k59"/>
+                            <constraint firstItem="pfl-Xt-Kyf" firstAttribute="top" secondItem="kbW-LA-f5B" secondAttribute="bottom" id="RNz-kT-bEq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kbW-LA-f5B" secondAttribute="trailing" id="RPH-kI-3b9"/>
                             <constraint firstItem="pfl-Xt-Kyf" firstAttribute="top" secondItem="WTS-vs-VLo" secondAttribute="bottom" id="h5x-M2-6F1"/>
+                            <constraint firstItem="kbW-LA-f5B" firstAttribute="top" secondItem="0Zf-FL-Rvc" secondAttribute="bottom" id="xdY-EL-m1B"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="300"/>
+                    <size key="freeformSize" width="320" height="400"/>
                     <connections>
+                        <outlet property="emptyLabel" destination="kbW-LA-f5B" id="xyY-1w-I7n"/>
                         <outlet property="tableView" destination="WTS-vs-VLo" id="2Ng-BQ-sBR"/>
                     </connections>
                 </viewController>

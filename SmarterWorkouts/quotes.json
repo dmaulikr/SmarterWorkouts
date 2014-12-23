@@ -13,11 +13,15 @@
   },
   {
     "author": "Mario Andretti",
-    "quote": "If you have everything under control, you’re not moving fast enough."
+    "quote": "If everything seems under control, you’re just not going fast enough."
   },
   {
     "author": "Michael Jordan",
     "quote": "You have to expect things of yourself before you can do them."
+  },
+  {
+    "author": "Michael Jordan",
+    "quote": "I’ve missed more than 9,000 shots in my career. I’ve lost almost 300 games. 26 times I’ve been trusted to take the game winning shot and missed. I’ve failed over and over and over again in my life and that is why I succeed."
   },
   {
     "author": "Arnold Schwarzenegger",
@@ -57,7 +61,7 @@
   },
   {
     "author": "Bruce Lee",
-    "quote": "If you always put limit on everything you do, physical or anything else. It will spread into your work and into your life. There are no limits. There are only plateaus, and you must not stay there, you must go beyond them."
+    "quote": "If you always put limits on everything you do, physical or anything else, it will spread into your work and into your life. There are no limits. There are only plateaus, and you must not stay there, you must go beyond them."
   },
   {
     "author": "Bruce Lee",
@@ -74,5 +78,25 @@
   {
     "author": "Steve Shaw",
     "quote": "On the Internet, everyone squats. In real life, the squat rack is always empty. You figure out what this means."
+  },
+  {
+    "author": "Winston Churchill",
+    "quote": "If you’re going through hell, keep going."
+  },
+  {
+    "author": "Winston Churchill",
+    "quote": "Never, never, never give up."
+  },
+  {
+    "author": "Walt Disney",
+    "quote": "The way to get started is to quit talking and start doing."
+  },
+  {
+    "author": "Benjamin Franklin",
+    "quote": "By failing to prepare, you are preparing to fail."
+  },
+  {
+    "author": "Muhammad Ali",
+    "quote": "I know where I'm going and I know the truth, and I don't have to be what you want me to be. I'm free to be what I want."
   }
 ]
