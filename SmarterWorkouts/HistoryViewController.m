@@ -50,21 +50,6 @@
     [emptyLabel setHidden:[self tableView:self.tableView numberOfRowsInSection:0] != 0];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    if (self.selectionDelegate) {
-        UIBarButtonItem *useButton = [[UIBarButtonItem alloc] initWithTitle:@"Use" style:UIBarButtonItemStylePlain
-                                                                     target:self action:@selector(useButtonTapped:)];
-        [useButton setEnabled:NO];
-        self.navigationItem.rightBarButtonItem = useButton;
-    }
-}
-
-- (void)useButtonTapped:(id)useButton {
-    [self.selectionDelegate workoutSelected:self.selectedWorkout];
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [[self findAllWorkouts] count];
 }
@@ -81,8 +66,15 @@
 
     HistoryCell *cell = nil;
     if (self.selectedWorkout == workout) {
-        cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(HistoryCellExpanded.class)];
-        [(HistoryCellExpanded *) cell setDelegate:self];
+        HistoryCellExpanded *expanded = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(HistoryCellExpanded.class)];
+        [expanded setDelegate:self];
+        if (self.selectionDelegate) {
+            [expanded.editButtonLabel setText:@"Copy"];
+        }
+        else {
+            [expanded.editButtonLabel setText:@"Edit"];
+        }
+        cell = expanded;
     }
     else {
         cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(HistoryCell.class)];
@@ -101,14 +93,20 @@
         self.selectedWorkout = newSelectedWorkout;
     }
     [self.navigationItem.rightBarButtonItem setEnabled:YES];
-    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, 1)] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 - (void)editWorkout:(Workout *)workout {
-    UIStoryboard *historyStoryboard = [UIStoryboard storyboardWithName:@"Workout" bundle:[NSBundle mainBundle]];
-    WorkoutController *controller = [historyStoryboard instantiateInitialViewController];
-    [controller setWorkout:workout];
-    [self.navigationController pushViewController:controller animated:YES];
+    if (self.selectionDelegate) {
+        [self.selectionDelegate workoutSelected:self.selectedWorkout];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else {
+        UIStoryboard *historyStoryboard = [UIStoryboard storyboardWithName:@"Workout" bundle:[NSBundle mainBundle]];
+        WorkoutController *controller = [historyStoryboard instantiateInitialViewController];
+        [controller setWorkout:workout];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
