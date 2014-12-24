@@ -4,6 +4,7 @@
 #import "EditWorkoutDelegate.h"
 #import "NSManagedObjectContext+MagicalRecord.h"
 #import "NSManagedObjectContext+MagicalSaves.h"
+#import "AllSetsDataSource.h"
 
 @implementation HistoryCellExpanded
 
@@ -15,6 +16,9 @@
     UIDatePicker *datePicker = [UIDatePicker new];
     [self.dateField setInputView:datePicker];
     [datePicker addTarget:self action:@selector(updateWorkoutDate:) forControlEvents:UIControlEventValueChanged];
+
+    [self.allSetsTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [self.allSetsTableView setBackgroundColor:[UIColor clearColor]];
 }
 
 - (void)updateWorkoutDate:(id)datePicker {
@@ -28,6 +32,17 @@
     [self.dateField setText:[self formattedDateForWorkout:workout]];
     UIDatePicker *picker = (UIDatePicker *) [self.dateField inputView];
     [picker setDate:workout.date];
+
+    [AllSetsDataSource registerNibs:self.allSetsTableView];
+    self.allSetsDataSource = [[AllSetsDataSource alloc] initWithWorkout:workout];
+    [self.allSetsTableView setDataSource:self.allSetsDataSource];
+    [self.allSetsTableView reloadData];
+
+    NSInteger setsCount = [self.allSetsTableView numberOfRowsInSection:0];
+    int rowHeight = 44;
+    int rowsToShow = 3;
+    [self.allSetsTableViewHeight setConstant:setsCount <= rowsToShow ? setsCount * rowHeight : rowsToShow * rowHeight + rowHeight / 2];
+    [self layoutIfNeeded];
 }
 
 - (IBAction)editButtonTapped:(id)sender {
