@@ -3,7 +3,7 @@
 #import "SetGroup.h"
 #import "Set.h"
 #import "CellRegister.h"
-#import "SmallSetCell.h"
+#import "SmallWeightSetCell.h"
 
 @implementation AllSetsDataSource
 
@@ -26,7 +26,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SmallSetCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(SmallSetCell.class)];
+    SmallWeightSetCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(SmallWeightSetCell.class)];
     Set *set = [self setForIndexPath:indexPath];
     [cell setSet:set];
     return cell;
@@ -37,7 +37,7 @@
 }
 
 + (void)registerNibs:(UITableView *)tableView {
-    [CellRegister registerClass:SmallSetCell.class for:tableView];
+    [CellRegister registerClass:SmallWeightSetCell.class for:tableView];
 }
 
 @end
