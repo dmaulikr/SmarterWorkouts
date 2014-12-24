@@ -14,7 +14,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Squat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhu-z2-ZVS">
-                        <rect key="frame" x="8" y="8" width="83.5" height="59.5"/>
+                        <rect key="frame" x="8" y="8" width="83.5" height="44.5"/>
                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -27,10 +27,10 @@
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zl8-HJ-pze">
-                        <rect key="frame" x="8" y="216" width="341" height="59"/>
+                        <rect key="frame" x="8" y="231" width="341" height="44"/>
                         <color key="backgroundColor" red="1" green="0.54509803921568623" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="59" id="PDZ-ua-L2U"/>
+                            <constraint firstAttribute="height" constant="44" id="PDZ-ua-L2U"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                         <state key="normal">
@@ -42,20 +42,20 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiJ-LS-McB">
-                        <rect key="frame" x="157" y="232" width="42" height="28"/>
+                        <rect key="frame" x="157" y="239.5" width="42" height="28"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="11/12/14" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hzz-07-rAF">
-                        <rect key="frame" x="220" y="17" width="129" height="40"/>
+                        <rect key="frame" x="220" y="9.5" width="129" height="40"/>
                         <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nET-um-S2c">
-                        <rect key="frame" x="8" y="65" width="341" height="143"/>
+                        <rect key="frame" x="8" y="52" width="341" height="170.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="143" id="eXB-RZ-b26"/>
@@ -68,14 +68,13 @@
                     <constraint firstItem="nET-um-S2c" firstAttribute="trailing" secondItem="5nx-sL-3wt" secondAttribute="trailingMargin" id="4g3-gF-E1M"/>
                     <constraint firstItem="zl8-HJ-pze" firstAttribute="leading" secondItem="5nx-sL-3wt" secondAttribute="leadingMargin" id="5FM-9n-iFs"/>
                     <constraint firstItem="Hhu-z2-ZVS" firstAttribute="centerY" secondItem="Hzz-07-rAF" secondAttribute="centerY" id="6z1-PW-0S0"/>
-                    <constraint firstItem="zl8-HJ-pze" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Hhu-z2-ZVS" secondAttribute="bottom" constant="8" id="DsF-VT-OMu"/>
                     <constraint firstItem="zl8-HJ-pze" firstAttribute="trailing" secondItem="5nx-sL-3wt" secondAttribute="trailingMargin" id="Hby-SG-LrV"/>
                     <constraint firstAttribute="trailing" secondItem="jzd-yl-EGi" secondAttribute="trailing" id="JGn-dc-VYW"/>
                     <constraint firstItem="Hhu-z2-ZVS" firstAttribute="top" secondItem="5nx-sL-3wt" secondAttribute="topMargin" id="KD7-FE-Cwa"/>
                     <constraint firstItem="Hhu-z2-ZVS" firstAttribute="leading" secondItem="5nx-sL-3wt" secondAttribute="leadingMargin" id="Kdz-7p-A7b"/>
                     <constraint firstItem="nET-um-S2c" firstAttribute="leading" secondItem="5nx-sL-3wt" secondAttribute="leadingMargin" id="MAQ-C3-6Ox"/>
                     <constraint firstItem="zl8-HJ-pze" firstAttribute="bottom" secondItem="5nx-sL-3wt" secondAttribute="bottomMargin" id="Rb8-91-yXv"/>
-                    <constraint firstItem="nET-um-S2c" firstAttribute="top" secondItem="Hhu-z2-ZVS" secondAttribute="bottom" constant="-2.5" id="Swb-r8-ska"/>
+                    <constraint firstItem="nET-um-S2c" firstAttribute="top" secondItem="Hhu-z2-ZVS" secondAttribute="bottom" id="Swb-r8-ska"/>
                     <constraint firstItem="zl8-HJ-pze" firstAttribute="height" secondItem="Hhu-z2-ZVS" secondAttribute="height" id="Wca-o0-5IB"/>
                     <constraint firstItem="zl8-HJ-pze" firstAttribute="centerX" secondItem="xiJ-LS-McB" secondAttribute="centerX" id="eli-Dc-ZuF"/>
                     <constraint firstItem="Hzz-07-rAF" firstAttribute="trailing" secondItem="5nx-sL-3wt" secondAttribute="trailingMargin" id="hYa-sg-4Be"/>
