@@ -15,9 +15,14 @@
     _workout = workout;
     [self.primaryActivityName setText:[PrimaryActivityFinder primaryActivityFor:workout]];
 
+    [self.date setText:[self formattedDateForWorkout:workout]];
+}
+
+- (NSString *)formattedDateForWorkout:(Workout *)workout {
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setDateStyle:NSDateFormatterShortStyle];
-    [self.date setText:[dateFormatter stringFromDate:workout.date]];
+    NSString *formattedDate = [dateFormatter stringFromDate:workout.date];
+    return formattedDate;
 }
 
 @end

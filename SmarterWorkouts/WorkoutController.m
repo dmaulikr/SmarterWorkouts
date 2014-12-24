@@ -19,6 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [SetCellFactory registerNibs:self.tableView];
+    [ActivityCellFactory registerNibs:self.tableView];
+
     if (!self.workout) {
         self.newWorkout = YES;
         self.title = @"New Workout";
@@ -48,9 +52,6 @@
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-
-    [SetCellFactory registerNibs:self.tableView];
-    [ActivityCellFactory registerNibs:self.tableView];
 }
 
 - (Workout *)createNewWorkout {

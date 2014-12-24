@@ -54,6 +54,7 @@
 		5459054020D3D2EB28EE444F /* 709-plus@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5459076A50C3F5059B5ABDF7 /* 709-plus@3x.png */; };
 		5459054D6E01E0A7A22F7665 /* TimerActiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590F3FFC4B3A5BBC5F2B8A /* TimerActiveCell.m */; };
 		5459057DFD2184A543E03067 /* 415-weightlifter-inverse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5459050D61A1F3E6DF7EB87E /* 415-weightlifter-inverse@2x.png */; };
+		5459058B8D152963A6C7E571 /* InputAccessoryBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590B139E84BF5FD750E43E /* InputAccessoryBuilder.m */; };
 		5459059CF1F760883A545BE0 /* ActivitySelectorInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590D666EAF59158375E202 /* ActivitySelectorInputViewController.m */; };
 		545905A336F2279F9E0685A0 /* BarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590709AEBEC0E0AE30F736 /* BarCalculator.m */; };
 		545905A5E67B52C206C6B7C7 /* 415-weightlifter.png in Resources */ = {isa = PBXBuildFile; fileRef = 545902E6FECAFBC9D876CAA5 /* 415-weightlifter.png */; };
@@ -281,6 +282,7 @@
 		54590A956DCD8C1CF6738B52 /* 974-users.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "974-users.png"; sourceTree = "<group>"; };
 		54590AAE4C1642A3A0A9BD45 /* Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Set.m; path = Models/Set.m; sourceTree = "<group>"; };
 		54590ACC1AC6B9D074702B48 /* ActivityWeightFormViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityWeightFormViewControllerTests.m; sourceTree = "<group>"; };
+		54590B139E84BF5FD750E43E /* InputAccessoryBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputAccessoryBuilder.m; sourceTree = "<group>"; };
 		54590B172184011883D18ACF /* SetupTimerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupTimerCell.h; sourceTree = "<group>"; };
 		54590B470770405B75EE9A62 /* ActivitySearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitySearchCell.xib; sourceTree = "<group>"; };
 		54590B48DB05EBC72108D9F8 /* 1091-weights.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1091-weights.png"; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 		54590DE94E1B20B22425DADE /* SetGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetGroup.h; path = Models/SetGroup.h; sourceTree = "<group>"; };
 		54590DF5CCADA728F393AF01 /* WorkoutControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutControllerTests.m; sourceTree = "<group>"; };
 		54590DFEC887B12C9D546107 /* SmarterWorkoutsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmarterWorkoutsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54590E06A3C9C6B6F3279B45 /* InputAccessoryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputAccessoryBuilder.h; sourceTree = "<group>"; };
 		54590E06AB55B27E9575B177 /* CellRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellRegister.m; sourceTree = "<group>"; };
 		54590E07FF92A54D023DD877 /* 721-bookmarks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "721-bookmarks.png"; sourceTree = "<group>"; };
 		54590E583ADE4FD8272B88B9 /* UIImageViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewHelper.m; sourceTree = "<group>"; };
@@ -449,6 +452,8 @@
 				54590E060577AE26EF41AB85 /* Form */,
 				545905C44E3B1AA051AF2BC0 /* UIImageHelper.m */,
 				545903B0856088908CEFBB56 /* UIImageHelper.h */,
+				54590B139E84BF5FD750E43E /* InputAccessoryBuilder.m */,
+				54590E06A3C9C6B6F3279B45 /* InputAccessoryBuilder.h */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1195,6 +1200,7 @@
 				54590B184F8BBFBD7F5B8CD3 /* ActivitySearchCell.m in Sources */,
 				54590C32D6F705FCDDC281F5 /* UIImageHelper.m in Sources */,
 				54590BC14BAFB3766CF8B979 /* HistoryCellExpanded.m in Sources */,
+				5459058B8D152963A6C7E571 /* InputAccessoryBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,4 +10,6 @@
 
 @property(nonatomic, strong) Workout *workout;
 
+- (NSString *)formattedDateForWorkout:(Workout *)workout;
+
 @end
