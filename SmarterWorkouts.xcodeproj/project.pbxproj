@@ -11,6 +11,7 @@
 		0209F6681A3E4DB70098AB63 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0209F6671A3E4DB70098AB63 /* HistoryCell.xib */; };
 		023832081A47B01D001D6FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023832051A47B01D001D6FDA /* Main.storyboard */; };
 		023832091A47B01D001D6FDA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 023832071A47B01D001D6FDA /* MainViewController.m */; };
+		023B48B01A4B1C7B002400FC /* SmallSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023B48AF1A4B1C7B002400FC /* SmallSetCell.xib */; };
 		02423F8D1A2FE81D0048BB17 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02423F8C1A2FE81D0048BB17 /* WatchKit.framework */; };
 		02423F941A2FE81D0048BB17 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02423F931A2FE81D0048BB17 /* InterfaceController.m */; };
 		02423F971A2FE81D0048BB17 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02423F961A2FE81D0048BB17 /* NotificationController.m */; };
@@ -90,6 +91,7 @@
 		54590947D4AE48B5A14E96C1 /* 974-users.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590A956DCD8C1CF6738B52 /* 974-users.png */; };
 		54590948B017444BD9DF749B /* DurationSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545905ABBA5E7B5529B9F446 /* DurationSetCell.xib */; };
 		5459099A09CF8618E5B6BB25 /* DurationDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590FE09C7C8766D9F8E7B9 /* DurationDisplay.m */; };
+		5459099BF3596DFD68D281CD /* SmallSetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459063AF6468E291D5B260E /* SmallSetCell.m */; };
 		545909B97C0D7547A221B9F2 /* WeightSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590C0D4B5814B6A76D333C /* WeightSetCell.xib */; };
 		54590A1E5DB5BBC42710FE1B /* 415-weightlifter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545904CAA5CED6CA3A33D217 /* 415-weightlifter@2x.png */; };
 		54590A255A325F01D6D60EBC /* 721-bookmarks.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590E07FF92A54D023DD877 /* 721-bookmarks.png */; };
@@ -167,6 +169,7 @@
 		023832051A47B01D001D6FDA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		023832061A47B01D001D6FDA /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		023832071A47B01D001D6FDA /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		023B48AF1A4B1C7B002400FC /* SmallSetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallSetCell.xib; sourceTree = "<group>"; };
 		02423F8B1A2FE81D0048BB17 /* SmarterWorkouts WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SmarterWorkouts WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02423F8C1A2FE81D0048BB17 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		02423F901A2FE81D0048BB17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -227,6 +230,7 @@
 		5459040050D27D2FEAEF9090 /* FormItemBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormItemBarButtonItem.m; sourceTree = "<group>"; };
 		5459041C8F7457EE25991D77 /* DecimalNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecimalNumbers.h; sourceTree = "<group>"; };
 		54590438A2E236FB2F530D28 /* EditWorkoutDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditWorkoutDelegate.h; sourceTree = "<group>"; };
+		545904684EDE741E7454E334 /* SmallSetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallSetCell.h; sourceTree = "<group>"; };
 		5459047548B43CB2B2ABA86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Workout.storyboard; sourceTree = "<group>"; };
 		545904CAA5CED6CA3A33D217 /* 415-weightlifter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "415-weightlifter@2x.png"; sourceTree = "<group>"; };
 		545904E1841B2C9A4524B6E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -243,6 +247,7 @@
 		545905ED0E0E46EE8AA17304 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		545905F2270D5965183E8A15 /* SetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCell.h; sourceTree = "<group>"; };
 		5459061FF264AFC33EDE1495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5459063AF6468E291D5B260E /* SmallSetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallSetCell.m; sourceTree = "<group>"; };
 		54590645E3F315FB504F4374 /* ActivitySelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySelectorViewController.h; sourceTree = "<group>"; };
 		545906B93DC6D229534AC85D /* UIImage+ColorFromImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorFromImage.h"; sourceTree = "<group>"; };
 		54590709AEBEC0E0AE30F736 /* BarCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarCalculator.m; sourceTree = "<group>"; };
@@ -583,6 +588,9 @@
 				54590438A2E236FB2F530D28 /* EditWorkoutDelegate.h */,
 				5459093895DB1B992DB052DC /* AllSetsDataSource.m */,
 				54590E3E6FEAF22DB6070EE6 /* AllSetsDataSource.h */,
+				5459063AF6468E291D5B260E /* SmallSetCell.m */,
+				545904684EDE741E7454E334 /* SmallSetCell.h */,
+				023B48AF1A4B1C7B002400FC /* SmallSetCell.xib */,
 			);
 			name = History;
 			sourceTree = "<group>";
@@ -1072,6 +1080,7 @@
 				54590947D4AE48B5A14E96C1 /* 974-users.png in Resources */,
 				54590CCD4CA56AB75C86FFC6 /* 974-users@2x.png in Resources */,
 				54590AF6E68001E2BCB8ABCA /* 974-users@3x.png in Resources */,
+				023B48B01A4B1C7B002400FC /* SmallSetCell.xib in Resources */,
 				5459028BF0E8E0CC8030CC32 /* 415-weightlifter-inverse.png in Resources */,
 				5459057DFD2184A543E03067 /* 415-weightlifter-inverse@2x.png in Resources */,
 				54590FBCDF61D07DE37687D5 /* 415-weightlifter-inverse@3x.png in Resources */,
@@ -1207,6 +1216,7 @@
 				54590BC14BAFB3766CF8B979 /* HistoryCellExpanded.m in Sources */,
 				5459058B8D152963A6C7E571 /* InputAccessoryBuilder.m in Sources */,
 				54590940D5286483D8D750BC /* AllSetsDataSource.m in Sources */,
+				5459099BF3596DFD68D281CD /* SmallSetCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

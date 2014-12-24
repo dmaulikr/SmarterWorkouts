@@ -33,15 +33,13 @@
     UIDatePicker *picker = (UIDatePicker *) [self.dateField inputView];
     [picker setDate:workout.date];
 
-    [AllSetsDataSource registerNibs:self.allSetsTableView];
-    self.allSetsDataSource = [[AllSetsDataSource alloc] initWithWorkout:workout];
-    [self.allSetsTableView setDataSource:self.allSetsDataSource];
+    self.allSetsDataSource = [[AllSetsDataSource alloc] initWithWorkout:workout tableView:self.allSetsTableView];
     [self.allSetsTableView reloadData];
 
     NSInteger setsCount = [self.allSetsTableView numberOfRowsInSection:0];
-    int rowHeight = 44;
     int rowsToShow = 3;
-    [self.allSetsTableViewHeight setConstant:setsCount <= rowsToShow ? setsCount * rowHeight : rowsToShow * rowHeight + rowHeight / 2];
+    [self.allSetsTableViewHeight setConstant:setsCount <= rowsToShow ? setsCount * self.allSetsTableView.rowHeight :
+            rowsToShow * self.allSetsTableView.rowHeight + self.allSetsTableView.rowHeight / 2];
     [self layoutIfNeeded];
 }
 

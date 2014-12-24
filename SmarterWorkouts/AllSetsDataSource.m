@@ -2,13 +2,20 @@
 #import "Workout.h"
 #import "SetGroup.h"
 #import "Set.h"
+#import "CellRegister.h"
+#import "SmallSetCell.h"
 
 @implementation AllSetsDataSource
 
-- (instancetype)initWithWorkout:(Workout *)workout {
+- (instancetype)initWithWorkout:(Workout *)workout tableView: (UITableView *)tableView {
     self = [super init];
     if (self) {
         self.workout = workout;
+
+        [AllSetsDataSource registerNibs:tableView];
+        [tableView setDataSource:self];
+        [tableView setDelegate:self];
+        tableView.rowHeight = 27;
     }
 
     return self;
@@ -19,9 +26,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"c"];
+    SmallSetCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(SmallSetCell.class)];
     Set *set = [self setForIndexPath:indexPath];
-    [[cell textLabel] setText:set.activity];
+    [cell setSet:set];
     return cell;
 }
 
@@ -30,7 +37,7 @@
 }
 
 + (void)registerNibs:(UITableView *)tableView {
-
+    [CellRegister registerClass:SmallSetCell.class for:tableView];
 }
 
 @end
