@@ -9,5 +9,4 @@
 
 - (instancetype)initWithWorkout:(Workout *)workout tableView:(UITableView *)tableView;
 
-+ (void)registerNibs:(UITableView *)tableView;
 @end

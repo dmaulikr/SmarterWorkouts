@@ -2,17 +2,16 @@
 #import "Workout.h"
 #import "SetGroup.h"
 #import "Set.h"
-#import "CellRegister.h"
-#import "SmallWeightSetCell.h"
+#import "SmallSetCellFactory.h"
 
 @implementation AllSetsDataSource
 
-- (instancetype)initWithWorkout:(Workout *)workout tableView: (UITableView *)tableView {
+- (instancetype)initWithWorkout:(Workout *)workout tableView:(UITableView *)tableView {
     self = [super init];
     if (self) {
         self.workout = workout;
 
-        [AllSetsDataSource registerNibs:tableView];
+        [SmallSetCellFactory registerNibs:tableView];
         [tableView setDataSource:self];
         [tableView setDelegate:self];
         tableView.rowHeight = 27;
@@ -26,18 +25,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SmallWeightSetCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(SmallWeightSetCell.class)];
     Set *set = [self setForIndexPath:indexPath];
-    [cell setSet:set];
-    return cell;
+    return [SmallSetCellFactory cellForSet:set tableView:tableView indexPath:indexPath];
 }
 
 - (Set *)setForIndexPath:(NSIndexPath *)indexPath {
     return [[self.workout setGroups][0] sets][(NSUInteger) indexPath.row];
-}
-
-+ (void)registerNibs:(UITableView *)tableView {
-    [CellRegister registerClass:SmallWeightSetCell.class for:tableView];
 }
 
 @end
