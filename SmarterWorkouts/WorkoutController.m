@@ -208,13 +208,6 @@
     [self restoreViewState];
 }
 
-- (void)formDelete {
-    SetGroup *setGroup = self.workout.setGroups[0];
-    [setGroup removeSetsObject:self.selectedSet];
-    [self.selectedSet MR_deleteEntity];
-    [self restoreViewState];
-}
-
 - (void)restoreViewState {
     [self.tableView setScrollEnabled:YES];
     [self resetFormState];
@@ -251,6 +244,23 @@
     else {
         [self.navigationController popViewControllerAnimated:YES];
     }
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        SetGroup *setGroup = self.workout.setGroups[0];
+        [setGroup removeSetsObject:[setGroup sets][(NSUInteger) [indexPath row]]];
+        [self.selectedSet MR_deleteEntity];
+        [self restoreViewState];
+    }
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
 }
 
 @end

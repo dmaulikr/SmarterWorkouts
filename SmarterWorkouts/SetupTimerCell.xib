@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -19,20 +19,6 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t85-Ii-z8s">
-                        <rect key="frame" x="242" y="5" width="70" height="33"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="70" id="KlZ-3Q-uWU"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <state key="normal" title="Delete">
-                            <color key="titleColor" red="1" green="0.44271818930000001" blue="0.46442715670000001" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                        <connections>
-                            <action selector="deleteButtonTapped:" destination="9rC-8l-Q0f" eventType="touchUpInside" id="DWs-Jx-53X"/>
-                        </connections>
-                    </button>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many minutes?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yfw-aO-8GY" customClass="FlavorTextUITextField">
                         <rect key="frame" x="8" y="43" width="304" height="50"/>
                         <constraints>
@@ -79,10 +65,8 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="t85-Ii-z8s" firstAttribute="centerY" secondItem="Tvo-OD-GUe" secondAttribute="centerY" id="1Bs-FT-phI"/>
                     <constraint firstItem="pzh-yO-DQc" firstAttribute="trailing" secondItem="3hK-SR-bgF" secondAttribute="trailingMargin" id="1y8-r4-wk5"/>
                     <constraint firstItem="72U-3e-xsL" firstAttribute="leading" secondItem="3hK-SR-bgF" secondAttribute="leadingMargin" id="JBZ-xF-U4i"/>
-                    <constraint firstItem="t85-Ii-z8s" firstAttribute="trailing" secondItem="3hK-SR-bgF" secondAttribute="trailingMargin" id="N3T-lN-d2M"/>
                     <constraint firstItem="i17-0R-Q8o" firstAttribute="leading" secondItem="72U-3e-xsL" secondAttribute="trailing" constant="8" id="SFe-yP-UYR"/>
                     <constraint firstItem="72U-3e-xsL" firstAttribute="top" secondItem="pzh-yO-DQc" secondAttribute="bottom" constant="8" id="XCw-hh-RU6"/>
                     <constraint firstItem="pzh-yO-DQc" firstAttribute="leading" secondItem="3hK-SR-bgF" secondAttribute="leadingMargin" id="Xug-oY-Q6T"/>
@@ -100,7 +84,6 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="cancelButton" destination="72U-3e-xsL" id="ebK-yy-I99"/>
-                <outlet property="deleteButton" destination="t85-Ii-z8s" id="Lvu-Lt-vCP"/>
                 <outlet property="minutes" destination="yfw-aO-8GY" id="3Ph-VW-Zhs"/>
                 <outlet property="seconds" destination="pzh-yO-DQc" id="Iaq-L0-kkC"/>
                 <outlet property="startTimerButton" destination="i17-0R-Q8o" id="fs6-hi-L8q"/>

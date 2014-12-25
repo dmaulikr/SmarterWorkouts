@@ -27,8 +27,4 @@
     [self.activityFormDelegate formCanceled];
 }
 
-- (IBAction)deleteButtonTapped:(id)sender {
-    [self.activityFormDelegate formDelete];
-}
-
 @end
