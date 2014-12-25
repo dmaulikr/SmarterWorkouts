@@ -200,6 +200,7 @@
 - (void)formDelete {
     SetGroup *setGroup = self.workout.setGroups[0];
     [setGroup removeSetsObject:self.selectedSet];
+    [self.selectedSet MR_deleteEntity];
     [self restoreViewState];
 }
 
