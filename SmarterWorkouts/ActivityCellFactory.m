@@ -18,17 +18,18 @@
 
 + cellForSelectedActivity:(Activity *)selectedActivity
               selectedSet:(Set *)selectedSet
+                setToCopy:(Set *)setToCopy
            formChangeType:(NSString *)formChangeType
         formChangeOptions:(NSDictionary *)formChangeOptions
                 tableView:(UITableView *)tableView
                 indexPath:(NSIndexPath *)indexPath {
-    ActivityWeightFormCell *cell = nil;
+    ActivityCell *cell = nil;
     NSString *type = [self activityTypeForSelectedActivity:selectedActivity selectedSet:selectedSet];
-    if ([type isEqualToString:WEIGHT_ACTIVITY]) {
+    if ([type isEqualToString:(NSString *) WEIGHT_ACTIVITY]) {
         cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ActivityWeightFormCell.class) forIndexPath:indexPath];
     }
-    else if ([type isEqualToString:TIMER_SETUP_ACTIVITY]) {
-        if ([formChangeType isEqualToString:TIMER_ACTIVE_ACTIVITY]) {
+    else if ([type isEqualToString:(NSString *) TIMER_SETUP_ACTIVITY]) {
+        if ([formChangeType isEqualToString:(NSString *) TIMER_ACTIVE_ACTIVITY]) {
             cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(TimerActiveCell.class) forIndexPath:indexPath];
             [cell setFormChangeOptions:formChangeOptions];
         }
@@ -41,6 +42,9 @@
     }
     if (selectedSet != nil) {
         [cell setSelectedSet:selectedSet];
+    }
+    if (setToCopy != nil) {
+        [cell setSetToCopy:setToCopy];
     }
     return cell;
 };

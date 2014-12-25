@@ -15,6 +15,9 @@
     [self.deleteButton setHidden:YES];
 }
 
+- (void)setSetToCopy:(Set *)set {
+}
+
 - (void)setSelectedSet:(Set *)selectedSet {
     _selectedSet = selectedSet;
     [self.deleteButton setHidden:NO];

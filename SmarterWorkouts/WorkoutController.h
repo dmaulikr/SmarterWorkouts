@@ -25,4 +25,6 @@
 
 @property(nonatomic, strong) ActivitySelectorInputViewController *selectActivityController;
 @property(nonatomic) BOOL newWorkout;
+@property(nonatomic, strong) Activity *repeatActivity;
+@property(nonatomic) BOOL copyLastSet;
 @end

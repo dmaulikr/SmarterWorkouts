@@ -15,4 +15,6 @@
 @property(nonatomic, strong) Set *selectedSet;
 @property(nonatomic, strong) NSDictionary *formChangeOptions;
 
+- (void)setSetToCopy:(Set *)set;
+
 @end

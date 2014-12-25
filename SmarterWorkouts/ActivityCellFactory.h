@@ -8,6 +8,7 @@
 
 + cellForSelectedActivity:(Activity *)selectedActivity
               selectedSet:(Set *)selectedSet
+              setToCopy:(Set *)setToCopy
            formChangeType:(NSString *)formChangeType
         formChangeOptions:(NSDictionary *)formChangeOptions
                 tableView:(UITableView *)tableView

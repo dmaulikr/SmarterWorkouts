@@ -4,6 +4,7 @@
 #import "UIImage+ColorFromImage.h"
 #import "UIImageViewHelper.h"
 #import "Colors.h"
+#import "Workout.h"
 
 @implementation ActivitySelectorInputViewController
 
@@ -15,16 +16,18 @@
 }
 
 - (void)activitySelected:(Activity *)activity {
-    [self setLastActivity:activity];
     [self.delegate activitySelected:activity];
 }
 
-- (void)setLastActivity:(Activity *)activity {
-    self.repeatActivity = activity;
+- (void)activityRepeated {
+}
+
+
+- (void)copyWorkout:(Workout *)workout {
 }
 
 - (IBAction)repeatButtonTapped:(id)sender {
-    [self.delegate activitySelected:self.repeatActivity];
+    [self.delegate activityRepeated];
 }
 
 @end

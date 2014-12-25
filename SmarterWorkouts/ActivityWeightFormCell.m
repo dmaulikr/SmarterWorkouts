@@ -79,6 +79,19 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
     [self.addButton setTitle:@"Save" forState:UIControlStateNormal];
 }
 
+- (void)setSetToCopy:(Set *)set {
+    if ([set.weight compare:[NSDecimalNumber zero]] == NSOrderedDescending) {
+        [self.weightInput setText:[NSString stringWithFormat:@"%@", set.weight]];
+    }
+    if ([set.reps intValue] == 1) {
+        [self.repsInput setText:@""];
+    }
+    else {
+        [self.repsInput setText:[NSString stringWithFormat:@"%@", set.reps]];
+    }
+}
+
+
 - (void)weightChanged:(id)weightChanged {
     NSDecimalNumber *weight = [DecimalNumbers parse:[self.weightInput text]];
     if ([weight compare:[NSDecimalNumber decimalNumberWithString:@"45"]] == NSOrderedDescending) {

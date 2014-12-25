@@ -101,8 +101,13 @@
 
     if (([self isAddingSet] && [indexPath row] == [[self.workout.setGroups[0] sets] count]) ||
             ([self isEditingSet] && currentSet == self.selectedSet)) {
+        Set *setToCopy = nil;
+        if (self.copyLastSet && [indexPath row] > 0) {
+            setToCopy = [self.workout.setGroups[0] sets][(NSUInteger) ([indexPath row] - 1)];
+        }
         ActivityWeightFormCell *cell = [ActivityCellFactory cellForSelectedActivity:self.selectedActivity
                                                                         selectedSet:self.selectedSet
+                                                                          setToCopy:setToCopy
                                                                      formChangeType:self.formChangeType
                                                                   formChangeOptions:self.formChangeOptions
                                                                           tableView:tableView
@@ -148,7 +153,7 @@
     self.selectedSet = nil;
 
     [self hideInitialViews];
-    [self.selectActivityController setLastActivity:activity];
+    self.repeatActivity = activity;
 
     [self.tableView reloadData];
     [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 300, 0)];
@@ -165,6 +170,12 @@
     [self.selectActivityContainer setHidden:NO];
 }
 
+- (void)activityRepeated {
+    self.copyLastSet = YES;
+    [self activitySelected:self.repeatActivity];
+    self.copyLastSet = NO;
+}
+
 - (void)copyWorkout:(Workout *)workout {
     [WorkoutCopier copy:workout to:self.workout];
     [self hideInitialViews];
@@ -176,7 +187,7 @@
     NSString *activityName = [[[workout.setGroups[0] sets] lastObject] activity];
     Activity *lastActivity = [Activity MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@",
                                                                                                   @"name", activityName]];
-    [self.selectActivityController setRepeatActivity:lastActivity];
+    self.repeatActivity = lastActivity;
 }
 
 - (void)formCanceled {
