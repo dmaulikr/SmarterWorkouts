@@ -86,6 +86,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Workout *newSelectedWorkout = [self findAllWorkouts][(NSUInteger) indexPath.row];
+
+    self.selectedWorkout = nil;
+    [self.tableView reloadData];
+
     if (self.selectedWorkout == newSelectedWorkout) {
         self.selectedWorkout = nil;
     }
@@ -93,7 +97,7 @@
         self.selectedWorkout = newSelectedWorkout;
     }
     [self.navigationItem.rightBarButtonItem setEnabled:YES];
-    [self.tableView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, 1)] withRowAnimation:UITableViewRowAnimationNone];
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 - (void)editWorkout:(Workout *)workout {
