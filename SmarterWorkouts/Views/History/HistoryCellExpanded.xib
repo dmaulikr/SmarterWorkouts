@@ -55,7 +55,7 @@
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nET-um-S2c">
-                        <rect key="frame" x="8" y="52" width="341" height="170.5"/>
+                        <rect key="frame" x="8" y="57.5" width="341" height="165"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="143" id="eXB-RZ-b26"/>
@@ -73,8 +73,8 @@
                     <constraint firstItem="Hhu-z2-ZVS" firstAttribute="top" secondItem="5nx-sL-3wt" secondAttribute="topMargin" id="KD7-FE-Cwa"/>
                     <constraint firstItem="Hhu-z2-ZVS" firstAttribute="leading" secondItem="5nx-sL-3wt" secondAttribute="leadingMargin" id="Kdz-7p-A7b"/>
                     <constraint firstItem="nET-um-S2c" firstAttribute="leading" secondItem="5nx-sL-3wt" secondAttribute="leadingMargin" id="MAQ-C3-6Ox"/>
+                    <constraint firstItem="nET-um-S2c" firstAttribute="top" secondItem="Hzz-07-rAF" secondAttribute="bottom" constant="8" id="MTn-Zu-YGe"/>
                     <constraint firstItem="zl8-HJ-pze" firstAttribute="bottom" secondItem="5nx-sL-3wt" secondAttribute="bottomMargin" id="Rb8-91-yXv"/>
-                    <constraint firstItem="nET-um-S2c" firstAttribute="top" secondItem="Hhu-z2-ZVS" secondAttribute="bottom" id="Swb-r8-ska"/>
                     <constraint firstItem="zl8-HJ-pze" firstAttribute="height" secondItem="Hhu-z2-ZVS" secondAttribute="height" id="Wca-o0-5IB"/>
                     <constraint firstItem="zl8-HJ-pze" firstAttribute="centerX" secondItem="xiJ-LS-McB" secondAttribute="centerX" id="eli-Dc-ZuF"/>
                     <constraint firstItem="Hzz-07-rAF" firstAttribute="trailing" secondItem="5nx-sL-3wt" secondAttribute="trailingMargin" id="hYa-sg-4Be"/>

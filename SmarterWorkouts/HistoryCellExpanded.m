@@ -5,6 +5,7 @@
 #import "NSManagedObjectContext+MagicalRecord.h"
 #import "NSManagedObjectContext+MagicalSaves.h"
 #import "AllSetsDataSource.h"
+#import "InputAccessoryBuilder.h"
 
 @implementation HistoryCellExpanded
 
@@ -15,6 +16,7 @@
                                forState:UIControlStateHighlighted];
     UIDatePicker *datePicker = [UIDatePicker new];
     [self.dateField setInputView:datePicker];
+    [InputAccessoryBuilder doneButtonAccessory:self.dateField];
     [datePicker addTarget:self action:@selector(updateWorkoutDate:) forControlEvents:UIControlEventValueChanged];
 
     [self.allSetsTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
