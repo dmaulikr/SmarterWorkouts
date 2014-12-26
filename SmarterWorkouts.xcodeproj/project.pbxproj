@@ -28,6 +28,7 @@
 		5459003749AD32360447790F /* 901-repeat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590EED5F73DE4BB57F40C5 /* 901-repeat@3x.png */; };
 		5459004C362F8D82667493BD /* BarCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902FC40A458CC44ECB9A4 /* BarCalculatorTests.m */; };
 		545900A896D00F0EDEEEAEEC /* SmallDurationSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590E52A709C738C59FE1E4 /* SmallDurationSetCell.xib */; };
+		545900F12ADFCD764A72A104 /* 746-plus-circle-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590A2BC9B71EA9362C1C89 /* 746-plus-circle-toolbar@3x.png */; };
 		5459014698809F8D820FF883 /* ActivitySelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C9608EA266833F2A3D3 /* ActivitySelectorViewController.m */; };
 		5459019491D5CB54BAD0D851 /* plates.json in Resources */ = {isa = PBXBuildFile; fileRef = 545901DE0307A2E0890A0281 /* plates.json */; };
 		54590239EE7C0CFDD2FFD0E0 /* activities.json in Resources */ = {isa = PBXBuildFile; fileRef = 54590FE99DD4EAE18743CF08 /* activities.json */; };
@@ -76,6 +77,7 @@
 		5459072AA62AACF824479581 /* PlateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459057E9A8FEBF598DFA13B /* PlateTests.m */; };
 		54590734A86AD0DF370B279A /* FlavorTextUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590B7D358083C53A75BA3E /* FlavorTextUITextField.m */; };
 		545907C3DBD21895DE413D74 /* SetGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590D88EEE880F3472985DB /* SetGroup.m */; };
+		545907C561F202F033024BE6 /* 746-plus-circle-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5459095B9E6BC400C716D32E /* 746-plus-circle-toolbar@2x.png */; };
 		545907CCA7D50AB8EFAC07AB /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590ED3193BE2D1D5DBEDE1 /* Activity.m */; };
 		545907E6880B196D473BB864 /* Workout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545906E82697330EFD85E5DF /* Workout.storyboard */; };
 		545907EBCA6CB1F8EA6D5EA0 /* 1091-weights@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5459028A285EBBD9BEA85B42 /* 1091-weights@3x.png */; };
@@ -98,6 +100,7 @@
 		54590A33A2E31F01CCF2CFC2 /* SelectionGroupHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590919E0BD56CE8C4431A0 /* SelectionGroupHeader.xib */; };
 		54590A521B88AA25554E54F9 /* PrimaryActivityFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 545909E992DE8D502FDC3322 /* PrimaryActivityFinder.m */; };
 		54590AAA65C6097C5D196CE9 /* AllSetsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459090E156EEE30BC6F508F /* AllSetsDataSource.m */; };
+		54590AF0B50C19DF1851E92B /* 746-plus-circle-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590760B5052A6DCC9F2736 /* 746-plus-circle-toolbar.png */; };
 		54590AF6E68001E2BCB8ABCA /* 974-users@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545908E1A969ECC5D31D89B4 /* 974-users@3x.png */; };
 		54590B184F8BBFBD7F5B8CD3 /* ActivitySearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 545901CFDE3C13EF2DCFC3CB /* ActivitySearchCell.m */; };
 		54590B5CE0A8BD63B2C84F6C /* SmallSetCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590EDA6715D0CB46E486E6 /* SmallSetCellFactory.m */; };
@@ -259,6 +262,7 @@
 		5459070CBC39B0E47814377C /* WorkoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutController.h; sourceTree = "<group>"; };
 		54590722ED75492DCCF67654 /* SetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCell.m; sourceTree = "<group>"; };
 		5459075A2F1ADAB16C894A61 /* 721-bookmarks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "721-bookmarks@2x.png"; sourceTree = "<group>"; };
+		54590760B5052A6DCC9F2736 /* 746-plus-circle-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "746-plus-circle-toolbar.png"; sourceTree = "<group>"; };
 		5459076A50C3F5059B5ABDF7 /* 709-plus@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-plus@3x.png"; sourceTree = "<group>"; };
 		5459078B35AD577F2A45D1D8 /* DurationSetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DurationSetCell.h; sourceTree = "<group>"; };
 		545907D0EC153A54AC0C5A5D /* NewActivitySelectorInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewActivitySelectorInputViewController.h; sourceTree = "<group>"; };
@@ -277,6 +281,7 @@
 		545909370C64722C73459C11 /* Plate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Plate.m; path = Models/Plate.m; sourceTree = "<group>"; };
 		5459093FA06E60D65D8B9C63 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5459094388A431B3BB423E90 /* Form.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Form.m; sourceTree = "<group>"; };
+		5459095B9E6BC400C716D32E /* 746-plus-circle-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "746-plus-circle-toolbar@2x.png"; sourceTree = "<group>"; };
 		5459095D3D1623B3210D4AAD /* ActivityFormDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityFormDelegate.h; sourceTree = "<group>"; };
 		5459096A0052ABCAEAA63C96 /* PrimaryActivityFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimaryActivityFinder.h; sourceTree = "<group>"; };
 		545909BCED15F549B2D6A9B5 /* 901-repeat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "901-repeat.png"; sourceTree = "<group>"; };
@@ -287,6 +292,7 @@
 		54590A03841C8680E28F7B70 /* NotNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotNil.m; sourceTree = "<group>"; };
 		54590A0834F9DED4435C7A4C /* FormDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormDelegate.h; sourceTree = "<group>"; };
 		54590A0AB9FC341CFD9CEB9F /* 901-repeat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "901-repeat@2x.png"; sourceTree = "<group>"; };
+		54590A2BC9B71EA9362C1C89 /* 746-plus-circle-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "746-plus-circle-toolbar@3x.png"; sourceTree = "<group>"; };
 		54590A2E38F8204300D80EF7 /* SetCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCellFactory.h; sourceTree = "<group>"; };
 		54590A3C397CD5F84B4E6B36 /* WeightInputControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightInputControls.h; sourceTree = "<group>"; };
 		54590A5EE6F4DA37356E698F /* WorkoutCopier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutCopier.m; sourceTree = "<group>"; };
@@ -893,6 +899,9 @@
 				54590202DEE53269D2AB44A0 /* 415-weightlifter-inverse.png */,
 				5459050D61A1F3E6DF7EB87E /* 415-weightlifter-inverse@2x.png */,
 				54590EFD0FF7BBCD646EB476 /* 415-weightlifter-inverse@3x.png */,
+				54590760B5052A6DCC9F2736 /* 746-plus-circle-toolbar.png */,
+				5459095B9E6BC400C716D32E /* 746-plus-circle-toolbar@2x.png */,
+				54590A2BC9B71EA9362C1C89 /* 746-plus-circle-toolbar@3x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -1106,6 +1115,9 @@
 				54590FBCDF61D07DE37687D5 /* 415-weightlifter-inverse@3x.png in Resources */,
 				5459089953448E117633ABC0 /* SmallWeightSetCell.xib in Resources */,
 				545900A896D00F0EDEEEAEEC /* SmallDurationSetCell.xib in Resources */,
+				54590AF0B50C19DF1851E92B /* 746-plus-circle-toolbar.png in Resources */,
+				545907C561F202F033024BE6 /* 746-plus-circle-toolbar@2x.png in Resources */,
+				545900F12ADFCD764A72A104 /* 746-plus-circle-toolbar@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

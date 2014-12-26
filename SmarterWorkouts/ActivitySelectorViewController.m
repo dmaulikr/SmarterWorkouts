@@ -22,6 +22,8 @@
     self.data = [Activity MR_fetchAllGroupedBy:@"type" withPredicate:nil sortedBy:@"type,name" ascending:YES];
     self.filteredData = self.data;
     self.navigationItem.title = @"Choose an Activity";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Add New"
+                                                                              style:UIBarButtonItemStylePlain target:self action:@selector(addNew)];
 
     UIBarButtonItem *cancelButton =
             [[UIBarButtonItem alloc] initWithTitle:@"cancel"
@@ -40,6 +42,10 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.tableHeaderView = self.searchController.searchBar;
     [CellRegister registerClass:ActivitySearchCell.class for:self.tableView];
+}
+
+- (void)addNew {
+
 }
 
 - (void)cancel {
