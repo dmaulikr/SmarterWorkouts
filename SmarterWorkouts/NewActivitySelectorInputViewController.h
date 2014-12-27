@@ -6,7 +6,7 @@
 @protocol ActivitySelectorDelegate;
 @class Activity;
 
-@interface NewActivitySelectorInputViewController : UIViewController <UITextFieldDelegate, WorkoutSelectionDelegate>
+@interface NewActivitySelectorInputViewController : UIViewController <UITextFieldDelegate, WorkoutSelectionDelegate, ActivitySelectorDelegate>
 @property(weak, nonatomic) IBOutlet UIButton *findNewActivityButton;
 @property (weak, nonatomic) IBOutlet UIImageView *historyImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *chooseActivityImageView;

@@ -6,6 +6,7 @@
 #import "SelectionGroupHeader.h"
 #import "ActivitySearchCell.h"
 #import "CellRegister.h"
+#import "CreateNewActivityViewController.h"
 
 @implementation ActivitySelectorViewController
 
@@ -21,8 +22,8 @@
 - (void)viewDidLoad {
     self.data = [Activity MR_fetchAllGroupedBy:@"type" withPredicate:nil sortedBy:@"type,name" ascending:YES];
     self.filteredData = self.data;
-    self.navigationItem.title = @"Choose an Activity";
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Add New"
+    self.navigationItem.title = @"Activities";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Create New"
                                                                               style:UIBarButtonItemStylePlain target:self action:@selector(addNew)];
 
     UIBarButtonItem *cancelButton =
@@ -39,17 +40,20 @@
     [self.searchController.searchBar sizeToFit];
     [self.searchController setDelegate:self];
 
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.tableHeaderView = self.searchController.searchBar;
     [CellRegister registerClass:ActivitySearchCell.class for:self.tableView];
 }
 
 - (void)addNew {
-
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"CreateNewActivityViewController" bundle:nil];
+    CreateNewActivityViewController *createNewViewController = [sb instantiateInitialViewController];
+    [self.searchController setActive:NO];
+    [self.navigationController pushViewController:createNewViewController animated:YES];
 }
 
 - (void)cancel {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.searchController setActive:NO];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -70,6 +74,10 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 44;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 64;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -101,7 +109,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Activity *selectedActivity = [self.filteredData objectAtIndexPath:indexPath];
-    [self.searchController setActive:NO];
     [self dismissViewControllerAnimated:YES completion:^{
         [self.delegate activitySelected:selectedActivity];
     }];

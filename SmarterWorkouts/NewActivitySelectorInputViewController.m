@@ -25,8 +25,7 @@
 
 - (IBAction)showActivitySelector {
     ActivitySelectorViewController *controller = [[ActivitySelectorViewController alloc] initWithDelegate:self];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
-    [self.parentViewController presentViewController:nav animated:YES completion:nil];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (IBAction)showHistorySelector:(id)sender {
@@ -43,5 +42,12 @@
 - (void)activitySelected:(Activity *)activity {
     [self.delegate activitySelected:activity];
 }
+
+- (void)activityRepeated {
+}
+
+- (void)copyWorkout:(Workout *)workout {
+}
+
 
 @end
