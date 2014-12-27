@@ -1,7 +1,9 @@
 #import <Foundation/Foundation.h>
 
+@class Activity;
+
 @protocol ActivityCreateController <NSObject>
 
-- (NSDictionary *) activityData;
+- (void) addExtraInfo: (Activity *) activity;
 
 @end

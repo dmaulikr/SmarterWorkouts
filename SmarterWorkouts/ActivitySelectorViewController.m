@@ -20,8 +20,6 @@
 }
 
 - (void)viewDidLoad {
-    self.data = [Activity MR_fetchAllGroupedBy:@"type" withPredicate:nil sortedBy:@"type,name" ascending:YES];
-    self.filteredData = self.data;
     self.navigationItem.title = @"Activities";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Create New"
                                                                               style:UIBarButtonItemStylePlain target:self action:@selector(addNew)];
@@ -42,6 +40,12 @@
 
     self.tableView.tableHeaderView = self.searchController.searchBar;
     [CellRegister registerClass:ActivitySearchCell.class for:self.tableView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.data = [Activity MR_fetchAllGroupedBy:@"type" withPredicate:nil sortedBy:@"type,name" ascending:YES];
+    self.filteredData = self.data;
+    [self.tableView reloadData];
 }
 
 - (void)addNew {
@@ -109,9 +113,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Activity *selectedActivity = [self.filteredData objectAtIndexPath:indexPath];
-    [self dismissViewControllerAnimated:YES completion:^{
-        [self.delegate activitySelected:selectedActivity];
-    }];
+    [self.delegate activitySelected:selectedActivity];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

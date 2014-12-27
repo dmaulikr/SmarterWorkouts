@@ -1,7 +1,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
 #import "SWTestCase.h"
 #import "WeightCreateViewController.h"
+#import "Activity.h"
 
 @interface WeightCreateViewControllerTests : SWTestCase
 @end
@@ -23,11 +25,11 @@
     [createViewController.lbsKgSegment setSelectedSegmentIndex:1];
     [createViewController.maxField setText:@"305"];
 
-    NSDictionary *data = [createViewController activityData];
-    XCTAssertNotNil(data);
-    XCTAssertEqualObjects(data[@"usesBar"], @(1));
-    XCTAssertEqualObjects(data[@"units"], @"kg");
-    XCTAssertEqualObjects(data[@"max"], [NSDecimalNumber decimalNumberWithString:@"305"]);
+    Activity *activity = [Activity MR_createEntity];
+    [createViewController addExtraInfo:activity];
+    XCTAssertEqual(activity.usesBar, YES);
+    XCTAssertEqualObjects(activity.units, @"kg");
+    XCTAssertEqualObjects(activity.personalRecord, [NSDecimalNumber decimalNumberWithString:@"305"]);
 }
 
 @end

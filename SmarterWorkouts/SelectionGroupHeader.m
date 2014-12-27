@@ -4,17 +4,13 @@
 @implementation SelectionGroupHeader
 
 - (void)setType:(NSString *)type {
-    if ([type isEqualToString:@"weight"]) {
-        [self.typeImage setImage:[UIImage imageNamed:@"1091-weights"]];
-    }
-    else if ([type isEqualToString:@"timer"]) {
-        [self.typeImage setImage:[UIImage imageNamed:@"1097-timer-2"]];
-    }
-    else {
-        [self.typeImage setImage:nil];
-    }
+    NSDictionary *typesToImages = @{
+            @"weight" : @"1091-weights",
+            @"timer" : @"1097-timer-2",
+            @"miscellaneous" : @""
+    };
+    [self.typeImage setImage:[UIImage imageNamed:typesToImages[type]]];
     [UIImageViewHelper makeWhite:self.typeImage];
-
     [self.typeName setText:type];
 }
 

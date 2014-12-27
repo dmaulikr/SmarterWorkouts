@@ -16,5 +16,6 @@
 @property (nonatomic, retain) NSDecimalNumber * personalRecord;
 @property (nonatomic, retain) NSString *units;
 @property (nonatomic, retain) NSString *type;
+@property (nonatomic) BOOL usesBar;
 
 @end

@@ -1,6 +1,10 @@
+#import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
+#import <MagicalRecord/MagicalRecord/NSManagedObjectContext+MagicalRecord.h>
+#import <MagicalRecord/MagicalRecord/NSManagedObjectContext+MagicalSaves.h>
 #import "CreateNewActivityViewController.h"
 #import "ActivityCreateController.h"
 #import "WeightCreateViewController.h"
+#import "Activity.h"
 
 
 const int WEIGHT_INDEX = 1;
@@ -32,10 +36,14 @@ const int WEIGHT_INDEX = 1;
 }
 
 - (void)save {
+    Activity *activity = [Activity MR_createEntity];
+    activity.name = [activityNameField text];
+    activity.type = @"miscellaneous";
     if (![weightContainerView isHidden]) {
-        NSDictionary *additionalData = [self.weightController activityData];
-        NSLog(@"%@", additionalData);
+        [self.weightController addExtraInfo:activity];
     }
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
