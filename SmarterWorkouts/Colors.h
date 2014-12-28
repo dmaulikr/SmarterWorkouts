@@ -10,4 +10,6 @@
 + (UIColor *)secondaryButtonColor;
 
 + (UIColor *)secondaryButtonColorHighlight;
+
++ (UIColor *)secondaryButtonColorDisabled;
 @end

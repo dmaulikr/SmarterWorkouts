@@ -13,4 +13,5 @@
 @property(weak, nonatomic) IBOutlet UIButton *repeatActivityButton;
 @property (weak, nonatomic) IBOutlet UILabel *repeatActivityLabel;
 
+- (void)setRepeatActivity:(Activity *)activity;
 @end

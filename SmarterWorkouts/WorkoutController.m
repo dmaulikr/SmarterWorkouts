@@ -153,7 +153,7 @@
     self.selectedSet = nil;
 
     [self hideInitialViews];
-    self.repeatActivity = activity;
+    [self setRepeatActivity:activity];
 
     [self.tableView reloadData];
     [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 300, 0)];
@@ -183,14 +183,25 @@
     [self setRepeatActivityToLast:workout];
 }
 
+- (void)setRepeatActivity:(Activity *)repeatActivity {
+    _repeatActivity = repeatActivity;
+    [self.selectActivityController setRepeatActivity:repeatActivity];
+}
+
 - (void)setRepeatActivityToLast:(Workout *)workout {
+    if ([[workout.setGroups[0] sets] count] == 0) {
+        [self setRepeatActivity:nil];
+        return;
+    }
+
     NSString *activityName = [[[workout.setGroups[0] sets] lastObject] activity];
     Activity *lastActivity = [Activity MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@",
                                                                                                   @"name", activityName]];
-    self.repeatActivity = lastActivity;
+    [self setRepeatActivity:lastActivity];
 }
 
 - (void)formCanceled {
+    [self setRepeatActivityToLast:self.workout];
     [self restoreViewState];
 }
 

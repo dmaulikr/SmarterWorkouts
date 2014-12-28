@@ -19,4 +19,7 @@
     return [UIColor colorWithRed:37.0f/255 green:116.0f/255 blue:169.0f/255 alpha:1];
 }
 
++ (UIColor *)secondaryButtonColorDisabled {
+    return [UIColor colorWithRed:93.0f/255 green:196.0f/255 blue:252.0f/255 alpha:1];
+}
 @end
