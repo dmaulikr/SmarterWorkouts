@@ -252,6 +252,7 @@
         [setGroup removeSetsObject:[setGroup sets][(NSUInteger) [indexPath row]]];
         [self.selectedSet MR_deleteEntity];
         [self restoreViewState];
+        [self setRepeatActivityToLast:self.workout];
     }
 }
 

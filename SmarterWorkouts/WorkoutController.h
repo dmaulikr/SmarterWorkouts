@@ -27,4 +27,6 @@
 @property(nonatomic) BOOL newWorkout;
 @property(nonatomic, strong) Activity *repeatActivity;
 @property(nonatomic) BOOL copyLastSet;
+
+- (void)setRepeatActivityToLast:(Workout *)workout;
 @end
