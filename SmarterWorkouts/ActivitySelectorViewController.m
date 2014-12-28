@@ -1,4 +1,7 @@
 #import <CoreData/CoreData.h>
+#import <MagicalRecord/MagicalRecord/NSManagedObjectContext+MagicalRecord.h>
+#import <MagicalRecord/MagicalRecord/NSManagedObjectContext+MagicalSaves.h>
+#import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
 #import "ActivitySelectorViewController.h"
 #import "ActivitySelectorDelegate.h"
 #import "Activity.h"
@@ -21,8 +24,10 @@
 
 - (void)viewDidLoad {
     self.navigationItem.title = @"Activities";
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Create New"
-                                                                              style:UIBarButtonItemStylePlain target:self action:@selector(addNew)];
+    self.navigationItem.rightBarButtonItems =
+            @[
+                    [[UIBarButtonItem alloc] initWithTitle:@"New" style:UIBarButtonItemStylePlain target:self action:@selector(addNew)]
+            ];
 
     UIBarButtonItem *cancelButton =
             [[UIBarButtonItem alloc] initWithTitle:@"cancel"
@@ -115,6 +120,24 @@
     Activity *selectedActivity = [self.filteredData objectAtIndexPath:indexPath];
     [self.delegate activitySelected:selectedActivity];
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [[self.filteredData objectAtIndexPath:indexPath] MR_deleteEntity];
+        self.data = [Activity MR_fetchAllGroupedBy:@"type" withPredicate:nil sortedBy:@"type,name" ascending:YES];
+        [self filterDataBy:[self.searchController.searchBar text]];
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        [self.tableView reloadData];
+    }
 }
 
 @end
