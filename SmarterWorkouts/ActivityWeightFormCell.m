@@ -1,4 +1,5 @@
 #import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
+#import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalFinders.h>
 #import "ActivityWeightFormCell.h"
 #import "Form.h"
 #import "DecimalNumbers.h"
@@ -56,6 +57,9 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
     [self.setsInput setText:@""];
 
     [self.weightInput becomeFirstResponder];
+
+    [self.platesLabel setHidden:!activity.usesBar];
+    [self.platesLabelSubtitle setHidden:!activity.usesBar];
 }
 
 - (void)setSelectedSet:(Set *)selectedSet {
@@ -77,6 +81,9 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
         [self.repsInput setText:[NSString stringWithFormat:@"%@", selectedSet.reps]];
     }
     [self.addButton setTitle:@"Save" forState:UIControlStateNormal];
+    Activity *activity = [Activity MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@", @"name", selectedSet.activity]];
+    [self.platesLabel setHidden:!activity.usesBar];
+    [self.platesLabelSubtitle setHidden:!activity.usesBar];
 }
 
 - (void)setSetToCopy:(Set *)set {

@@ -2,17 +2,20 @@
   {
     "name": "Bench",
     "type": "weight",
-    "units": "lbs"
+    "units": "lbs",
+    "usesBar": true
   },
   {
     "name": "Squat",
     "type": "weight",
-    "units": "lbs"
+    "units": "lbs",
+    "usesBar": true
   },
   {
     "name": "Deadlift",
     "type": "weight",
-    "units": "lbs"
+    "units": "lbs",
+    "usesBar": true
   },
   {
     "name": "Rest",
