@@ -32,6 +32,7 @@
 		545900EEC0BF7316D0C1EFB3 /* WeightCreateViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C0DFE5292040072F281 /* WeightCreateViewControllerTests.m */; };
 		545900F12ADFCD764A72A104 /* 746-plus-circle-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590A2BC9B71EA9362C1C89 /* 746-plus-circle-toolbar@3x.png */; };
 		5459014698809F8D820FF883 /* ActivitySelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C9608EA266833F2A3D3 /* ActivitySelectorViewController.m */; };
+		545901888D25AA1C5E39144C /* CurrentWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 545901444767D3CF95F9A3C3 /* CurrentWorkout.m */; };
 		5459019491D5CB54BAD0D851 /* plates.json in Resources */ = {isa = PBXBuildFile; fileRef = 545901DE0307A2E0890A0281 /* plates.json */; };
 		54590239EE7C0CFDD2FFD0E0 /* activities.json in Resources */ = {isa = PBXBuildFile; fileRef = 54590FE99DD4EAE18743CF08 /* activities.json */; };
 		5459026A326FCE30A182C947 /* 709-plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545903888625FF04D581594B /* 709-plus@2x.png */; };
@@ -207,6 +208,7 @@
 		5459010B98D31794F6C7AA70 /* ActivityWeightFormCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityWeightFormCell.xib; sourceTree = "<group>"; };
 		5459010D561B0BAFE7C99B7E /* DurationSetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DurationSetCell.m; sourceTree = "<group>"; };
 		5459013B85548A27B8B1B805 /* PlateRemaining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateRemaining.m; sourceTree = "<group>"; };
+		545901444767D3CF95F9A3C3 /* CurrentWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentWorkout.m; sourceTree = "<group>"; };
 		54590160A8D663DAC97950B5 /* CreateNewActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateNewActivityViewController.m; sourceTree = "<group>"; };
 		54590171034AD926A45B4069 /* SmallDurationSetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallDurationSetCell.m; sourceTree = "<group>"; };
 		54590172178526A1757A7450 /* HistoryCellExpanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryCellExpanded.m; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 		54590EFD0FF7BBCD646EB476 /* 415-weightlifter-inverse@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "415-weightlifter-inverse@3x.png"; sourceTree = "<group>"; };
 		54590F0008BBC7974A542DBB /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		54590F097E9B63849FEF2808 /* 721-bookmarks@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "721-bookmarks@3x.png"; sourceTree = "<group>"; };
+		54590F0FECDC2DE619BE04E7 /* CurrentWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentWorkout.h; sourceTree = "<group>"; };
 		54590F3FFC4B3A5BBC5F2B8A /* TimerActiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerActiveCell.m; sourceTree = "<group>"; };
 		54590F54C0452DE8C7971409 /* BarCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarCalculator.h; sourceTree = "<group>"; };
 		54590F67011D15477EEAEDF0 /* Set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Set.h; path = Models/Set.h; sourceTree = "<group>"; };
@@ -580,6 +583,8 @@
 				545905DDCDDBF05FFED34534 /* ActivitySelectorInputViewController.h */,
 				5459070CBC39B0E47814377C /* WorkoutController.h */,
 				5459023FB1ACF26ED54A2EEE /* WorkoutController.m */,
+				545901444767D3CF95F9A3C3 /* CurrentWorkout.m */,
+				54590F0FECDC2DE619BE04E7 /* CurrentWorkout.h */,
 			);
 			name = Workout;
 			sourceTree = "<group>";
@@ -1298,6 +1303,7 @@
 				54590B5CE0A8BD63B2C84F6C /* SmallSetCellFactory.m in Sources */,
 				54590096202B3CBF2E36A63A /* CreateNewActivityViewController.m in Sources */,
 				54590D8ED7334B05A3BC546E /* WeightCreateViewController.m in Sources */,
+				545901888D25AA1C5E39144C /* CurrentWorkout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

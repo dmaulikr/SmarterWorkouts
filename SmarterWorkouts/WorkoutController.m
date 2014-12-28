@@ -14,6 +14,7 @@
 #import "ActivitySelectorInputViewController.h"
 #import "HistoryViewController.h"
 #import "WorkoutCopier.h"
+#import "CurrentWorkout.h"
 
 @implementation WorkoutController
 
@@ -26,9 +27,19 @@
     if (!self.workout) {
         self.newWorkout = YES;
         self.title = @"New Workout";
-        self.workout = [self createNewWorkout];
-        [self.selectActivityContainer setHidden:YES];
-        [self.navigationItem.rightBarButtonItem setEnabled:NO];
+
+        if ([[CurrentWorkout instance] workout]) {
+            self.workout = [[CurrentWorkout instance] workout];
+            [self hideInitialViews];
+            [self restoreViewState];
+            [self setRepeatActivityToLast:self.workout];
+        }
+        else {
+            self.workout = [self createNewWorkout];
+            [[CurrentWorkout instance] setWorkout:self.workout];
+            [self.selectActivityContainer setHidden:YES];
+            [self.navigationItem.rightBarButtonItem setEnabled:NO];
+        }
     }
     else {
         self.newWorkout = NO;
@@ -243,7 +254,7 @@
 
 - (IBAction)doneButtonTapped:(id)sender {
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
-
+    [[CurrentWorkout instance] setWorkout:nil];
     if (self.newWorkout) {
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"HistoryViewController" bundle:nil];
         HistoryViewController *history = [sb instantiateViewControllerWithIdentifier:@"historyViewController"];
