@@ -271,8 +271,9 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         SetGroup *setGroup = self.workout.setGroups[0];
-        [setGroup removeSetsObject:[setGroup sets][(NSUInteger) [indexPath row]]];
-        [self.selectedSet MR_deleteEntity];
+        Set *set = [setGroup sets][(NSUInteger) [indexPath row]];
+        [setGroup removeSetsObject:set];
+        [set MR_deleteEntity];
         [self restoreViewState];
         [self setRepeatActivityToLast:self.workout];
     }

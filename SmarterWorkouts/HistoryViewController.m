@@ -88,7 +88,6 @@
     Workout *newSelectedWorkout = [self findAllWorkouts][(NSUInteger) indexPath.row];
 
     self.selectedWorkout = nil;
-    [self.tableView reloadData];
 
     if (self.selectedWorkout == newSelectedWorkout) {
         self.selectedWorkout = nil;
@@ -97,7 +96,7 @@
         self.selectedWorkout = newSelectedWorkout;
     }
     [self.navigationItem.rightBarButtonItem setEnabled:YES];
-    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    [self.tableView reloadData];
 }
 
 - (void)editWorkout:(Workout *)workout {
