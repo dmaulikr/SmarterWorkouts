@@ -30,6 +30,7 @@
 
         if ([[CurrentWorkout instance] workout]) {
             self.workout = [[CurrentWorkout instance] workout];
+            self.context = [[CurrentWorkout instance] context];
             [self hideInitialViews];
             [self restoreViewState];
             [self setRepeatActivityToLast:self.workout];
@@ -37,11 +38,13 @@
         else {
             self.workout = [self createNewWorkout];
             [[CurrentWorkout instance] setWorkout:self.workout];
+            [[CurrentWorkout instance] setContext:self.context];
             [self.selectActivityContainer setHidden:YES];
             [self.navigationItem.rightBarButtonItem setEnabled:NO];
         }
     }
     else {
+        self.context = [NSManagedObjectContext MR_defaultContext];
         self.newWorkout = NO;
         self.title = @"Edit Workout";
         [self hideInitialViews];
@@ -66,9 +69,10 @@
 }
 
 - (Workout *)createNewWorkout {
-    Workout *workout = [Workout MR_createEntity];
+    self.context = [NSManagedObjectContext MR_context];
+    Workout *workout = [Workout MR_createEntityInContext:self.context];
     workout.date = [NSDate new];
-    [workout addSetGroupsObject:[SetGroup MR_createEntity]];
+    [workout addSetGroupsObject:[SetGroup MR_createEntityInContext:self.context]];
     return workout;
 }
 

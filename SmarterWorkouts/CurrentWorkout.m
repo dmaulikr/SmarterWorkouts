@@ -1,4 +1,5 @@
 #import <objc/objc-api.h>
+#import <CoreData/CoreData.h>
 #import "CurrentWorkout.h"
 #import "Workout.h"
 

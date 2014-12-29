@@ -28,5 +28,7 @@
 @property(nonatomic, strong) Activity *repeatActivity;
 @property(nonatomic) BOOL copyLastSet;
 
+@property(nonatomic, strong) NSManagedObjectContext *context;
+
 - (void)setRepeatActivityToLast:(Workout *)workout;
 @end
