@@ -26,7 +26,7 @@
         XCTAssertNotNil(setGroup.sets);
 
         Set *set = [Set MR_createEntityInContext:localContext];
-        set.activity = @"Bench";
+        set.activity = [Activity findByName: @"Bench" withContext:localContext];
         set.comments = @"Missed a rep";
         set.reps = @2;
         set.weight = [NSDecimalNumber decimalNumberWithString:@"205"];
@@ -44,7 +44,7 @@
         XCTAssertEqual([setGroup.sets count], 1);
 
         Set *set = setGroup.sets[0];
-        XCTAssertEqualObjects(set.activity, @"Bench");
+        XCTAssertEqualObjects(set.activity.name, @"Bench");
         [expectation fulfill];
     }];
 

@@ -1,6 +1,7 @@
 #import "DurationSetCell.h"
 #import "Set.h"
 #import "DurationDisplay.h"
+#import "Activity.h"
 
 @implementation DurationSetCell
 
@@ -11,7 +12,7 @@
 
 - (void)setSet:(Set *)set {
     [super setSet:set];
-    [self.activityLabel setText:set.activity];
+    [self.activityLabel setText:set.activity.name];
     [self.durationLabel setText:[DurationDisplay displayHumanDurationFromSeconds:set.duration]];
 }
 

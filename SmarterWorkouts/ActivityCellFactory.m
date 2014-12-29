@@ -3,7 +3,6 @@
 #import "SetupTimerCell.h"
 #import "Activity.h"
 #import "Set.h"
-#import "NSManagedObject+MagicalFinders.h"
 #import "TimerActiveCell.h"
 #import "CellRegister.h"
 
@@ -54,9 +53,7 @@
         return selectedActivity.type;
     }
     else {
-        Activity *activity = [Activity MR_findFirstWithPredicate:
-                [NSPredicate predicateWithFormat:@"%K == %@", @"name", selectedSet.activity]];
-        return [activity type];
+        return selectedSet.activity.type;
     }
 }
 

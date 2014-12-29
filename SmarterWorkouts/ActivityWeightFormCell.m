@@ -1,5 +1,4 @@
 #import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
-#import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalFinders.h>
 #import "ActivityWeightFormCell.h"
 #import "Form.h"
 #import "DecimalNumbers.h"
@@ -65,7 +64,7 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
 - (void)setSelectedSet:(Set *)selectedSet {
     [super setSelectedSet:selectedSet];
     [self.deleteButton setHidden:NO];
-    [self.activityNameLabel setText:selectedSet.activity];
+    [self.activityNameLabel setText:selectedSet.activity.name];
     [self.setsInput setText:@""];
     if ([selectedSet.weight compare:[NSDecimalNumber zero]] == NSOrderedDescending) {
         [self.weightInput setText:[NSString stringWithFormat:@"%@", selectedSet.weight]];
@@ -81,9 +80,8 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
         [self.repsInput setText:[NSString stringWithFormat:@"%@", selectedSet.reps]];
     }
     [self.addButton setTitle:@"Save" forState:UIControlStateNormal];
-    Activity *activity = [Activity MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@", @"name", selectedSet.activity]];
-    [self.platesLabel setHidden:!activity.usesBar];
-    [self.platesLabelSubtitle setHidden:!activity.usesBar];
+    [self.platesLabel setHidden:!selectedSet.activity.usesBar];
+    [self.platesLabelSubtitle setHidden:!selectedSet.activity.usesBar];
 }
 
 - (void)setSetToCopy:(Set *)set {
@@ -133,7 +131,7 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
     for (int setIndex = 0; setIndex < [self loggedSets]; setIndex++) {
         Set *set = nil;
         set = [Set MR_createEntity];
-        set.activity = self.selectedSet ? self.selectedSet.activity : self.activity.name;
+        set.activity = self.selectedSet ? self.selectedSet.activity : self.activity;
         set.units = self.selectedSet ? self.selectedSet.units : self.activity.units;
         set.weight = [DecimalNumbers parse:self.weightInput.text];
         set.reps = @([self loggedReps]);

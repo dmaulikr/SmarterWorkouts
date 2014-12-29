@@ -1,3 +1,4 @@
+#import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
 #import "WorkoutCopier.h"
 #import "Workout.h"
 #import "SetGroup.h"
@@ -7,12 +8,16 @@
 @implementation WorkoutCopier
 
 + (void)copy:(Workout *)src to:(Workout *)dest {
-    NSMutableArray *setData = [@[] mutableCopy];
     for (Set *set in [src.setGroups[0] sets]) {
-        [setData addObject:[set dictionary]];
+        Set *destSet = [Set MR_createEntity];
+        destSet.activity = set.activity;
+        destSet.units = set.units;
+        destSet.weight = set.weight;
+        destSet.comments = set.comments;
+        destSet.duration = set.duration;
+        destSet.reps = set.reps;
+        [dest.setGroups[0] addSetsObject:destSet];
     }
-
-    [dest.setGroups[0] addSetsArray:[Set MR_importFromArray:setData]];
 }
 
 @end

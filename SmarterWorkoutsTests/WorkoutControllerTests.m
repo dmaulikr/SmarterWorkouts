@@ -18,13 +18,13 @@
     XCTAssertNil(controller.repeatActivity);
 
     Set *set1 = [Set MR_createEntity];
-    set1.activity = @"Squat";
+    set1.activity = [Activity findByName:@"Squat"];
     [controller.workout.setGroups[0] addSetsObject:set1];
     [controller setRepeatActivityToLast:controller.workout];
     XCTAssertEqualObjects(controller.repeatActivity.name, @"Squat");
 
     Set *set2 = [Set MR_createEntity];
-    set2.activity = @"Bench";
+    set2.activity = [Activity findByName:@"Bench"];
     [controller.workout.setGroups[0] addSetsObject:set2];
     [controller setRepeatActivityToLast:controller.workout];
     XCTAssertEqualObjects(controller.repeatActivity.name, @"Bench");
@@ -56,8 +56,8 @@
 
 - (void)testCreatesNewWorkoutIfNoneExisting {
     XCTAssertEqualObjects([Workout MR_numberOfEntities], @0);
-    [self getController];
-    XCTAssertEqualObjects([Workout MR_numberOfEntities], @1);
+    WorkoutController *controller = [self getController];
+    XCTAssertEqualObjects([Workout MR_numberOfEntitiesWithContext:controller.context], @1);
 }
 
 @end

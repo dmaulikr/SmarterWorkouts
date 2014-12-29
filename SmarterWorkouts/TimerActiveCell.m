@@ -30,7 +30,7 @@ const NSString *TIMER_ACTIVE_ACTIVITY = @"activetimer";
 - (IBAction)doneButtonTapped:(id)sender {
     [[SWTimer instance] stopTimer];
     Set *set = [Set MR_createEntity];
-    set.activity = self.selectedSet ? self.selectedSet.activity : self.activity.name;
+    set.activity = self.selectedSet ? self.selectedSet.activity : self.activity;
     set.duration = @(self.totalSeconds);
     [self.activityFormDelegate formFinished:@[set]];
 }

@@ -2,6 +2,7 @@
 #import "Workout.h"
 #import "SetGroup.h"
 #import "Set.h"
+#import "Activity.h"
 
 @implementation PrimaryActivityFinder
 
@@ -13,12 +14,12 @@
     }
 
     for (Set *set in setGroup.sets) {
-        NSNumber *count = activityCounts[set.activity];
+        NSNumber *count = activityCounts[set.activity.name];
         count = count ? count : @(0);
-        activityCounts[set.activity] = count;
+        activityCounts[set.activity.name] = count;
     }
 
-    NSString *primaryActivity = (NSString *) [setGroup.sets[0] activity];
+    NSString *primaryActivity = [[setGroup.sets[0] activity] name];
     for (NSString *activity in activityCounts) {
         if ([activityCounts[activity] intValue] > [activityCounts[primaryActivity] intValue]) {
             primaryActivity = activity;

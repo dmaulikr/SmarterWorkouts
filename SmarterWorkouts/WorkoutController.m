@@ -1,6 +1,5 @@
 #import <MagicalRecord/MagicalRecord/MagicalRecord+Actions.h>
 #import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
-#import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalFinders.h>
 #import "WorkoutController.h"
 #import "ActivityWeightFormCell.h"
 #import "Activity.h"
@@ -209,10 +208,7 @@
         return;
     }
 
-    NSString *activityName = [[[workout.setGroups[0] sets] lastObject] activity];
-    Activity *lastActivity = [Activity MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@",
-                                                                                                  @"name", activityName]];
-    [self setRepeatActivity:lastActivity];
+    [self setRepeatActivity:[[[workout.setGroups[0] sets] lastObject] activity]];
 }
 
 - (void)formCanceled {
@@ -257,7 +253,7 @@
 }
 
 - (IBAction)doneButtonTapped:(id)sender {
-    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+    [self.context MR_saveToPersistentStoreAndWait];
     [[CurrentWorkout instance] setWorkout:nil];
     if (self.newWorkout) {
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"HistoryViewController" bundle:nil];

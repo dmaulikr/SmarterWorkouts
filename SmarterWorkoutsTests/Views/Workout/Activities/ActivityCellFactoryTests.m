@@ -22,7 +22,7 @@
     Activity *activity = [Activity MR_findFirst];
     activity.type = @"new";
     Set *selectedSet = [Set MR_createEntity];
-    selectedSet.activity = activity.name;
+    selectedSet.activity = activity;
     XCTAssertNotNil(activity.type);
 
     NSString *type = [ActivityCellFactory activityTypeForSelectedActivity:nil selectedSet:selectedSet];

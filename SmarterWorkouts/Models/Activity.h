@@ -12,10 +12,13 @@
 
 @interface Activity : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSDecimalNumber * personalRecord;
-@property (nonatomic, retain) NSString *units;
-@property (nonatomic, retain) NSString *type;
-@property (nonatomic) BOOL usesBar;
+@property(nonatomic, retain) NSString *name;
+@property(nonatomic, retain) NSDecimalNumber *personalRecord;
+@property(nonatomic, retain) NSString *units;
+@property(nonatomic, retain) NSString *type;
+@property(nonatomic) BOOL usesBar;
 
++ (Activity *)findByName:(NSString *)name;
+
++ (Activity *)findByName:(NSString *)string withContext:(NSManagedObjectContext *)context;
 @end
