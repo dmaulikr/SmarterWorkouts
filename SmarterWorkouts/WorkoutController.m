@@ -181,7 +181,6 @@
 - (void)hideInitialViews {
     [self.startNewActivityContainer setHidden:YES];
     [self.quoteContainer setHidden:YES];
-    [self.selectActivityContainer setHidden:NO];
 }
 
 - (void)activityRepeated {
@@ -232,6 +231,7 @@
 
 - (void)restoreViewState {
     [self.tableView setScrollEnabled:YES];
+    [self.selectActivityContainer setHidden:NO];
     [self resetFormState];
     [self.tableView setContentInset:UIEdgeInsetsZero];
     [self.tableView reloadData];
@@ -240,6 +240,10 @@
 }
 
 - (void)formChangeToType:(NSString *)type withOptions:(NSDictionary *)options {
+    if ([type isEqualToString:@"activetimer"]) {
+        [self.selectActivityContainer setHidden:YES];
+    }
+
     self.formChangeType = type;
     self.formChangeOptions = options;
     [self.tableView reloadData];
