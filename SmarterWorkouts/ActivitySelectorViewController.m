@@ -1,7 +1,6 @@
 #import <CoreData/CoreData.h>
 #import <MagicalRecord/MagicalRecord/NSManagedObjectContext+MagicalRecord.h>
 #import <MagicalRecord/MagicalRecord/NSManagedObjectContext+MagicalSaves.h>
-#import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
 #import "ActivitySelectorViewController.h"
 #import "ActivitySelectorDelegate.h"
 #import "Activity.h"
@@ -130,7 +129,8 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [[self.filteredData objectAtIndexPath:indexPath] MR_deleteEntity];
+        Activity *activity = [self.filteredData objectAtIndexPath:indexPath];
+        [activity deleteEntity];
         self.data = [Activity findAllByType];
         [self filterDataBy:[self.searchController.searchBar text]];
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];

@@ -7,7 +7,9 @@
 //
 
 #import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalFinders.h>
+#import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
 #import "Activity.h"
+#import "Set.h"
 
 
 @implementation Activity
@@ -27,8 +29,8 @@
 
 + (Activity *)findByName:(NSString *)name withContext:(NSManagedObjectContext *)context {
     NSPredicate *nameMatchingPredicate = [NSPredicate predicateWithFormat:@"%K == %@", @"name", name];
-    return [Activity MR_findFirstWithPredicate:
-            [NSCompoundPredicate andPredicateWithSubpredicates:@[nameMatchingPredicate, [self notArchivedPredicate]]]];
+    return [Activity                                                                                  MR_findFirstWithPredicate:
+            [NSCompoundPredicate andPredicateWithSubpredicates:@[nameMatchingPredicate, [self notArchivedPredicate]]] inContext:context];
 }
 
 + (NSFetchedResultsController *)findAllByType {
@@ -43,6 +45,16 @@
 
 + (NSPredicate *)notArchivedPredicate {
     return [NSPredicate predicateWithFormat:@"%K == %d", @"archived", NO];
+}
+
+- (void)deleteEntity {
+    Set *set = [Set MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@", @"activity", self]];
+    if (set) {
+        self.archived = YES;
+    }
+    else {
+        [self MR_deleteEntity];
+    }
 }
 
 @end

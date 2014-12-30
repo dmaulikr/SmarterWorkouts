@@ -26,4 +26,7 @@
 + (NSFetchedResultsController *)findAllByType;
 
 + (NSFetchedResultsController *)findAllByTypeMatching:(NSString *)text;
+
+- (void) deleteEntity;
+
 @end
