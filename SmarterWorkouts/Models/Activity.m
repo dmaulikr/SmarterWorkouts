@@ -20,20 +20,29 @@
 @dynamic type;
 
 + (Activity *)findByName:(NSString *)name {
-    return [Activity MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@", @"name", name]];
+    NSPredicate *nameMatchingPredicate = [NSPredicate predicateWithFormat:@"%K == %@", @"name", name];
+    return [Activity MR_findFirstWithPredicate:
+            [NSCompoundPredicate andPredicateWithSubpredicates:@[nameMatchingPredicate, [self notArchivedPredicate]]]];
 }
 
 + (Activity *)findByName:(NSString *)name withContext:(NSManagedObjectContext *)context {
-    return [Activity MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@", @"name", name] inContext:context];
+    NSPredicate *nameMatchingPredicate = [NSPredicate predicateWithFormat:@"%K == %@", @"name", name];
+    return [Activity MR_findFirstWithPredicate:
+            [NSCompoundPredicate andPredicateWithSubpredicates:@[nameMatchingPredicate, [self notArchivedPredicate]]]];
 }
 
 + (NSFetchedResultsController *)findAllByType {
-    return [Activity MR_fetchAllGroupedBy:@"type" withPredicate:nil sortedBy:@"type,name" ascending:YES];
+    return [Activity MR_fetchAllGroupedBy:@"type" withPredicate:[self notArchivedPredicate] sortedBy:@"type,name" ascending:YES];
 }
 
 + (NSFetchedResultsController *)findAllByTypeMatching:(NSString *)text {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name CONTAINS[cd] %@", [text lowercaseString]];
-    return [Activity MR_fetchAllGroupedBy:@"type" withPredicate:predicate sortedBy:@"type,name" ascending:YES];
+    return [Activity                                                                          MR_fetchAllGroupedBy:@"type" withPredicate:
+            [NSCompoundPredicate andPredicateWithSubpredicates:@[predicate, [self notArchivedPredicate]]] sortedBy:@"type,name" ascending:YES];
+}
+
++ (NSPredicate *)notArchivedPredicate {
+    return [NSPredicate predicateWithFormat:@"%K == %d", @"archived", NO];
 }
 
 @end
