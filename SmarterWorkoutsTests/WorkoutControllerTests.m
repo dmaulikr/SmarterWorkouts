@@ -54,10 +54,4 @@
     XCTAssertEqualObjects([Workout MR_numberOfEntities], @1);
 }
 
-- (void)testCreatesNewWorkoutIfNoneExisting {
-    XCTAssertEqualObjects([Workout MR_numberOfEntities], @0);
-    WorkoutController *controller = [self getController];
-    XCTAssertEqualObjects([Workout MR_numberOfEntitiesWithContext:controller.context], @1);
-}
-
 @end

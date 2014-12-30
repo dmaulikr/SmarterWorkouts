@@ -5,7 +5,6 @@
 #import "ActivitySelectorViewController.h"
 #import "ActivitySelectorDelegate.h"
 #import "Activity.h"
-#import "NSManagedObject+MagicalFinders.h"
 #import "SelectionGroupHeader.h"
 #import "ActivitySearchCell.h"
 #import "CellRegister.h"
@@ -48,7 +47,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    self.data = [Activity MR_fetchAllGroupedBy:@"type" withPredicate:nil sortedBy:@"type,name" ascending:YES];
+    self.data = [Activity findAllByType];
     self.filteredData = self.data;
     [self.tableView reloadData];
 }
@@ -110,8 +109,7 @@
         self.filteredData = self.data;
     }
     else {
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name CONTAINS[cd] %@", [text lowercaseString]];
-        self.filteredData = [Activity MR_fetchAllGroupedBy:@"type" withPredicate:predicate sortedBy:@"type,name" ascending:YES];
+        self.filteredData = [Activity findAllByTypeMatching:text];
     }
     [self.tableView reloadData];
 }
@@ -133,7 +131,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [[self.filteredData objectAtIndexPath:indexPath] MR_deleteEntity];
-        self.data = [Activity MR_fetchAllGroupedBy:@"type" withPredicate:nil sortedBy:@"type,name" ascending:YES];
+        self.data = [Activity findAllByType];
         [self filterDataBy:[self.searchController.searchBar text]];
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         [self.tableView reloadData];

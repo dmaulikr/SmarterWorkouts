@@ -13,6 +13,8 @@
 @implementation Activity
 
 @dynamic name;
+@dynamic archived;
+@dynamic usesBar;
 @dynamic personalRecord;
 @dynamic units;
 @dynamic type;
@@ -23,6 +25,15 @@
 
 + (Activity *)findByName:(NSString *)name withContext:(NSManagedObjectContext *)context {
     return [Activity MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@", @"name", name] inContext:context];
+}
+
++ (NSFetchedResultsController *)findAllByType {
+    return [Activity MR_fetchAllGroupedBy:@"type" withPredicate:nil sortedBy:@"type,name" ascending:YES];
+}
+
++ (NSFetchedResultsController *)findAllByTypeMatching:(NSString *)text {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name CONTAINS[cd] %@", [text lowercaseString]];
+    return [Activity MR_fetchAllGroupedBy:@"type" withPredicate:predicate sortedBy:@"type,name" ascending:YES];
 }
 
 @end

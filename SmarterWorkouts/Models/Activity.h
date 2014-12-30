@@ -17,8 +17,13 @@
 @property(nonatomic, retain) NSString *units;
 @property(nonatomic, retain) NSString *type;
 @property(nonatomic) BOOL usesBar;
+@property(nonatomic) BOOL archived;
 
 + (Activity *)findByName:(NSString *)name;
 
 + (Activity *)findByName:(NSString *)string withContext:(NSManagedObjectContext *)context;
+
++ (NSFetchedResultsController *)findAllByType;
+
++ (NSFetchedResultsController *)findAllByTypeMatching:(NSString *)text;
 @end
