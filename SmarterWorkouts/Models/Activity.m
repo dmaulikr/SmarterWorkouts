@@ -57,4 +57,23 @@
     }
 }
 
++ (Activity *)createWithName:(NSString *)name {
+    NSPredicate *nameMatchingPredicate = [NSPredicate predicateWithFormat:@"%K == %@", @"name", name];
+    Activity *existing = [Activity MR_findFirstWithPredicate:nameMatchingPredicate];
+    if (existing) {
+        if (existing.archived) {
+            existing.archived = NO;
+            return existing;
+        }
+        else {
+            return nil;
+        }
+    }
+    else {
+        Activity *activity = [Activity MR_createEntity];
+        activity.name = name;
+        return activity;
+    }
+}
+
 @end

@@ -53,8 +53,26 @@
 
     [activity deleteEntity];
 
+    
     XCTAssertEqual([activity archived], YES);
     XCTAssertEqual([[Activity MR_numberOfEntities] intValue], count + 1);
+}
+
+- (void)testCreateActivityDoesNotCreateDupes {
+    int count = [[Activity MR_numberOfEntities] intValue];
+    [Activity createWithName:@"Dupe"];
+    [Activity createWithName:@"Dupe"];
+    XCTAssertEqual([[Activity MR_numberOfEntities] intValue], count + 1);
+}
+
+- (void)testCreateActivityUnarchivesIfExists {
+    int count = [[Activity MR_numberOfEntities] intValue];
+    Activity *activity1 = [Activity createWithName:@"Dupe"];
+    activity1.archived = NO;
+
+    Activity *activity2 = [Activity createWithName:@"Dupe"];
+    XCTAssertEqual([[Activity MR_numberOfEntities] intValue], count + 1);
+    XCTAssertEqual(activity2.archived, NO);
 }
 
 @end

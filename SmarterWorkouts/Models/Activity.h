@@ -27,6 +27,8 @@
 
 + (NSFetchedResultsController *)findAllByTypeMatching:(NSString *)text;
 
-- (void) deleteEntity;
+- (void)deleteEntity;
+
++ (Activity *)createWithName:(NSString *)name;
 
 @end
