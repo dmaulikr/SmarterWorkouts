@@ -4,4 +4,5 @@
 @interface WorkoutControls : UIView {}
 @property (weak, nonatomic) IBOutlet UIButton *arrangeButton;
 
+@property(nonatomic) BOOL ordering;
 @end

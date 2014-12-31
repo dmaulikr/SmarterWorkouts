@@ -14,6 +14,7 @@
 #import "HistoryViewController.h"
 #import "WorkoutCopier.h"
 #import "CurrentWorkout.h"
+#import "WorkoutControls.h"
 
 @implementation WorkoutController
 
@@ -78,7 +79,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
-    self.tableView.tableHeaderView = [[NSBundle mainBundle] loadNibNamed:@"WorkoutControls" owner:self options:nil][0];
+    WorkoutControls *workoutControls = [[NSBundle mainBundle] loadNibNamed:@"WorkoutControls" owner:self options:nil][0];
+
+    self.tableView.tableHeaderView = workoutControls;
     [self toggleToolbar:NO];
 }
 
@@ -297,8 +300,16 @@
     return UITableViewCellEditingStyleDelete;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+
 }
 
 @end
