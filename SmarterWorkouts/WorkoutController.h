@@ -2,6 +2,7 @@
 #import "ActivityFormDelegate.h"
 #import "ActivitySelectorDelegate.h"
 #import "WorkoutSelectionDelegate.h"
+#import "WorkoutControlsDelegate.h"
 
 @class ActivityWeightFormCell;
 @class Workout;
@@ -9,7 +10,7 @@
 @class NewActivitySelectorInputViewController;
 @class ActivitySelectorInputViewController;
 
-@interface WorkoutController : UIViewController <UITextFieldDelegate, ActivitySelectorDelegate, ActivityFormDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface WorkoutController : UIViewController <UITextFieldDelegate, ActivitySelectorDelegate, ActivityFormDelegate, UITableViewDelegate, UITableViewDataSource, WorkoutControlsDelegate> {
 }
 @property (weak, nonatomic) IBOutlet UIView *quoteContainer;
 @property (weak, nonatomic) IBOutlet UIView *startNewActivityContainer;

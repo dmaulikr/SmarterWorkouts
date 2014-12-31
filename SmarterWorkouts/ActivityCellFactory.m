@@ -1,3 +1,4 @@
+#import <CoreData/CoreData.h>
 #import "ActivityCellFactory.h"
 #import "ActivityWeightFormCell.h"
 #import "SetupTimerCell.h"
@@ -15,13 +16,9 @@
     }
 }
 
-+ cellForSelectedActivity:(Activity *)selectedActivity
-              selectedSet:(Set *)selectedSet
-                setToCopy:(Set *)setToCopy
-           formChangeType:(NSString *)formChangeType
-        formChangeOptions:(NSDictionary *)formChangeOptions
-                tableView:(UITableView *)tableView
-                indexPath:(NSIndexPath *)indexPath {
++ (id)cellForSelectedActivity:(Activity *)selectedActivity selectedSet:(Set *)selectedSet setToCopy:(Set *)setToCopy
+               formChangeType:(NSString *)formChangeType formChangeOptions:(NSDictionary *)formChangeOptions
+                    tableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath context:(NSManagedObjectContext *)context {
     ActivityCell *cell = nil;
     NSString *type = [self activityTypeForSelectedActivity:selectedActivity selectedSet:selectedSet];
     if ([type isEqualToString:(NSString *) WEIGHT_ACTIVITY]) {
@@ -36,6 +33,7 @@
             cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(SetupTimerCell.class) forIndexPath:indexPath];
         }
     }
+    [cell setContext: context];
     if (selectedActivity != nil) {
         [cell setActivity:selectedActivity];
     }

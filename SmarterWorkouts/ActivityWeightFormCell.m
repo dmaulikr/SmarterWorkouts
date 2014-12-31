@@ -130,8 +130,8 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
 
     for (int setIndex = 0; setIndex < [self loggedSets]; setIndex++) {
         Set *set = nil;
-        set = [Set MR_createEntity];
-        set.activity = self.selectedSet ? self.selectedSet.activity : self.activity;
+        set = [Set MR_createEntityInContext:self.context];
+        set.activity = self.selectedSet ? self.selectedSet.activity : [self.activity MR_inContext:self.context];
         set.units = self.selectedSet ? self.selectedSet.units : self.activity.units;
         set.weight = [DecimalNumbers parse:self.weightInput.text];
         set.reps = @([self loggedReps]);

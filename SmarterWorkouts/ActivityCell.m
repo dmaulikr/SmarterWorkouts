@@ -1,3 +1,4 @@
+#import <CoreData/CoreData.h>
 #import "ActivityCell.h"
 #import "ActivityFormDelegate.h"
 #import "Set.h"

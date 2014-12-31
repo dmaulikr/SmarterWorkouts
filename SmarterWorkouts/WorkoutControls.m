@@ -1,4 +1,5 @@
 #import "WorkoutControls.h"
+#import "WorkoutControlsDelegate.h"
 
 @implementation WorkoutControls
 
@@ -31,6 +32,7 @@
                         [self highlightColor]
                                  forState:UIControlStateHighlighted];
     }
+    [self.delegate toggleOrdering:self.ordering];
 }
 
 @end

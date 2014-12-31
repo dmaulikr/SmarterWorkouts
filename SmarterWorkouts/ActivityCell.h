@@ -4,6 +4,7 @@
 @protocol ActivityFormDelegate;
 @class Set;
 @class Activity;
+@class NSManagedObjectContext;
 
 @interface ActivityCell : UITableViewCell
 
@@ -14,6 +15,8 @@
 @property(nonatomic, strong) Activity *activity;
 @property(nonatomic, strong) Set *selectedSet;
 @property(nonatomic, strong) NSDictionary *formChangeOptions;
+
+@property(nonatomic, strong) NSManagedObjectContext *context;
 
 - (void)setSetToCopy:(Set *)set;
 

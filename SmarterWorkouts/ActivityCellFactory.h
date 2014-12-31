@@ -3,16 +3,11 @@
 
 @class Set;
 @class Activity;
+@class NSManagedObjectContext;
 
 @interface ActivityCellFactory : NSObject
 
-+ cellForSelectedActivity:(Activity *)selectedActivity
-              selectedSet:(Set *)selectedSet
-              setToCopy:(Set *)setToCopy
-           formChangeType:(NSString *)formChangeType
-        formChangeOptions:(NSDictionary *)formChangeOptions
-                tableView:(UITableView *)tableView
-                indexPath:(NSIndexPath *)indexPath;
++ (id)cellForSelectedActivity:(Activity *)selectedActivity selectedSet:(Set *)selectedSet setToCopy:(Set *)setToCopy formChangeType:(NSString *)formChangeType formChangeOptions:(NSDictionary *)formChangeOptions tableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath context:(NSManagedObjectContext *)context;
 
 + (NSString *)activityTypeForSelectedActivity:(Activity *)selectedActivity selectedSet:(Set *)selectedSet;
 

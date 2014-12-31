@@ -80,9 +80,10 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
     WorkoutControls *workoutControls = [[NSBundle mainBundle] loadNibNamed:@"WorkoutControls" owner:self options:nil][0];
+    [workoutControls setDelegate:self];
 
     self.tableView.tableHeaderView = workoutControls;
-    [self toggleToolbar:NO];
+    [self hideToolbar];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -130,7 +131,8 @@
                                                                      formChangeType:self.formChangeType
                                                                   formChangeOptions:self.formChangeOptions
                                                                           tableView:tableView
-                                                                          indexPath:indexPath];
+                                                                          indexPath:indexPath
+                                                                            context:self.context];
         [cell setActivityFormDelegate:self];
         return cell;
     }
@@ -232,15 +234,21 @@
         [setGroup addSetsArray:sets];
     }
     [self restoreViewState];
-    [self toggleToolbar:NO];
+    [self hideToolbar];
 }
 
-- (void)toggleToolbar:(BOOL)isVisible {
-    self.tableView.contentInset = UIEdgeInsetsMake(isVisible ? 0 : -self.tableView.tableHeaderView.frame.size.height, 0, 0, 0);
+- (void)hideToolbar {
+    self.tableView.contentInset = UIEdgeInsetsMake(-self.tableView.tableHeaderView.frame.size.height, 0, 0, 0);
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    [self toggleToolbar:[scrollView contentOffset].y < self.tableView.tableHeaderView.frame.size.height / 2];
+    CGFloat yOffset = [scrollView contentOffset].y;
+    if (yOffset > self.tableView.tableHeaderView.frame.size.height) {
+        [self hideToolbar];
+    }
+    else {
+        self.tableView.contentInset = UIEdgeInsetsMake(MIN(-yOffset, 0), 0, 0, 0);
+    }
 }
 
 - (void)restoreViewState {
@@ -309,7 +317,20 @@
 }
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    if (destinationIndexPath.row == sourceIndexPath.row) {
+        return;
+    }
 
+    SetGroup *setGroup = self.workout.setGroups[0];
+    Set *set = setGroup.sets[(NSUInteger) sourceIndexPath.row];
+    NSMutableArray *sets = [[setGroup.sets array] mutableCopy];
+    [sets removeObjectAtIndex:(NSUInteger) sourceIndexPath.row];
+    [sets insertObject:set atIndex:(NSUInteger) destinationIndexPath.row];
+    setGroup.sets = [NSOrderedSet orderedSetWithArray:sets];
+}
+
+- (void)toggleOrdering:(BOOL)ordering {
+    [self.tableView setEditing:ordering];
 }
 
 @end

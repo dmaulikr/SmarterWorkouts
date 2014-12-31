@@ -74,7 +74,7 @@ const NSString *TIMER_SETUP_ACTIVITY = @"timer";
 
 - (IBAction)startTimer:(id)sender {
     if (self.selectedSet) {
-        Set *set = [Set MR_createEntity];
+        Set *set = [Set MR_createEntityInContext:self.context];
         set.activity = self.selectedSet.activity;
         set.duration = @([self.minutes.text intValue] * 60 + [self.seconds.text intValue]);
         [self.activityFormDelegate formFinished:@[set]];

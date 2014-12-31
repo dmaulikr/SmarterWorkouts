@@ -42,6 +42,7 @@
 		545902FB5831A7DA0C4FE5CD /* SetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590722ED75492DCCF67654 /* SetCell.m */; };
 		5459030C7A29CAEC0F6477AD /* NewActivitySelectorInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590BFD70E633D4614C618F /* NewActivitySelectorInputViewController.m */; };
 		5459033E2868864F19843FC3 /* UIImageViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590E583ADE4FD8272B88B9 /* UIImageViewHelper.m */; };
+		5459036AAFC4C7321743456C /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590B22D565A96FCAA89128 /* UIColor+HexString.m */; };
 		5459038EF0C90D4D20E0CD13 /* 1091-weights@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545904F4A9A261D4FA5EA3D6 /* 1091-weights@2x.png */; };
 		545903AECA023DD003774059 /* WorkoutControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902F39621185F30F59354 /* WorkoutControls.m */; };
 		545903BFCE9385C58941EE23 /* CreateNewActivityViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545903DB0A21E7CD1A8EA630 /* CreateNewActivityViewController.storyboard */; };
@@ -228,9 +229,11 @@
 		545901DE0307A2E0890A0281 /* plates.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; name = plates.json; path = Models/Fixtures/plates.json; sourceTree = "<group>"; };
 		54590201C4190E548A25C192 /* WorkoutSelectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutSelectionDelegate.h; sourceTree = "<group>"; };
 		54590202DEE53269D2AB44A0 /* 415-weightlifter-inverse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "415-weightlifter-inverse.png"; sourceTree = "<group>"; };
+		54590211010BBCB7FC53B385 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
 		5459022C1F4BBBE900679F3F /* UIImage+ColorFromImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorFromImage.m"; sourceTree = "<group>"; };
 		5459022EB488280BD9CBEAFF /* SelectionGroupHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionGroupHeader.m; sourceTree = "<group>"; };
 		5459023FB1ACF26ED54A2EEE /* WorkoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutController.m; sourceTree = "<group>"; };
+		545902550988E14D5373EB74 /* WorkoutControlsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutControlsDelegate.h; sourceTree = "<group>"; };
 		5459026160D6CA4853567D93 /* QuoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteViewController.m; sourceTree = "<group>"; };
 		5459026C617E75E81E2D9D0D /* 1097-timer-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1097-timer-2.png"; sourceTree = "<group>"; };
 		5459026EC551FA5E344D9121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -323,6 +326,7 @@
 		54590ACC1AC6B9D074702B48 /* ActivityWeightFormViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityWeightFormViewControllerTests.m; sourceTree = "<group>"; };
 		54590B139E84BF5FD750E43E /* InputAccessoryBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputAccessoryBuilder.m; sourceTree = "<group>"; };
 		54590B172184011883D18ACF /* SetupTimerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupTimerCell.h; sourceTree = "<group>"; };
+		54590B22D565A96FCAA89128 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
 		54590B470770405B75EE9A62 /* ActivitySearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitySearchCell.xib; sourceTree = "<group>"; };
 		54590B48DB05EBC72108D9F8 /* 1091-weights.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1091-weights.png"; sourceTree = "<group>"; };
 		54590B4F6AA10C1CF0540B16 /* ActivityWeightFormCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityWeightFormCell.h; sourceTree = "<group>"; };
@@ -626,6 +630,7 @@
 				545902F39621185F30F59354 /* WorkoutControls.m */,
 				545906ABA0A549BC8C5F5E78 /* WorkoutControls.h */,
 				54590EE886537A36A1B8BF5E /* WorkoutControls.xib */,
+				545902550988E14D5373EB74 /* WorkoutControlsDelegate.h */,
 			);
 			name = Toolbar;
 			sourceTree = "<group>";
@@ -828,6 +833,8 @@
 			children = (
 				5459022C1F4BBBE900679F3F /* UIImage+ColorFromImage.m */,
 				545906B93DC6D229534AC85D /* UIImage+ColorFromImage.h */,
+				54590B22D565A96FCAA89128 /* UIColor+HexString.m */,
+				54590211010BBCB7FC53B385 /* UIColor+HexString.h */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -1337,6 +1344,7 @@
 				545901888D25AA1C5E39144C /* CurrentWorkout.m in Sources */,
 				545904093E7355E6B2AE1E5B /* Plate.m in Sources */,
 				545903AECA023DD003774059 /* WorkoutControls.m in Sources */,
+				5459036AAFC4C7321743456C /* UIColor+HexString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
