@@ -78,6 +78,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
+    self.tableView.tableHeaderView = [[NSBundle mainBundle] loadNibNamed:@"WorkoutControls" owner:self options:nil][0];
+    [self toggleToolbar:NO];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -170,7 +172,7 @@
     [self setRepeatActivity:activity];
 
     [self.tableView reloadData];
-    [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 300, 0)];
+    [self.tableView setContentInset:UIEdgeInsetsMake(-self.tableView.tableHeaderView.frame.size.height, 0, 300, 0)];
     [self.tableView layoutIfNeeded];
     NSIndexPath *lastIndexPath = [NSIndexPath                       indexPathForRow:
             ([self tableView:self.tableView numberOfRowsInSection:0] - 1) inSection:0];
@@ -227,13 +229,21 @@
         [setGroup addSetsArray:sets];
     }
     [self restoreViewState];
+    [self toggleToolbar:NO];
+}
+
+- (void)toggleToolbar:(BOOL)isVisible {
+    self.tableView.contentInset = UIEdgeInsetsMake(isVisible ? 0 : -self.tableView.tableHeaderView.frame.size.height, 0, 0, 0);
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self toggleToolbar:[scrollView contentOffset].y < self.tableView.tableHeaderView.frame.size.height / 2];
 }
 
 - (void)restoreViewState {
     [self.tableView setScrollEnabled:YES];
     [self.selectActivityContainer setHidden:NO];
     [self resetFormState];
-    [self.tableView setContentInset:UIEdgeInsetsZero];
     [self.tableView reloadData];
 
     [self.navigationItem.rightBarButtonItem setEnabled:([[self.workout.setGroups[0] sets] count] > 0)];

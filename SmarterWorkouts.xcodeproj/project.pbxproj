@@ -43,6 +43,7 @@
 		5459030C7A29CAEC0F6477AD /* NewActivitySelectorInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590BFD70E633D4614C618F /* NewActivitySelectorInputViewController.m */; };
 		5459033E2868864F19843FC3 /* UIImageViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590E583ADE4FD8272B88B9 /* UIImageViewHelper.m */; };
 		5459038EF0C90D4D20E0CD13 /* 1091-weights@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545904F4A9A261D4FA5EA3D6 /* 1091-weights@2x.png */; };
+		545903AECA023DD003774059 /* WorkoutControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902F39621185F30F59354 /* WorkoutControls.m */; };
 		545903BFCE9385C58941EE23 /* CreateNewActivityViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545903DB0A21E7CD1A8EA630 /* CreateNewActivityViewController.storyboard */; };
 		545903DDFDE7F7965ADDE139 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 545904E1841B2C9A4524B6E1 /* main.m */; };
 		545903DF837690ABCFCA4C44 /* FormItemBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459040050D27D2FEAEF9090 /* FormItemBarButtonItem.m */; };
@@ -89,8 +90,10 @@
 		545907EBCA6CB1F8EA6D5EA0 /* 1091-weights@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5459028A285EBBD9BEA85B42 /* 1091-weights@3x.png */; };
 		545907F94CB867B1C27CB465 /* 901-repeat.png in Resources */ = {isa = PBXBuildFile; fileRef = 545909BCED15F549B2D6A9B5 /* 901-repeat.png */; };
 		54590813BA5B7CD984F40F82 /* SetupTimerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459090219AF2435A810360C /* SetupTimerCell.m */; };
+		54590857FD139CFDFDE50317 /* 904-shuffle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590C3BBE2F28DDF435B0F8 /* 904-shuffle@3x.png */; };
 		5459088D582EFF54312D9232 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C685E059C6D70516D6D /* Colors.m */; };
 		5459089953448E117633ABC0 /* SmallWeightSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590F8F97EC48A6E8CD6BC3 /* SmallWeightSetCell.xib */; };
+		545908C237BF913D8CE95F71 /* WorkoutControls.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590EE886537A36A1B8BF5E /* WorkoutControls.xib */; };
 		545908E4AE08AE9309C97858 /* CellRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590E06AB55B27E9575B177 /* CellRegister.m */; };
 		545908EA948161743CA45E19 /* PlateRemaining.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459013B85548A27B8B1B805 /* PlateRemaining.m */; };
 		5459090C89F657907DFB3A7C /* 415-weightlifter@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5459081C8E408A1A14807DB9 /* 415-weightlifter@3x.png */; };
@@ -99,6 +102,7 @@
 		54590932EB0474ECEFD2461B /* HistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902ECBF0EC52B9AD3131F /* HistoryCell.m */; };
 		54590947D4AE48B5A14E96C1 /* 974-users.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590A956DCD8C1CF6738B52 /* 974-users.png */; };
 		54590948B017444BD9DF749B /* DurationSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545905ABBA5E7B5529B9F446 /* DurationSetCell.xib */; };
+		5459097950209E591AEEDC12 /* 904-shuffle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590C97C78EC47E0E968831 /* 904-shuffle@2x.png */; };
 		5459099A09CF8618E5B6BB25 /* DurationDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590FE09C7C8766D9F8E7B9 /* DurationDisplay.m */; };
 		545909B97C0D7547A221B9F2 /* WeightSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590C0D4B5814B6A76D333C /* WeightSetCell.xib */; };
 		54590A1E5DB5BBC42710FE1B /* 415-weightlifter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545904CAA5CED6CA3A33D217 /* 415-weightlifter@2x.png */; };
@@ -110,6 +114,7 @@
 		54590AF6E68001E2BCB8ABCA /* 974-users@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545908E1A969ECC5D31D89B4 /* 974-users@3x.png */; };
 		54590B184F8BBFBD7F5B8CD3 /* ActivitySearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 545901CFDE3C13EF2DCFC3CB /* ActivitySearchCell.m */; };
 		54590B5CE0A8BD63B2C84F6C /* SmallSetCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590EDA6715D0CB46E486E6 /* SmallSetCellFactory.m */; };
+		54590B9F00E1B634B46EE06F /* 904-shuffle.png in Resources */ = {isa = PBXBuildFile; fileRef = 545900B73B1EC46C5240FCD7 /* 904-shuffle.png */; };
 		54590BAD0BDD079C13B5806A /* ActivitySearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590B470770405B75EE9A62 /* ActivitySearchCell.xib */; };
 		54590BBF38CCD39F0B4229FE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5459093FA06E60D65D8B9C63 /* CoreData.framework */; };
 		54590BC14BAFB3766CF8B979 /* HistoryCellExpanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590172178526A1757A7450 /* HistoryCellExpanded.m */; };
@@ -205,6 +210,7 @@
 		5459008E74B4D7736182DDDB /* DurationDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DurationDisplay.h; sourceTree = "<group>"; };
 		54590099F7C030E1042A60BE /* BarLoadingSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarLoadingSetupViewController.h; sourceTree = "<group>"; };
 		545900B085897FD8B72023A8 /* Workout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Workout.m; path = Models/Workout.m; sourceTree = "<group>"; };
+		545900B73B1EC46C5240FCD7 /* 904-shuffle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "904-shuffle.png"; sourceTree = "<group>"; };
 		545900DE6BC3C8B8CD9B979C /* PlateRemaining.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateRemaining.h; sourceTree = "<group>"; };
 		545900F4F126F777ABE82238 /* SetCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCellFactory.m; sourceTree = "<group>"; };
 		54590106A79353B3DF4D3B9C /* 1097-timer-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1097-timer-2@2x.png"; sourceTree = "<group>"; };
@@ -237,6 +243,7 @@
 		545902E72D54617EBBB68CC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		545902ECBF0EC52B9AD3131F /* HistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryCell.m; sourceTree = "<group>"; };
 		545902EF18EEC12333570E82 /* CellRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellRegister.h; sourceTree = "<group>"; };
+		545902F39621185F30F59354 /* WorkoutControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutControls.m; sourceTree = "<group>"; };
 		545902FC40A458CC44ECB9A4 /* BarCalculatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarCalculatorTests.m; sourceTree = "<group>"; };
 		545902FDED688FE872C92CF1 /* SWTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTestCase.m; sourceTree = "<group>"; };
 		545903888625FF04D581594B /* 709-plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-plus@2x.png"; sourceTree = "<group>"; };
@@ -271,6 +278,7 @@
 		545905F2270D5965183E8A15 /* SetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCell.h; sourceTree = "<group>"; };
 		5459061FF264AFC33EDE1495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		54590645E3F315FB504F4374 /* ActivitySelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySelectorViewController.h; sourceTree = "<group>"; };
+		545906ABA0A549BC8C5F5E78 /* WorkoutControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutControls.h; sourceTree = "<group>"; };
 		545906B93DC6D229534AC85D /* UIImage+ColorFromImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorFromImage.h"; sourceTree = "<group>"; };
 		54590709AEBEC0E0AE30F736 /* BarCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarCalculator.m; sourceTree = "<group>"; };
 		5459070CBC39B0E47814377C /* WorkoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutController.h; sourceTree = "<group>"; };
@@ -331,9 +339,11 @@
 		54590C1704D57A0CB87CD410 /* ModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelTests.m; sourceTree = "<group>"; };
 		54590C296C1E9F278FA1D7C4 /* ActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityCell.h; sourceTree = "<group>"; };
 		54590C38B44998CB847FF30C /* FixtureLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FixtureLoader.m; path = Models/Fixtures/FixtureLoader.m; sourceTree = "<group>"; };
+		54590C3BBE2F28DDF435B0F8 /* 904-shuffle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "904-shuffle@3x.png"; sourceTree = "<group>"; };
 		54590C685E059C6D70516D6D /* Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
 		54590C6E54128A0CE53B06EF /* SelectionGroupHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionGroupHeader.h; sourceTree = "<group>"; };
 		54590C9608EA266833F2A3D3 /* ActivitySelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitySelectorViewController.m; sourceTree = "<group>"; };
+		54590C97C78EC47E0E968831 /* 904-shuffle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "904-shuffle@2x.png"; sourceTree = "<group>"; };
 		54590CA37F0A1D91DD9AD39B /* FlavorTextUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlavorTextUITextField.h; sourceTree = "<group>"; };
 		54590CBDA13FF3EC3F932B52 /* ActivityCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCellFactory.m; sourceTree = "<group>"; };
 		54590CFA15918636F9EA4B15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -361,6 +371,7 @@
 		54590ED3193BE2D1D5DBEDE1 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Activity.m; path = Models/Activity.m; sourceTree = "<group>"; };
 		54590EDA6715D0CB46E486E6 /* SmallSetCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallSetCellFactory.m; sourceTree = "<group>"; };
 		54590EE3C490AC580F46B152 /* HistoryCellExpanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryCellExpanded.h; sourceTree = "<group>"; };
+		54590EE886537A36A1B8BF5E /* WorkoutControls.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkoutControls.xib; sourceTree = "<group>"; };
 		54590EED5F73DE4BB57F40C5 /* 901-repeat@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "901-repeat@3x.png"; sourceTree = "<group>"; };
 		54590EEDEDFB55C9CD0B52CD /* SWTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTimer.m; sourceTree = "<group>"; };
 		54590EFD0FF7BBCD646EB476 /* 415-weightlifter-inverse@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "415-weightlifter-inverse@3x.png"; sourceTree = "<group>"; };
@@ -585,6 +596,7 @@
 				5459023FB1ACF26ED54A2EEE /* WorkoutController.m */,
 				545901444767D3CF95F9A3C3 /* CurrentWorkout.m */,
 				54590F0FECDC2DE619BE04E7 /* CurrentWorkout.h */,
+				545904C1B1536C24B93B25BD /* Toolbar */,
 			);
 			name = Workout;
 			sourceTree = "<group>";
@@ -606,6 +618,16 @@
 				02423F9F1A2FE81D0048BB17 /* SmarterWorkouts Watch App.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		545904C1B1536C24B93B25BD /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+				545902F39621185F30F59354 /* WorkoutControls.m */,
+				545906ABA0A549BC8C5F5E78 /* WorkoutControls.h */,
+				54590EE886537A36A1B8BF5E /* WorkoutControls.xib */,
+			);
+			name = Toolbar;
 			sourceTree = "<group>";
 		};
 		54590503FAB1C2573B77EDF1 /* History */ = {
@@ -952,6 +974,9 @@
 				54590760B5052A6DCC9F2736 /* 746-plus-circle-toolbar.png */,
 				5459095B9E6BC400C716D32E /* 746-plus-circle-toolbar@2x.png */,
 				54590A2BC9B71EA9362C1C89 /* 746-plus-circle-toolbar@3x.png */,
+				54590C3BBE2F28DDF435B0F8 /* 904-shuffle@3x.png */,
+				545900B73B1EC46C5240FCD7 /* 904-shuffle.png */,
+				54590C97C78EC47E0E968831 /* 904-shuffle@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -1169,6 +1194,10 @@
 				545907C561F202F033024BE6 /* 746-plus-circle-toolbar@2x.png in Resources */,
 				545900F12ADFCD764A72A104 /* 746-plus-circle-toolbar@3x.png in Resources */,
 				545903BFCE9385C58941EE23 /* CreateNewActivityViewController.storyboard in Resources */,
+				545908C237BF913D8CE95F71 /* WorkoutControls.xib in Resources */,
+				54590857FD139CFDFDE50317 /* 904-shuffle@3x.png in Resources */,
+				54590B9F00E1B634B46EE06F /* 904-shuffle.png in Resources */,
+				5459097950209E591AEEDC12 /* 904-shuffle@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1307,6 +1336,7 @@
 				54590D8ED7334B05A3BC546E /* WeightCreateViewController.m in Sources */,
 				545901888D25AA1C5E39144C /* CurrentWorkout.m in Sources */,
 				545904093E7355E6B2AE1E5B /* Plate.m in Sources */,
+				545903AECA023DD003774059 /* WorkoutControls.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
