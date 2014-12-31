@@ -243,7 +243,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat yOffset = [scrollView contentOffset].y;
-    if (yOffset > self.tableView.tableHeaderView.frame.size.height) {
+    if (yOffset > self.tableView.tableHeaderView.frame.size.height - 10) {
         [self hideToolbar];
     }
     else {
