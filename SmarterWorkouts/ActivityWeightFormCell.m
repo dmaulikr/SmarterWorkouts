@@ -16,13 +16,12 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [WeightInputControls addLbsKgSelector:self.weightInput];
+    [WeightInputControls addLbsKgSelector:self.weightInput delegate:self];
     self.form = [[Form alloc] initWithFields:@[self.weightInput, self.repsInput, self.setsInput]];
     [self.form setDelegate:self];
 
     [self.weightInput addTarget:self action:@selector(weightChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.weightInput setDelegate:self];
-    [self.weightInput setFlavor:@"lbs"];
     [self.weightInput setText:@""];
 
     [self.repsInput setDelegate:self];
@@ -31,8 +30,7 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
     [self.setsInput setDelegate:self];
     [self.setsInput setFlavor:@"sets"];
 
-    self.platesLabel.alpha = 0;
-    self.platesLabelSubtitle.alpha = 0;
+    self.platesContainer.alpha = 0;
 }
 
 - (void)layoutSubviews {
@@ -49,20 +47,25 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
     [self.setsInput setText:@""];
 }
 
+- (void)setUnits:(NSString *)units {
+    _units = [units mutableCopy];
+    [self.weightInput setFlavor:units];
+}
+
 - (void)setActivity:(Activity *)activity {
     [super setActivity:activity];
+    [self setUnits:activity.units];
     [self.deleteButton setHidden:YES];
     [self.activityNameLabel setText:self.activity.name];
     [self.setsInput setText:@""];
 
     [self.weightInput becomeFirstResponder];
-
-    [self.platesLabel setHidden:!activity.usesBar];
-    [self.platesLabelSubtitle setHidden:!activity.usesBar];
+    [self.platesContainer setHidden:!activity.usesBar];
 }
 
 - (void)setSelectedSet:(Set *)selectedSet {
     [super setSelectedSet:selectedSet];
+    [self setUnits:selectedSet.units];
     [self.deleteButton setHidden:NO];
     [self.activityNameLabel setText:selectedSet.activity.name];
     [self.setsInput setText:@""];
@@ -80,11 +83,11 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
         [self.repsInput setText:[NSString stringWithFormat:@"%@", selectedSet.reps]];
     }
     [self.addButton setTitle:@"Save" forState:UIControlStateNormal];
-    [self.platesLabel setHidden:!selectedSet.activity.usesBar];
-    [self.platesLabelSubtitle setHidden:!selectedSet.activity.usesBar];
+    [self.platesContainer setHidden:!selectedSet.activity.usesBar];
 }
 
 - (void)setSetToCopy:(Set *)set {
+    [self setUnits:set.units];
     if ([set.weight compare:[NSDecimalNumber zero]] == NSOrderedDescending) {
         [self.weightInput setText:[NSString stringWithFormat:@"%@", set.weight]];
     }
@@ -100,11 +103,11 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
     NSDecimalNumber *weight = [DecimalNumbers parse:[self.weightInput text]];
     if ([weight compare:[NSDecimalNumber decimalNumberWithString:@"45"]] == NSOrderedDescending) {
         BarCalculator *calculator = [[BarCalculator alloc] initWithPlates:
-                        [Plate findAllSorted:self.selectedSet ? self.selectedSet.units : self.activity.units]
+                        [Plate findAllSorted:self.units]
                                                                 barWeight:[NSDecimalNumber decimalNumberWithString:@"45"]];
         NSArray *platesToMakeWeight = [calculator platesToMakeWeight:weight];
         NSString *platesText = [platesToMakeWeight componentsJoinedByString:@", "];
-        if (self.platesLabel.alpha > 0) {
+        if (self.platesContainer.alpha > 0) {
             [UIView transitionWithView:self.platesLabel duration:0.3 options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve animations:^{
                 [self.platesLabel setText:platesText];
             }               completion:nil];
@@ -112,15 +115,13 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
         else {
             [UIView animateWithDuration:0.3 animations:^{
                 [self.platesLabel setText:[platesToMakeWeight componentsJoinedByString:@", "]];
-                self.platesLabel.alpha = 1;
-                self.platesLabelSubtitle.alpha = 1;
+                self.platesContainer.alpha = 1;
             }];
         }
     }
     else {
         [UIView animateWithDuration:0.3 animations:^{
-            self.platesLabel.alpha = 0;
-            self.platesLabelSubtitle.alpha = 0;
+            self.platesContainer.alpha = 0;
         }];
     }
 }
@@ -167,4 +168,11 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
     }
 }
 
+- (void)lbsKgsChanged:(id)control {
+    self.units = [control selectedSegmentIndex] == 0 ? @"lbs" : @"kg";
+    if (self.selectedSet) {
+        self.selectedSet.units = self.units;
+    }
+    [self weightChanged:nil];
+}
 @end

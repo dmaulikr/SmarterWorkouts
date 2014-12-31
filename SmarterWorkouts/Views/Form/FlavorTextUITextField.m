@@ -12,7 +12,7 @@
 }
 
 - (void)removeFlavor {
-    if ([self.text containsString:self.flavor]) {
+    if (self.flavor && [self.text containsString:self.flavor]) {
         [self setText:[self.text stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@" %@", self.flavor] withString:@""]];
     }
 }

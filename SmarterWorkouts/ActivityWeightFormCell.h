@@ -21,9 +21,13 @@ extern const NSString *WEIGHT_ACTIVITY;
 @property(nonatomic, strong) Form *form;
 @property(weak, nonatomic) IBOutlet UILabel *platesLabel;
 @property(weak, nonatomic) IBOutlet UILabel *platesLabelSubtitle;
+@property (weak, nonatomic) IBOutlet UIView *platesContainer;
+
+@property(nonatomic, copy) NSString *units;
 
 - (int)loggedSets;
 
 - (int)loggedReps;
 
+- (void)lbsKgsChanged:(id)lbsKgsChanged;
 @end
