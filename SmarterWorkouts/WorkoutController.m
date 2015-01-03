@@ -237,6 +237,10 @@
     [self hideToolbar];
 }
 
+- (void)segueTo:(UIViewController *)controller {
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
 - (void)hideToolbar {
     self.tableView.contentInset = UIEdgeInsetsMake(-self.tableView.tableHeaderView.frame.size.height, 0, 0, 0);
 }

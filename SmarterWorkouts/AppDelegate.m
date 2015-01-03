@@ -17,7 +17,7 @@
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setTranslucent:NO];
-    [MagicalRecord setupCoreDataStackWithStoreNamed:@"Workout"];
+    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"Workout"];
     [[FixtureLoader instance] loadData];
     return YES;
 }

@@ -1,4 +1,5 @@
 #import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
+#import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalFinders.h>
 #import "ActivityWeightFormCell.h"
 #import "Form.h"
 #import "DecimalNumbers.h"
@@ -9,6 +10,7 @@
 #import "Set.h"
 #import "Plate.h"
 #import "BarCalculator.h"
+#import "Bar.h"
 
 const NSString *WEIGHT_ACTIVITY = @"weight";
 
@@ -31,6 +33,9 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
     [self.setsInput setFlavor:@"sets"];
 
     self.platesContainer.alpha = 0;
+
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(platesContainerTapped)];
+    [self.platesContainer addGestureRecognizer:tap];
 }
 
 - (void)layoutSubviews {
@@ -102,9 +107,10 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
 - (void)weightChanged:(id)weightChanged {
     NSDecimalNumber *weight = [DecimalNumbers parse:[self.weightInput text]];
     if ([weight compare:[NSDecimalNumber decimalNumberWithString:@"45"]] == NSOrderedDescending) {
+        Bar *bar = [Bar MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@", @"units", self.units]];
         BarCalculator *calculator = [[BarCalculator alloc] initWithPlates:
                         [Plate findAllSorted:self.units]
-                                                                barWeight:[NSDecimalNumber decimalNumberWithString:@"45"]];
+                                                                barWeight:bar.weight];
         NSArray *platesToMakeWeight = [calculator platesToMakeWeight:weight];
         NSString *platesText = [platesToMakeWeight componentsJoinedByString:@", "];
         if (self.platesContainer.alpha > 0) {
@@ -140,6 +146,11 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
     }
 
     [self.activityFormDelegate formFinished:sets];
+}
+
+- (void)platesContainerTapped {
+    UIViewController *controller = [[NSBundle mainBundle] loadNibNamed:@"BarPlateSetup" owner:self options:nil][0];
+    [self.activityFormDelegate segueTo:controller];
 }
 
 - (int)valueOf:(UITextField *)field {

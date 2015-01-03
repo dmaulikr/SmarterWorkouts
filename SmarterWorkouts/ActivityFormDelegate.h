@@ -7,4 +7,6 @@
 
 - (void)formChangeToType:(NSString *)type withOptions:(NSDictionary *)options;
 
+- (void)segueTo:(UIViewController *)controller;
+
 @end
