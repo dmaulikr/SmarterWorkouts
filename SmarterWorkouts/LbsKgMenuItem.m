@@ -1,4 +1,5 @@
 #import "LbsKgMenuItem.h"
+#import "UnitsChangedDelegate.h"
 
 @implementation LbsKgMenuItem
 
@@ -9,7 +10,11 @@
 
 - (IBAction)tapped:(id)sender {
     self.selectedUnits = [self.selectedUnits isEqualToString:@"lbs"] ? @"kg" : @"lbs";
+    [self.delegate unitsChanged:self.selectedUnits];
+}
 
+- (void)setSelectedUnits:(NSString *)selectedUnits {
+    _selectedUnits = [selectedUnits mutableCopy];
     if ([self.selectedUnits isEqualToString:@"kg"]) {
         [self makeBold:self.kgLabel];
         [self makeLight:self.lbsLabel];

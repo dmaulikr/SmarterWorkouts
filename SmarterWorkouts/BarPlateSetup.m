@@ -7,7 +7,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.units = @"lbs";
+    [self setUnits:@"lbs"];
+}
+
+- (void)setUnits:(NSString *)units {
+    _units = [units mutableCopy];
     [self setBarFieldFromUnits];
     [self updateLbsKgSelector];
 }
@@ -19,8 +23,14 @@
 
 - (void)updateLbsKgSelector {
     LbsKgMenuItem *item = [[NSBundle mainBundle] loadNibNamed:@"LbsKgMenuItem" owner:self options:nil][0];
+    [item setDelegate:self];
+    [item setSelectedUnits:self.units];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:item];
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Title" style:UIBarButtonItemStylePlain target:self action:nil];
+}
+
+- (void)unitsChanged:(NSString *)selectedUnits {
+    self.units = selectedUnits;
+    [self setBarFieldFromUnits];
 }
 
 @end

@@ -11,6 +11,7 @@
 #import "Plate.h"
 #import "BarCalculator.h"
 #import "Bar.h"
+#import "BarPlateSetup.h"
 
 const NSString *WEIGHT_ACTIVITY = @"weight";
 
@@ -149,7 +150,8 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
 }
 
 - (void)platesContainerTapped {
-    UIViewController *controller = [[NSBundle mainBundle] loadNibNamed:@"BarPlateSetup" owner:self options:nil][0];
+    BarPlateSetup *controller = [[NSBundle mainBundle] loadNibNamed:@"BarPlateSetup" owner:self options:nil][0];
+    [controller setUnits: self.units];
     [self.activityFormDelegate segueTo:controller];
 }
 

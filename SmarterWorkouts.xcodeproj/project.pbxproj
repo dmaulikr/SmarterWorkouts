@@ -354,6 +354,7 @@
 		54590C0D26A5837C428167A9 /* Workout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Workout.h; path = Models/Workout.h; sourceTree = "<group>"; };
 		54590C0D4B5814B6A76D333C /* WeightSetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeightSetCell.xib; sourceTree = "<group>"; };
 		54590C0DFE5292040072F281 /* WeightCreateViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightCreateViewControllerTests.m; sourceTree = "<group>"; };
+		54590C0EF6063E2762E4CC4C /* UnitsChangedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitsChangedDelegate.h; sourceTree = "<group>"; };
 		54590C1704D57A0CB87CD410 /* ModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelTests.m; sourceTree = "<group>"; };
 		54590C296C1E9F278FA1D7C4 /* ActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityCell.h; sourceTree = "<group>"; };
 		54590C38B44998CB847FF30C /* FixtureLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FixtureLoader.m; path = Models/Fixtures/FixtureLoader.m; sourceTree = "<group>"; };
@@ -910,6 +911,7 @@
 				545903B6060FD417DA48B7C8 /* LbsKgMenuItem.xib */,
 				54590B603434CE72554A615C /* LbsKgMenuItem.m */,
 				54590FF81F944FE66113014F /* LbsKgMenuItem.h */,
+				54590C0EF6063E2762E4CC4C /* UnitsChangedDelegate.h */,
 			);
 			name = BarPlates;
 			sourceTree = "<group>";
