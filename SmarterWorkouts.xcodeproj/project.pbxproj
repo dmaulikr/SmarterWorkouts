@@ -25,6 +25,7 @@
 		0267A9AC1A21180D00DE7DBC /* Workout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0267A9AA1A21180D00DE7DBC /* Workout.xcdatamodeld */; };
 		027996041A50F9FE00BE0D22 /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 027996031A50F9FE00BE0D22 /* Set.m */; };
 		027ABDDB1A195D2000DE3321 /* BarLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 027ABDDA1A195D2000DE3321 /* BarLoadingViewController.xib */; };
+		02CE7EAD1A5B38B700420FE2 /* PlateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02CE7EAC1A5B38B700420FE2 /* PlateCell.xib */; };
 		02DDF7061A336DED00359F93 /* SetupTimerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DDF7051A336DED00359F93 /* SetupTimerCell.xib */; };
 		5459002593878AF8B4A8BA94 /* SelectionGroupHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459022EB488280BD9CBEAFF /* SelectionGroupHeader.m */; };
 		5459003749AD32360447790F /* 901-repeat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590EED5F73DE4BB57F40C5 /* 901-repeat@3x.png */; };
@@ -55,6 +56,7 @@
 		545904093E7355E6B2AE1E5B /* Plate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545901A4BEFB683859DA0582 /* Plate.m */; };
 		5459043FCE22ED7A812150B4 /* 1097-timer-2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545908707514D9B67C217C4A /* 1097-timer-2@3x.png */; };
 		5459046E831C0A8B5C2B3F39 /* ActivityWeightFormCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5459010B98D31794F6C7AA70 /* ActivityWeightFormCell.xib */; };
+		54590474BD902C6BB5D9F4B2 /* PlateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590A317AE7918F830C49C6 /* PlateCell.m */; };
 		5459049CB6FF57F96117F82E /* ActivityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459046AAA5998518A745AF1 /* ActivityTests.m */; };
 		5459049DF905839DCCD95CE9 /* 901-repeat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590A0AB9FC341CFD9CEB9F /* 901-repeat@2x.png */; };
 		545904A94006B70A52734507 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590F0008BBC7974A542DBB /* HistoryViewController.m */; };
@@ -216,12 +218,14 @@
 		027996021A50F9FE00BE0D22 /* Set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Set.h; path = SmarterWorkouts/Models/Set.h; sourceTree = "<group>"; };
 		027996031A50F9FE00BE0D22 /* Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Set.m; path = SmarterWorkouts/Models/Set.m; sourceTree = "<group>"; };
 		027ABDDA1A195D2000DE3321 /* BarLoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarLoadingViewController.xib; sourceTree = "<group>"; };
+		02CE7EAC1A5B38B700420FE2 /* PlateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlateCell.xib; sourceTree = "<group>"; };
 		02DDF7051A336DED00359F93 /* SetupTimerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupTimerCell.xib; sourceTree = "<group>"; };
 		5459008E74B4D7736182DDDB /* DurationDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DurationDisplay.h; sourceTree = "<group>"; };
 		54590099F7C030E1042A60BE /* BarLoadingSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarLoadingSetupViewController.h; sourceTree = "<group>"; };
 		545900B085897FD8B72023A8 /* Workout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Workout.m; path = Models/Workout.m; sourceTree = "<group>"; };
 		545900B73B1EC46C5240FCD7 /* 904-shuffle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "904-shuffle.png"; sourceTree = "<group>"; };
 		545900DE6BC3C8B8CD9B979C /* PlateRemaining.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateRemaining.h; sourceTree = "<group>"; };
+		545900E9740DB206E61F5560 /* PlateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateCell.h; sourceTree = "<group>"; };
 		545900F4F126F777ABE82238 /* SetCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCellFactory.m; sourceTree = "<group>"; };
 		54590106A79353B3DF4D3B9C /* 1097-timer-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1097-timer-2@2x.png"; sourceTree = "<group>"; };
 		5459010B98D31794F6C7AA70 /* ActivityWeightFormCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityWeightFormCell.xib; sourceTree = "<group>"; };
@@ -258,6 +262,7 @@
 		545902F39621185F30F59354 /* WorkoutControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutControls.m; sourceTree = "<group>"; };
 		545902FC40A458CC44ECB9A4 /* BarCalculatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarCalculatorTests.m; sourceTree = "<group>"; };
 		545902FDED688FE872C92CF1 /* SWTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTestCase.m; sourceTree = "<group>"; };
+		5459034C26C96660601DA379 /* PlateCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateCellProtocol.h; sourceTree = "<group>"; };
 		545903888625FF04D581594B /* 709-plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-plus@2x.png"; sourceTree = "<group>"; };
 		545903A3249D172566898D0E /* HistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryCell.h; sourceTree = "<group>"; };
 		545903AC024EC344BA992AB7 /* quotes.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = quotes.json; sourceTree = "<group>"; };
@@ -331,6 +336,7 @@
 		54590A0AB9FC341CFD9CEB9F /* 901-repeat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "901-repeat@2x.png"; sourceTree = "<group>"; };
 		54590A2BC9B71EA9362C1C89 /* 746-plus-circle-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "746-plus-circle-toolbar@3x.png"; sourceTree = "<group>"; };
 		54590A2E38F8204300D80EF7 /* SetCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCellFactory.h; sourceTree = "<group>"; };
+		54590A317AE7918F830C49C6 /* PlateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateCell.m; sourceTree = "<group>"; };
 		54590A3C397CD5F84B4E6B36 /* WeightInputControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightInputControls.h; sourceTree = "<group>"; };
 		54590A44741C2A595BB2E277 /* ActivityCreateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityCreateController.h; sourceTree = "<group>"; };
 		54590A5EE6F4DA37356E698F /* WorkoutCopier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutCopier.m; sourceTree = "<group>"; };
@@ -912,6 +918,10 @@
 				54590B603434CE72554A615C /* LbsKgMenuItem.m */,
 				54590FF81F944FE66113014F /* LbsKgMenuItem.h */,
 				54590C0EF6063E2762E4CC4C /* UnitsChangedDelegate.h */,
+				54590A317AE7918F830C49C6 /* PlateCell.m */,
+				545900E9740DB206E61F5560 /* PlateCell.h */,
+				02CE7EAC1A5B38B700420FE2 /* PlateCell.xib */,
+				5459034C26C96660601DA379 /* PlateCellProtocol.h */,
 			);
 			name = BarPlates;
 			sourceTree = "<group>";
@@ -1218,6 +1228,7 @@
 				0265AB761A49E44800A8556D /* HistoryCellExpanded.xib in Resources */,
 				5459038EF0C90D4D20E0CD13 /* 1091-weights@2x.png in Resources */,
 				5459050E52423716366E7C31 /* 1091-weights.png in Resources */,
+				02CE7EAD1A5B38B700420FE2 /* PlateCell.xib in Resources */,
 				54590911F8B740D151B3D410 /* 1097-timer-2.png in Resources */,
 				5459043FCE22ED7A812150B4 /* 1097-timer-2@3x.png in Resources */,
 				54590600C2136F850AFCC748 /* 1097-timer-2@2x.png in Resources */,
@@ -1388,6 +1399,7 @@
 				5459036AAFC4C7321743456C /* UIColor+HexString.m in Sources */,
 				545908548376744B1522360F /* BarPlateSetup.m in Sources */,
 				54590696682F37F748487188 /* LbsKgMenuItem.m in Sources */,
+				54590474BD902C6BB5D9F4B2 /* PlateCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

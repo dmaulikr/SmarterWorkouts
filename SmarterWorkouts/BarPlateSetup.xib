@@ -19,7 +19,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar Weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBV-Au-wuT">
                         <rect key="frame" x="16" y="12" width="114.5" height="30"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="45" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o0C-uj-4wL">
@@ -27,15 +27,31 @@
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                     </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plates" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZ1-2i-VhW">
+                        <rect key="frame" x="16" y="50" width="63.5" height="28.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eDQ-QY-vfT">
+                        <rect key="frame" x="16" y="86" width="288" height="306"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tableView>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
+                    <constraint firstItem="eDQ-QY-vfT" firstAttribute="top" secondItem="rZ1-2i-VhW" secondAttribute="bottom" constant="8" id="0H4-eX-bnO"/>
                     <constraint firstItem="o0C-uj-4wL" firstAttribute="top" secondItem="9Qp-z0-JCG" secondAttribute="bottom" constant="12" id="5N5-No-w4H"/>
                     <constraint firstItem="o0C-uj-4wL" firstAttribute="height" secondItem="JBV-Au-wuT" secondAttribute="height" id="6hs-8K-MV2"/>
                     <constraint firstItem="JBV-Au-wuT" firstAttribute="leading" secondItem="wIC-qL-fBF" secondAttribute="leadingMargin" id="Asw-Ge-aBR"/>
                     <constraint firstItem="o0C-uj-4wL" firstAttribute="leading" secondItem="JBV-Au-wuT" secondAttribute="trailing" constant="8" id="DPw-TF-lv2"/>
                     <constraint firstItem="JBV-Au-wuT" firstAttribute="top" secondItem="9Qp-z0-JCG" secondAttribute="bottom" constant="12" id="DZ4-RX-juA"/>
                     <constraint firstItem="o0C-uj-4wL" firstAttribute="trailing" secondItem="wIC-qL-fBF" secondAttribute="trailingMargin" id="UKI-a3-5Cd"/>
+                    <constraint firstItem="eDQ-QY-vfT" firstAttribute="leading" secondItem="wIC-qL-fBF" secondAttribute="leadingMargin" id="iJC-Rq-zDH"/>
+                    <constraint firstItem="uUF-3E-p39" firstAttribute="top" secondItem="eDQ-QY-vfT" secondAttribute="bottom" constant="8" id="jsb-T4-XoZ"/>
+                    <constraint firstItem="rZ1-2i-VhW" firstAttribute="leading" secondItem="wIC-qL-fBF" secondAttribute="leadingMargin" id="jvp-Oz-xa7"/>
+                    <constraint firstItem="eDQ-QY-vfT" firstAttribute="trailing" secondItem="wIC-qL-fBF" secondAttribute="trailingMargin" id="vcB-Ay-DXJ"/>
+                    <constraint firstItem="rZ1-2i-VhW" firstAttribute="top" secondItem="JBV-Au-wuT" secondAttribute="bottom" constant="8" id="zUN-0T-75P"/>
                 </constraints>
             </view>
             <nil key="simulatedStatusBarMetrics"/>
@@ -43,6 +59,7 @@
             <size key="freeformSize" width="320" height="400"/>
             <connections>
                 <outlet property="barTextField" destination="o0C-uj-4wL" id="iXC-AL-fVX"/>
+                <outlet property="platesTable" destination="eDQ-QY-vfT" id="FAg-XE-KBa"/>
             </connections>
             <point key="canvasLocation" x="825" y="25"/>
         </viewController>
