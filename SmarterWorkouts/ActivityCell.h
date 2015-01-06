@@ -20,4 +20,5 @@
 
 - (void)setSetToCopy:(Set *)set;
 
+- (void)viewWillAppear;
 @end

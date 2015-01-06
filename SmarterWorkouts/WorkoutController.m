@@ -84,6 +84,13 @@
 
     self.tableView.tableHeaderView = workoutControls;
     [self hideToolbar];
+
+    if (self.selectedSet || self.selectedActivity) {
+        for(int row = 0; row < [self.tableView numberOfRowsInSection:0]; row++){
+            ActivityCell *cell = (ActivityCell *) [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:0]];
+            [cell viewWillAppear];
+        }
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

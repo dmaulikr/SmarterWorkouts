@@ -105,6 +105,11 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
     }
 }
 
+- (void)viewWillAppear {
+    [super viewWillAppear];
+    [self weightChanged:nil];
+}
+
 - (void)weightChanged:(id)weightChanged {
     NSDecimalNumber *weight = [DecimalNumbers parse:[self.weightInput text]];
     if ([weight compare:[NSDecimalNumber decimalNumberWithString:@"45"]] == NSOrderedDescending) {

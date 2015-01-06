@@ -13,31 +13,32 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hn4-zE-l1L" id="r32-Ga-IXl">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45 lbs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9W-ZT-qWG">
-                        <rect key="frame" x="8" y="18" width="79" height="29"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2 plates" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0q3-ns-N3G" customClass="FlavorTextUITextField">
-                        <rect key="frame" x="95" y="8" width="217" height="49.5"/>
+                        <rect key="frame" x="205" y="8" width="107" height="49.5"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                     </textField>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="45 lbs" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MmB-TY-lvK" customClass="FlavorTextUITextField">
+                        <rect key="frame" x="8" y="8" width="120" height="49.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="p4Z-Dh-cqY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                    </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="r9W-ZT-qWG" secondAttribute="bottom" constant="10" id="GRi-fb-zvk"/>
                     <constraint firstItem="0q3-ns-N3G" firstAttribute="top" secondItem="r32-Ga-IXl" secondAttribute="topMargin" id="XiD-1H-MOS"/>
-                    <constraint firstItem="r9W-ZT-qWG" firstAttribute="top" secondItem="r32-Ga-IXl" secondAttribute="topMargin" constant="10" id="YnW-I4-dgh"/>
                     <constraint firstItem="0q3-ns-N3G" firstAttribute="trailing" secondItem="r32-Ga-IXl" secondAttribute="trailingMargin" id="dBg-f6-EkR"/>
-                    <constraint firstItem="r9W-ZT-qWG" firstAttribute="leading" secondItem="r32-Ga-IXl" secondAttribute="leadingMargin" id="j4r-fJ-MBh"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="MmB-TY-lvK" secondAttribute="bottom" id="f0N-M5-Wds"/>
+                    <constraint firstItem="MmB-TY-lvK" firstAttribute="top" secondItem="r32-Ga-IXl" secondAttribute="topMargin" id="l2J-n2-uka"/>
                     <constraint firstAttribute="bottomMargin" secondItem="0q3-ns-N3G" secondAttribute="bottom" id="ljG-YC-ZHG"/>
-                    <constraint firstItem="0q3-ns-N3G" firstAttribute="leading" secondItem="r9W-ZT-qWG" secondAttribute="trailing" constant="8" id="qla-7G-KdP"/>
+                    <constraint firstItem="MmB-TY-lvK" firstAttribute="leading" secondItem="r32-Ga-IXl" secondAttribute="leadingMargin" id="p8T-I3-Tzb"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="platesField" destination="0q3-ns-N3G" id="wp6-9l-RUi"/>
-                <outlet property="weightLabel" destination="r9W-ZT-qWG" id="tK4-Gz-iD7"/>
+                <outlet property="weightField" destination="MmB-TY-lvK" id="ogn-eW-RFX"/>
             </connections>
             <point key="canvasLocation" x="296" y="172"/>
         </tableViewCell>

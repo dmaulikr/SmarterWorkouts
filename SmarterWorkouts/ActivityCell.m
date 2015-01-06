@@ -28,4 +28,7 @@
     [self.activityFormDelegate formCanceled];
 }
 
+- (void)viewWillAppear {
+}
+
 @end
