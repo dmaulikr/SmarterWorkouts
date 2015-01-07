@@ -19,8 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"History";
-    [self.tableView setBackgroundColor:
-            [UIColor colorWithRed:(CGFloat) (52.0 / 255) green:(CGFloat) (182 / 255.0) blue:(CGFloat) (252.0 / 255) alpha:1]];
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.rowHeight = UITableViewAutomaticDimension;

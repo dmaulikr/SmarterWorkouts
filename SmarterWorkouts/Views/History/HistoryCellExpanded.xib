@@ -16,7 +16,6 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Squat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhu-z2-ZVS">
                         <rect key="frame" x="8" y="8" width="83.5" height="44.5"/>
                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzd-yl-EGi">
@@ -49,8 +48,6 @@
                     </label>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="11/12/14" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hzz-07-rAF">
                         <rect key="frame" x="220" y="9.5" width="129" height="40"/>
-                        <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
@@ -62,7 +59,6 @@
                         </constraints>
                     </tableView>
                 </subviews>
-                <color key="backgroundColor" red="0.20392156859999999" green="0.71372549019999998" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="zl8-HJ-pze" firstAttribute="top" secondItem="nET-um-S2c" secondAttribute="bottom" constant="8" id="1rK-8Y-3XC"/>
                     <constraint firstItem="nET-um-S2c" firstAttribute="trailing" secondItem="5nx-sL-3wt" secondAttribute="trailingMargin" id="4g3-gF-E1M"/>
