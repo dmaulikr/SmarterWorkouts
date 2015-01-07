@@ -85,18 +85,23 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="740-gear-toolbar.png" translatesAutoresizingMaskIntoConstraints="NO" id="35J-ww-Zqx">
+                                <rect key="frame" x="417" y="8" width="22" height="22"/>
+                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="JTB-yb-so9" firstAttribute="leading" secondItem="cG6-Hl-ZJP" secondAttribute="leading" constant="8" id="7DA-so-V02"/>
                             <constraint firstAttribute="height" constant="69" id="7vp-CT-dwl"/>
                             <constraint firstAttribute="trailing" secondItem="JTB-yb-so9" secondAttribute="trailing" constant="8" id="Elh-A9-ctC"/>
+                            <constraint firstItem="X0a-Xo-5vs" firstAttribute="centerY" secondItem="35J-ww-Zqx" secondAttribute="centerY" constant="-0.75" id="F9Y-BX-6vO"/>
                             <constraint firstAttribute="bottom" secondItem="JTB-yb-so9" secondAttribute="bottom" constant="8" id="MKu-pw-e8D"/>
                             <constraint firstItem="X0a-Xo-5vs" firstAttribute="leading" secondItem="cG6-Hl-ZJP" secondAttribute="leading" constant="8" id="kBp-Du-Nm0"/>
                             <constraint firstItem="X0a-Xo-5vs" firstAttribute="top" secondItem="cG6-Hl-ZJP" secondAttribute="top" constant="8" id="tQc-M4-8vd"/>
+                            <constraint firstAttribute="trailing" secondItem="35J-ww-Zqx" secondAttribute="trailing" constant="8" id="xsm-63-mHb"/>
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvT-DP-QyE">
-                        <rect key="frame" x="235.5" y="109" width="211.5" height="50"/>
+                        <rect key="frame" x="235" y="109" width="211.5" height="50"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                         <state key="normal" title="Notes">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -147,4 +152,7 @@
             <point key="canvasLocation" x="343.5" y="438"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="740-gear-toolbar.png" width="22" height="22"/>
+    </resources>
 </document>

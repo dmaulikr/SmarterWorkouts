@@ -80,6 +80,7 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
     }
     else {
         [self.weightInput setText:@""];
+        [self.weightInput addFlavor];
     }
 
     if ([selectedSet.reps intValue] == 1) {
@@ -87,7 +88,9 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
     }
     else {
         [self.repsInput setText:[NSString stringWithFormat:@"%@", selectedSet.reps]];
+        [self.repsInput addFlavor];
     }
+
     [self.addButton setTitle:@"Save" forState:UIControlStateNormal];
     [self.platesContainer setHidden:!selectedSet.activity.usesBar];
 }

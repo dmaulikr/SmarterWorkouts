@@ -14,15 +14,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LP2-vI-eZV">
-                        <rect key="frame" x="195" y="14" width="29" height="32"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="frame" x="209" y="16" width="25" height="28.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="168lbs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqr-Kq-xoJ">
-                        <rect key="frame" x="232" y="15" width="80" height="31"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
-                        <color key="textColor" red="0.98039215690000003" green="0.99215686270000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="242" y="15.5" width="70" height="28.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3c-Hq-0RX">
@@ -33,19 +31,18 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Power Clean" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.70000000000000018" translatesAutoresizingMaskIntoConstraints="NO" id="5fL-sT-cTI">
-                        <rect key="frame" x="8" y="8" width="152" height="44"/>
+                        <rect key="frame" x="8" y="8" width="132.5" height="44"/>
                         <constraints>
                             <constraint firstAttribute="height" priority="999" constant="44" id="hAj-8W-YSY"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="centerY" secondItem="LP2-vI-eZV" secondAttribute="centerY" id="34A-fR-WLO"/>
-                    <constraint firstAttribute="centerY" secondItem="Dqr-Kq-xoJ" secondAttribute="centerY" id="5nN-SZ-F6F"/>
+                    <constraint firstAttribute="centerY" secondItem="LP2-vI-eZV" secondAttribute="centerY" id="0xn-Bb-Ctl"/>
                     <constraint firstItem="d3c-Hq-0RX" firstAttribute="leading" secondItem="XVB-Wm-jq0" secondAttribute="leading" id="EUH-9N-fcB"/>
+                    <constraint firstAttribute="centerY" secondItem="Dqr-Kq-xoJ" secondAttribute="centerY" id="KMt-8J-fNi"/>
                     <constraint firstItem="5fL-sT-cTI" firstAttribute="bottom" secondItem="XVB-Wm-jq0" secondAttribute="bottomMargin" id="MSC-Q4-jcK"/>
                     <constraint firstItem="Dqr-Kq-xoJ" firstAttribute="leading" secondItem="LP2-vI-eZV" secondAttribute="trailing" constant="8" id="NxN-lG-ypB"/>
                     <constraint firstItem="5fL-sT-cTI" firstAttribute="leading" secondItem="XVB-Wm-jq0" secondAttribute="leadingMargin" id="VBZ-CP-hzA"/>
@@ -55,7 +52,6 @@
                     <constraint firstAttribute="trailingMargin" secondItem="Dqr-Kq-xoJ" secondAttribute="trailing" id="uZl-BW-h3R"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.22352941176470587" green="0.54509803921568623" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="activityLabel" destination="5fL-sT-cTI" id="5iC-Zt-p1z"/>
                 <outlet property="repsLabel" destination="LP2-vI-eZV" id="292-ku-d52"/>
