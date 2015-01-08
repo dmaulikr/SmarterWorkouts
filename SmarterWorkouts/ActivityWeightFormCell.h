@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "FormDelegate.h"
 #import "ActivityCell.h"
+#import "TextSaved.h"
 
 @class WorkoutController;
 @protocol ActivityFormDelegate;
@@ -11,7 +12,7 @@
 
 extern const NSString *WEIGHT_ACTIVITY;
 
-@interface ActivityWeightFormCell : ActivityCell <UITextFieldDelegate, FormDelegate>
+@interface ActivityWeightFormCell : ActivityCell <UITextFieldDelegate, FormDelegate, TextSaved>
 @property(weak, nonatomic) IBOutlet UILabel *activityNameLabel;
 @property(weak, nonatomic) IBOutlet FlavorTextUITextField *weightInput;
 @property(weak, nonatomic) IBOutlet FlavorTextUITextField *repsInput;
@@ -22,6 +23,8 @@ extern const NSString *WEIGHT_ACTIVITY;
 @property(weak, nonatomic) IBOutlet UILabel *platesLabel;
 @property(weak, nonatomic) IBOutlet UILabel *platesLabelSubtitle;
 @property (weak, nonatomic) IBOutlet UIView *platesContainer;
+@property (weak, nonatomic) IBOutlet UITextField *notesHiddenInput;
+@property (weak, nonatomic) IBOutlet UILabel *notesLabel;
 
 @property(nonatomic, copy) NSString *units;
 

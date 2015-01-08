@@ -12,6 +12,7 @@
 #import "BarCalculator.h"
 #import "Bar.h"
 #import "BarPlateSetup.h"
+#import "NoteInputAccessoryView.h"
 
 const NSString *WEIGHT_ACTIVITY = @"weight";
 
@@ -37,6 +38,9 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(platesContainerTapped)];
     [self.platesContainer addGestureRecognizer:tap];
+
+    NoteInputAccessoryView *view = [[NSBundle mainBundle] loadNibNamed:@"NoteInputAccessoryView" owner:self options:nil][0];
+    [self.notesHiddenInput setInputAccessoryView:view];
 }
 
 - (void)layoutSubviews {
@@ -67,6 +71,8 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
 
     [self.weightInput becomeFirstResponder];
     [self.platesContainer setHidden:!activity.usesBar];
+    [self.notesLabel setText:@""];
+    [self.notesHiddenInput setText:@""];
 }
 
 - (void)setSelectedSet:(Set *)selectedSet {
@@ -93,6 +99,8 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
 
     [self.addButton setTitle:@"Save" forState:UIControlStateNormal];
     [self.platesContainer setHidden:!selectedSet.activity.usesBar];
+    [self.notesLabel setText:selectedSet.comments];
+    [self.notesHiddenInput setText:selectedSet.comments];
 }
 
 - (void)setSetToCopy:(Set *)set {
@@ -106,6 +114,8 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
     else {
         [self.repsInput setText:[NSString stringWithFormat:@"%@", set.reps]];
     }
+    [self.notesLabel setText:set.comments];
+    [self.notesHiddenInput setText:set.comments];
 }
 
 - (void)viewWillAppear {
@@ -151,6 +161,7 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
         set.units = self.selectedSet ? self.selectedSet.units : self.activity.units;
         set.weight = [DecimalNumbers parse:self.weightInput.text];
         set.reps = @([self loggedReps]);
+        set.comments = [self.notesHiddenInput text];
         [sets addObject:set];
     }
 
@@ -159,7 +170,7 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
 
 - (void)platesContainerTapped {
     BarPlateSetup *controller = [[NSBundle mainBundle] loadNibNamed:@"BarPlateSetup" owner:self options:nil][0];
-    [controller setUnits: self.units];
+    [controller setUnits:self.units];
     [self.activityFormDelegate segueTo:controller];
 }
 
@@ -196,4 +207,19 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
     }
     [self weightChanged:nil];
 }
+
+- (IBAction)notesTapped:(id)sender {
+    [self.notesHiddenInput becomeFirstResponder];
+    NoteInputAccessoryView *view = (NoteInputAccessoryView *) [self.notesHiddenInput inputAccessoryView];
+    [view setDelegate:self];
+    [view.messageBox setText:[self.notesHiddenInput text]];
+    [view.messageBox becomeFirstResponder];
+}
+
+- (void)textSaved:(NSString *)text {
+    [self.notesHiddenInput setText:text];
+    [self.notesHiddenInput endEditing:YES];
+    [self.notesLabel setText:text];
+}
+
 @end

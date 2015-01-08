@@ -124,6 +124,7 @@
 		54590AF0B50C19DF1851E92B /* 746-plus-circle-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590760B5052A6DCC9F2736 /* 746-plus-circle-toolbar.png */; };
 		54590AF6E68001E2BCB8ABCA /* 974-users@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545908E1A969ECC5D31D89B4 /* 974-users@3x.png */; };
 		54590B184F8BBFBD7F5B8CD3 /* ActivitySearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 545901CFDE3C13EF2DCFC3CB /* ActivitySearchCell.m */; };
+		54590B592C5179B355D57FC2 /* NoteInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590543AF84083FC2BEACF7 /* NoteInputAccessoryView.m */; };
 		54590B5CE0A8BD63B2C84F6C /* SmallSetCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590EDA6715D0CB46E486E6 /* SmallSetCellFactory.m */; };
 		54590B9F00E1B634B46EE06F /* 904-shuffle.png in Resources */ = {isa = PBXBuildFile; fileRef = 545900B73B1EC46C5240FCD7 /* 904-shuffle.png */; };
 		54590BAD0BDD079C13B5806A /* ActivitySearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590B470770405B75EE9A62 /* ActivitySearchCell.xib */; };
@@ -146,6 +147,7 @@
 		54590E57AC06674BBE929D2B /* ActivityCellFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459082A26AD4BB9670D2BDC /* ActivityCellFactoryTests.m */; };
 		54590E74E212FDDCCE00FA59 /* SmallWeightSetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590449FC1597429B032042 /* SmallWeightSetCell.m */; };
 		54590EA2C3FB9CCC2411C9CA /* quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 545903AC024EC344BA992AB7 /* quotes.json */; };
+		54590EC4CA651E059EEEBC2A /* NoteInputAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590D179A66492863B7995B /* NoteInputAccessoryView.xib */; };
 		54590F2DE0A40BC4E74C42A0 /* SWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590EEDEDFB55C9CD0B52CD /* SWTimer.m */; };
 		54590F71343D7A09435938C2 /* Form.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459094388A431B3BB423E90 /* Form.m */; };
 		54590FA6C97345D57ECC5425 /* DurationDisplayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590272E50B204941754D35 /* DurationDisplayTests.m */; };
@@ -288,7 +290,9 @@
 		545905044CA3AB8FAD537913 /* QuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteViewController.h; sourceTree = "<group>"; };
 		5459050D61A1F3E6DF7EB87E /* 415-weightlifter-inverse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "415-weightlifter-inverse@2x.png"; sourceTree = "<group>"; };
 		5459052DF846D5DF7C5F03DF /* SmallDurationSetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallDurationSetCell.h; sourceTree = "<group>"; };
+		54590543AF84083FC2BEACF7 /* NoteInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteInputAccessoryView.m; sourceTree = "<group>"; };
 		54590553C780EDD38BD34CA6 /* 709-plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-plus.png"; sourceTree = "<group>"; };
+		54590564CFF8E8F4DF307D66 /* NoteInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteInputAccessoryView.h; sourceTree = "<group>"; };
 		5459057E9A8FEBF598DFA13B /* PlateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateTests.m; sourceTree = "<group>"; };
 		5459058F798687931790C88A /* SmallSetCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallSetCellFactory.h; sourceTree = "<group>"; };
 		545905ABBA5E7B5529B9F446 /* DurationSetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DurationSetCell.xib; sourceTree = "<group>"; };
@@ -377,12 +381,14 @@
 		54590CA37F0A1D91DD9AD39B /* FlavorTextUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlavorTextUITextField.h; sourceTree = "<group>"; };
 		54590CBDA13FF3EC3F932B52 /* ActivityCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCellFactory.m; sourceTree = "<group>"; };
 		54590CFA15918636F9EA4B15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		54590D179A66492863B7995B /* NoteInputAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteInputAccessoryView.xib; sourceTree = "<group>"; };
 		54590D2D5626EF13B98FF8EF /* 740-gear-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "740-gear-toolbar.png"; sourceTree = "<group>"; };
 		54590D666EAF59158375E202 /* ActivitySelectorInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitySelectorInputViewController.m; sourceTree = "<group>"; };
 		54590D78FE5F96E85ACD09C8 /* UIImageViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewHelper.h; sourceTree = "<group>"; };
 		54590D88EEE880F3472985DB /* SetGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetGroup.m; path = Models/SetGroup.m; sourceTree = "<group>"; };
 		54590D8D064A5780839A3443 /* WeightSetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightSetCell.h; sourceTree = "<group>"; };
 		54590D9ABFE1DCA1F76A27E3 /* ActivityCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityCellFactory.h; sourceTree = "<group>"; };
+		54590DBA504081D7FFCC3C55 /* TextSaved.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextSaved.h; sourceTree = "<group>"; };
 		54590DCC45595B04895F779F /* ActivityWeightFormCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityWeightFormCell.m; sourceTree = "<group>"; };
 		54590DE94E1B20B22425DADE /* SetGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetGroup.h; path = Models/SetGroup.h; sourceTree = "<group>"; };
 		54590DF2D5E1B0F20CC5D4FF /* CreateNewActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateNewActivityViewController.h; sourceTree = "<group>"; };
@@ -825,6 +831,10 @@
 				5459015270B1DC4F65DF6E6E /* Timer */,
 				54590CBDA13FF3EC3F932B52 /* ActivityCellFactory.m */,
 				54590D9ABFE1DCA1F76A27E3 /* ActivityCellFactory.h */,
+				54590D179A66492863B7995B /* NoteInputAccessoryView.xib */,
+				54590543AF84083FC2BEACF7 /* NoteInputAccessoryView.m */,
+				54590564CFF8E8F4DF307D66 /* NoteInputAccessoryView.h */,
+				54590DBA504081D7FFCC3C55 /* TextSaved.h */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -1268,6 +1278,7 @@
 				545901B813C1C149E3C8C423 /* 740-gear-toolbar.png in Resources */,
 				5459033B738CAB4A42774A53 /* 740-gear-toolbar@3x.png in Resources */,
 				54590D5CA738C0D118029FA5 /* 740-gear-toolbar@2x.png in Resources */,
+				54590EC4CA651E059EEEBC2A /* NoteInputAccessoryView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1412,6 +1423,7 @@
 				545908548376744B1522360F /* BarPlateSetup.m in Sources */,
 				54590696682F37F748487188 /* LbsKgMenuItem.m in Sources */,
 				54590474BD902C6BB5D9F4B2 /* PlateCell.m in Sources */,
+				54590B592C5179B355D57FC2 /* NoteInputAccessoryView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

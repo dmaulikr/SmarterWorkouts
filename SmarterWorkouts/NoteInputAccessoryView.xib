@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NoteInputAccessoryView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHs-7S-niJ">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="1"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="vrW-3x-JlC"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type your notes..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Hn-rX-tlW">
+                    <rect key="frame" x="6" y="6" width="246" height="32"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byl-Gp-3B2">
+                    <rect key="frame" x="260" y="6" width="32" height="30"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                    <state key="normal" title="Save">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="saveTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ice-Lg-eAz"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0Hn-rX-tlW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="6" id="1Qq-Vv-BGH"/>
+                <constraint firstAttribute="bottom" secondItem="0Hn-rX-tlW" secondAttribute="bottom" constant="6" id="7H1-tY-WBd"/>
+                <constraint firstItem="0Hn-rX-tlW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="SHp-F8-6Xr"/>
+                <constraint firstItem="byl-Gp-3B2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="U79-AE-kfc"/>
+                <constraint firstAttribute="trailing" secondItem="byl-Gp-3B2" secondAttribute="trailing" constant="8" id="c50-WE-QEq"/>
+                <constraint firstItem="uHs-7S-niJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hsK-bZ-qC3"/>
+                <constraint firstAttribute="trailing" secondItem="uHs-7S-niJ" secondAttribute="trailing" id="htE-30-5t9"/>
+                <constraint firstAttribute="bottom" secondItem="byl-Gp-3B2" secondAttribute="bottom" constant="8" id="i9e-sD-bJn"/>
+                <constraint firstItem="byl-Gp-3B2" firstAttribute="leading" secondItem="0Hn-rX-tlW" secondAttribute="trailing" constant="8" id="o70-am-VSt"/>
+                <constraint firstItem="uHs-7S-niJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yVe-Pr-xn9"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="messageBox" destination="0Hn-rX-tlW" id="Uyp-Nl-bvq"/>
+            </connections>
+        </view>
+    </objects>
+</document>
