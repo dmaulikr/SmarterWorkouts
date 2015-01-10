@@ -71,8 +71,13 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
 
     [self.weightInput becomeFirstResponder];
     [self.platesContainer setHidden:!activity.usesBar];
-    [self.notesLabel setText:@""];
+    [self hideNotes:YES];
     [self.notesHiddenInput setText:@""];
+}
+
+- (void)hideNotes:(BOOL)shouldHide {
+    [self.notesLabel setHidden:shouldHide];
+    [self.notesVerticalPaddingConstraint setConstant:shouldHide ? 0 : 12];
 }
 
 - (void)setSelectedSet:(Set *)selectedSet {
@@ -100,6 +105,7 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
     [self.addButton setTitle:@"Save" forState:UIControlStateNormal];
     [self.platesContainer setHidden:!selectedSet.activity.usesBar];
     [self.notesLabel setText:selectedSet.comments];
+    [self hideNotes:[selectedSet.comments isEqualToString:@""]];
     [self.notesHiddenInput setText:selectedSet.comments];
 }
 
@@ -114,8 +120,9 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
     else {
         [self.repsInput setText:[NSString stringWithFormat:@"%@", set.reps]];
     }
-    [self.notesLabel setText:set.comments];
-    [self.notesHiddenInput setText:set.comments];
+    [self hideNotes:YES];
+    [self.notesLabel setText:@""];
+    [self.notesHiddenInput setText:@""];
 }
 
 - (void)viewWillAppear {
@@ -220,6 +227,7 @@ const NSString *WEIGHT_ACTIVITY = @"weight";
     [self.notesHiddenInput setText:text];
     [self.notesHiddenInput endEditing:YES];
     [self.notesLabel setText:text];
+    [self hideNotes:[text isEqualToString:@""]];
 }
 
 @end

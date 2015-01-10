@@ -14,12 +14,12 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LP2-vI-eZV">
-                        <rect key="frame" x="209" y="16" width="25" height="28.5"/>
+                        <rect key="frame" x="209" y="16" width="25" height="29"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="168lbs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqr-Kq-xoJ">
-                        <rect key="frame" x="242" y="15.5" width="70" height="28.5"/>
+                        <rect key="frame" x="242" y="16" width="70" height="29"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -31,7 +31,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Power Clean" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.70000000000000018" translatesAutoresizingMaskIntoConstraints="NO" id="5fL-sT-cTI">
-                        <rect key="frame" x="8" y="8" width="132.5" height="44"/>
+                        <rect key="frame" x="8" y="8" width="133" height="44"/>
                         <constraints>
                             <constraint firstAttribute="height" priority="999" constant="44" id="hAj-8W-YSY"/>
                         </constraints>

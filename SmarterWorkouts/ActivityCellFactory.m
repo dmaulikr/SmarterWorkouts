@@ -7,10 +7,14 @@
 #import "TimerActiveCell.h"
 #import "CellRegister.h"
 
+typedef NSArray *array;
+
 @implementation ActivityCellFactory
 
 + (void)registerNibs:(UITableView *)tableView {
-    NSArray *classes = @[TimerActiveCell.class, ActivityWeightFormCell.class, SetupTimerCell.class];
+    array classes = @[TimerActiveCell.class,
+            ActivityWeightFormCell.class,
+            SetupTimerCell.class];
     for (Class klass in classes) {
         [CellRegister registerClass:klass for:tableView];
     }

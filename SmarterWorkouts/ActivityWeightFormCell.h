@@ -25,6 +25,7 @@ extern const NSString *WEIGHT_ACTIVITY;
 @property (weak, nonatomic) IBOutlet UIView *platesContainer;
 @property (weak, nonatomic) IBOutlet UITextField *notesHiddenInput;
 @property (weak, nonatomic) IBOutlet UILabel *notesLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *notesVerticalPaddingConstraint;
 
 @property(nonatomic, copy) NSString *units;
 

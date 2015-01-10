@@ -3,11 +3,16 @@
 #import "WeightSetCell.h"
 #import "DurationSetCell.h"
 #import "CellRegister.h"
+#import "WeightSetCellWithComments.h"
 
 @implementation SetCellFactory
 
 + (void)registerNibs:(UITableView *)tableView {
-    NSArray *classes = @[WeightSetCell.class, DurationSetCell.class];
+    NSArray *classes = @[
+            WeightSetCell.class,
+            DurationSetCell.class,
+            WeightSetCellWithComments.class
+    ];
     for (Class klass in classes) {
         [CellRegister registerClass:klass for:tableView];
     }
@@ -19,7 +24,12 @@
         cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(DurationSetCell.class) forIndexPath:indexPath];
     }
     else {
-        cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(WeightSetCell.class) forIndexPath:indexPath];
+        if (set.comments) {
+            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(WeightSetCellWithComments.class) forIndexPath:indexPath];
+        }
+        else {
+            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(WeightSetCell.class) forIndexPath:indexPath];
+        }
     }
     [cell setSet:set];
     return cell;
