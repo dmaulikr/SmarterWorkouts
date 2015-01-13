@@ -29,6 +29,7 @@
 		02DDF7061A336DED00359F93 /* SetupTimerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DDF7051A336DED00359F93 /* SetupTimerCell.xib */; };
 		5459002593878AF8B4A8BA94 /* SelectionGroupHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459022EB488280BD9CBEAFF /* SelectionGroupHeader.m */; };
 		5459003749AD32360447790F /* 901-repeat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590EED5F73DE4BB57F40C5 /* 901-repeat@3x.png */; };
+		54590040FF2735B1C6A4904E /* 912-gears.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590E85F0F2A1C45692C3B5 /* 912-gears.png */; };
 		5459004C362F8D82667493BD /* BarCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902FC40A458CC44ECB9A4 /* BarCalculatorTests.m */; };
 		54590096202B3CBF2E36A63A /* CreateNewActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590160A8D663DAC97950B5 /* CreateNewActivityViewController.m */; };
 		545900A896D00F0EDEEEAEEC /* SmallDurationSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590E52A709C738C59FE1E4 /* SmallDurationSetCell.xib */; };
@@ -48,6 +49,7 @@
 		5459033B738CAB4A42774A53 /* 740-gear-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545909CCB4A62AC6A95B9D3B /* 740-gear-toolbar@3x.png */; };
 		5459033E2868864F19843FC3 /* UIImageViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590E583ADE4FD8272B88B9 /* UIImageViewHelper.m */; };
 		5459036AAFC4C7321743456C /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590B22D565A96FCAA89128 /* UIColor+HexString.m */; };
+		545903732D09E118747A59C4 /* 912-gears@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545901AF75BC27A0B483172F /* 912-gears@2x.png */; };
 		5459038EF0C90D4D20E0CD13 /* 1091-weights@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545904F4A9A261D4FA5EA3D6 /* 1091-weights@2x.png */; };
 		5459038FBAC596822F11CF5D /* BarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590996D2BBCB5B6C7919D5 /* BarTests.m */; };
 		545903AECA023DD003774059 /* WorkoutControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902F39621185F30F59354 /* WorkoutControls.m */; };
@@ -155,6 +157,7 @@
 		54590FA6C97345D57ECC5425 /* DurationDisplayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590272E50B204941754D35 /* DurationDisplayTests.m */; };
 		54590FB9490FAEFD72CB3D61 /* ActivityWeightFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590DCC45595B04895F779F /* ActivityWeightFormCell.m */; };
 		54590FBCDF61D07DE37687D5 /* 415-weightlifter-inverse@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590EFD0FF7BBCD646EB476 /* 415-weightlifter-inverse@3x.png */; };
+		54590FD6036F00E0A0B40E2E /* 912-gears@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590F155D911A87B8A8F1B3 /* 912-gears@3x.png */; };
 		85DF1FB35B784B81ACF3A198 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4D313009C4493EB660B607 /* libPods.a */; };
 		FF4001A8394D49AEB26DF52E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4D313009C4493EB660B607 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -245,6 +248,7 @@
 		54590172178526A1757A7450 /* HistoryCellExpanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryCellExpanded.m; sourceTree = "<group>"; };
 		54590198A3FDA57942B27728 /* WorkoutCopier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutCopier.h; sourceTree = "<group>"; };
 		545901A4BEFB683859DA0582 /* Plate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Plate.m; path = Models/Plate.m; sourceTree = "<group>"; };
+		545901AF75BC27A0B483172F /* 912-gears@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "912-gears@2x.png"; sourceTree = "<group>"; };
 		545901B004EED157EE15481A /* WeightSetCellWithComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightSetCellWithComments.m; sourceTree = "<group>"; };
 		545901CFDE3C13EF2DCFC3CB /* ActivitySearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitySearchCell.m; sourceTree = "<group>"; };
 		545901DE0307A2E0890A0281 /* plates.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; name = plates.json; path = Models/Fixtures/plates.json; sourceTree = "<group>"; };
@@ -407,6 +411,7 @@
 		54590E52A709C738C59FE1E4 /* SmallDurationSetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallDurationSetCell.xib; sourceTree = "<group>"; };
 		54590E583ADE4FD8272B88B9 /* UIImageViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewHelper.m; sourceTree = "<group>"; };
 		54590E627A49A487C2872338 /* SWTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTestCase.h; sourceTree = "<group>"; };
+		54590E85F0F2A1C45692C3B5 /* 912-gears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "912-gears.png"; sourceTree = "<group>"; };
 		54590E8F5D24A631F5E0049D /* WeightInputControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightInputControls.m; sourceTree = "<group>"; };
 		54590EB282861E49AA99C2C7 /* WeightCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightCreateViewController.h; sourceTree = "<group>"; };
 		54590EBCDAD295792A89F284 /* ActivitySearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySearchCell.h; sourceTree = "<group>"; };
@@ -422,6 +427,7 @@
 		54590F0008BBC7974A542DBB /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		54590F097E9B63849FEF2808 /* 721-bookmarks@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "721-bookmarks@3x.png"; sourceTree = "<group>"; };
 		54590F0FECDC2DE619BE04E7 /* CurrentWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentWorkout.h; sourceTree = "<group>"; };
+		54590F155D911A87B8A8F1B3 /* 912-gears@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "912-gears@3x.png"; sourceTree = "<group>"; };
 		54590F3FFC4B3A5BBC5F2B8A /* TimerActiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerActiveCell.m; sourceTree = "<group>"; };
 		54590F54C0452DE8C7971409 /* BarCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarCalculator.h; sourceTree = "<group>"; };
 		54590F6B39C5170F22DD30BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -1058,6 +1064,9 @@
 				54590D2D5626EF13B98FF8EF /* 740-gear-toolbar.png */,
 				545909CCB4A62AC6A95B9D3B /* 740-gear-toolbar@3x.png */,
 				54590B0D5F9BE6924434419F /* 740-gear-toolbar@2x.png */,
+				545901AF75BC27A0B483172F /* 912-gears@2x.png */,
+				54590F155D911A87B8A8F1B3 /* 912-gears@3x.png */,
+				54590E85F0F2A1C45692C3B5 /* 912-gears.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -1288,6 +1297,9 @@
 				54590D5CA738C0D118029FA5 /* 740-gear-toolbar@2x.png in Resources */,
 				54590EC4CA651E059EEEBC2A /* NoteInputAccessoryView.xib in Resources */,
 				5459014F5966F5625D13A9F1 /* WeightSetCellWithComments.xib in Resources */,
+				545903732D09E118747A59C4 /* 912-gears@2x.png in Resources */,
+				54590FD6036F00E0A0B40E2E /* 912-gears@3x.png in Resources */,
+				54590040FF2735B1C6A4904E /* 912-gears.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BOn-O8-9g4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -47,7 +48,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PU0-30-EkA">
-                                <rect key="frame" x="0.0" y="20" width="320" height="134"/>
+                                <rect key="frame" x="0.0" y="20" width="160" height="133.5"/>
                                 <color key="backgroundColor" red="0.52941176470588236" green="0.82745098039215681" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                                 <state key="normal">
@@ -59,7 +60,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qG0-9M-bFi">
-                                <rect key="frame" x="0.0" y="286" width="320" height="134"/>
+                                <rect key="frame" x="0.0" y="286" width="320" height="133.5"/>
                                 <color key="backgroundColor" red="0.55686274509803924" green="0.26666666666666666" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                                 <state key="normal">
@@ -71,19 +72,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bk-8i-Krz">
-                                <rect key="frame" x="115" y="69" width="90" height="36"/>
+                                <rect key="frame" x="35" y="59" width="90" height="35.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="721-bookmarks.png" translatesAutoresizingMaskIntoConstraints="NO" id="fBM-Xw-z3f">
-                                <rect key="frame" x="79" y="75" width="28" height="24"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="415-weightlifter-inverse.png" translatesAutoresizingMaskIntoConstraints="NO" id="gyx-cE-fNk">
-                                <rect key="frame" x="69" y="206" width="28" height="26"/>
+                                <rect key="frame" x="69" y="206.5" width="28" height="26"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juW-ez-eB1">
-                                <rect key="frame" x="105" y="203" width="110" height="36"/>
+                                <rect key="frame" x="105" y="202.5" width="109.5" height="35.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -92,33 +90,60 @@
                                 <rect key="frame" x="77" y="344" width="28" height="18"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friends" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tst-SK-7ej">
-                                <rect key="frame" x="113" y="335" width="95" height="36"/>
+                                <rect key="frame" x="113" y="335" width="94.5" height="35.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="721-bookmarks.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kkb-Kw-jVs">
+                                <rect key="frame" x="66" y="98" width="28" height="24"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXy-Fg-x4K">
+                                <rect key="frame" x="160" y="20" width="160" height="133.5"/>
+                                <color key="backgroundColor" red="1" green="0.58556988428192724" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activities" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYo-Ug-I8n">
+                                <rect key="frame" x="183" y="59" width="113" height="35.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="912-gears.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Nw-f0-CCM">
+                                <rect key="frame" x="226" y="96" width="28" height="28"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="tst-SK-7ej" secondAttribute="centerX" id="2FB-tn-OHR"/>
                             <constraint firstItem="qG0-9M-bFi" firstAttribute="leading" secondItem="H44-Y4-yV5" secondAttribute="leading" id="2yK-qo-FdU"/>
-                            <constraint firstItem="PU0-30-EkA" firstAttribute="centerY" secondItem="7bk-8i-Krz" secondAttribute="centerY" id="FAb-g2-c4e"/>
+                            <constraint firstItem="ZXy-Fg-x4K" firstAttribute="top" secondItem="jar-yI-Qo5" secondAttribute="top" id="7SX-ax-Jbc"/>
+                            <constraint firstItem="PU0-30-EkA" firstAttribute="centerY" secondItem="7bk-8i-Krz" secondAttribute="centerY" constant="10" id="FAb-g2-c4e"/>
                             <constraint firstItem="gyx-cE-fNk" firstAttribute="centerY" secondItem="W17-o9-RVa" secondAttribute="centerY" id="Ftl-Gh-AxM"/>
+                            <constraint firstItem="ZXy-Fg-x4K" firstAttribute="leading" secondItem="PU0-30-EkA" secondAttribute="trailing" id="HU2-Yb-c7N"/>
                             <constraint firstItem="PU0-30-EkA" firstAttribute="top" secondItem="jar-yI-Qo5" secondAttribute="top" id="Hj2-mb-1UI"/>
                             <constraint firstItem="xH5-Go-ViL" firstAttribute="centerY" secondItem="qG0-9M-bFi" secondAttribute="centerY" id="I1Y-pB-7rf"/>
+                            <constraint firstItem="8Nw-f0-CCM" firstAttribute="centerY" secondItem="ZXy-Fg-x4K" secondAttribute="centerY" constant="23" id="IWj-2w-dX7"/>
+                            <constraint firstItem="Kkb-Kw-jVs" firstAttribute="centerY" secondItem="PU0-30-EkA" secondAttribute="centerY" constant="23" id="IfN-f5-5jk"/>
                             <constraint firstItem="W17-o9-RVa" firstAttribute="top" secondItem="PU0-30-EkA" secondAttribute="bottom" id="LoU-97-bkh"/>
                             <constraint firstItem="juW-ez-eB1" firstAttribute="centerX" secondItem="W17-o9-RVa" secondAttribute="centerX" id="MeQ-4e-lke"/>
                             <constraint firstItem="W17-o9-RVa" firstAttribute="height" secondItem="qG0-9M-bFi" secondAttribute="height" id="MfB-pg-spC"/>
                             <constraint firstItem="W17-o9-RVa" firstAttribute="leading" secondItem="H44-Y4-yV5" secondAttribute="leading" id="NCt-pI-OLl"/>
                             <constraint firstItem="juW-ez-eB1" firstAttribute="centerY" secondItem="W17-o9-RVa" secondAttribute="centerY" id="NQK-cE-PIK"/>
+                            <constraint firstItem="gYo-Ug-I8n" firstAttribute="centerX" secondItem="ZXy-Fg-x4K" secondAttribute="centerX" id="Nbt-HX-jgT"/>
+                            <constraint firstItem="PU0-30-EkA" firstAttribute="centerX" secondItem="Kkb-Kw-jVs" secondAttribute="centerX" id="O0Q-eH-M0M"/>
                             <constraint firstItem="PU0-30-EkA" firstAttribute="leading" secondItem="H44-Y4-yV5" secondAttribute="leading" id="Q7I-D7-0dI"/>
+                            <constraint firstItem="gYo-Ug-I8n" firstAttribute="baseline" secondItem="7bk-8i-Krz" secondAttribute="baseline" id="QId-yK-crN"/>
+                            <constraint firstItem="8Nw-f0-CCM" firstAttribute="centerX" secondItem="ZXy-Fg-x4K" secondAttribute="centerX" id="U2M-F3-NXE"/>
                             <constraint firstItem="Ndq-Lg-lSA" firstAttribute="top" secondItem="qG0-9M-bFi" secondAttribute="bottom" id="Zy3-km-uCl"/>
-                            <constraint firstItem="fBM-Xw-z3f" firstAttribute="centerY" secondItem="7bk-8i-Krz" secondAttribute="centerY" id="iTS-zh-6Y0"/>
-                            <constraint firstItem="7bk-8i-Krz" firstAttribute="leading" secondItem="fBM-Xw-z3f" secondAttribute="trailing" constant="8" id="lpK-XX-7Wb"/>
+                            <constraint firstAttribute="trailing" secondItem="ZXy-Fg-x4K" secondAttribute="trailing" id="fHG-Mj-Y30"/>
+                            <constraint firstItem="W17-o9-RVa" firstAttribute="top" secondItem="ZXy-Fg-x4K" secondAttribute="bottom" id="ln2-Sb-ylI"/>
                             <constraint firstItem="tst-SK-7ej" firstAttribute="centerY" secondItem="qG0-9M-bFi" secondAttribute="centerY" id="oW8-6f-xpz"/>
                             <constraint firstAttribute="trailing" secondItem="W17-o9-RVa" secondAttribute="trailing" id="saq-oW-jsM"/>
                             <constraint firstItem="juW-ez-eB1" firstAttribute="leading" secondItem="gyx-cE-fNk" secondAttribute="trailing" constant="8" id="tcp-vy-gFi"/>
-                            <constraint firstAttribute="trailing" secondItem="PU0-30-EkA" secondAttribute="trailing" id="tpa-gK-zLl"/>
+                            <constraint firstAttribute="trailing" secondItem="PU0-30-EkA" secondAttribute="trailing" multiplier="2" id="tpa-gK-zLl"/>
                             <constraint firstItem="PU0-30-EkA" firstAttribute="height" secondItem="W17-o9-RVa" secondAttribute="height" id="uRo-AP-2LW"/>
                             <constraint firstItem="qG0-9M-bFi" firstAttribute="top" secondItem="W17-o9-RVa" secondAttribute="bottom" id="uaH-OF-TRL"/>
                             <constraint firstAttribute="trailing" secondItem="qG0-9M-bFi" secondAttribute="trailing" id="xir-4L-7zb"/>
@@ -130,11 +155,13 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="420"/>
                     <connections>
+                        <outlet property="activityButton" destination="ZXy-Fg-x4K" id="flJ-um-aIm"/>
+                        <outlet property="activityImage" destination="8Nw-f0-CCM" id="xNZ-F2-fD5"/>
                         <outlet property="friendsButton" destination="qG0-9M-bFi" id="7W6-0J-BBW"/>
                         <outlet property="friendsImage" destination="xH5-Go-ViL" id="HZj-dp-SVp"/>
                         <outlet property="friendsLabel" destination="tst-SK-7ej" id="Hm8-KV-c2y"/>
                         <outlet property="historyButton" destination="PU0-30-EkA" id="Gkz-eB-Whs"/>
-                        <outlet property="historyImage" destination="fBM-Xw-z3f" id="6Px-RM-YTM"/>
+                        <outlet property="historyImage" destination="Kkb-Kw-jVs" id="PtT-0x-dby"/>
                         <outlet property="workoutButton" destination="W17-o9-RVa" id="wIu-ZA-uen"/>
                         <outlet property="workoutImage" destination="gyx-cE-fNk" id="RnI-OE-reN"/>
                     </connections>
@@ -147,6 +174,7 @@
     <resources>
         <image name="415-weightlifter-inverse.png" width="28" height="26"/>
         <image name="721-bookmarks.png" width="28" height="24"/>
+        <image name="912-gears.png" width="28" height="28"/>
         <image name="974-users.png" width="28" height="18"/>
     </resources>
 </document>

@@ -2,11 +2,13 @@
 #import "UIImage+ColorFromImage.h"
 #import "UIImageViewHelper.h"
 #import "UIImageHelper.h"
+#import "UIColor+HexString.h"
 
 @implementation MainViewController {
+    __weak IBOutlet UIImageView *activityImage;
+    __weak IBOutlet UIImageView *friendsImage;
     __weak IBOutlet UIImageView *historyImage;
     __weak IBOutlet UIImageView *workoutImage;
-    __weak IBOutlet UIImageView *friendsImage;
     __weak IBOutlet UILabel *friendsLabel;
 }
 
@@ -29,9 +31,12 @@
                                                                                     blue:(CGFloat) (131 / 255.0)
                                                                                    alpha:1.0]]
                                   forState:UIControlStateHighlighted];
+    [self.activityButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHexString:@"C67400"]] forState:UIControlStateHighlighted];
+
     [UIImageViewHelper makeWhite:historyImage];
     [UIImageViewHelper makeWhite:workoutImage];
     [UIImageViewHelper makeWhite:friendsImage];
+    [UIImageViewHelper makeWhite:activityImage];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
