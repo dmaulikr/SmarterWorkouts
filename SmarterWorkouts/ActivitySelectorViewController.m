@@ -27,13 +27,15 @@
                     [[UIBarButtonItem alloc] initWithTitle:@"New" style:UIBarButtonItemStylePlain target:self action:@selector(addNew)]
             ];
 
-    UIBarButtonItem *cancelButton =
-            [[UIBarButtonItem alloc] initWithTitle:@"cancel"
-                                             style:UIBarButtonItemStylePlain
-                                            target:self
-                                            action:@selector(cancel)];
+    if (self.delegate) {
+        UIBarButtonItem *cancelButton =
+                [[UIBarButtonItem alloc] initWithTitle:@"cancel"
+                                                 style:UIBarButtonItemStylePlain
+                                                target:self
+                                                action:@selector(cancel)];
+        self.navigationItem.leftBarButtonItem = cancelButton;
+    }
 
-    self.navigationItem.leftBarButtonItem = cancelButton;
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self;
     self.searchController.dimsBackgroundDuringPresentation = NO;
@@ -46,20 +48,27 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.searchController.searchBar setHidden:NO];
+    [self.navigationController setNavigationBarHidden:NO];
+
     self.data = [Activity findAllByType];
     self.filteredData = self.data;
     [self.tableView reloadData];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.searchController.searchBar setHidden:YES];
+    [super viewWillDisappear:animated];
+}
+
 - (void)addNew {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"CreateNewActivityViewController" bundle:nil];
     CreateNewActivityViewController *createNewViewController = [sb instantiateInitialViewController];
-    [self.searchController setActive:NO];
     [self.navigationController pushViewController:createNewViewController animated:YES];
 }
 
 - (void)cancel {
-    [self.searchController setActive:NO];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -115,8 +124,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Activity *selectedActivity = [self.filteredData objectAtIndexPath:indexPath];
-    [self.delegate activitySelected:selectedActivity];
-    [self.navigationController popViewControllerAnimated:YES];
+    if (self.delegate) {
+        [self.delegate activitySelected:selectedActivity];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {

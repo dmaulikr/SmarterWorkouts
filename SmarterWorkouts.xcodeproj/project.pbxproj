@@ -14,7 +14,6 @@
 		02423F8D1A2FE81D0048BB17 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02423F8C1A2FE81D0048BB17 /* WatchKit.framework */; };
 		02423F941A2FE81D0048BB17 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02423F931A2FE81D0048BB17 /* InterfaceController.m */; };
 		02423F971A2FE81D0048BB17 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02423F961A2FE81D0048BB17 /* NotificationController.m */; };
-		02423F9A1A2FE81D0048BB17 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02423F991A2FE81D0048BB17 /* GlanceController.m */; };
 		02423F9C1A2FE81D0048BB17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02423F9B1A2FE81D0048BB17 /* Images.xcassets */; };
 		02423FA01A2FE81D0048BB17 /* SmarterWorkouts Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = 02423F9F1A2FE81D0048BB17 /* SmarterWorkouts Watch App.app */; };
 		02423FA71A2FE81D0048BB17 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02423FA61A2FE81D0048BB17 /* Interface.storyboard */; };
@@ -214,8 +213,6 @@
 		02423F931A2FE81D0048BB17 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
 		02423F951A2FE81D0048BB17 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
 		02423F961A2FE81D0048BB17 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
-		02423F981A2FE81D0048BB17 /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
-		02423F991A2FE81D0048BB17 /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
 		02423F9B1A2FE81D0048BB17 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		02423F9F1A2FE81D0048BB17 /* SmarterWorkouts Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmarterWorkouts Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02423FA51A2FE81D0048BB17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -476,8 +473,6 @@
 				02423F931A2FE81D0048BB17 /* InterfaceController.m */,
 				02423F951A2FE81D0048BB17 /* NotificationController.h */,
 				02423F961A2FE81D0048BB17 /* NotificationController.m */,
-				02423F981A2FE81D0048BB17 /* GlanceController.h */,
-				02423F991A2FE81D0048BB17 /* GlanceController.m */,
 				02423F9B1A2FE81D0048BB17 /* Images.xcassets */,
 				02423F8F1A2FE81D0048BB17 /* Supporting Files */,
 			);
@@ -1375,7 +1370,6 @@
 			files = (
 				02423F971A2FE81D0048BB17 /* NotificationController.m in Sources */,
 				02423F941A2FE81D0048BB17 /* InterfaceController.m in Sources */,
-				02423F9A1A2FE81D0048BB17 /* GlanceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

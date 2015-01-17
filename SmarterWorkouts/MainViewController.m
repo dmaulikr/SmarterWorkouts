@@ -3,6 +3,7 @@
 #import "UIImageViewHelper.h"
 #import "UIImageHelper.h"
 #import "UIColor+HexString.h"
+#import "ActivitySelectorViewController.h"
 
 @implementation MainViewController {
     __weak IBOutlet UIImageView *activityImage;
@@ -77,6 +78,11 @@
 }
 
 - (IBAction)selectFriends:(id)sender {
+}
+
+- (IBAction)selectActivities:(id)sender {
+    ActivitySelectorViewController *controller = [ActivitySelectorViewController new];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)loadStoryboard:(NSString *)nibName {
