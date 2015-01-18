@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 
 extern const NSString *ACTIVITY_WEIGHT;
+extern const NSString *ACTIVITY_TIMER;
 
 @interface Activity : NSManagedObject
 

@@ -2,7 +2,7 @@
 #import <UIKit/UIKit.h>
 #import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
 #import "SWTestCase.h"
-#import "WeightCreateViewController.h"
+#import "WeightActivityEditViewController.h"
 #import "Activity.h"
 
 @interface WeightCreateViewControllerTests : SWTestCase
@@ -12,7 +12,7 @@
 
 - (void)testGetsActivityDataFromFields {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"CreateEditActivityController" bundle:nil];
-    WeightCreateViewController *createViewController = [sb instantiateViewControllerWithIdentifier:@"WeightCreateViewController"];
+    WeightActivityEditViewController *createViewController = [sb instantiateViewControllerWithIdentifier:@"WeightActivityEditViewController"];
 
     UISwitch *usesBarSwitch = [[UISwitch alloc] init];
     UISegmentedControl *lbsKgSegment = [[UISegmentedControl alloc] initWithItems:@[@"lbs", @"kg"]];

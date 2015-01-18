@@ -1,8 +1,8 @@
-#import "WeightCreateViewController.h"
+#import "WeightActivityEditViewController.h"
 #import "DecimalNumbers.h"
 #import "Activity.h"
 
-@implementation WeightCreateViewController
+@implementation WeightActivityEditViewController
 
 - (void)addExtraInfo:(Activity *)activity {
     activity.usesBar = [self.usesBar isOn];
@@ -21,11 +21,6 @@
     else {
         [self.view setHidden:YES];
     }
-}
-
-- (void)setActive:(BOOL)active {
-    _active = active;
-    [self.view setHidden:!active];
 }
 
 @end

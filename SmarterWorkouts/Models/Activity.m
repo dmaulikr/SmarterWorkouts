@@ -11,7 +11,8 @@
 #import "Activity.h"
 #import "Set.h"
 
-const NSString *ACTIVITY_WEIGHT= @"weight";
+const NSString *ACTIVITY_WEIGHT = @"weight";
+const NSString *ACTIVITY_TIMER = @"timer";
 
 @implementation Activity
 

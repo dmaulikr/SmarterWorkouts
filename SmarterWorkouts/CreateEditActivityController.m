@@ -1,11 +1,13 @@
 #import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
 #import <MagicalRecord/MagicalRecord/NSManagedObjectContext+MagicalRecord.h>
 #import <MagicalRecord/MagicalRecord/NSManagedObjectContext+MagicalSaves.h>
-#import "WeightCreateViewController.h"
+#import "WeightActivityEditViewController.h"
 #import "Activity.h"
 #import "CreateEditActivityController.h"
+#import "TimeActivityEditViewController.h"
 
 const int WEIGHT_INDEX = 1;
+const int TIMER_INDEX = 2;
 
 @implementation CreateEditActivityController {
     __weak IBOutlet UITextField *activityNameField;
@@ -14,12 +16,14 @@ const int WEIGHT_INDEX = 1;
 
 - (IBAction)typeChanged:(id)sender {
     [self.weightController setActive:[sender selectedSegmentIndex] == WEIGHT_INDEX];
+    [self.timerController setActive:[sender selectedSegmentIndex] == TIMER_INDEX];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = self.activityToEdit ? @"Edit" : @"Create";
     [self.weightController setupInitialActivity:self.activityToEdit];
+    [self.timerController setupInitialActivity:self.activityToEdit];
     [activityNameField setText:[self.activityToEdit name]];
 
     if (self.activityToEdit) {
@@ -42,11 +46,21 @@ const int WEIGHT_INDEX = 1;
 }
 
 - (void)save {
-    Activity *activity = [Activity MR_createEntity];
+    Activity *activity = nil;
+    if (!self.activityToEdit) {
+        activity = [Activity MR_createEntity];
+    }
+    else {
+        activity = self.activityToEdit;
+    }
+
     activity.name = [activityNameField text];
     activity.type = @"miscellaneous";
     if ([self.weightController active]) {
         [self.weightController addExtraInfo:activity];
+    }
+    if ([self.timerController active]) {
+        [self.timerController addExtraInfo:activity];
     }
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
     [self.navigationController popViewControllerAnimated:YES];
@@ -54,8 +68,11 @@ const int WEIGHT_INDEX = 1;
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     [super prepareForSegue:segue sender:sender];
-    if ([[segue destinationViewController] class] == WeightCreateViewController.class) {
+    if ([[segue destinationViewController] class] == WeightActivityEditViewController.class) {
         self.weightController = [segue destinationViewController];
+    }
+    else if ([[segue destinationViewController] class] == TimeActivityEditViewController.class) {
+        self.timerController = [segue destinationViewController];
     }
 }
 

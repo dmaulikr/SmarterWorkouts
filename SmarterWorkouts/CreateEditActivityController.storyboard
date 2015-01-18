@@ -48,17 +48,27 @@
                                     <segue destination="ZcY-cC-01e" kind="embed" identifier="" id="HG4-kR-G3S"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Exc-WS-4ms">
+                                <rect key="frame" x="0.0" y="116" width="357" height="284"/>
+                                <connections>
+                                    <segue destination="i5q-7A-WmV" kind="embed" id="o4l-vC-jj7"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="c4O-In-kL4" firstAttribute="top" secondItem="Exc-WS-4ms" secondAttribute="bottom" id="4sZ-66-Tqf"/>
                             <constraint firstItem="nUa-oZ-T0X" firstAttribute="trailing" secondItem="vh4-Y8-Cef" secondAttribute="trailingMargin" id="6oG-70-H5Z"/>
                             <constraint firstItem="V5M-hh-3V8" firstAttribute="trailing" secondItem="vh4-Y8-Cef" secondAttribute="trailingMargin" id="6tW-a1-nG1"/>
                             <constraint firstItem="c4O-In-kL4" firstAttribute="top" secondItem="6gS-VK-wft" secondAttribute="bottom" id="756-Wk-QMI"/>
+                            <constraint firstAttribute="trailing" secondItem="Exc-WS-4ms" secondAttribute="trailing" id="Bwc-eU-dvy"/>
                             <constraint firstItem="6gS-VK-wft" firstAttribute="top" secondItem="nUa-oZ-T0X" secondAttribute="bottom" constant="12" id="D3r-gV-gBU"/>
                             <constraint firstItem="nUa-oZ-T0X" firstAttribute="leading" secondItem="vh4-Y8-Cef" secondAttribute="leadingMargin" id="Ght-0h-lDf"/>
                             <constraint firstItem="nUa-oZ-T0X" firstAttribute="top" secondItem="V5M-hh-3V8" secondAttribute="bottom" constant="8" id="LXb-tO-woo"/>
                             <constraint firstItem="V5M-hh-3V8" firstAttribute="top" secondItem="STU-13-N21" secondAttribute="bottom" constant="8" id="Xdb-Es-kY4"/>
+                            <constraint firstItem="Exc-WS-4ms" firstAttribute="top" secondItem="nUa-oZ-T0X" secondAttribute="bottom" constant="12" id="XpV-rB-vF6"/>
                             <constraint firstItem="6gS-VK-wft" firstAttribute="trailing" secondItem="vh4-Y8-Cef" secondAttribute="trailing" id="cD9-Fo-3EB"/>
+                            <constraint firstItem="Exc-WS-4ms" firstAttribute="leading" secondItem="vh4-Y8-Cef" secondAttribute="leading" id="ksB-zV-IVM"/>
                             <constraint firstItem="V5M-hh-3V8" firstAttribute="leading" secondItem="vh4-Y8-Cef" secondAttribute="leadingMargin" id="uvP-ED-r1A"/>
                             <constraint firstItem="6gS-VK-wft" firstAttribute="leading" secondItem="vh4-Y8-Cef" secondAttribute="leading" id="wKy-xk-Hk6"/>
                         </constraints>
@@ -75,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="229.5" y="347"/>
         </scene>
-        <!--Weight Create View Controller-->
+        <!--Weight Activity Edit View Controller-->
         <scene sceneID="yaj-pA-uaw">
             <objects>
-                <viewController storyboardIdentifier="WeightCreateViewController" automaticallyAdjustsScrollViewInsets="NO" id="ZcY-cC-01e" customClass="WeightCreateViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeightCreateViewController" automaticallyAdjustsScrollViewInsets="NO" id="ZcY-cC-01e" customClass="WeightActivityEditViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eYs-tb-gLm"/>
                         <viewControllerLayoutGuide type="bottom" id="KgT-tM-WhM"/>
@@ -139,6 +149,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnI-uq-nMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="229.5" y="726"/>
+        </scene>
+        <!--Time Activity Edit View Controller-->
+        <scene sceneID="O6w-bm-TO4">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="i5q-7A-WmV" customClass="TimeActivityEditViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aMZ-WP-fQe"/>
+                        <viewControllerLayoutGuide type="bottom" id="BoU-7a-ZbL"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lB6-rE-bGS">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4O-5s-Xo4">
+                                <rect key="frame" x="83" y="20" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="120"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDX-xF-g51" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="618.5" y="730"/>
         </scene>
     </scenes>
 </document>
