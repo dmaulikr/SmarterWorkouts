@@ -5,17 +5,15 @@
 #import "Activity.h"
 #import "CreateEditActivityController.h"
 
-
 const int WEIGHT_INDEX = 1;
 
 @implementation CreateEditActivityController {
     __weak IBOutlet UITextField *activityNameField;
     __weak IBOutlet UISegmentedControl *typeSegment;
-    __weak IBOutlet UIView *weightContainerView;
 }
 
 - (IBAction)typeChanged:(id)sender {
-    [weightContainerView setHidden:[sender selectedSegmentIndex] != WEIGHT_INDEX];
+    [self.weightController setActive:[sender selectedSegmentIndex] == WEIGHT_INDEX];
 }
 
 - (void)viewDidLoad {
@@ -32,7 +30,7 @@ const int WEIGHT_INDEX = 1;
         }
     }
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleDone target:self action:@selector(save)];
-    [self.navigationItem.rightBarButtonItem setEnabled:self.activityToEdit ? YES : NO];
+    [self.navigationItem.rightBarButtonItem setEnabled:self.activityToEdit != nil];
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped)];
     tap.cancelsTouchesInView = NO;
@@ -47,7 +45,7 @@ const int WEIGHT_INDEX = 1;
     Activity *activity = [Activity MR_createEntity];
     activity.name = [activityNameField text];
     activity.type = @"miscellaneous";
-    if (![weightContainerView isHidden]) {
+    if ([self.weightController active]) {
         [self.weightController addExtraInfo:activity];
     }
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];

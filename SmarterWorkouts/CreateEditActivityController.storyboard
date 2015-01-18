@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="W4M-gu-byk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="W4M-gu-byk">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Create New Activity View Controller-->
+        <!--Create Edit Activity Controller-->
         <scene sceneID="tlp-UR-irQ">
             <objects>
                 <viewController id="W4M-gu-byk" customClass="CreateEditActivityController" sceneMemberID="viewController">
@@ -69,7 +69,6 @@
                     <connections>
                         <outlet property="activityNameField" destination="V5M-hh-3V8" id="JU4-v4-vjI"/>
                         <outlet property="typeSegment" destination="nUa-oZ-T0X" id="2ZQ-kq-Lpo"/>
-                        <outlet property="weightContainerView" destination="6gS-VK-wft" id="m64-PC-2bm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSM-cT-T0P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -90,12 +89,10 @@
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hrp-AH-fpF">
                                 <rect key="frame" x="127" y="11" width="51" height="31"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uses Bar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnV-tv-WoZ">
                                 <rect key="frame" x="16" y="12" width="95" height="28.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="L0I-rj-bmd">
@@ -107,7 +104,6 @@
                                     <segment title="lbs"/>
                                     <segment title="kg"/>
                                 </segments>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Max (optional)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NKX-yp-bfZ">
                                 <rect key="frame" x="16" y="55" width="325" height="44"/>
@@ -118,7 +114,6 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.65490196079999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Hrp-AH-fpF" firstAttribute="centerY" secondItem="OnV-tv-WoZ" secondAttribute="centerY" id="8Bo-Ge-z2H"/>
                             <constraint firstItem="NKX-yp-bfZ" firstAttribute="leading" secondItem="xP1-ju-Tcs" secondAttribute="leadingMargin" id="8sj-Ys-nkp"/>
