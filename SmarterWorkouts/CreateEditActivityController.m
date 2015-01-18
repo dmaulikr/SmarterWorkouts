@@ -4,9 +4,6 @@
 #import "WeightCreateViewController.h"
 #import "Activity.h"
 #import "CreateEditActivityController.h"
-#import "ActivityCreateController.h"
-#import "WeightCreateViewController.h"
-#import "Activity.h"
 
 
 const int WEIGHT_INDEX = 1;
@@ -24,9 +21,18 @@ const int WEIGHT_INDEX = 1;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = self.activityToEdit ? @"Edit" : @"Create";
-    [self.weightController setupInitialActivity: self.activityToEdit];
+    [self.weightController setupInitialActivity:self.activityToEdit];
+    [activityNameField setText:[self.activityToEdit name]];
+
+    if (self.activityToEdit) {
+        NSDictionary *segments = @{@"weight" : @1, @"timer" : @2};
+        NSNumber *segment = segments[self.activityToEdit.type];
+        if (segment) {
+            [typeSegment setSelectedSegmentIndex:[segment integerValue]];
+        }
+    }
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleDone target:self action:@selector(save)];
-    [self.navigationItem.rightBarButtonItem setEnabled:NO];
+    [self.navigationItem.rightBarButtonItem setEnabled:self.activityToEdit ? YES : NO];
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped)];
     tap.cancelsTouchesInView = NO;
