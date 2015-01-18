@@ -7,4 +7,5 @@
 @property (weak, nonatomic) IBOutlet UITextField *maxField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *lbsKgSegment;
 
+- (void)setupInitialActivity:(Activity *)activity;
 @end

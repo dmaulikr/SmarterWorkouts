@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+extern const NSString *ACTIVITY_WEIGHT;
 
 @interface Activity : NSManagedObject
 

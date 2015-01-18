@@ -11,7 +11,7 @@
 @implementation WeightCreateViewControllerTests
 
 - (void)testGetsActivityDataFromFields {
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"CreateNewActivityViewController" bundle:nil];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"CreateEditActivityController" bundle:nil];
     WeightCreateViewController *createViewController = [sb instantiateViewControllerWithIdentifier:@"WeightCreateViewController"];
 
     UISwitch *usesBarSwitch = [[UISwitch alloc] init];

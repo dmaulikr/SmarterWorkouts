@@ -8,7 +8,7 @@
         <!--Create New Activity View Controller-->
         <scene sceneID="tlp-UR-irQ">
             <objects>
-                <viewController id="W4M-gu-byk" customClass="CreateNewActivityViewController" sceneMemberID="viewController">
+                <viewController id="W4M-gu-byk" customClass="CreateEditActivityController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="STU-13-N21"/>
                         <viewControllerLayoutGuide type="bottom" id="c4O-In-kL4"/>

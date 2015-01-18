@@ -30,7 +30,7 @@
 		5459003749AD32360447790F /* 901-repeat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590EED5F73DE4BB57F40C5 /* 901-repeat@3x.png */; };
 		54590040FF2735B1C6A4904E /* 912-gears.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590E85F0F2A1C45692C3B5 /* 912-gears.png */; };
 		5459004C362F8D82667493BD /* BarCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902FC40A458CC44ECB9A4 /* BarCalculatorTests.m */; };
-		54590096202B3CBF2E36A63A /* CreateNewActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590160A8D663DAC97950B5 /* CreateNewActivityViewController.m */; };
+		54590096202B3CBF2E36A63A /* CreateEditActivityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590160A8D663DAC97950B5 /* CreateEditActivityController.m */; };
 		545900A896D00F0EDEEEAEEC /* SmallDurationSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590E52A709C738C59FE1E4 /* SmallDurationSetCell.xib */; };
 		545900EEC0BF7316D0C1EFB3 /* WeightCreateViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C0DFE5292040072F281 /* WeightCreateViewControllerTests.m */; };
 		545900F12ADFCD764A72A104 /* 746-plus-circle-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590A2BC9B71EA9362C1C89 /* 746-plus-circle-toolbar@3x.png */; };
@@ -52,7 +52,7 @@
 		5459038EF0C90D4D20E0CD13 /* 1091-weights@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545904F4A9A261D4FA5EA3D6 /* 1091-weights@2x.png */; };
 		5459038FBAC596822F11CF5D /* BarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590996D2BBCB5B6C7919D5 /* BarTests.m */; };
 		545903AECA023DD003774059 /* WorkoutControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902F39621185F30F59354 /* WorkoutControls.m */; };
-		545903BFCE9385C58941EE23 /* CreateNewActivityViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545903DB0A21E7CD1A8EA630 /* CreateNewActivityViewController.storyboard */; };
+		545903BFCE9385C58941EE23 /* CreateEditActivityController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545903DB0A21E7CD1A8EA630 /* CreateEditActivityController.storyboard */; };
 		545903DDFDE7F7965ADDE139 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 545904E1841B2C9A4524B6E1 /* main.m */; };
 		545903DF837690ABCFCA4C44 /* FormItemBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459040050D27D2FEAEF9090 /* FormItemBarButtonItem.m */; };
 		545903F7AC9D9FB10A9887C8 /* ActivityWeightFormViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590ACC1AC6B9D074702B48 /* ActivityWeightFormViewControllerTests.m */; };
@@ -240,7 +240,7 @@
 		5459013B85548A27B8B1B805 /* PlateRemaining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateRemaining.m; sourceTree = "<group>"; };
 		545901444767D3CF95F9A3C3 /* CurrentWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentWorkout.m; sourceTree = "<group>"; };
 		545901534BE83F9329F3246D /* Plate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Plate.h; path = Models/Plate.h; sourceTree = "<group>"; };
-		54590160A8D663DAC97950B5 /* CreateNewActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateNewActivityViewController.m; sourceTree = "<group>"; };
+		54590160A8D663DAC97950B5 /* CreateEditActivityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEditActivityController.m; sourceTree = "<group>"; };
 		54590171034AD926A45B4069 /* SmallDurationSetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallDurationSetCell.m; sourceTree = "<group>"; };
 		54590172178526A1757A7450 /* HistoryCellExpanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryCellExpanded.m; sourceTree = "<group>"; };
 		54590198A3FDA57942B27728 /* WorkoutCopier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutCopier.h; sourceTree = "<group>"; };
@@ -278,7 +278,7 @@
 		545903B0856088908CEFBB56 /* UIImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageHelper.h; sourceTree = "<group>"; };
 		545903B6060FD417DA48B7C8 /* LbsKgMenuItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LbsKgMenuItem.xib; sourceTree = "<group>"; };
 		545903D445CCE5EB68AB601D /* WorkoutCopierTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutCopierTests.m; sourceTree = "<group>"; };
-		545903DB0A21E7CD1A8EA630 /* CreateNewActivityViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateNewActivityViewController.storyboard; sourceTree = "<group>"; };
+		545903DB0A21E7CD1A8EA630 /* CreateEditActivityController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateEditActivityController.storyboard; sourceTree = "<group>"; };
 		545903F57D7C270830C13B3B /* FixtureLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FixtureLoader.h; path = Models/Fixtures/FixtureLoader.h; sourceTree = "<group>"; };
 		545903FBE12939C3C1F5D39D /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Activity.h; path = Models/Activity.h; sourceTree = "<group>"; };
 		5459040050D27D2FEAEF9090 /* FormItemBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormItemBarButtonItem.m; sourceTree = "<group>"; };
@@ -397,7 +397,7 @@
 		54590DBA504081D7FFCC3C55 /* TextSaved.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextSaved.h; sourceTree = "<group>"; };
 		54590DCC45595B04895F779F /* ActivityWeightFormCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityWeightFormCell.m; sourceTree = "<group>"; };
 		54590DE94E1B20B22425DADE /* SetGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetGroup.h; path = Models/SetGroup.h; sourceTree = "<group>"; };
-		54590DF2D5E1B0F20CC5D4FF /* CreateNewActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateNewActivityViewController.h; sourceTree = "<group>"; };
+		54590DF2D5E1B0F20CC5D4FF /* CreateEditActivityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEditActivityController.h; sourceTree = "<group>"; };
 		54590DF5CCADA728F393AF01 /* WorkoutControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutControllerTests.m; sourceTree = "<group>"; };
 		54590DF72111C855DD2A0AA7 /* BarPlateSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarPlateSetup.m; sourceTree = "<group>"; };
 		54590DFBAC95BDC1B86BD1A5 /* AllSetsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllSetsDataSource.h; sourceTree = "<group>"; };
@@ -771,9 +771,9 @@
 		545908E5A5EF4BA0ACFBA31E /* Create */ = {
 			isa = PBXGroup;
 			children = (
-				545903DB0A21E7CD1A8EA630 /* CreateNewActivityViewController.storyboard */,
-				54590DF2D5E1B0F20CC5D4FF /* CreateNewActivityViewController.h */,
-				54590160A8D663DAC97950B5 /* CreateNewActivityViewController.m */,
+				545903DB0A21E7CD1A8EA630 /* CreateEditActivityController.storyboard */,
+				54590DF2D5E1B0F20CC5D4FF /* CreateEditActivityController.h */,
+				54590160A8D663DAC97950B5 /* CreateEditActivityController.m */,
 				54590BAD1767B70F667FFD9F /* WeightCreateViewController.m */,
 				54590EB282861E49AA99C2C7 /* WeightCreateViewController.h */,
 				54590A44741C2A595BB2E277 /* ActivityCreateController.h */,
@@ -1279,7 +1279,7 @@
 				54590AF0B50C19DF1851E92B /* 746-plus-circle-toolbar.png in Resources */,
 				545907C561F202F033024BE6 /* 746-plus-circle-toolbar@2x.png in Resources */,
 				545900F12ADFCD764A72A104 /* 746-plus-circle-toolbar@3x.png in Resources */,
-				545903BFCE9385C58941EE23 /* CreateNewActivityViewController.storyboard in Resources */,
+				545903BFCE9385C58941EE23 /* CreateEditActivityController.storyboard in Resources */,
 				545908C237BF913D8CE95F71 /* WorkoutControls.xib in Resources */,
 				54590857FD139CFDFDE50317 /* 904-shuffle@3x.png in Resources */,
 				54590B9F00E1B634B46EE06F /* 904-shuffle.png in Resources */,
@@ -1428,7 +1428,7 @@
 				54590E74E212FDDCCE00FA59 /* SmallWeightSetCell.m in Sources */,
 				545904D45474ED7DC4F885A3 /* SmallDurationSetCell.m in Sources */,
 				54590B5CE0A8BD63B2C84F6C /* SmallSetCellFactory.m in Sources */,
-				54590096202B3CBF2E36A63A /* CreateNewActivityViewController.m in Sources */,
+				54590096202B3CBF2E36A63A /* CreateEditActivityController.m in Sources */,
 				54590D8ED7334B05A3BC546E /* WeightCreateViewController.m in Sources */,
 				024C7EFA1A577DA30041E8B5 /* Bar.m in Sources */,
 				545901888D25AA1C5E39144C /* CurrentWorkout.m in Sources */,

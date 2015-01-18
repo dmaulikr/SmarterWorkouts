@@ -11,6 +11,7 @@
 #import "Activity.h"
 #import "Set.h"
 
+const NSString *ACTIVITY_WEIGHT= @"weight";
 
 @implementation Activity
 

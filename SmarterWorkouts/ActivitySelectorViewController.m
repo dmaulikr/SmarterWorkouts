@@ -7,7 +7,7 @@
 #import "SelectionGroupHeader.h"
 #import "ActivitySearchCell.h"
 #import "CellRegister.h"
-#import "CreateNewActivityViewController.h"
+#import "CreateEditActivityController.h"
 
 @implementation ActivitySelectorViewController
 
@@ -63,8 +63,8 @@
 }
 
 - (void)addNew {
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"CreateNewActivityViewController" bundle:nil];
-    CreateNewActivityViewController *createNewViewController = [sb instantiateInitialViewController];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:NSStringFromClass(CreateEditActivityController.class) bundle:nil];
+    CreateEditActivityController *createNewViewController = [sb instantiateInitialViewController];
     [self.navigationController pushViewController:createNewViewController animated:YES];
 }
 
@@ -127,6 +127,12 @@
     if (self.delegate) {
         [self.delegate activitySelected:selectedActivity];
         [self.navigationController popViewControllerAnimated:YES];
+    }
+    else {
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:NSStringFromClass(CreateEditActivityController.class) bundle:nil];
+        CreateEditActivityController *createNewViewController = [sb instantiateInitialViewController];
+        createNewViewController.activityToEdit = selectedActivity;
+        [self.navigationController pushViewController:createNewViewController animated:YES];
     }
 }
 

@@ -11,4 +11,8 @@
     activity.type = @"weight";
 }
 
+- (void)setupInitialActivity:(Activity *)activity {
+    [self.view setHidden:activity == nil || ![activity.type isEqualToString:(NSString *) ACTIVITY_WEIGHT]];
+}
+
 @end
