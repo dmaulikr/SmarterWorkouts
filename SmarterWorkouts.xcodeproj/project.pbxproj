@@ -20,6 +20,7 @@
 		02423FA91A2FE81D0048BB17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02423FA81A2FE81D0048BB17 /* Images.xcassets */; };
 		02423FAC1A2FE81D0048BB17 /* SmarterWorkouts WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 02423F8B1A2FE81D0048BB17 /* SmarterWorkouts WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		024C7EFA1A577DA30041E8B5 /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 024C7EF91A577DA30041E8B5 /* Bar.m */; };
+		02531C5C1A6D7B0C00B0446A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02531C5B1A6D7B0C00B0446A /* CloudKit.framework */; };
 		0265AB761A49E44800A8556D /* HistoryCellExpanded.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0265AB751A49E44800A8556D /* HistoryCellExpanded.xib */; };
 		0267A9AC1A21180D00DE7DBC /* Workout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0267A9AA1A21180D00DE7DBC /* Workout.xcdatamodeld */; };
 		027996041A50F9FE00BE0D22 /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 027996031A50F9FE00BE0D22 /* Set.m */; };
@@ -117,6 +118,7 @@
 		54590932EB0474ECEFD2461B /* HistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902ECBF0EC52B9AD3131F /* HistoryCell.m */; };
 		54590947D4AE48B5A14E96C1 /* 974-users.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590A956DCD8C1CF6738B52 /* 974-users.png */; };
 		54590948B017444BD9DF749B /* DurationSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545905ABBA5E7B5529B9F446 /* DurationSetCell.xib */; };
+		54590978A1E88D1E6572D9D6 /* CloudKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905BDCCDE65A6F5431C56 /* CloudKitTests.m */; };
 		5459097950209E591AEEDC12 /* 904-shuffle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590C97C78EC47E0E968831 /* 904-shuffle@2x.png */; };
 		5459099A09CF8618E5B6BB25 /* DurationDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590FE09C7C8766D9F8E7B9 /* DurationDisplay.m */; };
 		545909B97C0D7547A221B9F2 /* WeightSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590C0D4B5814B6A76D333C /* WeightSetCell.xib */; };
@@ -222,6 +224,8 @@
 		02423FA81A2FE81D0048BB17 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		024C7EF81A577DA30041E8B5 /* Bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bar.h; path = SmarterWorkouts/Models/Bar.h; sourceTree = "<group>"; };
 		024C7EF91A577DA30041E8B5 /* Bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bar.m; path = SmarterWorkouts/Models/Bar.m; sourceTree = "<group>"; };
+		02531C5A1A6D7AC700B0446A /* SmarterWorkouts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SmarterWorkouts.entitlements; sourceTree = "<group>"; };
+		02531C5B1A6D7B0C00B0446A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		0265AB751A49E44800A8556D /* HistoryCellExpanded.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HistoryCellExpanded.xib; path = Views/History/HistoryCellExpanded.xib; sourceTree = "<group>"; };
 		0267A9AB1A21180D00DE7DBC /* Workout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Workout.xcdatamodel; sourceTree = "<group>"; };
 		027996021A50F9FE00BE0D22 /* Set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Set.h; path = SmarterWorkouts/Models/Set.h; sourceTree = "<group>"; };
@@ -303,6 +307,7 @@
 		5459057E9A8FEBF598DFA13B /* PlateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateTests.m; sourceTree = "<group>"; };
 		5459058F798687931790C88A /* SmallSetCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallSetCellFactory.h; sourceTree = "<group>"; };
 		545905ABBA5E7B5529B9F446 /* DurationSetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DurationSetCell.xib; sourceTree = "<group>"; };
+		545905BDCCDE65A6F5431C56 /* CloudKitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudKitTests.m; sourceTree = "<group>"; };
 		545905C44E3B1AA051AF2BC0 /* UIImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageHelper.m; sourceTree = "<group>"; };
 		545905DDCDDBF05FFED34534 /* ActivitySelectorInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySelectorInputViewController.h; sourceTree = "<group>"; };
 		545905E061C18E2B4E7B5637 /* SWTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTimer.h; sourceTree = "<group>"; };
@@ -463,6 +468,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02531C5C1A6D7B0C00B0446A /* CloudKit.framework in Frameworks */,
 				54590BBF38CCD39F0B4229FE /* CoreData.framework in Frameworks */,
 				FF4001A8394D49AEB26DF52E /* libPods.a in Frameworks */,
 			);
@@ -751,6 +757,7 @@
 				54590E7DCB70E3C787745F41 /* copy */,
 				5459046AAA5998518A745AF1 /* ActivityTests.m */,
 				54590996D2BBCB5B6C7919D5 /* BarTests.m */,
+				545905BDCCDE65A6F5431C56 /* CloudKitTests.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1007,6 +1014,7 @@
 		54590E7C84FB812C1C10E222 /* SmarterWorkouts */ = {
 			isa = PBXGroup;
 			children = (
+				02531C5A1A6D7AC700B0446A /* SmarterWorkouts.entitlements */,
 				0267A9A81A2117D200DE7DBC /* Models */,
 				0288D9891A180BF50092C2D3 /* Views */,
 				5459028458247F86AFC666EA /* Supporting Files */,
@@ -1085,6 +1093,7 @@
 		B9DD51763DC44FC980A2E276 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				02531C5B1A6D7B0C00B0446A /* CloudKit.framework */,
 				BD4D313009C4493EB660B607 /* libPods.a */,
 				5459093FA06E60D65D8B9C63 /* CoreData.framework */,
 				02423F8C1A2FE81D0048BB17 /* WatchKit.framework */,
@@ -1186,6 +1195,11 @@
 					};
 					545902536CDF9710E59E4BB2 = {
 						DevelopmentTeam = 255V99ZU6N;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1471,6 +1485,7 @@
 				545900EEC0BF7316D0C1EFB3 /* WeightCreateViewControllerTests.m in Sources */,
 				5459049CB6FF57F96117F82E /* ActivityTests.m in Sources */,
 				5459038FBAC596822F11CF5D /* BarTests.m in Sources */,
+				54590978A1E88D1E6572D9D6 /* CloudKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1599,6 +1614,7 @@
 			baseConfigurationReference = 951EA323B2EBA6F3B93DC5EE /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmarterWorkouts/SmarterWorkouts.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SmarterWorkouts/Info.plist;
@@ -1615,6 +1631,7 @@
 			baseConfigurationReference = D2ABD30978FA77B752E19FB5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmarterWorkouts/SmarterWorkouts.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SmarterWorkouts/Info.plist;

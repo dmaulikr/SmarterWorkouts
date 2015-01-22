@@ -1,11 +1,3 @@
-//
-//  SetGroup.h
-//  SmarterWorkouts
-//
-//  Created by Stefan Kendall on 11/22/14.
-//  Copyright (c) 2014 Stefan Kendall. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
