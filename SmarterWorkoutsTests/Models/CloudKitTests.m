@@ -1,8 +1,9 @@
 #import <Foundation/Foundation.h>
 #import <CloudKit/CloudKit.h>
 #import "SWTestCase.h"
+#import "CloudKitTestCase.h"
 
-@interface CloudKitTests : SWTestCase
+@interface CloudKitTests : CloudKitTestCase
 @end
 
 @implementation CloudKitTests
@@ -18,27 +19,51 @@
         workout[@"date"] = [NSDate new];
         workout[@"comments"] = @"Hard workout";
 
-        [[[CKContainer defaultContainer] publicCloudDatabase] saveRecord:workout completionHandler:
-                ^(CKRecord *savedWorkout, NSError *saveError) {
-                    XCTAssertTrue([savedWorkout.allKeys containsObject:@"user"]);
+        CKRecord *setGroup = [[CKRecord alloc] initWithRecordType:@"SetGroup"];
+        setGroup[@"name"] = @"Set group name";
+        setGroup[@"workout"] = [[CKReference alloc] initWithRecordID:workout.recordID action:CKReferenceActionDeleteSelf];
+        workout[@"setGroups"] = @[[[CKReference alloc] initWithRecord:setGroup action:CKReferenceActionNone]];
 
-                    CKRecord *setGroup = [[CKRecord alloc] initWithRecordType:@"SetGroup"];
-                    setGroup[@"name"] = @"Set group name";
-                    [[[CKContainer defaultContainer] publicCloudDatabase] saveRecord:setGroup completionHandler:
-                            ^(CKRecord *savedSetGroup, NSError *setGroupError) {
-                                workout[@"setGroups"] = @[[[CKReference alloc] initWithRecord:savedSetGroup action:CKReferenceActionNone]];
-                                [[[CKContainer defaultContainer] publicCloudDatabase] saveRecord:workout completionHandler:
-                                        ^(CKRecord *savedWorkout2, NSError *savedWorkout2Error) {
-                                            XCTAssertTrue([savedWorkout2.allKeys containsObject:@"SetGroups"]);
-                                            [expectation fulfill];
-                                        }];
-                                [expectation fulfill];
-                            }];
-                }];
+        CKModifyRecordsOperation *saveRecords = [[CKModifyRecordsOperation alloc] initWithRecordsToSave:@[workout, setGroup] recordIDsToDelete:nil];
+        [saveRecords setModifyRecordsCompletionBlock:^(NSArray *savedRecords, NSArray *deletedRecordIDs, NSError *operationError) {
+            XCTAssertEqual([savedRecords count], 2);
+            [expectation fulfill];
+        }];
+        [[[CKContainer defaultContainer] publicCloudDatabase] addOperation:saveRecords];
     }];
 
-    [self waitForExpectationsWithTimeout:3 handler:^(NSError *error) {
+    [self waitForExpectationsWithTimeout:3 handler:nil];
+}
+
+- (void)testCascadesDelete {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"cloudkit"];
+    [[CKContainer defaultContainer] fetchUserRecordIDWithCompletionHandler:^(CKRecordID *recordID, NSError *error) {
+        XCTAssertNil(error, @"Not logged into iCloud");
+
+        CKRecord *workout = [[CKRecord alloc] initWithRecordType:@"Workout"];
+        workout[@"user"] = [[CKReference alloc] initWithRecordID:recordID action:CKReferenceActionDeleteSelf];
+        CKRecord *setGroup = [[CKRecord alloc] initWithRecordType:@"SetGroup"];
+        setGroup[@"workout"] = [[CKReference alloc] initWithRecordID:workout.recordID action:CKReferenceActionDeleteSelf];
+        workout[@"setGroups"] = @[[[CKReference alloc] initWithRecord:setGroup action:CKReferenceActionNone]];
+
+        CKModifyRecordsOperation *saveRecords = [[CKModifyRecordsOperation alloc] initWithRecordsToSave:@[workout, setGroup] recordIDsToDelete:nil];
+        CKModifyRecordsOperation *deleteRecords = [[CKModifyRecordsOperation alloc] initWithRecordsToSave:nil recordIDsToDelete:@[workout.recordID]];
+
+        [saveRecords setModifyRecordsCompletionBlock:^(NSArray *savedRecords, NSArray *deletedRecordIDs, NSError *operationError) {
+            XCTAssertEqual([savedRecords count], 2);
+            [[[CKContainer defaultContainer] publicCloudDatabase] addOperation:deleteRecords];
+        }];
+
+        [deleteRecords setModifyRecordsCompletionBlock:^(NSArray *savedRecords, NSArray *deletedRecordIDs, NSError *operationError) {
+            //happens in the background. Can immediately query but is actually deleted later.
+            XCTAssertEqual([deletedRecordIDs count], 1);
+            [expectation fulfill];
+        }];
+
+        [[[CKContainer defaultContainer] publicCloudDatabase] addOperation:saveRecords];
     }];
+
+    [self waitForExpectationsWithTimeout:3 handler:nil];
 }
 
 @end
