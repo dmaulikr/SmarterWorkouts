@@ -12,7 +12,7 @@
 
 - (void)testGetsActivityDataFromFields {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"CreateEditActivityController" bundle:nil];
-    WeightActivityEditViewController *createViewController = [sb instantiateViewControllerWithIdentifier:@"WeightActivityEditViewController"];
+    WeightActivityEditViewController *createViewController = [sb instantiateViewControllerWithIdentifier:@"WeightCreateViewController"];
 
     UISwitch *usesBarSwitch = [[UISwitch alloc] init];
     UISegmentedControl *lbsKgSegment = [[UISegmentedControl alloc] initWithItems:@[@"lbs", @"kg"]];

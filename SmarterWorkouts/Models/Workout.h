@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "CloudKitModel.h"
 
 @class SetGroup;
 
-@interface Workout : NSManagedObject
+@interface Workout : NSManagedObject <CloudKitModel>
 
 @property (nonatomic, retain) NSString * comments;
 @property (nonatomic, retain) NSDate * date;

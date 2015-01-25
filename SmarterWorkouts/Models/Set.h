@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "CloudKitModel.h"
 
 @class Activity;
 
-@interface Set : NSManagedObject
+@interface Set : NSManagedObject <CloudKitModel>
 
 @property (nonatomic, retain) NSString * comments;
 @property (nonatomic, retain) NSNumber * duration;
