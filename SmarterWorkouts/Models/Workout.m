@@ -1,4 +1,5 @@
 #import <CloudKit/CloudKit.h>
+#import <objc/objc-api.h>
 #import "Workout.h"
 #import "SetGroup.h"
 #import "CloudKitUserService.h"
@@ -40,6 +41,10 @@
 
 - (void)didSave {
     [super didSave];
+    [self saveToCloudKit];
+}
+
+- (void)saveToCloudKit {
     [[CloudKitUserService instance] fetchUser:^(CKRecordID *user) {
         NSArray *allRecords = [self allRecordsToSave:user];
         CKModifyRecordsOperation *saveOperation = [[CKModifyRecordsOperation alloc] initWithRecordsToSave:allRecords recordIDsToDelete:nil];
