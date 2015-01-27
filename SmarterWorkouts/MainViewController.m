@@ -78,6 +78,7 @@
 }
 
 - (IBAction)selectFriends:(id)sender {
+    [self loadStoryboard:@"FriendsViewController"];
 }
 
 - (IBAction)selectActivities:(id)sender {
