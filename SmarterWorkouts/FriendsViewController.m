@@ -24,6 +24,12 @@ const int CONTACTS_SECTION = 1;
     [CellRegister registerClass:FriendCell.class for:self.tableView];
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Add Friend" style:UIBarButtonItemStylePlain target:self action:@selector(addFriend)];
+}
+
+- (void)addFriend {
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
