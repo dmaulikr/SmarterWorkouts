@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6735" systemVersion="14B25" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6750" systemVersion="14B25" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Activity" representedClassName="Activity" syncable="YES">
         <attribute name="archived" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
@@ -11,6 +11,10 @@
     <entity name="Bar" representedClassName="Bar" syncable="YES">
         <attribute name="units" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="weight" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="Friend" representedClassName="Friend" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recordName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Plate" representedClassName="Plate" syncable="YES">
         <attribute name="count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -40,10 +44,11 @@
     </entity>
     <elements>
         <element name="Activity" positionX="-54" positionY="63" width="128" height="135"/>
+        <element name="Bar" positionX="-54" positionY="72" width="128" height="75"/>
         <element name="Plate" positionX="-54" positionY="63" width="128" height="90"/>
         <element name="Set" positionX="-63" positionY="-18" width="128" height="135"/>
         <element name="SetGroup" positionX="-54" positionY="36" width="128" height="105"/>
         <element name="Workout" positionX="-45" positionY="54" width="128" height="120"/>
-        <element name="Bar" positionX="-54" positionY="72" width="128" height="75"/>
+        <element name="Friend" positionX="-54" positionY="72" width="128" height="73"/>
     </elements>
 </model>

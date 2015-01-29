@@ -1,9 +1,15 @@
 #import <CloudKit/CloudKit.h>
+#import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalFinders.h>
+#import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
 #import "FriendsViewController.h"
 #import "CellRegister.h"
 #import "LoadingFriendsCell.h"
 #import "AddFriendCell.h"
 #import "NoFriendsCell.h"
+#import "Friend.h"
+#import "FriendCell.h"
+
+const int CONTACTS_SECTION = 1;
 
 @implementation FriendsViewController
 
@@ -15,6 +21,7 @@
     [CellRegister registerClass:AddFriendCell.class for:self.tableView];
     [CellRegister registerClass:LoadingFriendsCell.class for:self.tableView];
     [CellRegister registerClass:NoFriendsCell.class for:self.tableView];
+    [CellRegister registerClass:FriendCell.class for:self.tableView];
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
@@ -55,18 +62,28 @@
     return @[@"Friends", @"Contacts"][(NSUInteger) section];
 }
 
+- (NSArray *)contactsNotInFriends {
+    return [self.contactsUsingApp filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:
+            ^BOOL(CKDiscoveredUserInfo *info, NSDictionary *bindings) {
+                NSArray *matching = [Friend MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@",
+                                                                                                     @"recordName",
+                                                                                                     info.userRecordID.recordName]];
+                return [matching count] == 0;
+            }]];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
         NSUInteger friendsCount = [[self getFriends] count];
         return friendsCount == 0 ? 1 : friendsCount;
     }
     else {
-        return self.contactsFound ? [self.contactsUsingApp count] : 1;
+        return self.contactsFound ? [self.contactsNotInFriends count] : 1;
     }
 }
 
 - (NSArray *)getFriends {
-    return @[];
+    return [Friend MR_findAll];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -75,19 +92,31 @@
             return [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(NoFriendsCell.class)];
         }
         else {
-            return nil;
+            FriendCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(FriendCell.class)];
+            [cell setFriend:[self getFriends][(NSUInteger) indexPath.row]];
+            return cell;
         }
     }
     else {
         if (self.contactsFound) {
             AddFriendCell *addFriendCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(AddFriendCell.class)];
-            CKDiscoveredUserInfo *info = self.contactsUsingApp[(NSUInteger) indexPath.row];
+            CKDiscoveredUserInfo *info = self.contactsNotInFriends[(NSUInteger) indexPath.row];
             [addFriendCell setUserInfo:info];
             return addFriendCell;
         }
         else {
             return [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(LoadingFriendsCell.class)];
         }
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == CONTACTS_SECTION && self.contactsFound) {
+        Friend *friend = [Friend MR_createEntity];
+        CKDiscoveredUserInfo *info = self.contactsNotInFriends[(NSUInteger) indexPath.row];
+        friend.name = [NSString stringWithFormat:@"%@ %@", info.firstName, info.lastName];
+        friend.recordName = info.userRecordID.recordName;
+        [self.tableView reloadData];
     }
 }
 
