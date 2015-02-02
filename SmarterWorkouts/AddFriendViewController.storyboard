@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fEz-cG-1AO">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+    </dependencies>
+    <scenes>
+        <!--Add Friend View Controller-->
+        <scene sceneID="jPj-Va-m5O">
+            <objects>
+                <viewController id="fEz-cG-1AO" customClass="AddFriendViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hdt-eO-Ucy"/>
+                        <viewControllerLayoutGuide type="bottom" id="juG-H8-y4x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fad-se-uB7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finding contacts using the app..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iun-Hp-8CI">
+                                <rect key="frame" x="0.0" y="320" width="375" height="28"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WAE-ht-WE8">
+                                <rect key="frame" x="178" y="348" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="MEe-XU-lLR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MEe-XU-lLR" firstAttribute="top" secondItem="Hdt-eO-Ucy" secondAttribute="top" id="5c9-Ue-Fwu"/>
+                            <constraint firstItem="Iun-Hp-8CI" firstAttribute="leading" secondItem="Fad-se-uB7" secondAttribute="leading" id="9yb-TJ-us8"/>
+                            <constraint firstAttribute="centerX" secondItem="WAE-ht-WE8" secondAttribute="centerX" id="IQV-Ca-P1h"/>
+                            <constraint firstItem="juG-H8-y4x" firstAttribute="top" secondItem="MEe-XU-lLR" secondAttribute="bottom" id="PBI-jG-gn2"/>
+                            <constraint firstAttribute="centerY" secondItem="Iun-Hp-8CI" secondAttribute="centerY" id="a1R-XX-HGh"/>
+                            <constraint firstAttribute="trailing" secondItem="MEe-XU-lLR" secondAttribute="trailing" id="bpp-rv-xxm"/>
+                            <constraint firstItem="Iun-Hp-8CI" firstAttribute="top" secondItem="WAE-ht-WE8" secondAttribute="bottom" constant="-48" id="htl-lO-7i0"/>
+                            <constraint firstItem="MEe-XU-lLR" firstAttribute="leading" secondItem="Fad-se-uB7" secondAttribute="leading" id="mpw-IO-U07"/>
+                            <constraint firstAttribute="trailing" secondItem="Iun-Hp-8CI" secondAttribute="trailing" id="vcX-cv-144"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="findingFriendsActivityIndicator" destination="WAE-ht-WE8" id="Dbx-kc-gzd"/>
+                        <outlet property="findingFriendsLabel" destination="Iun-Hp-8CI" id="sBN-om-IBz"/>
+                        <outlet property="tableView" destination="MEe-XU-lLR" id="xSb-e0-HMR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="df8-c2-wNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="195"/>
+        </scene>
+    </scenes>
+</document>

@@ -4,6 +4,7 @@
 #import "UIImageHelper.h"
 #import "UIColor+HexString.h"
 #import "ActivitySelectorViewController.h"
+#import "UIViewController+LoadStoryBoard.h"
 
 @implementation MainViewController {
     __weak IBOutlet UIImageView *activityImage;
@@ -83,12 +84,6 @@
 
 - (IBAction)selectActivities:(id)sender {
     ActivitySelectorViewController *controller = [ActivitySelectorViewController new];
-    [self.navigationController pushViewController:controller animated:YES];
-}
-
-- (void)loadStoryboard:(NSString *)nibName {
-    UIStoryboard *historyStoryboard = [UIStoryboard storyboardWithName:nibName bundle:[NSBundle mainBundle]];
-    UIViewController *controller = [historyStoryboard instantiateInitialViewController];
     [self.navigationController pushViewController:controller animated:YES];
 }
 
