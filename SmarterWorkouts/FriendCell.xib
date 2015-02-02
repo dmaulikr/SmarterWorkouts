@@ -7,29 +7,55 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KZW-J9-tHz" customClass="FriendCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="KZW-J9-tHz" customClass="FriendCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KZW-J9-tHz" id="TGt-Lf-1gN">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stefan Kendall" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dC-OX-fcA">
-                        <rect key="frame" x="8" y="8" width="156.5" height="49.5"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                        <rect key="frame" x="8" y="8" width="211" height="30.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03/09/1989" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQA-N4-DNj">
+                        <rect key="frame" x="225" y="42" width="87" height="20"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Squat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BL-dB-TgE">
+                        <rect key="frame" x="8" y="41" width="69" height="30.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Last Active" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPs-bd-Lrz">
+                        <rect key="frame" x="227" y="18" width="84.5" height="20"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="3dC-OX-fcA" secondAttribute="bottom" id="6jI-3R-2as"/>
-                    <constraint firstItem="3dC-OX-fcA" firstAttribute="top" secondItem="TGt-Lf-1gN" secondAttribute="topMargin" id="hbd-SN-Ata"/>
-                    <constraint firstItem="3dC-OX-fcA" firstAttribute="leading" secondItem="TGt-Lf-1gN" secondAttribute="leadingMargin" id="rh6-y3-zM8"/>
+                    <constraint firstItem="gQA-N4-DNj" firstAttribute="trailing" secondItem="TGt-Lf-1gN" secondAttribute="trailingMargin" id="4yV-jc-BUo"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="1BL-dB-TgE" secondAttribute="bottom" constant="0.5" id="Dgg-XE-9jK"/>
+                    <constraint firstItem="3dC-OX-fcA" firstAttribute="top" secondItem="TGt-Lf-1gN" secondAttribute="topMargin" id="KSj-Kv-wfj"/>
+                    <constraint firstItem="1BL-dB-TgE" firstAttribute="leading" secondItem="TGt-Lf-1gN" secondAttribute="leadingMargin" id="N9h-PV-mph"/>
+                    <constraint firstItem="UPs-bd-Lrz" firstAttribute="trailing" secondItem="TGt-Lf-1gN" secondAttribute="trailingMargin" id="Nnj-bL-IzB"/>
+                    <constraint firstItem="UPs-bd-Lrz" firstAttribute="leading" secondItem="3dC-OX-fcA" secondAttribute="trailing" constant="8" id="RiD-xU-SZt"/>
+                    <constraint firstAttribute="centerY" secondItem="UPs-bd-Lrz" secondAttribute="centerY" constant="12" id="WD0-qC-tql"/>
+                    <constraint firstItem="3dC-OX-fcA" firstAttribute="leading" secondItem="TGt-Lf-1gN" secondAttribute="leadingMargin" id="fWb-7c-kWQ"/>
+                    <constraint firstAttribute="centerY" secondItem="gQA-N4-DNj" secondAttribute="centerY" constant="-12" id="wNu-9q-PVM"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="lastActiveDate" destination="gQA-N4-DNj" id="CTw-Fo-nvQ"/>
                 <outlet property="nameLabel" destination="3dC-OX-fcA" id="sHY-uK-zgn"/>
+                <outlet property="primaryActivityLabel" destination="1BL-dB-TgE" id="CHU-PK-MmU"/>
             </connections>
-            <point key="canvasLocation" x="296" y="256"/>
+            <point key="canvasLocation" x="296" y="283.5"/>
         </tableViewCell>
     </objects>
 </document>

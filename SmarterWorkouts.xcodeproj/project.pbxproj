@@ -167,9 +167,11 @@
 		54590EB4CAF5B0A6F2790D35 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590354648EF3DAC710123D /* FriendCell.xib */; };
 		54590EBC8699CBEA76EA1091 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590507D7B3C45034D21DA1 /* FriendCell.m */; };
 		54590EC4CA651E059EEEBC2A /* NoteInputAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590D179A66492863B7995B /* NoteInputAccessoryView.xib */; };
+		54590EC67642F0BE0947D5B4 /* FriendUpdaterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590BA0F5911FD5D20BBCFB /* FriendUpdaterTests.m */; };
 		54590EF5DABB8A46432EF75C /* CloudKitTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590EECDA0B9989375FF267 /* CloudKitTestCase.m */; };
 		54590F2DE0A40BC4E74C42A0 /* SWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590EEDEDFB55C9CD0B52CD /* SWTimer.m */; };
 		54590F71343D7A09435938C2 /* Form.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459094388A431B3BB423E90 /* Form.m */; };
+		54590F9572D0A4AB369F13B6 /* FriendUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590B00714168CA4D9E780F /* FriendUpdater.m */; };
 		54590FA1CECB4EB5D147AAEF /* LoadingFriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590D97F4B4106FDCD54D88 /* LoadingFriendsCell.xib */; };
 		54590FA6C97345D57ECC5425 /* DurationDisplayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590272E50B204941754D35 /* DurationDisplayTests.m */; };
 		54590FB9490FAEFD72CB3D61 /* ActivityWeightFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590DCC45595B04895F779F /* ActivityWeightFormCell.m */; };
@@ -341,6 +343,7 @@
 		545906137F842943E2A5776F /* bars.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = bars.json; sourceTree = "<group>"; };
 		5459061FF264AFC33EDE1495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		54590645E3F315FB504F4374 /* ActivitySelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySelectorViewController.h; sourceTree = "<group>"; };
+		5459065AAA0AA27332F60D0D /* FriendUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendUpdater.h; sourceTree = "<group>"; };
 		545906ABA0A549BC8C5F5E78 /* WorkoutControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutControls.h; sourceTree = "<group>"; };
 		545906B93DC6D229534AC85D /* UIImage+ColorFromImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorFromImage.h"; sourceTree = "<group>"; };
 		54590709AEBEC0E0AE30F736 /* BarCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarCalculator.m; sourceTree = "<group>"; };
@@ -392,6 +395,7 @@
 		54590A956DCD8C1CF6738B52 /* 974-users.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "974-users.png"; sourceTree = "<group>"; };
 		54590ACC1AC6B9D074702B48 /* ActivityWeightFormViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityWeightFormViewControllerTests.m; sourceTree = "<group>"; };
 		54590ADCFD562F6151744144 /* ActivityCreateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCreateController.m; sourceTree = "<group>"; };
+		54590B00714168CA4D9E780F /* FriendUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendUpdater.m; sourceTree = "<group>"; };
 		54590B0D5F9BE6924434419F /* 740-gear-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "740-gear-toolbar@2x.png"; sourceTree = "<group>"; };
 		54590B139E84BF5FD750E43E /* InputAccessoryBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputAccessoryBuilder.m; sourceTree = "<group>"; };
 		54590B172184011883D18ACF /* SetupTimerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupTimerCell.h; sourceTree = "<group>"; };
@@ -404,6 +408,7 @@
 		54590B7D358083C53A75BA3E /* FlavorTextUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlavorTextUITextField.m; sourceTree = "<group>"; };
 		54590B971EFBE43DBA52F764 /* DecimalNumbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalNumbers.m; sourceTree = "<group>"; };
 		54590B9F520D28E4D4E2AEAA /* NotNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotNil.h; sourceTree = "<group>"; };
+		54590BA0F5911FD5D20BBCFB /* FriendUpdaterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendUpdaterTests.m; sourceTree = "<group>"; };
 		54590BAD1767B70F667FFD9F /* WeightActivityEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightActivityEditViewController.m; sourceTree = "<group>"; };
 		54590BCD6074B6467C4D1111 /* BarLoadingSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarLoadingSetupViewController.m; sourceTree = "<group>"; };
 		54590BE00588E22981740B8F /* 974-users@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "974-users@2x.png"; sourceTree = "<group>"; };
@@ -779,6 +784,8 @@
 				54590E4A83F580D1193EAC45 /* FriendsViewController.h */,
 				54590E69BC5D7FC94168CBA6 /* FriendsViewController.storyboard */,
 				545901A065BF5B89B4B39C84 /* FriendsCells */,
+				54590B00714168CA4D9E780F /* FriendUpdater.m */,
+				5459065AAA0AA27332F60D0D /* FriendUpdater.h */,
 			);
 			name = Friends;
 			sourceTree = "<group>";
@@ -836,6 +843,14 @@
 				5459096055B4F7F4B95813B2 /* WorkoutTests.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5459074032F35B30C36FD9E9 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				54590BA0F5911FD5D20BBCFB /* FriendUpdaterTests.m */,
+			);
+			path = Friends;
 			sourceTree = "<group>";
 		};
 		5459077F0EB4AF2C7DC590F5 /* Timer */ = {
@@ -951,6 +966,7 @@
 			children = (
 				545908F56CCD1B7EB6DF275C /* Workout */,
 				54590DEFBD0ACD54374E5B00 /* History */,
+				5459074032F35B30C36FD9E9 /* Friends */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1560,6 +1576,7 @@
 				5459060AB23C0AD34ADB86C9 /* AddFriendCell.m in Sources */,
 				5459049BFEC863D90E9DAF65 /* NoFriendsCell.m in Sources */,
 				54590EBC8699CBEA76EA1091 /* FriendCell.m in Sources */,
+				54590F9572D0A4AB369F13B6 /* FriendUpdater.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1584,6 +1601,7 @@
 				54590978A1E88D1E6572D9D6 /* CloudKitTests.m in Sources */,
 				54590EF5DABB8A46432EF75C /* CloudKitTestCase.m in Sources */,
 				545909AC86D7DA6DC42F329F /* WorkoutTests.m in Sources */,
+				54590EC67642F0BE0947D5B4 /* FriendUpdaterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

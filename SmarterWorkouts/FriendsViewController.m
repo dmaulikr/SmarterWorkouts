@@ -1,6 +1,8 @@
 #import <CloudKit/CloudKit.h>
 #import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalFinders.h>
 #import <MagicalRecord/MagicalRecord/NSManagedObject+MagicalRecord.h>
+#import <MagicalRecord/MagicalRecord/NSManagedObjectContext+MagicalRecord.h>
+#import <MagicalRecord/MagicalRecord/NSManagedObjectContext+MagicalSaves.h>
 #import "FriendsViewController.h"
 #import "CellRegister.h"
 #import "LoadingFriendsCell.h"
@@ -8,6 +10,7 @@
 #import "NoFriendsCell.h"
 #import "Friend.h"
 #import "FriendCell.h"
+#import "FriendUpdater.h"
 
 const int CONTACTS_SECTION = 1;
 
@@ -40,19 +43,41 @@ const int CONTACTS_SECTION = 1;
     self.contactsFound = NO;
     self.contactsUsingApp = @[];
     [self requestPermissionToFindFriends];
+    [self findFriendsLatestWorkout];
     [self.tableView reloadData];
+}
+
+- (void)findFriendsLatestWorkout {
+    NSArray *allFriends = [Friend MR_findAll];
+    NSMutableArray *predicates = [@[] mutableCopy];
+    for (Friend *friend in allFriends) {
+        [predicates addObject:[NSPredicate predicateWithFormat:@"%K == %@", @"user",
+                                                               [[CKRecordID alloc] initWithRecordName:friend.recordName]]];
+    }
+    if ([predicates count] > 0) {
+        CKQuery *friendWorkoutQuery = [[CKQuery alloc] initWithRecordType:@"Workout" predicate:
+                [NSCompoundPredicate orPredicateWithSubpredicates:predicates]];
+
+        [[[CKContainer defaultContainer] publicCloudDatabase] performQuery:friendWorkoutQuery inZoneWithID:nil completionHandler:
+                ^(NSArray *results, NSError *error) {
+                    [FriendUpdater updateFriendsFromWorkouts:results];
+                    [self.tableView reloadData];
+                }];
+    }
 }
 
 - (void)requestPermissionToFindFriends {
     [[CKContainer defaultContainer] requestApplicationPermission:CKApplicationPermissionUserDiscoverability
                                                completionHandler:^(CKApplicationPermissionStatus applicationPermissionStatus, NSError *error) {
                                                    if (applicationPermissionStatus == CKApplicationPermissionStatusGranted) {
-                                                       [[CKContainer defaultContainer] discoverAllContactUserInfosWithCompletionHandler:
-                                                               ^(NSArray *userInfos, NSError *error) {
-                                                                   self.contactsUsingApp = userInfos;
-                                                                   self.contactsFound = YES;
-                                                                   [self.tableView reloadData];
-                                                               }];
+                                                       CKDiscoverAllContactsOperation *operation = [CKDiscoverAllContactsOperation new];
+                                                       operation.queuePriority = NSOperationQueuePriorityHigh;
+                                                       operation.discoverAllContactsCompletionBlock = ^(NSArray *userInfos, NSError *operationError) {
+                                                           self.contactsUsingApp = userInfos;
+                                                           self.contactsFound = YES;
+                                                           [self.tableView reloadData];
+                                                       };
+                                                       [[CKContainer defaultContainer] addOperation:operation];
                                                    }
                                                    else {
                                                        self.contactsFound = YES;
@@ -122,6 +147,7 @@ const int CONTACTS_SECTION = 1;
         CKDiscoveredUserInfo *info = self.contactsNotInFriends[(NSUInteger) indexPath.row];
         friend.name = [NSString stringWithFormat:@"%@ %@", info.firstName, info.lastName];
         friend.recordName = info.userRecordID.recordName;
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         [self.tableView reloadData];
     }
 }

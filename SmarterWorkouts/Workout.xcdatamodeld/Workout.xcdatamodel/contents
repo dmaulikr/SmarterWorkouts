@@ -13,6 +13,8 @@
         <attribute name="weight" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
     </entity>
     <entity name="Friend" representedClassName="Friend" syncable="YES">
+        <attribute name="lastWorkoutActivity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastWorkoutDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="recordName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -45,10 +47,10 @@
     <elements>
         <element name="Activity" positionX="-54" positionY="63" width="128" height="135"/>
         <element name="Bar" positionX="-54" positionY="72" width="128" height="75"/>
+        <element name="Friend" positionX="-54" positionY="72" width="128" height="105"/>
         <element name="Plate" positionX="-54" positionY="63" width="128" height="90"/>
         <element name="Set" positionX="-63" positionY="-18" width="128" height="135"/>
         <element name="SetGroup" positionX="-54" positionY="36" width="128" height="105"/>
         <element name="Workout" positionX="-45" positionY="54" width="128" height="120"/>
-        <element name="Friend" positionX="-54" positionY="72" width="128" height="73"/>
     </elements>
 </model>
