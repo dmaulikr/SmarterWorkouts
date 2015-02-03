@@ -22,6 +22,7 @@
     self.title = @"Add Friend";
     [self requestPermissionToFindFriends];
     [self.tableView setHidden:YES];
+    [self.statusMessage setHidden:YES];
 }
 
 - (void)requestPermissionToFindFriends {
@@ -32,15 +33,22 @@
                                                        operation.queuePriority = NSOperationQueuePriorityHigh;
                                                        operation.discoverAllContactsCompletionBlock = ^(NSArray *userInfos, NSError *operationError) {
                                                            self.contactsUsingApp = userInfos;
-                                                           [self.tableView setHidden:NO];
                                                            [self.findingFriendsLabel setHidden:YES];
                                                            [self.findingFriendsActivityIndicator setHidden:YES];
-                                                           [self.tableView reloadData];
+                                                           if ([self.contactsUsingApp count] == 0) {
+                                                               [self.statusMessage setText:@"No friends found using the app. Invite someone through email?"];
+                                                               [self.statusMessage setHidden:NO];
+                                                           }
+                                                           else {
+                                                               [self.tableView setHidden:NO];
+                                                               [self.tableView reloadData];
+                                                           }
                                                        };
                                                        [[CKContainer defaultContainer] addOperation:operation];
                                                    }
                                                    else {
-                                                      //TODO: handle this.
+                                                       [self.statusMessage setHidden:NO];
+                                                       [self.statusMessage setText:@"Oops! There was a problem searching for friends. Try again?"];
                                                    }
                                                }];
 }

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fEz-cG-1AO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Add Friend View Controller-->
@@ -16,6 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status Message" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4v-mf-SUl">
+                                <rect key="frame" x="16" y="320" width="343" height="28"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finding contacts using the app..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iun-Hp-8CI">
                                 <rect key="frame" x="0.0" y="320" width="375" height="28"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
@@ -32,12 +39,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="F4v-mf-SUl" firstAttribute="leading" secondItem="Fad-se-uB7" secondAttribute="leadingMargin" id="29k-bY-GTi"/>
                             <constraint firstItem="MEe-XU-lLR" firstAttribute="top" secondItem="Hdt-eO-Ucy" secondAttribute="top" id="5c9-Ue-Fwu"/>
+                            <constraint firstAttribute="centerY" secondItem="F4v-mf-SUl" secondAttribute="centerY" id="90V-WA-NVS"/>
                             <constraint firstItem="Iun-Hp-8CI" firstAttribute="leading" secondItem="Fad-se-uB7" secondAttribute="leading" id="9yb-TJ-us8"/>
                             <constraint firstAttribute="centerX" secondItem="WAE-ht-WE8" secondAttribute="centerX" id="IQV-Ca-P1h"/>
+                            <constraint firstAttribute="centerX" secondItem="F4v-mf-SUl" secondAttribute="centerX" id="OSk-Ik-CMm"/>
                             <constraint firstItem="juG-H8-y4x" firstAttribute="top" secondItem="MEe-XU-lLR" secondAttribute="bottom" id="PBI-jG-gn2"/>
                             <constraint firstAttribute="centerY" secondItem="Iun-Hp-8CI" secondAttribute="centerY" id="a1R-XX-HGh"/>
                             <constraint firstAttribute="trailing" secondItem="MEe-XU-lLR" secondAttribute="trailing" id="bpp-rv-xxm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F4v-mf-SUl" secondAttribute="trailing" id="faF-A1-X6B"/>
                             <constraint firstItem="Iun-Hp-8CI" firstAttribute="top" secondItem="WAE-ht-WE8" secondAttribute="bottom" constant="-48" id="htl-lO-7i0"/>
                             <constraint firstItem="MEe-XU-lLR" firstAttribute="leading" secondItem="Fad-se-uB7" secondAttribute="leading" id="mpw-IO-U07"/>
                             <constraint firstAttribute="trailing" secondItem="Iun-Hp-8CI" secondAttribute="trailing" id="vcX-cv-144"/>
@@ -47,6 +58,7 @@
                     <connections>
                         <outlet property="findingFriendsActivityIndicator" destination="WAE-ht-WE8" id="Dbx-kc-gzd"/>
                         <outlet property="findingFriendsLabel" destination="Iun-Hp-8CI" id="sBN-om-IBz"/>
+                        <outlet property="statusMessage" destination="F4v-mf-SUl" id="UNy-6G-GYz"/>
                         <outlet property="tableView" destination="MEe-XU-lLR" id="xSb-e0-HMR"/>
                     </connections>
                 </viewController>
