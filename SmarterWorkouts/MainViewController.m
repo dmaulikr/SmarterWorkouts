@@ -58,9 +58,9 @@
 }
 
 - (void)animateWorkoutImage {
-    UIImage *downImage = [UIImageHelper image:[UIImage imageNamed:@"415-weightlifter-inverse.png"] withColor:[UIColor whiteColor]];
+    UIImage *downImage = [UIImageHelper image:[UIImage imageNamed:@"415-weightlifter-inverse"] withColor:[UIColor whiteColor]];
     workoutImage.animationImages = @[
-            [UIImageHelper image:[UIImage imageNamed:@"415-weightlifter.png"] withColor:[UIColor whiteColor]],
+            [UIImageHelper image:[UIImage imageNamed:@"415-weightlifter"] withColor:[UIColor whiteColor]],
             downImage,
             downImage,
             downImage

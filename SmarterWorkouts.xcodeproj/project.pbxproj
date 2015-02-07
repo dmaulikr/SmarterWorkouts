@@ -28,32 +28,23 @@
 		02DDF7061A336DED00359F93 /* SetupTimerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DDF7051A336DED00359F93 /* SetupTimerCell.xib */; };
 		5459002593878AF8B4A8BA94 /* SelectionGroupHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459022EB488280BD9CBEAFF /* SelectionGroupHeader.m */; };
 		5459003525EAC3351B01CE22 /* TimeActivityEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590EE39F2BF1A3B2E838B1 /* TimeActivityEditViewController.m */; };
-		5459003749AD32360447790F /* 901-repeat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590EED5F73DE4BB57F40C5 /* 901-repeat@3x.png */; };
-		54590040FF2735B1C6A4904E /* 912-gears.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590E85F0F2A1C45692C3B5 /* 912-gears.png */; };
 		5459004C362F8D82667493BD /* BarCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902FC40A458CC44ECB9A4 /* BarCalculatorTests.m */; };
 		54590096202B3CBF2E36A63A /* CreateEditActivityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590160A8D663DAC97950B5 /* CreateEditActivityController.m */; };
 		545900A896D00F0EDEEEAEEC /* SmallDurationSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590E52A709C738C59FE1E4 /* SmallDurationSetCell.xib */; };
 		545900EEC0BF7316D0C1EFB3 /* WeightCreateViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C0DFE5292040072F281 /* WeightCreateViewControllerTests.m */; };
-		545900F12ADFCD764A72A104 /* 746-plus-circle-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590A2BC9B71EA9362C1C89 /* 746-plus-circle-toolbar@3x.png */; };
 		5459014698809F8D820FF883 /* ActivitySelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C9608EA266833F2A3D3 /* ActivitySelectorViewController.m */; };
 		5459014F5966F5625D13A9F1 /* WeightSetCellWithComments.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590B4F44267BA008D3D184 /* WeightSetCellWithComments.xib */; };
 		5459015778C875EBCA5E3634 /* AddFriendViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545907F1F53E2D297EE3A54D /* AddFriendViewController.storyboard */; };
 		5459018335309C0F28BD414A /* LoadingFriendsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 545903F2D24589A8E37BF9FC /* LoadingFriendsCell.m */; };
 		545901888D25AA1C5E39144C /* CurrentWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 545901444767D3CF95F9A3C3 /* CurrentWorkout.m */; };
 		5459019491D5CB54BAD0D851 /* plates.json in Resources */ = {isa = PBXBuildFile; fileRef = 545901DE0307A2E0890A0281 /* plates.json */; };
-		545901B813C1C149E3C8C423 /* 740-gear-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590D2D5626EF13B98FF8EF /* 740-gear-toolbar.png */; };
 		54590239EE7C0CFDD2FFD0E0 /* activities.json in Resources */ = {isa = PBXBuildFile; fileRef = 54590FE99DD4EAE18743CF08 /* activities.json */; };
-		5459026A326FCE30A182C947 /* 709-plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545903888625FF04D581594B /* 709-plus@2x.png */; };
-		5459028BF0E8E0CC8030CC32 /* 415-weightlifter-inverse.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590202DEE53269D2AB44A0 /* 415-weightlifter-inverse.png */; };
 		545902DECE48C72B4EA42451 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545909DEAE65283756E25E7A /* LaunchScreen.xib */; };
 		545902FB5831A7DA0C4FE5CD /* SetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590722ED75492DCCF67654 /* SetCell.m */; };
 		5459030C7A29CAEC0F6477AD /* NewActivitySelectorInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590BFD70E633D4614C618F /* NewActivitySelectorInputViewController.m */; };
-		5459033B738CAB4A42774A53 /* 740-gear-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545909CCB4A62AC6A95B9D3B /* 740-gear-toolbar@3x.png */; };
 		5459033E2868864F19843FC3 /* UIImageViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590E583ADE4FD8272B88B9 /* UIImageViewHelper.m */; };
 		5459036AAFC4C7321743456C /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590B22D565A96FCAA89128 /* UIColor+HexString.m */; };
-		545903732D09E118747A59C4 /* 912-gears@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545901AF75BC27A0B483172F /* 912-gears@2x.png */; };
 		54590375748F21B25FF7D182 /* UIViewController+LoadStoryBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459040F4D867BEB3AADDF89 /* UIViewController+LoadStoryBoard.m */; };
-		5459038EF0C90D4D20E0CD13 /* 1091-weights@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545904F4A9A261D4FA5EA3D6 /* 1091-weights@2x.png */; };
 		5459038FBAC596822F11CF5D /* BarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590996D2BBCB5B6C7919D5 /* BarTests.m */; };
 		545903AECA023DD003774059 /* WorkoutControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902F39621185F30F59354 /* WorkoutControls.m */; };
 		545903BFCE9385C58941EE23 /* CreateEditActivityController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545903DB0A21E7CD1A8EA630 /* CreateEditActivityController.storyboard */; };
@@ -63,38 +54,29 @@
 		545903F7AC9D9FB10A9887C8 /* ActivityWeightFormViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590ACC1AC6B9D074702B48 /* ActivityWeightFormViewControllerTests.m */; };
 		545904028A0FC13BE238293B /* WeightSetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 545904FB5D170F8D0F3B40D3 /* WeightSetCell.m */; };
 		545904093E7355E6B2AE1E5B /* Plate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545901A4BEFB683859DA0582 /* Plate.m */; };
-		5459043FCE22ED7A812150B4 /* 1097-timer-2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545908707514D9B67C217C4A /* 1097-timer-2@3x.png */; };
 		5459046E831C0A8B5C2B3F39 /* ActivityWeightFormCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5459010B98D31794F6C7AA70 /* ActivityWeightFormCell.xib */; };
 		54590474BD902C6BB5D9F4B2 /* PlateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590A317AE7918F830C49C6 /* PlateCell.m */; };
 		5459049BFEC863D90E9DAF65 /* NoFriendsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 545906030EB76BFB8F2ABD76 /* NoFriendsCell.m */; };
 		5459049CB6FF57F96117F82E /* ActivityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459046AAA5998518A745AF1 /* ActivityTests.m */; };
-		5459049DF905839DCCD95CE9 /* 901-repeat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590A0AB9FC341CFD9CEB9F /* 901-repeat@2x.png */; };
 		545904A94006B70A52734507 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590F0008BBC7974A542DBB /* HistoryViewController.m */; };
 		545904B48E9BEB1559CD0C25 /* WorkoutControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590DF5CCADA728F393AF01 /* WorkoutControllerTests.m */; };
 		545904D45474ED7DC4F885A3 /* SmallDurationSetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590171034AD926A45B4069 /* SmallDurationSetCell.m */; };
 		5459050A104854CE2611F607 /* WeightInputControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590E8F5D24A631F5E0049D /* WeightInputControls.m */; };
 		5459050B535403E44BD7177D /* WeightSetCellWithComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 545901B004EED157EE15481A /* WeightSetCellWithComments.m */; };
-		5459050E52423716366E7C31 /* 1091-weights.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590B48DB05EBC72108D9F8 /* 1091-weights.png */; };
 		5459051FE88E8E7AC5B12DE2 /* ModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C1704D57A0CB87CD410 /* ModelTests.m */; };
 		5459052304D189F78C0C9CDE /* SetCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 545900F4F126F777ABE82238 /* SetCellFactory.m */; };
 		545905272B2BD1E72E5F01BC /* QuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459026160D6CA4853567D93 /* QuoteViewController.m */; };
-		5459054020D3D2EB28EE444F /* 709-plus@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5459076A50C3F5059B5ABDF7 /* 709-plus@3x.png */; };
 		5459054D6E01E0A7A22F7665 /* TimerActiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590F3FFC4B3A5BBC5F2B8A /* TimerActiveCell.m */; };
 		54590560CA74A5A4D0006A0B /* NoFriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545905AFE58A4D4DBB227972 /* NoFriendsCell.xib */; };
-		5459057DFD2184A543E03067 /* 415-weightlifter-inverse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5459050D61A1F3E6DF7EB87E /* 415-weightlifter-inverse@2x.png */; };
 		5459058B8D152963A6C7E571 /* InputAccessoryBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590B139E84BF5FD750E43E /* InputAccessoryBuilder.m */; };
 		5459059CF1F760883A545BE0 /* ActivitySelectorInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590D666EAF59158375E202 /* ActivitySelectorInputViewController.m */; };
 		545905A336F2279F9E0685A0 /* BarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590709AEBEC0E0AE30F736 /* BarCalculator.m */; };
-		545905A5E67B52C206C6B7C7 /* 415-weightlifter.png in Resources */ = {isa = PBXBuildFile; fileRef = 545902E6FECAFBC9D876CAA5 /* 415-weightlifter.png */; };
 		545905CA510C602B12251A49 /* PrimaryActivityFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590A8918D8253B759296F4 /* PrimaryActivityFinderTests.m */; };
 		545905DB034A77D24890E6CD /* SWTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902FDED688FE872C92CF1 /* SWTestCase.m */; };
 		545905E450208D41383B1F64 /* DurationSetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459010D561B0BAFE7C99B7E /* DurationSetCell.m */; };
-		545905E56CE3F26AADB60219 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545902E72D54617EBBB68CC0 /* Images.xcassets */; };
-		54590600C2136F850AFCC748 /* 1097-timer-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590106A79353B3DF4D3B9C /* 1097-timer-2@2x.png */; };
 		54590615727BF6F6713941C4 /* WorkoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459023FB1ACF26ED54A2EEE /* WorkoutController.m */; };
 		5459063EFF09D19F320CF6F9 /* WorkoutCopier.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590A5EE6F4DA37356E698F /* WorkoutCopier.m */; };
 		5459064B75B1BC89E0C1CA84 /* AddFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459015AF309CE07438A34E1 /* AddFriendCell.m */; };
-		54590694B74FD144286F36CB /* 721-bookmarks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5459075A2F1ADAB16C894A61 /* 721-bookmarks@2x.png */; };
 		54590696682F37F748487188 /* LbsKgMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590B603434CE72554A615C /* LbsKgMenuItem.m */; };
 		5459069A2F63D2C53C8478D1 /* TimerActiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545909D6873990B9CE232AD1 /* TimerActiveCell.xib */; };
 		545906E1AF7D6D5BDFE7E58F /* ActivityCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590CBDA13FF3EC3F932B52 /* ActivityCellFactory.m */; };
@@ -106,61 +88,44 @@
 		5459076960CA1348A1FB1B4B /* FriendsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54590E69BC5D7FC94168CBA6 /* FriendsViewController.storyboard */; };
 		545907C045FDE3E93F30CEEA /* CloudKitUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902703F5371800D9999C0 /* CloudKitUserService.m */; };
 		545907C3DBD21895DE413D74 /* SetGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590D88EEE880F3472985DB /* SetGroup.m */; };
-		545907C561F202F033024BE6 /* 746-plus-circle-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5459095B9E6BC400C716D32E /* 746-plus-circle-toolbar@2x.png */; };
 		545907CCA7D50AB8EFAC07AB /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590ED3193BE2D1D5DBEDE1 /* Activity.m */; };
 		545907E6880B196D473BB864 /* Workout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545906E82697330EFD85E5DF /* Workout.storyboard */; };
-		545907EBCA6CB1F8EA6D5EA0 /* 1091-weights@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5459028A285EBBD9BEA85B42 /* 1091-weights@3x.png */; };
-		545907F94CB867B1C27CB465 /* 901-repeat.png in Resources */ = {isa = PBXBuildFile; fileRef = 545909BCED15F549B2D6A9B5 /* 901-repeat.png */; };
 		54590813BA5B7CD984F40F82 /* SetupTimerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459090219AF2435A810360C /* SetupTimerCell.m */; };
 		545908548376744B1522360F /* BarPlateSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590DF72111C855DD2A0AA7 /* BarPlateSetup.m */; };
-		54590857FD139CFDFDE50317 /* 904-shuffle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590C3BBE2F28DDF435B0F8 /* 904-shuffle@3x.png */; };
 		5459088D582EFF54312D9232 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C685E059C6D70516D6D /* Colors.m */; };
 		5459089953448E117633ABC0 /* SmallWeightSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590F8F97EC48A6E8CD6BC3 /* SmallWeightSetCell.xib */; };
 		545908C237BF913D8CE95F71 /* WorkoutControls.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590EE886537A36A1B8BF5E /* WorkoutControls.xib */; };
 		545908E4AE08AE9309C97858 /* CellRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590E06AB55B27E9575B177 /* CellRegister.m */; };
 		545908EA948161743CA45E19 /* PlateRemaining.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459013B85548A27B8B1B805 /* PlateRemaining.m */; };
-		5459090C89F657907DFB3A7C /* 415-weightlifter@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5459081C8E408A1A14807DB9 /* 415-weightlifter@3x.png */; };
 		54590911E53B33C913C96E6D /* ActivityCreateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590ADCFD562F6151744144 /* ActivityCreateController.m */; };
-		54590911F8B740D151B3D410 /* 1097-timer-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5459026C617E75E81E2D9D0D /* 1097-timer-2.png */; };
 		545909286BF2789FEC5F277D /* DecimalNumbersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590ECB811EC9CD1B1F0127 /* DecimalNumbersTests.m */; };
 		54590932EB0474ECEFD2461B /* HistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 545902ECBF0EC52B9AD3131F /* HistoryCell.m */; };
-		54590947D4AE48B5A14E96C1 /* 974-users.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590A956DCD8C1CF6738B52 /* 974-users.png */; };
 		54590948B017444BD9DF749B /* DurationSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545905ABBA5E7B5529B9F446 /* DurationSetCell.xib */; };
 		545909692B506512B1AB410E /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C1260853783738A603C /* Bar.m */; };
 		54590978A1E88D1E6572D9D6 /* CloudKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905BDCCDE65A6F5431C56 /* CloudKitTests.m */; };
-		5459097950209E591AEEDC12 /* 904-shuffle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590C97C78EC47E0E968831 /* 904-shuffle@2x.png */; };
 		5459099A09CF8618E5B6BB25 /* DurationDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590FE09C7C8766D9F8E7B9 /* DurationDisplay.m */; };
 		545909AC86D7DA6DC42F329F /* WorkoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459096055B4F7F4B95813B2 /* WorkoutTests.m */; };
 		545909B97C0D7547A221B9F2 /* WeightSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590C0D4B5814B6A76D333C /* WeightSetCell.xib */; };
 		545909F8178B7E24CBBD1C07 /* BarPlateSetup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590EE9A652642DE2590775 /* BarPlateSetup.xib */; };
-		54590A1E5DB5BBC42710FE1B /* 415-weightlifter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545904CAA5CED6CA3A33D217 /* 415-weightlifter@2x.png */; };
-		54590A255A325F01D6D60EBC /* 721-bookmarks.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590E07FF92A54D023DD877 /* 721-bookmarks.png */; };
 		54590A33A2E31F01CCF2CFC2 /* SelectionGroupHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590919E0BD56CE8C4431A0 /* SelectionGroupHeader.xib */; };
 		54590A521B88AA25554E54F9 /* PrimaryActivityFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 545909E992DE8D502FDC3322 /* PrimaryActivityFinder.m */; };
 		54590AAA65C6097C5D196CE9 /* AllSetsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459090E156EEE30BC6F508F /* AllSetsDataSource.m */; };
 		54590AC1D2D3DD0B562322EA /* AddFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545907BA5F9DA9E3AD59EABF /* AddFriendCell.xib */; };
-		54590AF0B50C19DF1851E92B /* 746-plus-circle-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590760B5052A6DCC9F2736 /* 746-plus-circle-toolbar.png */; };
-		54590AF6E68001E2BCB8ABCA /* 974-users@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 545908E1A969ECC5D31D89B4 /* 974-users@3x.png */; };
 		54590B184F8BBFBD7F5B8CD3 /* ActivitySearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 545901CFDE3C13EF2DCFC3CB /* ActivitySearchCell.m */; };
 		54590B592C5179B355D57FC2 /* NoteInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590543AF84083FC2BEACF7 /* NoteInputAccessoryView.m */; };
 		54590B5CE0A8BD63B2C84F6C /* SmallSetCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590EDA6715D0CB46E486E6 /* SmallSetCellFactory.m */; };
-		54590B9F00E1B634B46EE06F /* 904-shuffle.png in Resources */ = {isa = PBXBuildFile; fileRef = 545900B73B1EC46C5240FCD7 /* 904-shuffle.png */; };
 		54590BAD0BDD079C13B5806A /* ActivitySearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590B470770405B75EE9A62 /* ActivitySearchCell.xib */; };
 		54590BBF38CCD39F0B4229FE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5459093FA06E60D65D8B9C63 /* CoreData.framework */; };
 		54590BC14BAFB3766CF8B979 /* HistoryCellExpanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590172178526A1757A7450 /* HistoryCellExpanded.m */; };
 		54590BD80E9121ED0C39CAB5 /* ActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 545907E5064B74F235D594CD /* ActivityCell.m */; };
 		54590BEED0724CBB0C82B207 /* LbsKgMenuItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545903B6060FD417DA48B7C8 /* LbsKgMenuItem.xib */; };
-		54590C02E95961E98D6283A7 /* 721-bookmarks@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590F097E9B63849FEF2808 /* 721-bookmarks@3x.png */; };
 		54590C28D65997BF8A46AEA8 /* WorkoutCopierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 545903D445CCE5EB68AB601D /* WorkoutCopierTests.m */; };
 		54590C32D6F705FCDDC281F5 /* UIImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905C44E3B1AA051AF2BC0 /* UIImageHelper.m */; };
 		54590C4BCE4509BFBE648974 /* NotNil.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590A03841C8680E28F7B70 /* NotNil.m */; };
 		54590C6379DC254E8B6BE8EC /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 545900B085897FD8B72023A8 /* Workout.m */; };
 		54590C8367DE427A8C7ABB06 /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545907E3EE9622A9F968EB2B /* AddFriendViewController.m */; };
-		54590CCD4CA56AB75C86FFC6 /* 974-users@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590BE00588E22981740B8F /* 974-users@2x.png */; };
 		54590CEAB0371F29DBD3C299 /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 545901B1E1B63560AA409611 /* Set.m */; };
-		54590D5CA738C0D118029FA5 /* 740-gear-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590B0D5F9BE6924434419F /* 740-gear-toolbar@2x.png */; };
 		54590D8ED7334B05A3BC546E /* WeightActivityEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590BAD1767B70F667FFD9F /* WeightActivityEditViewController.m */; };
-		54590DB99EE9D336E2A016FA /* 709-plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590553C780EDD38BD34CA6 /* 709-plus.png */; };
 		54590DDE043FDC900BB95DFF /* UIImage+ColorFromImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459022C1F4BBBE900679F3F /* UIImage+ColorFromImage.m */; };
 		54590E13FCBBA27BB0D90764 /* BarLoadingSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590BCD6074B6467C4D1111 /* BarLoadingSetupViewController.m */; };
 		54590E16F642336636D23885 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905ED0E0E46EE8AA17304 /* AppDelegate.m */; };
@@ -178,8 +143,6 @@
 		54590FA1CECB4EB5D147AAEF /* LoadingFriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590D97F4B4106FDCD54D88 /* LoadingFriendsCell.xib */; };
 		54590FA6C97345D57ECC5425 /* DurationDisplayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590272E50B204941754D35 /* DurationDisplayTests.m */; };
 		54590FB9490FAEFD72CB3D61 /* ActivityWeightFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590DCC45595B04895F779F /* ActivityWeightFormCell.m */; };
-		54590FBCDF61D07DE37687D5 /* 415-weightlifter-inverse@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590EFD0FF7BBCD646EB476 /* 415-weightlifter-inverse@3x.png */; };
-		54590FD6036F00E0A0B40E2E /* 912-gears@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54590F155D911A87B8A8F1B3 /* 912-gears@3x.png */; };
 		85DF1FB35B784B81ACF3A198 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4D313009C4493EB660B607 /* libPods.a */; };
 		FF4001A8394D49AEB26DF52E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4D313009C4493EB660B607 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -253,11 +216,9 @@
 		5459008E74B4D7736182DDDB /* DurationDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DurationDisplay.h; sourceTree = "<group>"; };
 		54590099F7C030E1042A60BE /* BarLoadingSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarLoadingSetupViewController.h; sourceTree = "<group>"; };
 		545900B085897FD8B72023A8 /* Workout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Workout.m; path = Models/Workout.m; sourceTree = "<group>"; };
-		545900B73B1EC46C5240FCD7 /* 904-shuffle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "904-shuffle.png"; sourceTree = "<group>"; };
 		545900DE6BC3C8B8CD9B979C /* PlateRemaining.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateRemaining.h; sourceTree = "<group>"; };
 		545900E9740DB206E61F5560 /* PlateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateCell.h; sourceTree = "<group>"; };
 		545900F4F126F777ABE82238 /* SetCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCellFactory.m; sourceTree = "<group>"; };
-		54590106A79353B3DF4D3B9C /* 1097-timer-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1097-timer-2@2x.png"; sourceTree = "<group>"; };
 		54590106EA44F3A9E2014ADA /* CloudKitUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudKitUserService.h; sourceTree = "<group>"; };
 		5459010B98D31794F6C7AA70 /* ActivityWeightFormCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityWeightFormCell.xib; sourceTree = "<group>"; };
 		5459010D561B0BAFE7C99B7E /* DurationSetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DurationSetCell.m; sourceTree = "<group>"; };
@@ -272,31 +233,25 @@
 		545901818949A6D7DCA3A0B6 /* Bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bar.h; path = Models/Bar.h; sourceTree = "<group>"; };
 		54590198A3FDA57942B27728 /* WorkoutCopier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutCopier.h; sourceTree = "<group>"; };
 		545901A4BEFB683859DA0582 /* Plate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Plate.m; path = Models/Plate.m; sourceTree = "<group>"; };
-		545901AF75BC27A0B483172F /* 912-gears@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "912-gears@2x.png"; sourceTree = "<group>"; };
 		545901B004EED157EE15481A /* WeightSetCellWithComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightSetCellWithComments.m; sourceTree = "<group>"; };
 		545901B1E1B63560AA409611 /* Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Set.m; path = Models/Set.m; sourceTree = "<group>"; };
 		545901C6BC3E402E980E54D0 /* Set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Set.h; path = Models/Set.h; sourceTree = "<group>"; };
 		545901CFDE3C13EF2DCFC3CB /* ActivitySearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitySearchCell.m; sourceTree = "<group>"; };
 		545901DE0307A2E0890A0281 /* plates.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; name = plates.json; path = Models/Fixtures/plates.json; sourceTree = "<group>"; };
 		54590201C4190E548A25C192 /* WorkoutSelectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutSelectionDelegate.h; sourceTree = "<group>"; };
-		54590202DEE53269D2AB44A0 /* 415-weightlifter-inverse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "415-weightlifter-inverse.png"; sourceTree = "<group>"; };
 		54590211010BBCB7FC53B385 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
 		5459022C1F4BBBE900679F3F /* UIImage+ColorFromImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorFromImage.m"; sourceTree = "<group>"; };
 		5459022EB488280BD9CBEAFF /* SelectionGroupHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionGroupHeader.m; sourceTree = "<group>"; };
 		5459023FB1ACF26ED54A2EEE /* WorkoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutController.m; sourceTree = "<group>"; };
 		545902550988E14D5373EB74 /* WorkoutControlsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutControlsDelegate.h; sourceTree = "<group>"; };
 		5459026160D6CA4853567D93 /* QuoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteViewController.m; sourceTree = "<group>"; };
-		5459026C617E75E81E2D9D0D /* 1097-timer-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1097-timer-2.png"; sourceTree = "<group>"; };
 		5459026EC551FA5E344D9121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		545902703F5371800D9999C0 /* CloudKitUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudKitUserService.m; sourceTree = "<group>"; };
 		54590272E50B204941754D35 /* DurationDisplayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DurationDisplayTests.m; sourceTree = "<group>"; };
 		545902792F0900BE86135C4D /* SmarterWorkouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmarterWorkouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5459028A285EBBD9BEA85B42 /* 1091-weights@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1091-weights@3x.png"; sourceTree = "<group>"; };
 		545902AEFA9863A426247AC3 /* TimeActivityEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeActivityEditViewController.h; sourceTree = "<group>"; };
 		545902B496A137869A803348 /* FormItemBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormItemBarButtonItem.h; sourceTree = "<group>"; };
 		545902D9ABC581A4A1688541 /* SmallWeightSetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallWeightSetCell.h; sourceTree = "<group>"; };
-		545902E6FECAFBC9D876CAA5 /* 415-weightlifter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "415-weightlifter.png"; sourceTree = "<group>"; };
-		545902E72D54617EBBB68CC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		545902ECBF0EC52B9AD3131F /* HistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryCell.m; sourceTree = "<group>"; };
 		545902EF18EEC12333570E82 /* CellRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellRegister.h; sourceTree = "<group>"; };
 		545902F39621185F30F59354 /* WorkoutControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutControls.m; sourceTree = "<group>"; };
@@ -304,7 +259,6 @@
 		545902FDED688FE872C92CF1 /* SWTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTestCase.m; sourceTree = "<group>"; };
 		5459034C26C96660601DA379 /* PlateCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateCellProtocol.h; sourceTree = "<group>"; };
 		54590354648EF3DAC710123D /* FriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
-		545903888625FF04D581594B /* 709-plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-plus@2x.png"; sourceTree = "<group>"; };
 		545903A3249D172566898D0E /* HistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryCell.h; sourceTree = "<group>"; };
 		545903AC024EC344BA992AB7 /* quotes.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = quotes.json; sourceTree = "<group>"; };
 		545903B0856088908CEFBB56 /* UIImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageHelper.h; sourceTree = "<group>"; };
@@ -322,18 +276,14 @@
 		54590449FC1597429B032042 /* SmallWeightSetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallWeightSetCell.m; sourceTree = "<group>"; };
 		5459046AAA5998518A745AF1 /* ActivityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTests.m; sourceTree = "<group>"; };
 		5459047548B43CB2B2ABA86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Workout.storyboard; sourceTree = "<group>"; };
-		545904CAA5CED6CA3A33D217 /* 415-weightlifter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "415-weightlifter@2x.png"; sourceTree = "<group>"; };
 		545904E1841B2C9A4524B6E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		545904F4A9A261D4FA5EA3D6 /* 1091-weights@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1091-weights@2x.png"; sourceTree = "<group>"; };
 		545904FB5D170F8D0F3B40D3 /* WeightSetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightSetCell.m; sourceTree = "<group>"; };
 		545905044CA3AB8FAD537913 /* QuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteViewController.h; sourceTree = "<group>"; };
 		54590507D7B3C45034D21DA1 /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
-		5459050D61A1F3E6DF7EB87E /* 415-weightlifter-inverse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "415-weightlifter-inverse@2x.png"; sourceTree = "<group>"; };
 		5459051DEAF49B5736BFA988 /* CloudKitModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudKitModel.h; sourceTree = "<group>"; };
 		54590524FDBBA0C76B3892DD /* NoFriendsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoFriendsCell.h; sourceTree = "<group>"; };
 		5459052DF846D5DF7C5F03DF /* SmallDurationSetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallDurationSetCell.h; sourceTree = "<group>"; };
 		54590543AF84083FC2BEACF7 /* NoteInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteInputAccessoryView.m; sourceTree = "<group>"; };
-		54590553C780EDD38BD34CA6 /* 709-plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-plus.png"; sourceTree = "<group>"; };
 		54590564CFF8E8F4DF307D66 /* NoteInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteInputAccessoryView.h; sourceTree = "<group>"; };
 		5459057E9A8FEBF598DFA13B /* PlateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateTests.m; sourceTree = "<group>"; };
 		5459058F798687931790C88A /* SmallSetCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallSetCellFactory.h; sourceTree = "<group>"; };
@@ -355,62 +305,48 @@
 		54590709AEBEC0E0AE30F736 /* BarCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarCalculator.m; sourceTree = "<group>"; };
 		5459070CBC39B0E47814377C /* WorkoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutController.h; sourceTree = "<group>"; };
 		54590722ED75492DCCF67654 /* SetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCell.m; sourceTree = "<group>"; };
-		5459075A2F1ADAB16C894A61 /* 721-bookmarks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "721-bookmarks@2x.png"; sourceTree = "<group>"; };
-		54590760B5052A6DCC9F2736 /* 746-plus-circle-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "746-plus-circle-toolbar.png"; sourceTree = "<group>"; };
-		5459076A50C3F5059B5ABDF7 /* 709-plus@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "709-plus@3x.png"; sourceTree = "<group>"; };
 		5459078B35AD577F2A45D1D8 /* DurationSetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DurationSetCell.h; sourceTree = "<group>"; };
 		545907BA5F9DA9E3AD59EABF /* AddFriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFriendCell.xib; sourceTree = "<group>"; };
 		545907D0EC153A54AC0C5A5D /* NewActivitySelectorInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewActivitySelectorInputViewController.h; sourceTree = "<group>"; };
 		545907E3EE9622A9F968EB2B /* AddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendViewController.m; sourceTree = "<group>"; };
 		545907E5064B74F235D594CD /* ActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCell.m; sourceTree = "<group>"; };
 		545907F1F53E2D297EE3A54D /* AddFriendViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddFriendViewController.storyboard; sourceTree = "<group>"; };
-		5459081C8E408A1A14807DB9 /* 415-weightlifter@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "415-weightlifter@3x.png"; sourceTree = "<group>"; };
 		5459082A26AD4BB9670D2BDC /* ActivityCellFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCellFactoryTests.m; sourceTree = "<group>"; };
 		54590842C22DF6768733ED66 /* TimerActiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerActiveCell.h; sourceTree = "<group>"; };
-		545908707514D9B67C217C4A /* 1097-timer-2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1097-timer-2@3x.png"; sourceTree = "<group>"; };
 		5459088CB14CF69909F833F6 /* Form.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Form.h; sourceTree = "<group>"; };
 		545908D6450F503B81944539 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
-		545908E1A969ECC5D31D89B4 /* 974-users@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "974-users@3x.png"; sourceTree = "<group>"; };
 		5459090219AF2435A810360C /* SetupTimerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupTimerCell.m; sourceTree = "<group>"; };
 		5459090E156EEE30BC6F508F /* AllSetsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllSetsDataSource.m; sourceTree = "<group>"; };
 		54590919E0BD56CE8C4431A0 /* SelectionGroupHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectionGroupHeader.xib; sourceTree = "<group>"; };
 		5459091EB57A54F3276C883F /* TimerObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerObserver.h; sourceTree = "<group>"; };
 		5459093FA06E60D65D8B9C63 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5459094388A431B3BB423E90 /* Form.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Form.m; sourceTree = "<group>"; };
-		5459095B9E6BC400C716D32E /* 746-plus-circle-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "746-plus-circle-toolbar@2x.png"; sourceTree = "<group>"; };
 		5459095D3D1623B3210D4AAD /* ActivityFormDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityFormDelegate.h; sourceTree = "<group>"; };
 		5459096055B4F7F4B95813B2 /* WorkoutTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutTests.m; sourceTree = "<group>"; };
 		5459096A0052ABCAEAA63C96 /* PrimaryActivityFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimaryActivityFinder.h; sourceTree = "<group>"; };
 		54590996D2BBCB5B6C7919D5 /* BarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarTests.m; sourceTree = "<group>"; };
 		545909B20133FB3DCB40D805 /* BarPlateSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarPlateSetup.h; sourceTree = "<group>"; };
-		545909BCED15F549B2D6A9B5 /* 901-repeat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "901-repeat.png"; sourceTree = "<group>"; };
 		545909CA1997BE71C52F50ED /* ActivitySelectorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySelectorDelegate.h; sourceTree = "<group>"; };
-		545909CCB4A62AC6A95B9D3B /* 740-gear-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "740-gear-toolbar@3x.png"; sourceTree = "<group>"; };
 		545909D6873990B9CE232AD1 /* TimerActiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerActiveCell.xib; sourceTree = "<group>"; };
 		545909DA02606108610095D4 /* LoadingFriendsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingFriendsCell.h; sourceTree = "<group>"; };
 		545909E188A0F9DE5E727714 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
 		545909E992DE8D502FDC3322 /* PrimaryActivityFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimaryActivityFinder.m; sourceTree = "<group>"; };
 		54590A03841C8680E28F7B70 /* NotNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotNil.m; sourceTree = "<group>"; };
 		54590A0834F9DED4435C7A4C /* FormDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormDelegate.h; sourceTree = "<group>"; };
-		54590A0AB9FC341CFD9CEB9F /* 901-repeat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "901-repeat@2x.png"; sourceTree = "<group>"; };
-		54590A2BC9B71EA9362C1C89 /* 746-plus-circle-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "746-plus-circle-toolbar@3x.png"; sourceTree = "<group>"; };
 		54590A2E38F8204300D80EF7 /* SetCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCellFactory.h; sourceTree = "<group>"; };
 		54590A317AE7918F830C49C6 /* PlateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateCell.m; sourceTree = "<group>"; };
 		54590A3C397CD5F84B4E6B36 /* WeightInputControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightInputControls.h; sourceTree = "<group>"; };
 		54590A44741C2A595BB2E277 /* ActivityCreateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityCreateController.h; sourceTree = "<group>"; };
 		54590A5EE6F4DA37356E698F /* WorkoutCopier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutCopier.m; sourceTree = "<group>"; };
 		54590A8918D8253B759296F4 /* PrimaryActivityFinderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimaryActivityFinderTests.m; sourceTree = "<group>"; };
-		54590A956DCD8C1CF6738B52 /* 974-users.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "974-users.png"; sourceTree = "<group>"; };
 		54590AAA1DAF0AE24D93DF78 /* AddFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendCell.h; sourceTree = "<group>"; };
 		54590ACC1AC6B9D074702B48 /* ActivityWeightFormViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityWeightFormViewControllerTests.m; sourceTree = "<group>"; };
 		54590ADCFD562F6151744144 /* ActivityCreateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCreateController.m; sourceTree = "<group>"; };
 		54590B00714168CA4D9E780F /* FriendUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendUpdater.m; sourceTree = "<group>"; };
-		54590B0D5F9BE6924434419F /* 740-gear-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "740-gear-toolbar@2x.png"; sourceTree = "<group>"; };
 		54590B139E84BF5FD750E43E /* InputAccessoryBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputAccessoryBuilder.m; sourceTree = "<group>"; };
 		54590B172184011883D18ACF /* SetupTimerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupTimerCell.h; sourceTree = "<group>"; };
 		54590B22D565A96FCAA89128 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
 		54590B470770405B75EE9A62 /* ActivitySearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitySearchCell.xib; sourceTree = "<group>"; };
-		54590B48DB05EBC72108D9F8 /* 1091-weights.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1091-weights.png"; sourceTree = "<group>"; };
 		54590B4F44267BA008D3D184 /* WeightSetCellWithComments.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeightSetCellWithComments.xib; sourceTree = "<group>"; };
 		54590B4F6AA10C1CF0540B16 /* ActivityWeightFormCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityWeightFormCell.h; sourceTree = "<group>"; };
 		54590B603434CE72554A615C /* LbsKgMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LbsKgMenuItem.m; sourceTree = "<group>"; };
@@ -420,7 +356,6 @@
 		54590BA0F5911FD5D20BBCFB /* FriendUpdaterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendUpdaterTests.m; sourceTree = "<group>"; };
 		54590BAD1767B70F667FFD9F /* WeightActivityEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightActivityEditViewController.m; sourceTree = "<group>"; };
 		54590BCD6074B6467C4D1111 /* BarLoadingSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarLoadingSetupViewController.m; sourceTree = "<group>"; };
-		54590BE00588E22981740B8F /* 974-users@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "974-users@2x.png"; sourceTree = "<group>"; };
 		54590BFD70E633D4614C618F /* NewActivitySelectorInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewActivitySelectorInputViewController.m; sourceTree = "<group>"; };
 		54590C0D26A5837C428167A9 /* Workout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Workout.h; path = Models/Workout.h; sourceTree = "<group>"; };
 		54590C0D4B5814B6A76D333C /* WeightSetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeightSetCell.xib; sourceTree = "<group>"; };
@@ -431,17 +366,14 @@
 		54590C1CE613905DA9EA0076 /* WeightSetCellWithComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightSetCellWithComments.h; sourceTree = "<group>"; };
 		54590C296C1E9F278FA1D7C4 /* ActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityCell.h; sourceTree = "<group>"; };
 		54590C38B44998CB847FF30C /* FixtureLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FixtureLoader.m; path = Models/Fixtures/FixtureLoader.m; sourceTree = "<group>"; };
-		54590C3BBE2F28DDF435B0F8 /* 904-shuffle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "904-shuffle@3x.png"; sourceTree = "<group>"; };
 		54590C685E059C6D70516D6D /* Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
 		54590C6E54128A0CE53B06EF /* SelectionGroupHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionGroupHeader.h; sourceTree = "<group>"; };
 		54590C9608EA266833F2A3D3 /* ActivitySelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitySelectorViewController.m; sourceTree = "<group>"; };
-		54590C97C78EC47E0E968831 /* 904-shuffle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "904-shuffle@2x.png"; sourceTree = "<group>"; };
 		54590CA37F0A1D91DD9AD39B /* FlavorTextUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlavorTextUITextField.h; sourceTree = "<group>"; };
 		54590CBDA13FF3EC3F932B52 /* ActivityCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCellFactory.m; sourceTree = "<group>"; };
 		54590CC9F291BB7253D32A2B /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
 		54590CFA15918636F9EA4B15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54590D179A66492863B7995B /* NoteInputAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteInputAccessoryView.xib; sourceTree = "<group>"; };
-		54590D2D5626EF13B98FF8EF /* 740-gear-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "740-gear-toolbar.png"; sourceTree = "<group>"; };
 		54590D666EAF59158375E202 /* ActivitySelectorInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitySelectorInputViewController.m; sourceTree = "<group>"; };
 		54590D78FE5F96E85ACD09C8 /* UIImageViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewHelper.h; sourceTree = "<group>"; };
 		54590D88EEE880F3472985DB /* SetGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetGroup.m; path = Models/SetGroup.m; sourceTree = "<group>"; };
@@ -460,13 +392,11 @@
 		54590DFEC887B12C9D546107 /* SmarterWorkoutsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmarterWorkoutsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54590E06A3C9C6B6F3279B45 /* InputAccessoryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputAccessoryBuilder.h; sourceTree = "<group>"; };
 		54590E06AB55B27E9575B177 /* CellRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellRegister.m; sourceTree = "<group>"; };
-		54590E07FF92A54D023DD877 /* 721-bookmarks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "721-bookmarks.png"; sourceTree = "<group>"; };
 		54590E4A83F580D1193EAC45 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		54590E52A709C738C59FE1E4 /* SmallDurationSetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallDurationSetCell.xib; sourceTree = "<group>"; };
 		54590E583ADE4FD8272B88B9 /* UIImageViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewHelper.m; sourceTree = "<group>"; };
 		54590E627A49A487C2872338 /* SWTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTestCase.h; sourceTree = "<group>"; };
 		54590E69BC5D7FC94168CBA6 /* FriendsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendsViewController.storyboard; sourceTree = "<group>"; };
-		54590E85F0F2A1C45692C3B5 /* 912-gears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "912-gears.png"; sourceTree = "<group>"; };
 		54590E8F5D24A631F5E0049D /* WeightInputControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightInputControls.m; sourceTree = "<group>"; };
 		54590EB282861E49AA99C2C7 /* WeightActivityEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightActivityEditViewController.h; sourceTree = "<group>"; };
 		54590EBCDAD295792A89F284 /* ActivitySearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitySearchCell.h; sourceTree = "<group>"; };
@@ -478,13 +408,9 @@
 		54590EE886537A36A1B8BF5E /* WorkoutControls.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkoutControls.xib; sourceTree = "<group>"; };
 		54590EE9A652642DE2590775 /* BarPlateSetup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarPlateSetup.xib; sourceTree = "<group>"; };
 		54590EECDA0B9989375FF267 /* CloudKitTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudKitTestCase.m; sourceTree = "<group>"; };
-		54590EED5F73DE4BB57F40C5 /* 901-repeat@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "901-repeat@3x.png"; sourceTree = "<group>"; };
 		54590EEDEDFB55C9CD0B52CD /* SWTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTimer.m; sourceTree = "<group>"; };
-		54590EFD0FF7BBCD646EB476 /* 415-weightlifter-inverse@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "415-weightlifter-inverse@3x.png"; sourceTree = "<group>"; };
 		54590F0008BBC7974A542DBB /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
-		54590F097E9B63849FEF2808 /* 721-bookmarks@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "721-bookmarks@3x.png"; sourceTree = "<group>"; };
 		54590F0FECDC2DE619BE04E7 /* CurrentWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentWorkout.h; sourceTree = "<group>"; };
-		54590F155D911A87B8A8F1B3 /* 912-gears@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "912-gears@3x.png"; sourceTree = "<group>"; };
 		54590F3FFC4B3A5BBC5F2B8A /* TimerActiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerActiveCell.m; sourceTree = "<group>"; };
 		54590F54C0452DE8C7971409 /* BarCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarCalculator.h; sourceTree = "<group>"; };
 		54590F6B39C5170F22DD30BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -1138,13 +1064,11 @@
 				0267A9A81A2117D200DE7DBC /* Models */,
 				0288D9891A180BF50092C2D3 /* Views */,
 				5459028458247F86AFC666EA /* Supporting Files */,
-				545902E72D54617EBBB68CC0 /* Images.xcassets */,
 				545909DEAE65283756E25E7A /* LaunchScreen.xib */,
 				54590CFA15918636F9EA4B15 /* AppDelegate.h */,
 				545905ED0E0E46EE8AA17304 /* AppDelegate.m */,
 				545906E82697330EFD85E5DF /* Workout.storyboard */,
 				545902D56BB61349A45A6675 /* Numbers */,
-				54590E9F250E1DE20DC966FF /* Images */,
 				545902443723D2F9011A3074 /* Formulas */,
 				5459077F0EB4AF2C7DC590F5 /* Timer */,
 				545909D9B110C4414335147C /* CloudKit */,
@@ -1158,49 +1082,6 @@
 				545903D445CCE5EB68AB601D /* WorkoutCopierTests.m */,
 			);
 			path = copy;
-			sourceTree = "<group>";
-		};
-		54590E9F250E1DE20DC966FF /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				5459075A2F1ADAB16C894A61 /* 721-bookmarks@2x.png */,
-				54590F097E9B63849FEF2808 /* 721-bookmarks@3x.png */,
-				54590E07FF92A54D023DD877 /* 721-bookmarks.png */,
-				54590553C780EDD38BD34CA6 /* 709-plus.png */,
-				5459076A50C3F5059B5ABDF7 /* 709-plus@3x.png */,
-				545903888625FF04D581594B /* 709-plus@2x.png */,
-				545909BCED15F549B2D6A9B5 /* 901-repeat.png */,
-				54590EED5F73DE4BB57F40C5 /* 901-repeat@3x.png */,
-				54590A0AB9FC341CFD9CEB9F /* 901-repeat@2x.png */,
-				5459028A285EBBD9BEA85B42 /* 1091-weights@3x.png */,
-				545904F4A9A261D4FA5EA3D6 /* 1091-weights@2x.png */,
-				54590B48DB05EBC72108D9F8 /* 1091-weights.png */,
-				5459026C617E75E81E2D9D0D /* 1097-timer-2.png */,
-				545908707514D9B67C217C4A /* 1097-timer-2@3x.png */,
-				54590106A79353B3DF4D3B9C /* 1097-timer-2@2x.png */,
-				545904CAA5CED6CA3A33D217 /* 415-weightlifter@2x.png */,
-				545902E6FECAFBC9D876CAA5 /* 415-weightlifter.png */,
-				5459081C8E408A1A14807DB9 /* 415-weightlifter@3x.png */,
-				54590A956DCD8C1CF6738B52 /* 974-users.png */,
-				54590BE00588E22981740B8F /* 974-users@2x.png */,
-				545908E1A969ECC5D31D89B4 /* 974-users@3x.png */,
-				54590202DEE53269D2AB44A0 /* 415-weightlifter-inverse.png */,
-				5459050D61A1F3E6DF7EB87E /* 415-weightlifter-inverse@2x.png */,
-				54590EFD0FF7BBCD646EB476 /* 415-weightlifter-inverse@3x.png */,
-				54590760B5052A6DCC9F2736 /* 746-plus-circle-toolbar.png */,
-				5459095B9E6BC400C716D32E /* 746-plus-circle-toolbar@2x.png */,
-				54590A2BC9B71EA9362C1C89 /* 746-plus-circle-toolbar@3x.png */,
-				54590C3BBE2F28DDF435B0F8 /* 904-shuffle@3x.png */,
-				545900B73B1EC46C5240FCD7 /* 904-shuffle.png */,
-				54590C97C78EC47E0E968831 /* 904-shuffle@2x.png */,
-				54590D2D5626EF13B98FF8EF /* 740-gear-toolbar.png */,
-				545909CCB4A62AC6A95B9D3B /* 740-gear-toolbar@3x.png */,
-				54590B0D5F9BE6924434419F /* 740-gear-toolbar@2x.png */,
-				545901AF75BC27A0B483172F /* 912-gears@2x.png */,
-				54590F155D911A87B8A8F1B3 /* 912-gears@3x.png */,
-				54590E85F0F2A1C45692C3B5 /* 912-gears.png */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		54590F00281EF17AE53D0E65 /* Activities */ = {
@@ -1374,7 +1255,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				545905E56CE3F26AADB60219 /* Images.xcassets in Resources */,
 				545902DECE48C72B4EA42451 /* LaunchScreen.xib in Resources */,
 				545907E6880B196D473BB864 /* Workout.storyboard in Resources */,
 				0209F6661A3E45A40098AB63 /* HistoryViewController.storyboard in Resources */,
@@ -1388,56 +1268,20 @@
 				023832081A47B01D001D6FDA /* Main.storyboard in Resources */,
 				545909B97C0D7547A221B9F2 /* WeightSetCell.xib in Resources */,
 				54590948B017444BD9DF749B /* DurationSetCell.xib in Resources */,
-				54590694B74FD144286F36CB /* 721-bookmarks@2x.png in Resources */,
-				54590C02E95961E98D6283A7 /* 721-bookmarks@3x.png in Resources */,
-				54590A255A325F01D6D60EBC /* 721-bookmarks.png in Resources */,
-				54590DB99EE9D336E2A016FA /* 709-plus.png in Resources */,
-				5459054020D3D2EB28EE444F /* 709-plus@3x.png in Resources */,
-				5459026A326FCE30A182C947 /* 709-plus@2x.png in Resources */,
-				545907F94CB867B1C27CB465 /* 901-repeat.png in Resources */,
-				5459003749AD32360447790F /* 901-repeat@3x.png in Resources */,
-				5459049DF905839DCCD95CE9 /* 901-repeat@2x.png in Resources */,
 				54590A33A2E31F01CCF2CFC2 /* SelectionGroupHeader.xib in Resources */,
-				545907EBCA6CB1F8EA6D5EA0 /* 1091-weights@3x.png in Resources */,
 				0265AB761A49E44800A8556D /* HistoryCellExpanded.xib in Resources */,
-				5459038EF0C90D4D20E0CD13 /* 1091-weights@2x.png in Resources */,
-				5459050E52423716366E7C31 /* 1091-weights.png in Resources */,
 				02CE7EAD1A5B38B700420FE2 /* PlateCell.xib in Resources */,
-				54590911F8B740D151B3D410 /* 1097-timer-2.png in Resources */,
-				5459043FCE22ED7A812150B4 /* 1097-timer-2@3x.png in Resources */,
-				54590600C2136F850AFCC748 /* 1097-timer-2@2x.png in Resources */,
 				54590BAD0BDD079C13B5806A /* ActivitySearchCell.xib in Resources */,
 				54590EA2C3FB9CCC2411C9CA /* quotes.json in Resources */,
-				54590A1E5DB5BBC42710FE1B /* 415-weightlifter@2x.png in Resources */,
-				545905A5E67B52C206C6B7C7 /* 415-weightlifter.png in Resources */,
-				5459090C89F657907DFB3A7C /* 415-weightlifter@3x.png in Resources */,
-				54590947D4AE48B5A14E96C1 /* 974-users.png in Resources */,
-				54590CCD4CA56AB75C86FFC6 /* 974-users@2x.png in Resources */,
-				54590AF6E68001E2BCB8ABCA /* 974-users@3x.png in Resources */,
-				5459028BF0E8E0CC8030CC32 /* 415-weightlifter-inverse.png in Resources */,
-				5459057DFD2184A543E03067 /* 415-weightlifter-inverse@2x.png in Resources */,
-				54590FBCDF61D07DE37687D5 /* 415-weightlifter-inverse@3x.png in Resources */,
 				5459089953448E117633ABC0 /* SmallWeightSetCell.xib in Resources */,
 				545900A896D00F0EDEEEAEEC /* SmallDurationSetCell.xib in Resources */,
-				54590AF0B50C19DF1851E92B /* 746-plus-circle-toolbar.png in Resources */,
-				545907C561F202F033024BE6 /* 746-plus-circle-toolbar@2x.png in Resources */,
-				545900F12ADFCD764A72A104 /* 746-plus-circle-toolbar@3x.png in Resources */,
 				545903BFCE9385C58941EE23 /* CreateEditActivityController.storyboard in Resources */,
 				545908C237BF913D8CE95F71 /* WorkoutControls.xib in Resources */,
-				54590857FD139CFDFDE50317 /* 904-shuffle@3x.png in Resources */,
-				54590B9F00E1B634B46EE06F /* 904-shuffle.png in Resources */,
-				5459097950209E591AEEDC12 /* 904-shuffle@2x.png in Resources */,
 				545909F8178B7E24CBBD1C07 /* BarPlateSetup.xib in Resources */,
 				5459073F5107CD9C880AB202 /* bars.json in Resources */,
 				54590BEED0724CBB0C82B207 /* LbsKgMenuItem.xib in Resources */,
-				545901B813C1C149E3C8C423 /* 740-gear-toolbar.png in Resources */,
-				5459033B738CAB4A42774A53 /* 740-gear-toolbar@3x.png in Resources */,
-				54590D5CA738C0D118029FA5 /* 740-gear-toolbar@2x.png in Resources */,
 				54590EC4CA651E059EEEBC2A /* NoteInputAccessoryView.xib in Resources */,
 				5459014F5966F5625D13A9F1 /* WeightSetCellWithComments.xib in Resources */,
-				545903732D09E118747A59C4 /* 912-gears@2x.png in Resources */,
-				54590FD6036F00E0A0B40E2E /* 912-gears@3x.png in Resources */,
-				54590040FF2735B1C6A4904E /* 912-gears.png in Resources */,
 				5459076960CA1348A1FB1B4B /* FriendsViewController.storyboard in Resources */,
 				54590FA1CECB4EB5D147AAEF /* LoadingFriendsCell.xib in Resources */,
 				54590560CA74A5A4D0006A0B /* NoFriendsCell.xib in Resources */,
