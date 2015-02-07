@@ -29,9 +29,19 @@
     [[CKContainer defaultContainer] requestApplicationPermission:CKApplicationPermissionUserDiscoverability
                                                completionHandler:^(CKApplicationPermissionStatus applicationPermissionStatus, NSError *error) {
                                                    if (applicationPermissionStatus == CKApplicationPermissionStatusGranted) {
-                                                       CKDiscoverAllContactsOperation *operation = [CKDiscoverAllContactsOperation new];
-                                                       operation.queuePriority = NSOperationQueuePriorityHigh;
-                                                       operation.discoverAllContactsCompletionBlock = ^(NSArray *userInfos, NSError *operationError) {
+                                                       [self findFriendsUsingApp];
+                                                   }
+                                                   else {
+                                                       [self.statusMessage setHidden:NO];
+                                                       [self.statusMessage setText:@"Oops! There was a problem searching for friends. Try again?"];
+                                                   }
+                                               }];
+}
+
+- (void)findFriendsUsingApp {
+    CKDiscoverAllContactsOperation *operation = [CKDiscoverAllContactsOperation new];
+    operation.queuePriority = NSOperationQueuePriorityHigh;
+    operation.discoverAllContactsCompletionBlock = ^(NSArray *userInfos, NSError *operationError) {
                                                            self.contactsUsingApp = userInfos;
                                                            [self.findingFriendsLabel setHidden:YES];
                                                            [self.findingFriendsActivityIndicator setHidden:YES];
@@ -44,13 +54,7 @@
                                                                [self.tableView reloadData];
                                                            }
                                                        };
-                                                       [[CKContainer defaultContainer] addOperation:operation];
-                                                   }
-                                                   else {
-                                                       [self.statusMessage setHidden:NO];
-                                                       [self.statusMessage setText:@"Oops! There was a problem searching for friends. Try again?"];
-                                                   }
-                                               }];
+    [[CKContainer defaultContainer] addOperation:operation];
 }
 
 
