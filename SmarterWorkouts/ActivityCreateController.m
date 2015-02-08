@@ -9,9 +9,4 @@
 - (void)setupInitialActivity:(Activity *)activity {
 }
 
-- (void)setActive:(BOOL)active {
-    _active = active;
-    [self.view setHidden:!active];
-}
-
 @end

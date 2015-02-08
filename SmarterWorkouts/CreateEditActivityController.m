@@ -12,11 +12,17 @@ const int TIMER_INDEX = 2;
 @implementation CreateEditActivityController {
     __weak IBOutlet UITextField *activityNameField;
     __weak IBOutlet UISegmentedControl *typeSegment;
+    __weak IBOutlet UIView *weightContainer;
+    __weak IBOutlet UIView *timeContainer;
 }
 
 - (IBAction)typeChanged:(id)sender {
-    [self.weightController setActive:[sender selectedSegmentIndex] == WEIGHT_INDEX];
-    [self.timerController setActive:[sender selectedSegmentIndex] == TIMER_INDEX];
+    [self showHideEditContainers:sender];
+}
+
+- (void)showHideEditContainers:(id)sender {
+    [weightContainer setHidden:[typeSegment selectedSegmentIndex] != WEIGHT_INDEX];
+    [timeContainer setHidden:[typeSegment selectedSegmentIndex] != TIMER_INDEX];
 }
 
 - (void)viewDidLoad {
@@ -31,6 +37,7 @@ const int TIMER_INDEX = 2;
         NSNumber *segment = segments[self.activityToEdit.type];
         if (segment) {
             [typeSegment setSelectedSegmentIndex:[segment integerValue]];
+            [self showHideEditContainers:nil];
         }
     }
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleDone target:self action:@selector(save)];
@@ -56,10 +63,10 @@ const int TIMER_INDEX = 2;
 
     activity.name = [activityNameField text];
     activity.type = @"miscellaneous";
-    if ([self.weightController active]) {
+    if (![weightContainer isHidden]) {
         [self.weightController addExtraInfo:activity];
     }
-    if ([self.timerController active]) {
+    if (![timeContainer isHidden]) {
         [self.timerController addExtraInfo:activity];
     }
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];

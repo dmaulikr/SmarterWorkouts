@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="htu-tR-CGE">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--New Workout-->
@@ -30,15 +29,6 @@
                                     <segue destination="0gp-Bq-YwD" kind="embed" identifier="newActivity" id="Uok-W9-AEE"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqo-VF-kYp">
-                                <rect key="frame" x="16" y="72" width="288" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="plh-DC-Gj5"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="iog-Pz-BOl" kind="embed" id="neT-2g-a7a"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcC-kr-xjb">
                                 <rect key="frame" x="0.0" y="310" width="320" height="90"/>
                                 <constraints>
@@ -61,9 +51,6 @@
                             <constraint firstAttribute="trailing" secondItem="Yfr-xH-5l7" secondAttribute="trailing" id="SK7-n6-CtI"/>
                             <constraint firstItem="Sth-Ar-4ce" firstAttribute="top" secondItem="vcC-kr-xjb" secondAttribute="bottom" id="Vdx-bB-njx"/>
                             <constraint firstItem="7KQ-5X-oca" firstAttribute="leading" secondItem="9te-tG-1mq" secondAttribute="leading" id="cjy-Be-bIk"/>
-                            <constraint firstItem="xqo-VF-kYp" firstAttribute="leading" secondItem="9te-tG-1mq" secondAttribute="leadingMargin" id="dU8-Hj-sUc"/>
-                            <constraint firstItem="xqo-VF-kYp" firstAttribute="top" secondItem="DFy-uO-dn9" secondAttribute="bottom" constant="8" id="ftR-29-EMN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xqo-VF-kYp" secondAttribute="trailing" id="vLW-oG-UbD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Workout" id="Mms-Kn-hlI">
@@ -77,7 +64,6 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="400"/>
                     <connections>
-                        <outlet property="quoteContainer" destination="xqo-VF-kYp" id="FPh-pM-b5M"/>
                         <outlet property="selectActivityContainer" destination="vcC-kr-xjb" id="vC8-x9-Y4O"/>
                         <outlet property="startNewActivityContainer" destination="7KQ-5X-oca" id="hKM-Ld-YcZ"/>
                         <outlet property="tableView" destination="Yfr-xH-5l7" id="hdb-Bg-4ak"/>
@@ -174,49 +160,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wiv-xx-qTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="841" y="350"/>
-        </scene>
-        <!--Quote View Controller-->
-        <scene sceneID="ZOi-xn-NyG">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="iog-Pz-BOl" customClass="QuoteViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XXp-CY-tKK"/>
-                        <viewControllerLayoutGuide type="bottom" id="Cu1-XG-B8F"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1rQ-a6-Zrf">
-                        <rect key="frame" x="0.0" y="0.0" width="288" height="200"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success isn't always about ‘Greatness’, it’s about consistency. Consistent, hard work gains success. Greatness will come." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7h-V7-KvV">
-                                <rect key="frame" x="0.0" y="0.0" width="288" height="90"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Dwayne Johnson" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzT-h2-QZb">
-                                <rect key="frame" x="130" y="94" width="158" height="23"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="I7h-V7-KvV" firstAttribute="top" secondItem="XXp-CY-tKK" secondAttribute="bottom" id="T5b-iM-47j"/>
-                            <constraint firstAttribute="trailing" secondItem="I7h-V7-KvV" secondAttribute="trailing" id="T63-lv-lwT"/>
-                            <constraint firstItem="I7h-V7-KvV" firstAttribute="leading" secondItem="1rQ-a6-Zrf" secondAttribute="leading" id="mIq-Ii-cDh"/>
-                            <constraint firstAttribute="trailing" secondItem="YzT-h2-QZb" secondAttribute="trailing" id="pIB-aU-liw"/>
-                            <constraint firstItem="YzT-h2-QZb" firstAttribute="top" secondItem="I7h-V7-KvV" secondAttribute="bottom" constant="4" id="ydl-TZ-JYw"/>
-                        </constraints>
-                    </view>
-                    <toolbarItems/>
-                    <connections>
-                        <outlet property="author" destination="YzT-h2-QZb" id="YHg-Sr-yo9"/>
-                        <outlet property="quote" destination="I7h-V7-KvV" id="iPl-4S-dGN"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WZp-bs-8so" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1311" y="-37"/>
         </scene>
         <!--Activity Selector Input View Controller-->
         <scene sceneID="ooT-bJ-AzS">

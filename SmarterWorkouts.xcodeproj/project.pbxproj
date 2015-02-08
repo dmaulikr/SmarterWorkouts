@@ -12,6 +12,7 @@
 		021433991A79BE4600B55F8C /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 021433981A79BE4600B55F8C /* Friend.m */; };
 		023832081A47B01D001D6FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023832051A47B01D001D6FDA /* Main.storyboard */; };
 		023832091A47B01D001D6FDA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 023832071A47B01D001D6FDA /* MainViewController.m */; };
+		0242301A1A86FEE100657D4E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 024230191A86FEE100657D4E /* Images.xcassets */; };
 		02423F8D1A2FE81D0048BB17 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02423F8C1A2FE81D0048BB17 /* WatchKit.framework */; };
 		02423F941A2FE81D0048BB17 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02423F931A2FE81D0048BB17 /* InterfaceController.m */; };
 		02423F971A2FE81D0048BB17 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02423F961A2FE81D0048BB17 /* NotificationController.m */; };
@@ -65,7 +66,6 @@
 		5459050B535403E44BD7177D /* WeightSetCellWithComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 545901B004EED157EE15481A /* WeightSetCellWithComments.m */; };
 		5459051FE88E8E7AC5B12DE2 /* ModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590C1704D57A0CB87CD410 /* ModelTests.m */; };
 		5459052304D189F78C0C9CDE /* SetCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 545900F4F126F777ABE82238 /* SetCellFactory.m */; };
-		545905272B2BD1E72E5F01BC /* QuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459026160D6CA4853567D93 /* QuoteViewController.m */; };
 		5459054D6E01E0A7A22F7665 /* TimerActiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590F3FFC4B3A5BBC5F2B8A /* TimerActiveCell.m */; };
 		54590560CA74A5A4D0006A0B /* NoFriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545905AFE58A4D4DBB227972 /* NoFriendsCell.xib */; };
 		5459058B8D152963A6C7E571 /* InputAccessoryBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590B139E84BF5FD750E43E /* InputAccessoryBuilder.m */; };
@@ -131,7 +131,6 @@
 		54590E16F642336636D23885 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545905ED0E0E46EE8AA17304 /* AppDelegate.m */; };
 		54590E57AC06674BBE929D2B /* ActivityCellFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459082A26AD4BB9670D2BDC /* ActivityCellFactoryTests.m */; };
 		54590E74E212FDDCCE00FA59 /* SmallWeightSetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590449FC1597429B032042 /* SmallWeightSetCell.m */; };
-		54590EA2C3FB9CCC2411C9CA /* quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 545903AC024EC344BA992AB7 /* quotes.json */; };
 		54590EB4CAF5B0A6F2790D35 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590354648EF3DAC710123D /* FriendCell.xib */; };
 		54590EBC8699CBEA76EA1091 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54590507D7B3C45034D21DA1 /* FriendCell.m */; };
 		54590EC4CA651E059EEEBC2A /* NoteInputAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54590D179A66492863B7995B /* NoteInputAccessoryView.xib */; };
@@ -193,6 +192,7 @@
 		023832051A47B01D001D6FDA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		023832061A47B01D001D6FDA /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		023832071A47B01D001D6FDA /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		024230191A86FEE100657D4E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		02423F8B1A2FE81D0048BB17 /* SmarterWorkouts WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SmarterWorkouts WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02423F8C1A2FE81D0048BB17 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		02423F901A2FE81D0048BB17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -244,7 +244,6 @@
 		5459022EB488280BD9CBEAFF /* SelectionGroupHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionGroupHeader.m; sourceTree = "<group>"; };
 		5459023FB1ACF26ED54A2EEE /* WorkoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutController.m; sourceTree = "<group>"; };
 		545902550988E14D5373EB74 /* WorkoutControlsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutControlsDelegate.h; sourceTree = "<group>"; };
-		5459026160D6CA4853567D93 /* QuoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteViewController.m; sourceTree = "<group>"; };
 		5459026EC551FA5E344D9121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		545902703F5371800D9999C0 /* CloudKitUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudKitUserService.m; sourceTree = "<group>"; };
 		54590272E50B204941754D35 /* DurationDisplayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DurationDisplayTests.m; sourceTree = "<group>"; };
@@ -260,7 +259,6 @@
 		5459034C26C96660601DA379 /* PlateCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateCellProtocol.h; sourceTree = "<group>"; };
 		54590354648EF3DAC710123D /* FriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
 		545903A3249D172566898D0E /* HistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryCell.h; sourceTree = "<group>"; };
-		545903AC024EC344BA992AB7 /* quotes.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = quotes.json; sourceTree = "<group>"; };
 		545903B0856088908CEFBB56 /* UIImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageHelper.h; sourceTree = "<group>"; };
 		545903B6060FD417DA48B7C8 /* LbsKgMenuItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LbsKgMenuItem.xib; sourceTree = "<group>"; };
 		545903D445CCE5EB68AB601D /* WorkoutCopierTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutCopierTests.m; sourceTree = "<group>"; };
@@ -278,7 +276,6 @@
 		5459047548B43CB2B2ABA86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Workout.storyboard; sourceTree = "<group>"; };
 		545904E1841B2C9A4524B6E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		545904FB5D170F8D0F3B40D3 /* WeightSetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightSetCell.m; sourceTree = "<group>"; };
-		545905044CA3AB8FAD537913 /* QuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteViewController.h; sourceTree = "<group>"; };
 		54590507D7B3C45034D21DA1 /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
 		5459051DEAF49B5736BFA988 /* CloudKitModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudKitModel.h; sourceTree = "<group>"; };
 		54590524FDBBA0C76B3892DD /* NoFriendsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoFriendsCell.h; sourceTree = "<group>"; };
@@ -526,7 +523,6 @@
 				5459001BFB717303CC6CE2F5 /* Setup */,
 				545902E9077C57BF70A67E6E /* Workout */,
 				54590D1F490E7B967C0D0F37 /* Categories */,
-				54590004C23627957CF23588 /* Quotes */,
 				54590503FAB1C2573B77EDF1 /* History */,
 				54590E06AB55B27E9575B177 /* CellRegister.m */,
 				545902EF18EEC12333570E82 /* CellRegister.h */,
@@ -551,16 +547,6 @@
 				951EA323B2EBA6F3B93DC5EE /* Pods.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		54590004C23627957CF23588 /* Quotes */ = {
-			isa = PBXGroup;
-			children = (
-				5459026160D6CA4853567D93 /* QuoteViewController.m */,
-				545905044CA3AB8FAD537913 /* QuoteViewController.h */,
-				545903AC024EC344BA992AB7 /* quotes.json */,
-			);
-			name = Quotes;
 			sourceTree = "<group>";
 		};
 		5459001BFB717303CC6CE2F5 /* Setup */ = {
@@ -1060,6 +1046,7 @@
 		54590E7C84FB812C1C10E222 /* SmarterWorkouts */ = {
 			isa = PBXGroup;
 			children = (
+				024230191A86FEE100657D4E /* Images.xcassets */,
 				02531C5A1A6D7AC700B0446A /* SmarterWorkouts.entitlements */,
 				0267A9A81A2117D200DE7DBC /* Models */,
 				0288D9891A180BF50092C2D3 /* Views */,
@@ -1266,13 +1253,13 @@
 				5459046E831C0A8B5C2B3F39 /* ActivityWeightFormCell.xib in Resources */,
 				5459069A2F63D2C53C8478D1 /* TimerActiveCell.xib in Resources */,
 				023832081A47B01D001D6FDA /* Main.storyboard in Resources */,
+				0242301A1A86FEE100657D4E /* Images.xcassets in Resources */,
 				545909B97C0D7547A221B9F2 /* WeightSetCell.xib in Resources */,
 				54590948B017444BD9DF749B /* DurationSetCell.xib in Resources */,
 				54590A33A2E31F01CCF2CFC2 /* SelectionGroupHeader.xib in Resources */,
 				0265AB761A49E44800A8556D /* HistoryCellExpanded.xib in Resources */,
 				02CE7EAD1A5B38B700420FE2 /* PlateCell.xib in Resources */,
 				54590BAD0BDD079C13B5806A /* ActivitySearchCell.xib in Resources */,
-				54590EA2C3FB9CCC2411C9CA /* quotes.json in Resources */,
 				5459089953448E117633ABC0 /* SmallWeightSetCell.xib in Resources */,
 				545900A896D00F0EDEEEAEEC /* SmallDurationSetCell.xib in Resources */,
 				545903BFCE9385C58941EE23 /* CreateEditActivityController.storyboard in Resources */,
@@ -1397,7 +1384,6 @@
 				5459099A09CF8618E5B6BB25 /* DurationDisplay.m in Sources */,
 				021433991A79BE4600B55F8C /* Friend.m in Sources */,
 				54590F2DE0A40BC4E74C42A0 /* SWTimer.m in Sources */,
-				545905272B2BD1E72E5F01BC /* QuoteViewController.m in Sources */,
 				5459059CF1F760883A545BE0 /* ActivitySelectorInputViewController.m in Sources */,
 				545904A94006B70A52734507 /* HistoryViewController.m in Sources */,
 				54590615727BF6F6713941C4 /* WorkoutController.m in Sources */,

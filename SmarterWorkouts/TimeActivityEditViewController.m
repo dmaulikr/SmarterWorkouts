@@ -8,10 +8,6 @@
 }
 
 - (void)setupInitialActivity:(Activity *)activity {
-    [self.view setHidden:activity == nil];
-    if (![activity.type isEqualToString:(NSString *) ACTIVITY_TIMER]) {
-        [self.view setHidden:YES];
-    }
 }
 
 @end

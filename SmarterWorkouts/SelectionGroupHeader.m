@@ -7,7 +7,7 @@
     NSDictionary *typesToImages = @{
             @"weight" : @"1091-weights",
             @"timer" : @"1097-timer-2",
-            @"miscellaneous" : @""
+            @"miscellaneous" : @"710-folder"
     };
     [self.typeImage setImage:[UIImage imageNamed:typesToImages[type]]];
     [UIImageViewHelper makeWhite:self.typeImage];

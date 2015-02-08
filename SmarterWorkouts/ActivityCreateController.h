@@ -9,6 +9,4 @@
 
 - (void)setupInitialActivity:(Activity *)activity;
 
-@property(nonatomic) BOOL active;
-
 @end

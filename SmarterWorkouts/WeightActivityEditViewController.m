@@ -12,14 +12,10 @@
 }
 
 - (void)setupInitialActivity:(Activity *)activity {
-    [self.view setHidden:activity == nil];
     if ([activity.type isEqualToString:(NSString *) ACTIVITY_WEIGHT]) {
         [self.usesBar setOn:activity.usesBar];
         [self.maxField setText:[activity.personalRecord stringValue]];
         [self.lbsKgSegment setSelectedSegmentIndex:[activity.units isEqualToString:@"lbs"] ? 0 : 1];
-    }
-    else {
-        [self.view setHidden:YES];
     }
 }
 
